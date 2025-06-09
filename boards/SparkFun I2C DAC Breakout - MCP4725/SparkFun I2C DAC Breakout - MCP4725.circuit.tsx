@@ -1,6 +1,6 @@
 import { MCP4725A1T_E_CH } from "@tsci/ShiboSoftwareDev.MCP4725A1T_E_CH"
 
-export default () => (
+const I2CDACBREAKOUT = () => (
   <board width="15.24mm" height="15.24mm">
     <MCP4725A1T_E_CH name="U1" />
     <resistor
@@ -200,3 +200,5 @@ export default () => (
     <trace from=".SJ1 > .pin2" to="net.VCC" />
   </board>
 )
+
+export default I2CDACBREAKOUT
