@@ -10,6 +10,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@tsci/ShiboSoftwareDev.MCP4725A1T_E_CH": "^0.1.0",
     "tscircuit": "^0.0.489"
   }
 }
