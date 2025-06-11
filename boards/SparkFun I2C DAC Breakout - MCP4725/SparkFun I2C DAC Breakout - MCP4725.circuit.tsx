@@ -1,8 +1,19 @@
 import { MCP4725A1T_E_CH } from "@tsci/ShiboSoftwareDev.MCP4725A1T_E_CH"
+import { sel } from "tscircuit"
 
 const I2CDACBREAKOUT = () => (
   <board width="15.24mm" height="15.24mm">
-    <MCP4725A1T_E_CH name="U1" />
+    <MCP4725A1T_E_CH
+      name="U1"
+      connections={{
+        VOUT: sel.JP6.pin2,
+        VSS: sel.net.GND,
+        VDD: [sel.net.VCC, sel.SJ2.pin1, sel.JP5.pin3],
+        SDA: sel.net.SDA,
+        SCL: sel.net.SCL,
+        A0: sel.SJ2.pin2,
+      }}
+    />
     <resistor
       resistance="4.7k"
       name="R1"
@@ -12,6 +23,10 @@ const I2CDACBREAKOUT = () => (
       schY={1}
       schX={2}
       schRotation={90}
+      connections={{
+        pin1: [sel.net.SCL, sel.JP5.pin1],
+        pin2: sel.SJ1.pin3,
+      }}
     />
     <resistor
       resistance="4.7k"
@@ -23,6 +38,10 @@ const I2CDACBREAKOUT = () => (
       schY={1}
       schX={3}
       schRotation={90}
+      connections={{
+        pin1: [sel.net.SDA, sel.JP5.pin2],
+        pin2: sel.SJ1.pin1,
+      }}
     />
     <resistor
       resistance="10k"
@@ -33,6 +52,10 @@ const I2CDACBREAKOUT = () => (
       footprint="0603"
       schY={-2.647}
       schX={0}
+      connections={{
+        pin1: [sel.net.GND, sel.JP6.pin1],
+        pin2: sel.SJ2.pin3,
+      }}
     />
     <capacitor
       capacitance="0.1uF"
@@ -44,6 +67,10 @@ const I2CDACBREAKOUT = () => (
       schY={0}
       schX={5}
       schRotation={90}
+      connections={{
+        pin1: [sel.net.VCC, sel.SJ1.pin2, sel.SJ2.pin1],
+        pin2: [sel.net.GND, sel.JP5.pin4],
+      }}
     />
 
     <jumper
@@ -169,35 +196,14 @@ const I2CDACBREAKOUT = () => (
     <hole name="MH1" diameter="3.302mm" pcbX="5.715mm" pcbY="5.715mm" />
     <hole name="MH1-2" diameter="3.302mm" pcbX="5.715mm" pcbY="-5.715mm" />
 
-    <trace from=".U1 > .pin1" to=".JP6 > .pin2" />
-    <trace from=".U1 > .pin2" to="net.GND" />
-    <trace from=".U1 > .pin3" to="net.VCC" />
-    <trace from=".U1 > .pin4" to="net.SDA" />
-    <trace from=".U1 > .pin5" to="net.SCL" />
-    <trace from=".U1 > .pin6" to=".SJ2 > .pin2" />
 
-    <trace from=".JP6 > .pin1" to="net.GND" />
 
-    <trace from=".R3 > .pin1" to="net.GND" />
-    <trace from=".R3 > .pin2" to=".SJ2 > .pin3" />
 
-    <trace from=".SJ2 > .pin1" to="net.VCC" />
 
-    <trace from=".C1 > .pin1" to="net.VCC" />
-    <trace from=".C1 > .pin2" to="net.GND" />
 
-    <trace from=".JP5 > .pin1" to="net.SCL" />
-    <trace from=".JP5 > .pin2" to="net.SDA" />
-    <trace from=".JP5 > .pin3" to="net.VCC" />
-    <trace from=".JP5 > .pin4" to="net.GND" />
 
-    <trace from=".R1 > .pin1" to="net.SCL" />
-    <trace from=".R1 > .pin2" to=".SJ1 > .pin3" />
 
-    <trace from=".R2 > .pin1" to="net.SDA" />
-    <trace from=".R2 > .pin2" to=".SJ1 > .pin1" />
 
-    <trace from=".SJ1 > .pin2" to="net.VCC" />
   </board>
 )
 
