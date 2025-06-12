@@ -1,16 +1,21 @@
 {
-  "name": "sparkfun-boards",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "dependencies": {
-    "@tsci/ShiboSoftwareDev.MCP4725A1T_E_CH": "^0.1.0",
-    "tscircuit": "^0.0.489"
-  }
+	"name": "sparkfun-boards",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"format": "biome format --write .",
+		"format:check": "biome format ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@tsci/ShiboSoftwareDev.MCP4725A1T_E_CH": "^0.1.0",
+		"tscircuit": "^0.0.489"
+	}
 }

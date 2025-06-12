@@ -59,8 +59,8 @@ const I2CDACBREAKOUT = () => (
       schY={0.2}
       schX={-3}
     />
-    
-     <jumper
+
+    <jumper
       name="JP5"
       pinLabels={{
         pin1: ["SCL"],
@@ -70,11 +70,10 @@ const I2CDACBREAKOUT = () => (
       }}
       footprint="pinrow4_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
       pcbX={-6.35}
-       pcbY={-2.54}
+      pcbY={-2.54}
       pcbRotation={270}
       schY={0}
       schX={8}
-       
     />
 
     <silkscreentext
