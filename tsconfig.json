@@ -25,6 +25,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
-    "types": ["@tscircuit/core"]
+    "types": ["@tscircuit/core", "bun-types"]
   }
 }

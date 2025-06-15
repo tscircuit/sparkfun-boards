@@ -9,7 +9,9 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@types/bun": "latest"
+		"@types/bun": "^1.2.16",
+		"bun-match-svg": "^0.0.11",
+		"circuit-to-svg": "^0.0.153"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
