@@ -9,13 +9,13 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"@tscircuit/cli": "latest"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"@tsci/ShiboSoftwareDev.MCP4725A1T_E_CH": "^0.1.0",
-		"tscircuit": "^0.0.489"
+		"tscircuit": "^0.0.499"
 	}
 }
