@@ -1,5 +1,6 @@
 import { FT232RL } from "./FT232RL"
 import { TYPE_C_31_M_12 } from "./TYPE_C_31_M_12"
+// https://tscircuit.com/techmannih/SparkFunUSB-to-SerialBreakout-FT232RL#files
 
 const USBToSerialBreakout = () => {
   return (
