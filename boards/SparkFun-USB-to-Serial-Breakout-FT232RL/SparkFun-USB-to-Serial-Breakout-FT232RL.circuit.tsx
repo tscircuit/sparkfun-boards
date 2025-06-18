@@ -14,7 +14,13 @@ const USBToSerialBreakout = () => {
         pcbX={6.3}
         pcbY={-16.2}
       />
-      <TYPE_C_31_M_12 name="USBC" pcbY={12.2} pcbRotation={180} schX={-12} />
+      <TYPE_C_31_M_12
+        name="USBC"
+        pcbY={12.2}
+        pcbRotation={180}
+        schX={-12}
+        schY={0.1}
+      />
       <resistor
         resistance="0.33k"
         footprint="0603"
@@ -89,7 +95,7 @@ const USBToSerialBreakout = () => {
         pcbY={8}
         footprint="0402"
         pcbRotation={90}
-        schY={1.5}
+        schY={0.5}
         schX={-9}
       />
       <jumper
@@ -335,14 +341,16 @@ const USBToSerialBreakout = () => {
       <trace from=".SW3 > .pin3" to="net.VCC" />
       <trace from=".R1 > .pin2" to="net.VCCIO" />
       <trace from=".R2 > .pin2" to="net.VCCIO" />
+      <trace from=".USBC > .pin14" to="net.GND" />
+
       <trace from=".R2 > .pin1" to=".LED2 > .pin1" />
       <trace from=".R1 > .pin1" to=".LED1 > .pin1" />
       <trace from=".U1 > .pin23" to=".LED1 > .pin2" />
 
       <trace from=".U1 > .pin22" to=".LED2 > .pin2" />
       <trace from=".U1 > .pin20" to=".F1 > .pin2" />
-      <trace from=".USBC > .pin9" to=".U1 > .pin16" />
-      <trace from=".U1 > .pin15" to=".USBC > .pin10" />
+      <trace from=".USBC > .pin17" to=".U1 > .pin16" />
+      <trace from=".U1 > .pin15" to=".USBC > .pin16" />
 
       <trace from=".C1 > .pin1" to="net.GND" />
       <trace from=".C1 > .pin2" to="net.VCC" />
@@ -350,7 +358,7 @@ const USBToSerialBreakout = () => {
       <trace from=".U1 > .pin17" to=".C1 > .pin2" />
       <trace from=".C2 > .pin2" to=".F1 > .pin2" />
       <trace from=".C5 > .pin2" to=".F1 > .pin2" />
-      <trace from=".USBC > .pin3" to=".F1 > .pin1" />
+      <trace from=".USBC > .pin18" to=".F1 > .pin1" />
 
       <trace from=".C2 > .pin1" to="net.GND" />
       <trace from=".C5 > .pin1" to="net.GND" />
