@@ -8,7 +8,7 @@
       },
       "devDependencies": {
         "@biomejs/biome": "^1.9.4",
-        "@tscircuit/cli": "latest",
+        "@tscircuit/cli": "^0.1.139",
         "@types/bun": "latest",
       },
       "peerDependencies": {
