@@ -1,4 +1,4 @@
-import { HMC6343 } from "./HMC6343.circuit"
+import { HMC6343 } from "./HMC6343"
 import { sel } from "@tscircuit/core"
 
 const HMC6343Breakout = () => (
