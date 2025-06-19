@@ -1,4 +1,4 @@
-import { HMC6343 } from "./HMC6343"
+import { HMC6343 } from "./HMC6343.circuit"
 import { sel } from "@tscircuit/core"
 
 export default () => (
