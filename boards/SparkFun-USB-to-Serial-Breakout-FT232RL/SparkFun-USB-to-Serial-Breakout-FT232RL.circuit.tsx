@@ -1,5 +1,8 @@
 import { FT232RL } from "./FT232RL"
 import { TYPE_C_31_M_12 } from "./TYPE_C_31_M_12"
+import { MST22D18G2_125 } from "./MST22D18G2_125"
+import { sel } from "@tscircuit/core"
+
 // https://tscircuit.com/techmannih/SparkFunUSB-to-SerialBreakout-FT232RL#files
 
 const USBToSerialBreakout = () => {
@@ -129,149 +132,7 @@ const USBToSerialBreakout = () => {
         schX={0}
         schY={-5}
       />
-      <switch
-        name="SW3"
-        type="spdt"
-        footprint={
-          <footprint>
-            <smtpad
-              portHints={["pin5"]}
-              pcbX="0mm"
-              pcbY="-2.8497529999998505mm"
-              width="1.199896mm"
-              height="1.9999959999999999mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin6"]}
-              pcbX="2.4998679999998785mm"
-              pcbY="-2.8500069999998914mm"
-              width="1.199896mm"
-              height="1.9999959999999999mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin1"]}
-              pcbX="-2.499867999999992mm"
-              pcbY="2.850007000000005mm"
-              width="1.199896mm"
-              height="1.9999959999999999mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin2"]}
-              pcbX="0mm"
-              pcbY="2.850007000000005mm"
-              width="1.199896mm"
-              height="1.9999959999999999mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin3"]}
-              pcbX="2.4998679999998785mm"
-              pcbY="2.850007000000005mm"
-              width="1.199896mm"
-              height="1.9999959999999999mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin4"]}
-              pcbX="-2.499867999999992mm"
-              pcbY="-2.8500069999998914mm"
-              width="1.199896mm"
-              height="1.9999959999999999mm"
-              shape="rect"
-            />
-            <silkscreenpath
-              route={[
-                { x: -2.5400000000000773, y: -0.5078730000000178 },
-                { x: -2.5400000000000773, y: 0.5081270000000586 },
-                { x: -1.5240000000001146, y: 0.5081270000000586 },
-                { x: -1.5240000000001146, y: -0.5078730000000178 },
-                { x: -2.5400000000000773, y: -0.5078730000000178 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: -3.048000000000002, y: -1.2698729999999614 },
-                { x: -3.048000000000002, y: 1.270127000000116 },
-                { x: 3.048000000000002, y: 1.270127000000116 },
-                { x: 3.048000000000002, y: -1.2698729999999614 },
-                { x: -3.048000000000002, y: -1.2698729999999614 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: -4.599965399999974, y: 1.8001487999999881 },
-                { x: -3.325571200000013, y: 1.8001487999999881 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: -1.6744188000000122, y: 1.8001487999999881 },
-                { x: -0.8255507999999736, y: 1.8001487999999881 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: 0.8255507999999736, y: 1.8001487999999881 },
-                { x: 1.6744441999999253, y: 1.8001487999999881 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: 3.3255457999999862, y: 1.8001487999999881 },
-                { x: 4.571999999999889, y: 1.77800000000002 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: 4.571999999999889, y: -1.777872999999886 },
-                { x: 3.3194498000000294, y: -1.777872999999886 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: 1.6805401999999958, y: -1.777872999999886 },
-                { x: 0.8194547999999031, y: -1.777872999999886 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: -0.8194548000001305, y: -1.777872999999886 },
-                { x: -1.6805401999999958, y: -1.777872999999886 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: -3.3194497999999157, y: -1.777872999999886 },
-                { x: -4.599965399999974, y: -1.777872999999886 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: -4.599965399999974, y: 1.8001487999999881 },
-                { x: -4.599965399999974, y: -1.7779999999999063 },
-              ]}
-            />
-            <silkscreenpath
-              route={[
-                { x: 4.571999999999889, y: -1.777872999999886 },
-                { x: 4.571999999999889, y: 1.8001487999999881 },
-              ]}
-            />
-          </footprint>
-        }
-        cadModel={{
-          objUrl:
-            "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=a98562e0d24740e1809e54f73242e180&pn=C2906280",
-          rotationOffset: { x: 0, y: 0, z: 0 },
-          positionOffset: { x: 0, y: 0, z: 0 },
-        }}
-        schX={-5}
-        schY={-6}
-        pcbY={5}
-      />
+      <MST22D18G2_125 name="SW3" schX={-5} schY={-6} pcbY={5} />
       <schematictext
         fontSize={0.3}
         text="Vcc = 2.7V to 5.5V"
@@ -293,76 +154,70 @@ const USBToSerialBreakout = () => {
         schY={-8}
         anchor="center_left"
       />
+      <trace from={sel.U1.pin1} to="net.TXD" />
+      <trace from={sel.U1.pin2} to="net.DTR" />
+      <trace from={sel.U1.pin4} to="net.VCCIO" />
+      <trace from={sel.U1.pin5} to="net.RXD" />
+      <trace from={sel.U1.pin3} to="net.RTS" />
+      <trace from={sel.U1.pin6} to="net.RI" />
+      <trace from={sel.U1.pin7} to="net.GND" />
+      <trace from={sel.U1.pin9} to="net.DSR" />
+      <trace from={sel.U1.pin10} to="net.DCD" />
+      <trace from={sel.U1.pin11} to="net.CTS" />
+      <trace from={sel.U1.pin12} to="net.SLEEP" />
+      <trace from={sel.U1.pin13} to="net.TXDEN" />
+      <trace from={sel.U1.pin14} to="net.PWREN" />
+      <trace from={sel.U1.pin18} to="net.GND" />
+      <trace from={sel.U1.pin21} to="net.GND" />
+      <trace from={sel.U1.pin25} to="net.GND" />
+      <trace from={sel.U1.pin26} to="net.GND" />
 
-      <trace from=".U1 > .pin1" to="net.TXD" />
-      <trace from=".U1 > .pin2" to="net.DTR" />
-      <trace from=".U1 > .pin4" to="net.VCCIO" />
-      <trace from=".U1 > .pin5" to="net.RXD" />
+      <trace from={sel.JP1.pin1} to="net.GND" />
+      <trace from={sel.JP1.pin6} to="net.CTS" />
+      <trace from={sel.JP1.pin2} to="net.TXLED" />
+      <trace from={sel.JP1.pin3} to="net.RXLED" />
+      <trace from={sel.JP1.pin4} to="net.VCC" />
+      <trace from={sel.JP1.pin5} to="net.V3_3" />
+      <trace from={sel.JP1.pin7} to="net.SLEEP" />
+      <trace from={sel.JP1.pin8} to="net.TXDEN" />
+      <trace from={sel.JP1.pin9} to="net.PWREN" />
 
-      <trace from=".U1 > .pin3" to="net.RTS" />
-      <trace from=".U1 > .pin6" to="net.RI" />
+      <trace from={sel.JP2.pin1} to="net.TXD" />
+      <trace from={sel.JP2.pin2} to="net.DTR" />
+      <trace from={sel.JP2.pin3} to="net.RTS" />
+      <trace from={sel.JP2.pin4} to="net.VCCIO" />
+      <trace from={sel.JP2.pin5} to="net.RXD" />
+      <trace from={sel.JP2.pin6} to="net.RI" />
+      <trace from={sel.JP2.pin7} to="net.GND" />
+      <trace from={sel.JP2.pin8} to="net.DSR" />
+      <trace from={sel.JP2.pin9} to="net.DCD" />
+      <trace from={sel.JP3.pin2} to="net.TXD" />
+      <trace from={sel.JP3.pin3} to="net.RXD" />
+      <trace from={sel.JP3.pin4} to="net.GND" />
+      <trace from={sel.JP3.pin1} to="net.VCC" />
 
-      <trace from=".U1 > .pin7" to="net.GND" />
-      <trace from=".U1 > .pin9" to="net.DSR" />
-      <trace from=".U1 > .pin10" to="net.DCD" />
-      <trace from=".U1 > .pin11" to="net.CTS" />
-      <trace from=".U1 > .pin12" to="net.SLEEP" />
-      <trace from=".U1 > .pin13" to="net.TXDEN" />
-      <trace from=".U1 > .pin14" to="net.PWREN" />
+      <trace from={sel.SW3.pin1} to="net.VCCIO" />
+      <trace from={sel.SW3.pin3} to="net.VCC" />
+      <trace from={sel.R1.pin2} to="net.VCCIO" />
+      <trace from={sel.R2.pin2} to="net.VCCIO" />
+      <trace from={sel.USBC.pin14} to="net.GND" />
 
-      <trace from=".U1 > .pin18" to="net.GND" />
-      <trace from=".U1 > .pin21" to="net.GND" />
-      <trace from=".U1 > .pin25" to="net.GND" />
-      <trace from=".U1 > .pin26" to="net.GND" />
-      <trace from=".JP1 > .pin1" to="net.GND" />
-      <trace from=".JP1 > .pin6" to="net.CTS" />
-      <trace from=".JP1 > .pin2" to="net.TXLED" />
-      <trace from=".JP1 > .pin3" to="net.RXLED" />
-      <trace from=".JP1 > .pin4" to="net.VCC" />
-      {/* <trace from=".JP1 > .pin5" to="net.3.3V" /> */}
-      <trace from=".JP1 > .pin7" to="net.SLEEP" />
-      <trace from=".JP1 > .pin8" to="net.TXDEN" />
-      <trace from=".JP1 > .pin9" to="net.PWREN" />
-      <trace from=".JP2 > .pin1" to="net.TXD" />
-      <trace from=".JP2 > .pin2" to="net.DTR" />
-      <trace from=".JP2 > .pin3" to="net.RTS" />
-      <trace from=".JP2 > .pin4" to="net.VCCIO" />
-      <trace from=".JP2 > .pin5" to="net.RXD" />
-      <trace from=".JP2 > .pin6" to="net.RI" />
-      <trace from=".JP2 > .pin7" to="net.GND" />
-      <trace from=".JP2 > .pin8" to="net.DSR" />
-      <trace from=".JP2 > .pin9" to="net.DCD" />
-      {/* <trace from=".JP3 > .pin6" to="net.RI" /> */}
-      <trace from=".JP3 > .pin2" to="net.TXD" />
-      <trace from=".JP3 > .pin3" to="net.RXD" />
-      <trace from=".JP3 > .pin4" to="net.GND" />
-      <trace from=".JP3 > .pin1" to="net.VCC" />
+      <trace from={sel.R2.pin1} to={sel.LED2.pin1} />
+      <trace from={sel.R1.pin1} to={sel.LED1.pin1} />
+      <trace from={sel.U1.pin23} to={sel.LED1.pin2} />
+      <trace from={sel.U1.pin22} to={sel.LED2.pin2} />
+      <trace from={sel.U1.pin20} to={sel.F1.pin2} />
+      <trace from={sel.USBC.pin17} to={sel.U1.pin16} />
+      <trace from={sel.U1.pin15} to={sel.USBC.pin16} />
 
-      <trace from=".SW3 > .pin1" to="net.VCCIO" />
-      <trace from=".SW3 > .pin3" to="net.VCC" />
-      <trace from=".R1 > .pin2" to="net.VCCIO" />
-      <trace from=".R2 > .pin2" to="net.VCCIO" />
-      <trace from=".USBC > .pin14" to="net.GND" />
-
-      <trace from=".R2 > .pin1" to=".LED2 > .pin1" />
-      <trace from=".R1 > .pin1" to=".LED1 > .pin1" />
-      <trace from=".U1 > .pin23" to=".LED1 > .pin2" />
-
-      <trace from=".U1 > .pin22" to=".LED2 > .pin2" />
-      <trace from=".U1 > .pin20" to=".F1 > .pin2" />
-      <trace from=".USBC > .pin17" to=".U1 > .pin16" />
-      <trace from=".U1 > .pin15" to=".USBC > .pin16" />
-
-      <trace from=".C1 > .pin1" to="net.GND" />
-      <trace from=".C1 > .pin2" to="net.VCC" />
-
-      <trace from=".U1 > .pin17" to=".C1 > .pin2" />
-      <trace from=".C2 > .pin2" to=".F1 > .pin2" />
-      <trace from=".C5 > .pin2" to=".F1 > .pin2" />
-      <trace from=".USBC > .pin18" to=".F1 > .pin1" />
-
-      <trace from=".C2 > .pin1" to="net.GND" />
-      <trace from=".C5 > .pin1" to="net.GND" />
+      <trace from={sel.C1.pin1} to="net.GND" />
+      <trace from={sel.C1.pin2} to="net.VCC" />
+      <trace from={sel.U1.pin17} to={sel.C1.pin2} />
+      <trace from={sel.C2.pin2} to={sel.F1.pin2} />
+      <trace from={sel.C5.pin2} to={sel.F1.pin2} />
+      <trace from={sel.USBC.pin18} to={sel.F1.pin1} />
+      <trace from={sel.C2.pin1} to="net.GND" />
+      <trace from={sel.C5.pin1} to="net.GND" />
     </board>
   )
 }
