@@ -5,6 +5,7 @@ const HMC6343Breakout = () => (
   <board>
     <HMC6343
       name="U1"
+      schWidth="1.4mm"
       connections={{
         VDD1: sel.net.V3_3,
         VDD2: sel.net.V3_3,
@@ -16,7 +17,31 @@ const HMC6343Breakout = () => (
         CS_CTRL: sel.net.CS,
         CS: "net.CS_CTRL",
       }}
+      schPinArrangement={{
+        leftSide: {
+          direction: "top-to-bottom",
+          pins: ["VDD1", "VDD2", "VDD3", "GND1", "GND2"],
+        },
+        rightSide: {
+          direction: "bottom-to-top",
+          pins: ["CS_CTRL", "CS", "SDA", "SCL"],
+        },
+      }}
+      schPinStyle={{
+        VDD3: {
+          marginBottom: 0.2,
+        },
+        SCL: {
+          marginTop: -0.2,
+        },
+        SDA: {
+          marginBottom: 0.2,
+        },
+      }}
     />
+
+    <hole diameter="3.2mm" pcbX={-11.5} pcbY={10} />
+    <hole diameter="3.2mm" pcbX={11.5} pcbY={-4} />
 
     <resistor
       name="R1"
@@ -98,10 +123,10 @@ const HMC6343Breakout = () => (
       pcbRotation="-90deg"
     />
 
-    <trace from=".JP1 > .pin4" to="net.SCL" />
-    <trace from=".JP1 > .pin3" to="net.SDA" />
-    <trace from=".JP1 > .pin2" to="net.V3_3" />
-    <trace from=".JP1 > .pin1" to="net.GND" />
+    <trace from={sel.JP1.pin4} to={sel.net.SCL} />
+    <trace from={sel.JP1.pin3} to={sel.net.SDA} />
+    <trace from={sel.JP1.pin2} to={sel.net.V3_3} />
+    <trace from={sel.JP1.pin1} to={sel.net.GND} />
   </board>
 )
 
