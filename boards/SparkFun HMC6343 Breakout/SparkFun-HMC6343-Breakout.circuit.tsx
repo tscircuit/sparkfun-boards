@@ -130,4 +130,5 @@ const HMC6343Breakout = () => (
   </board>
 )
 
+
 export default HMC6343Breakout
