@@ -10,12 +10,12 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@types/bun": "latest",
-		"@tscircuit/cli": "latest"
+		"@tscircuit/cli": "^0.1.139"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.499"
+		"tscircuit": "^0.0.502"
 	}
 }
