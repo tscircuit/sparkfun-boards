@@ -122,7 +122,6 @@ const HMC6343Breakout = () => (
       schX={-6.5}
       pcbRotation="-90deg"
     />
-
     <trace from={sel.JP1.pin4} to={sel.net.SCL} />
     <trace from={sel.JP1.pin3} to={sel.net.SDA} />
     <trace from={sel.JP1.pin2} to={sel.net.V3_3} />
