@@ -1,5 +1,6 @@
 import { HMC6343 } from "./HMC6343"
 import { sel } from "@tscircuit/core"
+// https://tscircuit.com/MustafaMulla29/HMC6343_Breakout#files
 
 const HMC6343Breakout = () => (
   <board>
