@@ -197,7 +197,7 @@ const USBToSerialBreakout = () => {
       <trace from={sel.JP3.pin1} to="net.VCC" />
 
       <trace from={sel.SW3.pin1} to="net.VCCIO" />
-      <trace from={sel.SW3.pin3} to="net.VCC" />
+      <trace from={sel.SW3.pin2} to="net.V3_3" />
       <trace from={sel.R1.pin2} to="net.VCCIO" />
       <trace from={sel.R2.pin2} to="net.VCCIO" />
       <trace from={sel.USBC.pin14} to="net.GND" />
