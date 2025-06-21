@@ -68,7 +68,7 @@ const I2CDACBREAKOUT = () => (
         pin3: ["VCC"],
         pin4: ["GND"],
       }}
-      footprint="pinrow4_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
+      footprint="pinrow4_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
       pcbX={-6.35}
       pcbY={-2.54}
       pcbRotation={270}
@@ -136,11 +136,15 @@ const I2CDACBREAKOUT = () => (
       anchor="center_left"
     />
 
-    <jumper
+    <solderjumper
       cadModel={null}
       name="SJ1"
       pinCount={3}
       internallyConnectedPins={[
+        ["1", "2"],
+        ["2", "3"],
+      ]}
+      bridgedPins={[
         ["1", "2"],
         ["2", "3"],
       ]}
@@ -152,7 +156,7 @@ const I2CDACBREAKOUT = () => (
       schX={2.5}
       schRotation={180}
     />
-    <jumper
+    <solderjumper
       cadModel={null}
       name="SJ2"
       pinCount={3}
