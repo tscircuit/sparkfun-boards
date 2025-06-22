@@ -1,7 +1,7 @@
 import { RFM69HCW } from "./RFM69HCW"
 import { sel } from "@tscircuit/core"
 
-const RFM69BREAKOUT =  () => (
+const RFM69BREAKOUT = () => (
   <board width={30} height={24}>
     <RFM69HCW
       name="U1"
