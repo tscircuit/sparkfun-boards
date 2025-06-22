@@ -124,47 +124,47 @@ const RFM69BREAKOUT = () => (
     <capacitor
       name="C2"
       capacitance={"0.1uF"}
-      footprint={"1210"}
+      footprint={"0603"}
       schRotation={90}
       schX={-4.7}
       pcbY={-10.5}
-      pcbX={3.5}
+      pcbX={-3.5}
       pcbRotation={180}
     />
     <capacitor
       name="C1"
       capacitance={"10uF"}
-      footprint={"0603"}
+      footprint={"1210"}
       schRotation={90}
       schX={-5.7}
       pcbY={-10.5}
-      pcbX={-3.5}
+      pcbX={3.5}
     />
     <net name="GND" />
     <net name="V3_3" />
     <schematictext
       text="Antenna length (1/4 wave)"
-      schX={5}
+      schX={4}
       schY={-1}
       fontSize={0.2}
-      anchor="bottom"
-      color="red"
+      anchor="center_left"
+      color="brown"
     />
     <schematictext
       text='915MHz: 3.07" = 78mm'
-      schX={4.85}
+      schX={4}
       schY={-1.3}
       fontSize={0.2}
-      anchor="bottom"
-      color="red"
+      anchor="center_left"
+      color="brown"
     />
     <schematictext
       text='434MHz: 6.47" = 164mm'
-      schX={4.9}
+      schX={4}
       schY={-1.5}
       fontSize={0.2}
-      anchor="bottom"
-      color="red"
+      anchor="center_left"
+      color="brown"
     />
     <trace from={sel.U1.pin13} to="JP1.pin1" />
     <trace from={sel.C1.pin1} to={"net.GND"} />
