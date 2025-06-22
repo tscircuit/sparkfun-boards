@@ -81,7 +81,7 @@ const RFM69BREAKOUT = () => (
       footprint="pinrow5_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
       facingDirection="left"
       schX={3}
-      schY={0.32}
+      schY={0.34}
       pcbRotation={90}
       pcbX={14}
       pcbY={3.3}
@@ -122,21 +122,21 @@ const RFM69BREAKOUT = () => (
       connectsTo={["U1.pin8"]}
     />
     <capacitor
-      name="C1"
+      name="C2"
       capacitance={"0.1uF"}
       footprint={"1210"}
       schRotation={90}
-      schX={-4.5}
+      schX={-4.7}
       pcbY={-10.5}
       pcbX={3.5}
       pcbRotation={180}
     />
     <capacitor
-      name="C2"
-      capacitance={"0.1uF"}
+      name="C1"
+      capacitance={"10uF"}
       footprint={"0603"}
       schRotation={90}
-      schX={-5.5}
+      schX={-5.7}
       pcbY={-10.5}
       pcbX={-3.5}
     />
