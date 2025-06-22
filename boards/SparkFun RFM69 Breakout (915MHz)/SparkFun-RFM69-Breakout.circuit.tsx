@@ -2,22 +2,23 @@ import { RFM69HCW } from "./RFM69HCW"
 import { sel } from "@tscircuit/core"
 
 const RFM69BREAKOUT = () => (
-  <board width={30} height={24}>
+  <board width="27.94mm" height="20.32mm">
     <RFM69HCW
       name="U1"
-      footprint="stampboard_left8_right8_bottom0_top0_w18mm_p2.22mm"
+      footprint="stampboard_left8_right8_bottom0_top0_w18mm_p2.0mm_pw1.2mm_pl3.0mm_padshape=rect"
+      pcbY="1.27mm"
     />
     <pinheader
       name="JP1"
       pinCount={2}
       schRotation={180}
-      footprint="pinrow2_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
+      footprint="pinrow2_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
       schFacingDirection="right"
       schX={-3}
       schY={1.4}
       pcbRotation={90}
-      pcbX={-14}
-      pcbY={-8}
+      pcbX={-12.7}
+      pcbY={-7.62}
       showSilkscreenPinLabels={true}
       pinLabels={["3.3V", "GND"]}
     />
@@ -39,13 +40,13 @@ const RFM69BREAKOUT = () => (
       name="JP2"
       pinCount={5}
       schRotation={0}
-      footprint="pinrow5_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
+      footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
       schFacingDirection="right"
       schX={-3}
       schY={-0.1}
       pcbRotation={90}
-      pcbX={-14}
-      pcbY={4}
+      pcbX={-12.7}
+      pcbY={3.81}
       connections={{
         pin1: sel.U1.pin2,
         pin2: sel.U1.pin3,
@@ -60,13 +61,13 @@ const RFM69BREAKOUT = () => (
       name="JP3"
       pinCount={1}
       schRotation={180}
-      footprint="pinrow1_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
+      footprint="pinrow1_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
       facingDirection="left"
       schX={3}
       schY={1.5}
       pcbRotation={90}
-      pcbX={-14}
-      pcbY={-4}
+      pcbX={-12.7}
+      pcbY={-3.81}
       connections={{
         pin1: sel.U1.pin14,
       }}
@@ -78,13 +79,13 @@ const RFM69BREAKOUT = () => (
       name="JP4"
       pinCount={5}
       schRotation={0}
-      footprint="pinrow5_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
+      footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
       facingDirection="left"
       schX={3}
       schY={0.34}
       pcbRotation={90}
-      pcbX={14}
-      pcbY={3.3}
+      pcbX={12.7}
+      pcbY={3.81}
       connections={{
         pin1: sel.U1.pin15,
         pin2: sel.U1.pin16,
@@ -99,13 +100,13 @@ const RFM69BREAKOUT = () => (
       name="JP5"
       pinCount={3}
       schRotation={180}
-      footprint="pinrow3_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
+      footprint="pinrow3_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
       facingDirection="left"
       schX={3}
       schY={-1}
       pcbRotation={90}
-      pcbX={14}
-      pcbY={-6.9}
+      pcbX={12.7}
+      pcbY={-6.35}
       connections={{
         pin1: sel.U1.pin8,
         pin2: sel.U1.pin9,
@@ -127,8 +128,8 @@ const RFM69BREAKOUT = () => (
       footprint={"0603"}
       schRotation={90}
       schX={-4.7}
-      pcbY={-10.5}
-      pcbX={-3.5}
+      pcbY={-8.89}
+      pcbX={-2.54}
       pcbRotation={180}
     />
     <capacitor
@@ -137,8 +138,8 @@ const RFM69BREAKOUT = () => (
       footprint={"1210"}
       schRotation={90}
       schX={-5.7}
-      pcbY={-10.5}
-      pcbX={3.5}
+      pcbY={-8.57}
+      pcbX={3.81}
     />
     <net name="GND" />
     <net name="V3_3" />
