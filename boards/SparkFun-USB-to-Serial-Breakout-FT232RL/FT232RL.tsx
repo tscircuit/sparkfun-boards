@@ -17,7 +17,7 @@ const pinLabels = {
   pin14: ["CBUS3"],
   pin15: ["USBDP"],
   pin16: ["USBDM"],
-  pin17: ["3V3OUT"],
+  pin17: ["V3_3OUT"],
   pin18: ["GND3"],
   pin19: ["pin19"],
   pin20: ["VCC"],
