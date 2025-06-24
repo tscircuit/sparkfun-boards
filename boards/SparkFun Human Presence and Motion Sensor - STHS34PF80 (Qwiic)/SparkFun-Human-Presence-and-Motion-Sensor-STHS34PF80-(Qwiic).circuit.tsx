@@ -527,7 +527,7 @@ const MotionSensor = () => (
       fontSize={0.3}
     />
     <schematictext
-      text="C\S\ Pullup"
+      text="N_CS Pullup"
       schX={9.5}
       schY={-2.6}
       color="brown"
