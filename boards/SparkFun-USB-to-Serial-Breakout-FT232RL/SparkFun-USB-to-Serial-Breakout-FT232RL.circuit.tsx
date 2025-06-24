@@ -3,11 +3,24 @@ import { TYPE_C_31_M_12 } from "./TYPE_C_31_M_12"
 import { MST22D18G2_125 } from "./MST22D18G2_125"
 import { sel } from "@tscircuit/core"
 
-// https://tscircuit.com/techmannih/SparkFunUSB-to-SerialBreakout-FT232RL#files
-
 const selectors = {
   U1: sel.U1(FT232RL),
   USBC: sel.USBC(TYPE_C_31_M_12),
+  JP1: sel<
+    | "GND"
+    | "TXLED"
+    | "RXLED"
+    | "VCC"
+    | "V3_3"
+    | "CTS"
+    | "SLEEP"
+    | "TXDEN"
+    | "PWREN"
+  >("JP1"),
+  JP2: sel<
+    "TXD" | "DTR" | "RTS" | "VCCIO" | "RXD" | "RI" | "GND" | "DSR" | "DCD"
+  >("JP2"),
+  JP3: sel<"VCC" | "TXD" | "RXD" | "GND">("JP3"),
 }
 
 const USBToSerialBreakout = () => {
@@ -62,7 +75,6 @@ const USBToSerialBreakout = () => {
         color="red"
         schDisplayValue="Green"
       />
-
       <capacitor
         capacitance="100000pF"
         footprint="cap0603"
@@ -107,6 +119,7 @@ const USBToSerialBreakout = () => {
         schY={0.5}
         schX={-9}
       />
+
       <jumper
         name="JP1"
         footprint="pinrow9_nosquareplating"
@@ -116,6 +129,17 @@ const USBToSerialBreakout = () => {
         schDirection="left"
         schX={5}
         schY={3}
+        pinLabels={{
+          pin1: "GND",
+          pin2: "TXLED",
+          pin3: "RXLED",
+          pin4: "VCC",
+          pin5: "V3_3",
+          pin6: "CTS",
+          pin7: "SLEEP",
+          pin8: "TXDEN",
+          pin9: "PWREN",
+        }}
       />
       <jumper
         name="JP2"
@@ -126,6 +150,17 @@ const USBToSerialBreakout = () => {
         schDirection="left"
         schX={6.5}
         schY={-2}
+        pinLabels={{
+          pin1: "TXD",
+          pin2: "DTR",
+          pin3: "RTS",
+          pin4: "VCCIO",
+          pin5: "RXD",
+          pin6: "RI",
+          pin7: "GND",
+          pin8: "DSR",
+          pin9: "DCD",
+        }}
       />
       <jumper
         name="JP3"
@@ -136,7 +171,14 @@ const USBToSerialBreakout = () => {
         pcbY={-16.2}
         schX={0}
         schY={-5}
+        pinLabels={{
+          pin1: "VCC",
+          pin2: "TXD",
+          pin3: "RXD",
+          pin4: "GND",
+        }}
       />
+
       <MST22D18G2_125 name="SW3" schX={-5} schY={-6} pcbY={5} />
       <schematictext
         fontSize={0.3}
@@ -159,16 +201,11 @@ const USBToSerialBreakout = () => {
         schY={-8}
         anchor="center_left"
       />
+
       <trace from={selectors.U1.TXD} to="net.TXD" />
-      <trace from={selectors.U1.pin2} to="net.DTR" />
       <trace from={selectors.U1.VCCIO} to="net.VCCIO" />
       <trace from={selectors.U1.RXD} to="net.RXD" />
-      <trace from={selectors.U1.pin3} to="net.RTS" />
-      <trace from={selectors.U1.pin6} to="net.RI" />
       <trace from={selectors.U1.GND1} to="net.GND" />
-      <trace from={selectors.U1.pin9} to="net.DSR" />
-      <trace from={selectors.U1.pin10} to="net.DCD" />
-      <trace from={selectors.U1.pin11} to="net.CTS" />
       <trace from={selectors.U1.CBUS4} to="net.SLEEP" />
       <trace from={selectors.U1.CBUS2} to="net.TXDEN" />
       <trace from={selectors.U1.CBUS3} to="net.PWREN" />
@@ -176,28 +213,28 @@ const USBToSerialBreakout = () => {
       <trace from={selectors.U1.GND2} to="net.GND" />
       <trace from={selectors.U1.AGND} to="net.GND" />
       <trace from={selectors.U1.TEST} to="net.GND" />
-      <trace from={sel.JP1.pin1} to="net.GND" />
-      <trace from={sel.JP1.pin6} to="net.CTS" />
-      <trace from={sel.JP1.pin2} to="net.TXLED" />
-      <trace from={sel.JP1.pin3} to="net.RXLED" />
-      <trace from={sel.JP1.pin4} to="net.VCC" />
-      <trace from={sel.JP1.pin5} to="net.V3_3" />
-      <trace from={sel.JP1.pin7} to="net.SLEEP" />
-      <trace from={sel.JP1.pin8} to="net.TXDEN" />
-      <trace from={sel.JP1.pin9} to="net.PWREN" />
-      <trace from={sel.JP2.pin1} to="net.TXD" />
-      <trace from={sel.JP2.pin2} to="net.DTR" />
-      <trace from={sel.JP2.pin3} to="net.RTS" />
-      <trace from={sel.JP2.pin4} to="net.VCCIO" />
-      <trace from={sel.JP2.pin5} to="net.RXD" />
-      <trace from={sel.JP2.pin6} to="net.RI" />
-      <trace from={sel.JP2.pin7} to="net.GND" />
-      <trace from={sel.JP2.pin8} to="net.DSR" />
-      <trace from={sel.JP2.pin9} to="net.DCD" />
-      <trace from={sel.JP3.pin2} to="net.TXD" />
-      <trace from={sel.JP3.pin3} to="net.RXD" />
-      <trace from={sel.JP3.pin4} to="net.GND" />
-      <trace from={sel.JP3.pin1} to="net.VCC" />
+      <trace from={selectors.JP1.GND} to="net.GND" />
+      <trace from={selectors.JP1.TXLED} to="net.TXLED" />
+      <trace from={selectors.JP1.RXLED} to="net.RXLED" />
+      <trace from={selectors.JP1.VCC} to="net.VCC" />
+      <trace from={selectors.JP1.V3_3} to="net.V3_3" />
+      <trace from={selectors.JP1.CTS} to="net.CTS" />
+      <trace from={selectors.JP1.SLEEP} to="net.SLEEP" />
+      <trace from={selectors.JP1.TXDEN} to="net.TXDEN" />
+      <trace from={selectors.JP1.PWREN} to="net.PWREN" />
+      <trace from={selectors.JP2.TXD} to="net.TXD" />
+      <trace from={selectors.JP2.DTR} to="net.DTR" />
+      <trace from={selectors.JP2.RTS} to="net.RTS" />
+      <trace from={selectors.JP2.VCCIO} to="net.VCCIO" />
+      <trace from={selectors.JP2.RXD} to="net.RXD" />
+      <trace from={selectors.JP2.RI} to="net.RI" />
+      <trace from={selectors.JP2.GND} to="net.GND" />
+      <trace from={selectors.JP2.DSR} to="net.DSR" />
+      <trace from={selectors.JP2.DCD} to="net.DCD" />
+      <trace from={selectors.JP3.TXD} to="net.TXD" />
+      <trace from={selectors.JP3.RXD} to="net.RXD" />
+      <trace from={selectors.JP3.GND} to="net.GND" />
+      <trace from={selectors.JP3.VCC} to="net.VCC" />
       <trace from={sel.SW3.pin1} to="net.VCCIO" />
       <trace from={sel.SW3.pin2} to="net.V3_3" />
       <trace from={sel.SW3.pin3} to="net.VCC" />
@@ -222,4 +259,5 @@ const USBToSerialBreakout = () => {
     </board>
   )
 }
+
 export default USBToSerialBreakout
