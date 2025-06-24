@@ -176,13 +176,9 @@ const I2CDACBREAKOUT = () => (
       cadModel={null}
       name="SJ1"
       pinCount={3}
-      internallyConnectedPins={[
-        ["1", "2"],
-        ["2", "3"],
-      ]}
       bridgedPins={[
-        ["1", "2"],
-        ["2", "3"],
+        ["pin1", "pin2"],
+        ["pin2", "pin3"],
       ]}
       footprint="solderjumper3_bridged123_p0.8_pw0.635_ph1.270"
       pcbX="0.8"
