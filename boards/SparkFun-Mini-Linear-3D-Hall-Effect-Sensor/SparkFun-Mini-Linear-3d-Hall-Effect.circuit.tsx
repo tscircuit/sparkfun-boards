@@ -231,8 +231,8 @@ export const TMAG5273HallEffect = () => (
         SCL: sel.net.SCL,
       }}
     />
-    <hole diameter="3.302mm" x={10} y={10} pcbX={2.54} pcbY={0.54} />
-    <hole diameter="3.302mm" x={10} y={10} pcbX={22.86} pcbY={0.54} />
+    <hole diameter="3.302mm" pcbX={2.54} pcbY={0.54} />
+    <hole diameter="3.302mm"  pcbX={22.86} pcbY={0.54} />
 
     <netlabel
       net="GND"
