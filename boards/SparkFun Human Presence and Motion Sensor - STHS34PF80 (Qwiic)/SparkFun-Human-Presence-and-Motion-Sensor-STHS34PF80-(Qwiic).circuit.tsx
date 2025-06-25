@@ -38,6 +38,10 @@ const MotionSensor = () => (
       schY={1.3}
       pcbX="-5.08"
       pcbY="3.81"
+      connections={{
+        pin1: "net.GND",
+        pin2: "net.V3_3",
+      }}
     />
     <capacitor
       name="C1"
@@ -48,6 +52,10 @@ const MotionSensor = () => (
       schY={1.3}
       pcbX="5.08"
       pcbRotation="90"
+      connections={{
+        pin1: "net.GND",
+        pin2: "net.V3_3",
+      }}
     />
     <net name="GND" />
     <net name="V3_3" />
@@ -75,6 +83,9 @@ const MotionSensor = () => (
       pcbX="2.54"
       pcbY="-5.08"
       pcbRotation="180"
+      connections={{
+        pin2: "JP1.pin3",
+      }}
     />
     <resistor
       resistance="2.2k"
@@ -85,6 +96,9 @@ const MotionSensor = () => (
       schRotation={90}
       pcbX="-2.54"
       pcbY="-5.08"
+      connections={{
+        pin2: "JP1.pin1",
+      }}
     />
     <netlabel
       schX={2.1}
@@ -116,6 +130,9 @@ const MotionSensor = () => (
       schRotation={90}
       pcbX="-5.08"
       pcbRotation="270"
+      connections={{
+        pin1: "D1.pin1",
+      }}
     />
     <led
       name="D1"
@@ -147,6 +164,9 @@ const MotionSensor = () => (
       pcbX="-10.16"
       pcbY="3.81"
       layer="bottom"
+      connections={{
+        pin2: "D1.pin2",
+      }}
     />
     <netlabel
       schX={6.5}
@@ -534,15 +554,6 @@ const MotionSensor = () => (
       anchor="center"
       fontSize={0.3}
     />
-
-    <trace from={sel.C1.pin1} to={"net.GND"} />
-    <trace from={sel.C2.pin1} to={"net.GND"} />
-    <trace from={sel.C1.pin2} to={"net.V3_3"} />
-    <trace from={sel.C2.pin2} to={"net.V3_3"} />
-    <trace from=".R1 > .pin2" to=".JP1 > .pin3" />
-    <trace from=".R2 > .pin2" to=".JP1 > .pin1" />
-    <trace from=".R3 > .pin1" to=".D1 > .pin1" />
-    <trace from=".D1 > .pin2" to=".JP3 > .pin2" />
   </board>
 )
 
