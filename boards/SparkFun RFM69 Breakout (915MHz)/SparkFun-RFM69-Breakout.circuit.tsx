@@ -22,6 +22,9 @@ const RFM69BREAKOUT = () => {
         pcbY={-7.62}
         showSilkscreenPinLabels={true}
         pinLabels={["3.3V", "GND"]}
+        connections={{
+          pin1: "U1.pin13",
+        }}
       />
       <netlabel
         schX={-1.7}
@@ -132,6 +135,10 @@ const RFM69BREAKOUT = () => {
         pcbY={-8.89}
         pcbX={-2.54}
         pcbRotation={180}
+        connections={{
+          pin1: "net.GND",
+          pin2: "net.V3_3",
+        }}
       />
       <capacitor
         name="C1"
@@ -141,6 +148,10 @@ const RFM69BREAKOUT = () => {
         schX={-5.7}
         pcbY={-8.57}
         pcbX={3.81}
+        connections={{
+          pin1: "net.GND",
+          pin2: "net.V3_3",
+        }}
       />
       <net name="GND" />
       <net name="V3_3" />
@@ -168,11 +179,6 @@ const RFM69BREAKOUT = () => {
         anchor="center_left"
         color="brown"
       />
-      <trace from={sel.U1.pin13} to="JP1.pin1" />
-      <trace from={sel.C1.pin1} to={"net.GND"} />
-      <trace from={sel.C2.pin1} to={"net.GND"} />
-      <trace from={sel.C1.pin2} to={"net.V3_3"} />
-      <trace from={sel.C2.pin2} to={"net.V3_3"} />
     </board>
   )
 }
