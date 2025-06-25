@@ -28,9 +28,15 @@ export default () => (
       schY={-1}
       schRotation={90}
       connections={{
-        pin1: sel.net.GND,
         pin2: sel.Q1.gate,
       }}
+    />
+    <netlabel
+      net="GND"
+      schX={-0.8}
+      schY={-1.8}
+      connection="R7.pin1"
+      anchorSide="top"
     />
 
     <mosfet
@@ -38,11 +44,17 @@ export default () => (
       footprint="sot23"
       channelType="p"
       mosfetMode="enhancement"
-      pcbRotation={180}
+      pcbRotation={0}
       pcbX={7.62}
       pcbY={7.62}
     />
-    <trace from={sel.Q1.drain} to={sel.net.V3_3} />
+    <netlabel
+      net="V3_3"
+      schX={0.305}
+      schY={1}
+      connection="Q1.pin1"
+      anchorSide="bottom"
+    />
     <netlabel
       net="V3_3_SW"
       schX={0.9}
@@ -164,9 +176,14 @@ export default () => (
       schX={9}
       schY={-1}
       schRotation={90}
-      connections={{
-        pin1: sel.net.SDA,
-      }}
+    />
+
+    <netlabel
+      net="SDA"
+      schX={9}
+      schY={-2}
+      connection="R2.pin1"
+      anchorSide="left"
     />
 
     <resistor
@@ -177,10 +194,15 @@ export default () => (
       pcbY={8.382}
       schX={11}
       schY={-1}
+      pcbRotation={180}
       schRotation={90}
-      connections={{
-        pin1: sel.net.SCL,
-      }}
+    />
+    <netlabel
+      net="SCL"
+      schX={11}
+      schY={-2}
+      connection="R5.pin1"
+      anchorSide="left"
     />
 
     <schematictext
@@ -203,7 +225,7 @@ export default () => (
         pin3: sel.net.SDA,
         pin4: sel.net.SCL,
         pin5: sel.net().DISABLE,
-        pin6: sel.net.INT,
+        pin6: sel.net.N_INT,
       }}
     />
     <netlabel
@@ -236,7 +258,7 @@ export default () => (
       pcbY={8.89}
       schX={3}
       schY={-6}
-      pcbRotation="-90deg"
+      pcbRotation="90deg"
       pinLabels={jumperPinLabels}
       connections={{
         SDA: sel.net.SDA,
@@ -303,7 +325,7 @@ export default () => (
       resistance="4.7k"
       footprint="0402"
       name="R3"
-      pcbRotation={90}
+      pcbRotation={-90}
       pcbX={19.796}
       pcbY={8.89}
       schX={12}
@@ -324,7 +346,7 @@ export default () => (
       name="D1"
       footprint="0603"
       color="red"
-      pcbRotation={90}
+      pcbRotation={-90}
       pcbX={17.399}
       pcbY={8.89}
       schX={12}
@@ -343,10 +365,15 @@ export default () => (
       schRotation={-90}
       connections={{
         pin1: sel.D1.cathode,
-        pin2: sel.net.GND,
       }}
     />
-
+    <netlabel
+      net="GND"
+      schX={12}
+      schY={-9.8}
+      connection="LED.pin2"
+      anchorSide="top"
+    />
     <schematictext
       text="INT Pullup"
       schX={15}
