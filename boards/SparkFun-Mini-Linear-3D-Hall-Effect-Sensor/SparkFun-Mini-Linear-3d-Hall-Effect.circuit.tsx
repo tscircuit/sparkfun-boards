@@ -222,6 +222,8 @@ export default () => (
       schY={-6}
       pcbRotation="0deg"
       connections={{
+        pin1: sel.net.GND,
+        pin2: sel.net.V3_3,
         pin3: sel.net.SDA,
         pin4: sel.net.SCL,
         pin5: sel.net().DISABLE,
@@ -261,6 +263,8 @@ export default () => (
       pcbRotation="90deg"
       pinLabels={jumperPinLabels}
       connections={{
+        pin1: sel.net.GND,
+        pin2: sel.net.V3_3,
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
       }}
@@ -293,6 +297,8 @@ export default () => (
       pcbRotation="-90deg"
       pinLabels={jumperPinLabels}
       connections={{
+        pin1: sel.net.GND,
+        pin2: sel.net.V3_3,
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
       }}
@@ -365,6 +371,7 @@ export default () => (
       schRotation={-90}
       connections={{
         pin1: sel.D1.cathode,
+        pin2: sel.net.GND,
       }}
     />
     <netlabel
@@ -393,6 +400,7 @@ export default () => (
       pinCount={2}
       schRotation={-90}
       connections={{
+        pin1: sel.net().V3_3_SW,
         pin2: sel.R4.pin2,
       }}
     />
