@@ -8,7 +8,7 @@ const jumperPinLabels = {
   pin4: "SCL",
 }
 
-export const TMAG5273HallEffect = () => (
+export default () => (
   <board>
     <schematictext
       text="Power-On Reset"
@@ -113,10 +113,22 @@ export const TMAG5273HallEffect = () => (
       pcbY={6.477}
       schX={7}
       schRotation="-90deg"
-      connections={{
-        pin1: sel.net().V3_3_SW,
-        pin2: sel.net.GND,
-      }}
+    />
+
+    <netlabel
+      net="V3_3_SW"
+      schX={7}
+      schY={1}
+      connection="C1.pin1"
+      anchorSide="bottom"
+    />
+
+    <netlabel
+      net="GND"
+      schX={7}
+      schY={-1}
+      connection="C1.pin2"
+      anchorSide="top"
     />
 
     <schematictext
@@ -129,7 +141,7 @@ export const TMAG5273HallEffect = () => (
     />
     <solderjumper
       name="I2C"
-      footprint="solderjumper3_briged123"
+      footprint="solderjumper3_bridged123"
       bridgedPins={[["1", "2", "3"]]}
       pcbX={14.605}
       pcbY={1.81}
@@ -232,7 +244,7 @@ export const TMAG5273HallEffect = () => (
       }}
     />
     <hole diameter="3.302mm" pcbX={2.54} pcbY={0.54} />
-    <hole diameter="3.302mm"  pcbX={22.86} pcbY={0.54} />
+    <hole diameter="3.302mm" pcbX={22.86} pcbY={0.54} />
 
     <netlabel
       net="GND"
@@ -299,8 +311,14 @@ export const TMAG5273HallEffect = () => (
       schRotation={90}
       connections={{
         pin1: sel.D1.anode,
-        pin2: sel.net().V3_3_SW,
       }}
+    />
+    <netlabel
+      net="V3_3_SW"
+      schX={12}
+      schY={-5}
+      connection="R3.pin2"
+      anchorSide="bottom"
     />
     <led
       name="D1"
@@ -310,12 +328,12 @@ export const TMAG5273HallEffect = () => (
       pcbX={17.399}
       pcbY={8.89}
       schX={12}
-      schY={-7.5}
+      schY={-7.3}
       schRotation={-90}
     />
     <solderjumper
       name="LED"
-      footprint="solderjumper2_briged12"
+      footprint="solderjumper2_bridged12"
       bridgedPins={[["1", "2"]]}
       pcbX={15.621}
       pcbY={5.223}
@@ -339,7 +357,7 @@ export const TMAG5273HallEffect = () => (
     />
     <solderjumper
       name="INT_JP"
-      footprint="solderjumper2_briged12"
+      footprint="solderjumper2_bridged12"
       bridgedPins={[["1", "2"]]}
       pcbX={6.35}
       pcbY={1.556}
@@ -348,9 +366,15 @@ export const TMAG5273HallEffect = () => (
       pinCount={2}
       schRotation={-90}
       connections={{
-        pin1: sel.net().V3_3_SW,
         pin2: sel.R4.pin2,
       }}
+    />
+    <netlabel
+      net="V3_3_SW"
+      schX={14.7}
+      schY={-5}
+      connection="INT_JP.pin1"
+      anchorSide="bottom"
     />
     <resistor
       resistance="10k"
@@ -371,5 +395,3 @@ export const TMAG5273HallEffect = () => (
     />
   </board>
 )
-
-export default TMAG5273HallEffect
