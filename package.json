@@ -9,8 +9,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@tscircuit/cli": "^0.1.145",
-		"@tscircuit/props": "^0.0.242",
+		"@tscircuit/cli": "^0.1.147",
+		"@tscircuit/props": "^0.0.243",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
