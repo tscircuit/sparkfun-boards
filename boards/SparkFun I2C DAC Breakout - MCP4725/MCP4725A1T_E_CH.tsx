@@ -37,7 +37,7 @@ export const MCP4725A1T_E_CH = (props: ChipProps<typeof pinLabels>) => {
           />
           <smtpad
             portHints={["pin1"]}
-            pcbX="0.3500099999999975mm"
+            pcbX="1.3500099999999975mm"
             pcbY="-0.9499600000000328mm"
             width="1.0999978mm"
             height="0.5999987999999999mm"
