@@ -192,4 +192,158 @@
     L 278.08671328719515,249.986013985964
     L 257.370629371132,249.986013985964
     Z
-  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="258.88111888161995" y="245.4545454545" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">GND</text><rect class="component-overlay" x="859.5896958040962" y="196.12031748252133" width="7.7739650349572" height="17.184415384598225" fill="transparent"/><path d="M 863.4152664334631 196.12031748252133 L 859.5896958040962 204.13726993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 863.5380902096866 196.12449650350032 L 867.3636608390534 204.14146993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 863.459536363533 196.33185734266098 L 863.459536363533 213.30473286711955" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="863.271862237659" y="193.6615258741322" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="ideographic" font-size="7.55244755244px">VCCIO</text><rect class="component-overlay" x="901.5477377620962" y="196.12031748252133" width="7.7739650349572" height="17.184415384598225" fill="transparent"/><path d="M 905.3733083914631 196.12031748252133 L 901.5477377620962 204.13726993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 905.4961321676866 196.12449650350032 L 909.3217027970534 204.14146993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 905.4175783215329 196.33185734266098 L 905.4175783215329 213.30473286711955" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="905.229904195659" y="193.6615258741322" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="ideographic" font-size="7.55244755244px">VCCIO</text><rect class="component-overlay" x="518.1832174827593" y="344.0612223774783" width="18.852641958023014" height="20.28375104893081" fill="transparent"/><path d="M 527.7980622379945 344.0612223774783 L 527.7980622379945 357.89199440543655" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 518.1832174827593 357.89061818166033 L 537.0358594407824 357.89061818166033" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 520.5397993009389 361.11779580403476 L 534.679277622603 361.11779580403476" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 525.2529587414936 364.3449734264091 L 529.9661181820483 364.3449734264091" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="526.8944874128206" y="369.2595566431874" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" font-size="7.55244755244px">GND</text><rect class="component-overlay" x="523.9024258743619" y="280.0398167831367" width="7.7739650349572" height="17.184415384598253" fill="transparent"/><path d="M 527.7279965037288 280.0398167831367 L 523.9024258743619 288.05676923068114" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 527.8508202799524 280.0439958041157 L 531.6763909093191 288.06096923068117" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 527.7722664337987 280.2513566432764 L 527.7722664337987 297.22423216773495" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="527.5845923079247" y="277.5810251747476" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="ideographic" font-size="7.55244755244px">VCC</text><rect class="component-overlay" x="392.3090916087593" y="344.0612223774783" width="18.85264195802307" height="20.28375104893081" fill="transparent"/><path d="M 401.9239363639944 344.0612223774783 L 401.9239363639944 357.89199440543655" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 392.3090916087593 357.89061818166033 L 411.16173356678235 357.89061818166033" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 394.6656734269387 361.11779580403476 L 408.80515174860284 361.11779580403476" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 399.3788328674935 364.3449734264091 L 404.0919923080482 364.3449734264091" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="401.02036153882045" y="369.2595566431874" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" font-size="7.55244755244px">GND</text><rect class="component-overlay" x="455.24615454575934" y="341.629963636222" width="18.85264195802307" height="20.28375104893081" fill="transparent"/><path d="M 464.8609993009945 341.629963636222 L 464.8609993009945 355.4607356641802" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 455.24615454575934 355.459359440404 L 474.0987965037824 355.459359440404" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 457.6027363639388 358.6865370627784 L 471.7422146856029 358.6865370627784" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 462.31589580449355 361.9137146851528 L 467.02905524504826 361.9137146851528" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="463.9574244758205" y="366.8282979019311" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" font-size="7.55244755244px">GND</text><text x="569.7902097904" y="27.2727272729" fill="#000000" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="12.587412587400001px" transform="rotate(0, 569.7902097904, 27.2727272729)">Vcc = 2.7V to 5.5V</text><text x="548.8111888113999" y="551.7482517479" fill="#000000" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="12.587412587400001px" transform="rotate(0, 548.8111888113999, 551.7482517479)">GND = 1100000 (0x60) (Default)</text><text x="548.8111888113999" y="572.7272727269001" fill="#000000" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="12.587412587400001px" transform="rotate(0, 548.8111888113999, 572.7272727269001)">VCC - 1100001 (0x61)</text></svg>
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="258.88111888161995" y="245.4545454545" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">GND</text><rect class="component-overlay" x="859.5896958040962" y="196.12031748252133" width="7.7739650349572" height="17.184415384598225" fill="transparent"/><path d="M 863.4152664334631 196.12031748252133 L 859.5896958040962 204.13726993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 863.5380902096866 196.12449650350032 L 867.3636608390534 204.14146993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 863.459536363533 196.33185734266098 L 863.459536363533 213.30473286711955" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="863.271862237659" y="193.6615258741322" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="ideographic" font-size="7.55244755244px">VCCIO</text><rect class="component-overlay" x="901.5477377620962" y="196.12031748252133" width="7.7739650349572" height="17.184415384598225" fill="transparent"/><path d="M 905.3733083914631 196.12031748252133 L 901.5477377620962 204.13726993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 905.4961321676866 196.12449650350032 L 909.3217027970534 204.14146993006577" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 905.4175783215329 196.33185734266098 L 905.4175783215329 213.30473286711955" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="905.229904195659" y="193.6615258741322" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="ideographic" font-size="7.55244755244px">VCCIO</text><rect class="component-overlay" x="518.1832174827593" y="344.0612223774783" width="18.852641958023014" height="20.28375104893081" fill="transparent"/><path d="M 527.7980622379945 344.0612223774783 L 527.7980622379945 357.89199440543655" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 518.1832174827593 357.89061818166033 L 537.0358594407824 357.89061818166033" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 520.5397993009389 361.11779580403476 L 534.679277622603 361.11779580403476" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 525.2529587414936 364.3449734264091 L 529.9661181820483 364.3449734264091" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="526.8944874128206" y="369.2595566431874" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" font-size="7.55244755244px">GND</text><rect class="component-overlay" x="523.9024258743619" y="280.0398167831367" width="7.7739650349572" height="17.184415384598253" fill="transparent"/><path d="M 527.7279965037288 280.0398167831367 L 523.9024258743619 288.05676923068114" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 527.8508202799524 280.0439958041157 L 531.6763909093191 288.06096923068117" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 527.7722664337987 280.2513566432764 L 527.7722664337987 297.22423216773495" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="527.5845923079247" y="277.5810251747476" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="ideographic" font-size="7.55244755244px">VCC</text><rect class="component-overlay" x="392.3090916087593" y="344.0612223774783" width="18.85264195802307" height="20.28375104893081" fill="transparent"/><path d="M 401.9239363639944 344.0612223774783 L 401.9239363639944 357.89199440543655" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 392.3090916087593 357.89061818166033 L 411.16173356678235 357.89061818166033" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 394.6656734269387 361.11779580403476 L 408.80515174860284 361.11779580403476" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 399.3788328674935 364.3449734264091 L 404.0919923080482 364.3449734264091" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="401.02036153882045" y="369.2595566431874" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" font-size="7.55244755244px">GND</text><rect class="component-overlay" x="455.24615454575934" y="341.629963636222" width="18.85264195802307" height="20.28375104893081" fill="transparent"/><path d="M 464.8609993009945 341.629963636222 L 464.8609993009945 355.4607356641802" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 455.24615454575934 355.459359440404 L 474.0987965037824 355.459359440404" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 457.6027363639388 358.6865370627784 L 471.7422146856029 358.6865370627784" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><path d="M 462.31589580449355 361.9137146851528 L 467.02905524504826 361.9137146851528" stroke="rgb(132, 0, 0)" fill="none" stroke-width="0.8391608391600001px" stroke-linecap="round"/><text x="463.9574244758205" y="366.8282979019311" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="middle" dominant-baseline="hanging" font-size="7.55244755244px">GND</text><path class="net-label" d="
+    M 980.9790209788,77.62237762250001
+    L 978.713286713068,82.15384615396401
+    L 957.9972027970048,82.15384615396401
+    L 957.9972027970048,73.09090909103601
+    L 978.713286713068,73.09090909103601
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="77.62237762250001" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">GND</text><path class="net-label" d="
+    M 980.9790209788,86.0139860141
+    L 978.713286713068,90.545454545564
+    L 950.377622377432,90.545454545564
+    L 950.377622377432,81.482517482636
+    L 978.713286713068,81.482517482636
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="86.0139860141" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">TXLED</text><path class="net-label" d="
+    M 980.9790209788,94.40559440569999
+    L 978.713286713068,98.93706293716399
+    L 949.818181817992,98.93706293716399
+    L 949.818181817992,89.87412587423599
+    L 978.713286713068,89.87412587423599
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="94.40559440569999" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">RXLED</text><path class="net-label" d="
+    M 980.9790209788,102.7972027973
+    L 978.713286713068,107.328671328764
+    L 958.8363636361648,107.328671328764
+    L 958.8363636361648,98.265734265836
+    L 978.713286713068,98.265734265836
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="102.7972027973" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">VCC</text><path class="net-label" d="
+    M 980.9790209788,111.18881118889999
+    L 978.713286713068,115.72027972036399
+    L 956.9846153844184,115.72027972036399
+    L 956.9846153844184,106.65734265743599
+    L 978.713286713068,106.65734265743599
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="111.18881118889999" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">V3_3</text><path class="net-label" d="
+    M 980.9790209788,119.5804195805
+    L 978.713286713068,124.111888111964
+    L 959.3958041956048,124.111888111964
+    L 959.3958041956048,115.048951049036
+    L 978.713286713068,115.048951049036
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="119.5804195805" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">CTS</text><path class="net-label" d="
+    M 980.9790209788,127.9720279721
+    L 978.713286713068,132.503496503564
+    L 950.377622377432,132.50349650356398
+    L 950.377622377432,123.440559440636
+    L 978.713286713068,123.440559440636
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="127.9720279721" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">SLEEP</text><path class="net-label" d="
+    M 980.9790209788,136.36363636369998
+    L 978.713286713068,140.89510489516397
+    L 949.258741258552,140.89510489516397
+    L 949.258741258552,131.83216783223597
+    L 978.713286713068,131.832167832236
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="136.36363636369998" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">TXDEN</text><path class="net-label" d="
+    M 980.9790209788,144.7552447553
+    L 978.713286713068,149.28671328676398
+    L 947.020979020792,149.28671328676398
+    L 947.020979020792,140.22377622383598
+    L 978.713286713068,140.223776223836
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="977.20279720258" y="144.7552447553" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">PWREN</text><path class="net-label" d="
+    M 989.3706293704,287.4125874125
+    L 987.104895104668,291.944055943964
+    L 967.7874125872048,291.944055943964
+    L 967.7874125872048,282.881118881036
+    L 987.104895104668,282.881118881036
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="287.4125874125" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">TXD</text><path class="net-label" d="
+    M 989.3706293704,295.8041958041
+    L 987.104895104668,300.335664335564
+    L 967.5076923074848,300.335664335564
+    L 967.5076923074848,291.272727272636
+    L 987.104895104668,291.272727272636
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="295.8041958041" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">DTR</text><path class="net-label" d="
+    M 989.3706293704,304.1958041957
+    L 987.104895104668,308.727272727164
+    L 967.7874125872048,308.727272727164
+    L 967.7874125872048,299.66433566423603
+    L 987.104895104668,299.66433566423603
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="304.1958041957" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">RTS</text><path class="net-label" d="
+    M 989.3706293704,312.58741258730004
+    L 987.104895104668,317.118881118764
+    L 959.048951048752,317.118881118764
+    L 959.048951048752,308.05594405583605
+    L 987.104895104668,308.05594405583605
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="312.58741258730004" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">VCCIO</text><path class="net-label" d="
+    M 989.3706293704,320.9790209789
+    L 987.104895104668,325.510489510364
+    L 967.2279720277648,325.510489510364
+    L 967.2279720277648,316.447552447436
+    L 987.104895104668,316.447552447436
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="320.9790209789" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">RXD</text><path class="net-label" d="
+    M 989.3706293704,329.3706293705
+    L 987.104895104668,333.902097901964
+    L 974.9538461536313,333.902097901964
+    L 974.9538461536313,324.839160839036
+    L 987.104895104668,324.839160839036
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="329.3706293705" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">RI</text><path class="net-label" d="
+    M 989.3706293704,337.7622377621
+    L 987.104895104668,342.293706293564
+    L 966.3888111886048,342.293706293564
+    L 966.3888111886048,333.23076923063604
+    L 987.104895104668,333.23076923063604
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="337.7622377621" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">GND</text><path class="net-label" d="
+    M 989.3706293704,346.1538461537
+    L 987.104895104668,350.685314685164
+    L 967.2279720277648,350.685314685164
+    L 967.2279720277648,341.622377622236
+    L 987.104895104668,341.622377622236
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="346.1538461537" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">DSR</text><path class="net-label" d="
+    M 989.3706293704,354.5454545453
+    L 987.104895104668,359.076923076764
+    L 966.9482517480449,359.076923076764
+    L 966.9482517480449,350.013986013836
+    L 987.104895104668,350.013986013836
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="985.59440559418" y="354.5454545453" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">DCD</text><path class="net-label" d="
+    M 691.4685314686,434.2657342655
+    L 689.2027972028679,438.797202796964
+    L 669.3258741259648,438.797202796964
+    L 669.3258741259648,429.734265734036
+    L 689.2027972028679,429.734265734036
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="687.6923076923799" y="434.2657342655" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">VCC</text><path class="net-label" d="
+    M 691.4685314686,442.6573426571
+    L 689.2027972028679,447.188811188564
+    L 669.8853146854048,447.188811188564
+    L 669.8853146854048,438.125874125636
+    L 689.2027972028679,438.125874125636
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="687.6923076923799" y="442.6573426571" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">TXD</text><path class="net-label" d="
+    M 691.4685314686,451.0489510487
+    L 689.2027972028679,455.580419580164
+    L 669.3258741259648,455.580419580164
+    L 669.3258741259648,446.51748251723603
+    L 689.2027972028679,446.51748251723603
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="687.6923076923799" y="451.0489510487" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">RXD</text><path class="net-label" d="
+    M 691.4685314686,459.44055944030004
+    L 689.2027972028679,463.972027971764
+    L 668.4867132868047,463.972027971764
+    L 668.4867132868047,454.90909090883605
+    L 689.2027972028679,454.90909090883605
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="0.8391608391600001px"/><text class="net-label-text" x="687.6923076923799" y="459.44055944030004" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="7.55244755244px" transform="">GND</text><text x="569.7902097904" y="27.2727272729" fill="#000000" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="12.587412587400001px" transform="rotate(0, 569.7902097904, 27.2727272729)">Vcc = 2.7V to 5.5V</text><text x="548.8111888113999" y="551.7482517479" fill="#000000" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="12.587412587400001px" transform="rotate(0, 548.8111888113999, 551.7482517479)">GND = 1100000 (0x60) (Default)</text><text x="548.8111888113999" y="572.7272727269001" fill="#000000" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="12.587412587400001px" transform="rotate(0, 548.8111888113999, 572.7272727269001)">VCC - 1100001 (0x61)</text></svg>
