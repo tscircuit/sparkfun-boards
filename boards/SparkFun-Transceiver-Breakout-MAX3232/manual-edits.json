@@ -1,0 +1,76 @@
+{
+  "schematic_placements": [
+    {
+      "selector": "C3",
+      "center": {
+        "x": 3.222932829316051,
+        "y": -0.0699928011199446
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C4",
+      "center": {
+        "x": 4.858215611076838,
+        "y": -0.08761307191111588
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C5",
+      "center": {
+        "x": 6.5316692066021895,
+        "y": -0.12252009320153101
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C1",
+      "center": {
+        "x": -3.645565119599389,
+        "y": 1.6503007569657449
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C2",
+      "center": {
+        "x": -3.6510850948923,
+        "y": 0.34171343586209596
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "U1",
+      "center": {
+        "x": -0.2656876855150062,
+        "y": 0.11116670120117994
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP2",
+      "center": {
+        "x": -5.251382887662739,
+        "y": -0.12671722069586633
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "U2",
+      "center": {
+        "x": -5.366476109644001,
+        "y": -0.049604875271816805
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "U",
+      "center": {
+        "x": -5.398828088467096,
+        "y": 0.022348057042324232
+      },
+      "relative_to": "group_center"
+    }
+  ]
+}
