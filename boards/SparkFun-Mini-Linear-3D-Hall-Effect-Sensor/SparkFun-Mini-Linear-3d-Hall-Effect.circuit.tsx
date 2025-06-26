@@ -1,5 +1,6 @@
 import { sel } from "@tscircuit/core"
 import { TMAG5273 } from "./TMAG5273"
+import { JumperFootprint } from "./jumper-footprint"
 
 const jumperPinLabels = {
   pin1: "GND",
@@ -9,7 +10,7 @@ const jumperPinLabels = {
 }
 
 export default () => (
-  <board autorouter="auto-cloud">
+  <board width="25.4mm" height="12.7mm" autorouter="auto-cloud">
     <schematictext
       text="Power-On Reset"
       schX={-1}
@@ -22,8 +23,8 @@ export default () => (
       resistance="10k"
       footprint="0603"
       name="R7"
-      pcbX={7.239}
-      pcbY={10.16}
+      pcbX={-5.461}
+      pcbY={3.81}
       schX={-0.8}
       schY={-1}
       schRotation={90}
@@ -45,8 +46,8 @@ export default () => (
       channelType="p"
       mosfetMode="enhancement"
       pcbRotation={180}
-      pcbX={7.62}
-      pcbY={7.62}
+      pcbX={-5.08}
+      pcbY={1.27}
     />
     <netlabel
       net="V3_3"
@@ -81,8 +82,8 @@ export default () => (
     <TMAG5273
       name="U1"
       layer="bottom"
-      pcbX={12.522}
-      pcbY={7.925}
+      pcbX={-0.1778}
+      pcbY={1.5748}
       schX={4}
       pcbRotation={180}
       schPinArrangement={{
@@ -122,8 +123,8 @@ export default () => (
       name="C1"
       capacitance="100nF"
       footprint="0603"
-      pcbX={12.7}
-      pcbY={6.477}
+      pcbX={0}
+      pcbY={0.127}
       schX={7}
       schRotation="-90deg"
     />
@@ -159,8 +160,8 @@ export default () => (
         ["1", "2"],
         ["2", "3"],
       ]}
-      pcbX={14.605}
-      pcbY={1.81}
+      pcbX={1.905}
+      pcbY={-2.54}
       schX={10}
       pinCount={3}
       schRotation="180deg"
@@ -175,8 +176,8 @@ export default () => (
       resistance="2.2k"
       footprint="0603"
       name="R2"
-      pcbX={13.97}
-      pcbY={10.5}
+      pcbX={1.27}
+      pcbY={3.937}
       schX={9}
       schY={-1}
       schRotation={90}
@@ -194,8 +195,8 @@ export default () => (
       resistance="2.2k"
       footprint="0603"
       name="R5"
-      pcbX={13.97}
-      pcbY={8.382}
+      pcbX={1.27}
+      pcbY={2.032}
       schX={11}
       schY={-1}
       pcbRotation={180}
@@ -217,11 +218,20 @@ export default () => (
       anchor="center"
       fontSize={0.3}
     />
-    <jumper
+    <pinheader
       name="J3"
+      pinCount={6}
       footprint="pinrow6__p2.54_id1.016_od1.88_nosquareplating"
-      pcbX={12.5}
-      pcbY={-1.27}
+      gender="female"
+      pitch="2.54mm"
+      schPinArrangement={{
+        rightSide: {
+          direction: "bottom-to-top",
+          pins: ["pin1", "pin2", "pin3", "pin4", "pin5", "pin6"],
+        },
+      }}
+      pcbX={0}
+      pcbY={-5.08}
       schX={-2}
       schY={-6}
       pcbRotation="0deg"
@@ -259,60 +269,9 @@ export default () => (
     />
     <jumper
       name="J1"
-      footprint={
-        <footprint name="jstsh4_ra_1mm">
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="-0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin4"]}
-            pcbX="1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC2"]}
-            pcbX="-2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC1"]}
-            pcbX="2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-        </footprint>
-      }
-      pcbX={2.699}
-      pcbY={8.89}
+      footprint={<JumperFootprint />}
+      pcbX={-8.001}
+      pcbY={2.54}
       schX={3}
       schY={-6}
       pcbRotation={-90}
@@ -324,8 +283,8 @@ export default () => (
         SCL: sel.net.SCL,
       }}
     />
-    <hole diameter="3.302mm" pcbX={2.54} pcbY={0.54} />
-    <hole diameter="3.302mm" pcbX={22.86} pcbY={0.54} />
+    <hole diameter="3.302mm" pcbX={10.16} pcbY={-3.81} />
+    <hole diameter="3.302mm" pcbX={-10.16} pcbY={-3.81} />
 
     <netlabel
       net="GND"
@@ -344,60 +303,9 @@ export default () => (
 
     <jumper
       name="J2"
-      footprint={
-        <footprint name="jstsh4_ra_1mm">
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="-0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin4"]}
-            pcbX="1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC2"]}
-            pcbX="-2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC1"]}
-            pcbX="2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-        </footprint>
-      }
-      pcbX={22.701}
-      pcbY={8.89}
+      footprint={<JumperFootprint />}
+      pcbX={8.001}
+      pcbY={2.54}
       schX={7}
       schY={-6}
       pcbRotation={90}
@@ -438,8 +346,8 @@ export default () => (
       footprint="0603"
       name="R3"
       pcbRotation={-90}
-      pcbX={19.796}
-      pcbY={8.89}
+      pcbX={6.096}
+      pcbY={2.54}
       schX={12}
       schY={-6}
       schRotation={90}
@@ -459,8 +367,8 @@ export default () => (
       footprint="0603"
       color="red"
       pcbRotation={-90}
-      pcbX={17.399}
-      pcbY={8.89}
+      pcbX={4.699}
+      pcbY={2.54}
       schX={12}
       schY={-7.3}
       schRotation={-90}
@@ -469,8 +377,8 @@ export default () => (
       name="LED"
       footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
       bridgedPins={[["1", "2"]]}
-      pcbX={15.621}
-      pcbY={5.223}
+      pcbX={2.921}
+      pcbY={-0.127}
       schX={12}
       schY={-8.8}
       pinCount={2}
@@ -499,8 +407,8 @@ export default () => (
       name="INT_JP"
       footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
       bridgedPins={[["1", "2"]]}
-      pcbX={6.35}
-      pcbY={1.556}
+      pcbX={-6.35}
+      pcbY={-2.794}
       schX={14.7}
       schY={-6}
       pinCount={2}
@@ -521,8 +429,8 @@ export default () => (
       resistance="10k"
       footprint="0603"
       name="R4"
-      pcbX={11.2}
-      pcbY={2.572}
+      pcbX={-1.651}
+      pcbY={-1.778}
       schX={14.7}
       schY={-7.5}
       schRotation={90}
