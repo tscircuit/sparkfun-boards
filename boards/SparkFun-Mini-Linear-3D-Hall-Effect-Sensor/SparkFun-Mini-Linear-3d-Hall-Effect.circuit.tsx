@@ -9,7 +9,7 @@ const jumperPinLabels = {
 }
 
 export default () => (
-  <board>
+  <board autorouter="auto-cloud">
     <schematictext
       text="Power-On Reset"
       schX={-1}
@@ -44,7 +44,7 @@ export default () => (
       footprint="sot23_3"
       channelType="p"
       mosfetMode="enhancement"
-      pcbRotation={0}
+      pcbRotation={180}
       pcbX={7.62}
       pcbY={7.62}
     />
@@ -526,6 +526,9 @@ export default () => (
       schX={14.7}
       schY={-7.5}
       schRotation={90}
+      connections={{
+        pin1: sel.net.N_INT,
+      }}
     />
     <netlabel
       net="INT"
