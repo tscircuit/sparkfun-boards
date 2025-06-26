@@ -318,8 +318,8 @@ export default () => (
       pcbRotation={-90}
       pinLabels={jumperPinLabels}
       connections={{
-        pin1: sel.net.GND,
-        pin2: sel.net.V3_3,
+        GND: sel.net.GND,
+        VCC: sel.net.V3_3,
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
       }}
@@ -403,8 +403,8 @@ export default () => (
       pcbRotation={90}
       pinLabels={jumperPinLabels}
       connections={{
-        pin1: sel.net.GND,
-        pin2: sel.net.V3_3,
+        GND: sel.net.GND,
+        VCC: sel.net.V3_3,
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
       }}
