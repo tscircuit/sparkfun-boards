@@ -21,9 +21,27 @@ const selectors = {
     "TXD" | "DTR" | "RTS" | "VCCIO" | "RXD" | "RI" | "GND" | "DSR" | "DCD"
   >("JP2"),
   JP3: sel<"VCC" | "TXD" | "RXD" | "GND">("JP3"),
+  net: sel.net<
+    | "TXD"
+    | "DTR"
+    | "RTS"
+    | "VCCIO"
+    | "RXD"
+    | "RI"
+    | "GND"
+    | "DSR"
+    | "DCD"
+    | "GND"
+    | "TXLED"
+    | "RXLED"
+    | "VCC"
+    | "V3_3"
+    | "CTS"
+    | "SLEEP"
+    | "TXDEN"
+    | "PWREN"
+  >(),
 }
-
-const net = sel.net
 
 const USBToSerialBreakout = () => (
   <board width="18mm" height="35mm" autorouter="auto-cloud">
@@ -64,9 +82,7 @@ const USBToSerialBreakout = () => (
       pcbRotation={180}
       schX={-12.5}
       schY={0.1}
-      connections={{
-        GND: "net.GND",
-      }}
+      connections={{ GND: "net.GND" }}
     />
 
     <fuse
@@ -79,6 +95,9 @@ const USBToSerialBreakout = () => (
       pcbRotation={90}
       schY={0.5}
       schX={-9}
+      connections={{
+        pin1: selectors.USBC.VCC,
+      }}
     />
 
     <resistor
@@ -169,13 +188,6 @@ const USBToSerialBreakout = () => (
 
     <jumper
       name="JP1"
-      footprint="pinrow9_nosquareplating"
-      pcbY={0}
-      pcbX={8}
-      pcbRotation={90}
-      schDirection="left"
-      schX={7}
-      schY={3}
       pinLabels={{
         pin1: "GND",
         pin2: "TXLED",
@@ -186,6 +198,24 @@ const USBToSerialBreakout = () => (
         pin7: "SLEEP",
         pin8: "TXDEN",
         pin9: "PWREN",
+      }}
+      footprint="pinrow9_nosquareplating"
+      pcbY={0}
+      pcbX={8}
+      pcbRotation={90}
+      schDirection="left"
+      schX={7}
+      schY={3}
+      connections={{
+        pin1: selectors.net.GND,
+        pin2: selectors.net.TXLED,
+        pin3: selectors.net.RXLED,
+        pin4: selectors.net.VCC,
+        pin5: selectors.net.V3_3,
+        pin6: selectors.net.CTS,
+        pin7: selectors.net.SLEEP,
+        pin8: selectors.net.TXDEN,
+        pin9: selectors.net.PWREN,
       }}
     />
 
@@ -199,18 +229,28 @@ const USBToSerialBreakout = () => (
       schX={7}
       schY={-2}
       pinLabels={{
-        pin1: "TXD",
-        pin2: "DTR",
-        pin3: "RTS",
-        pin4: "VCCIO",
-        pin5: "RXD",
-        pin6: "RI",
-        pin7: "GND",
-        pin8: "DSR",
-        pin9: "DCD",
+        pin1: ["TXD"],
+        pin2: ["DTR"],
+        pin3: ["RTS"],
+        pin4: ["VCCIO"],
+        pin5: ["RXD"],
+        pin6: ["RI"],
+        pin7: ["GND"],
+        pin8: ["DSR"],
+        pin9: ["DCD"],
+      }}
+      connections={{
+        TXD: selectors.net.TXD,
+        DTR: selectors.net.DTR,
+        RTS: selectors.net.RTS,
+        VCCIO: selectors.net.VCCIO,
+        RXD: selectors.net.RXD,
+        RI: selectors.net.RI,
+        GND: selectors.net.GND,
+        DSR: selectors.net.DSR,
+        DCD: selectors.net.DCD,
       }}
     />
-
     <jumper
       name="JP3"
       footprint="pinrow4"
@@ -226,21 +266,15 @@ const USBToSerialBreakout = () => (
         pin3: "RXD",
         pin4: "GND",
       }}
-    />
-
-    <MST22D18G2_125
-      name="SW3"
-      schX={-5}
-      schY={-6}
-      pcbY={5}
       connections={{
-        pin1: "net.VCCIO",
-        pin2: "net.V3_3",
-        pin3: "net.VCC",
+        VCC: selectors.net.VCC,
+        TXD: selectors.net.TXD,
+        RXD: selectors.net.RXD,
+        GND: selectors.net.GND,
       }}
     />
+    <MST22D18G2_125 name="SW3" schX={-5} schY={-6} pcbY={5} />
 
-    {/* Text annotations */}
     <schematictext
       fontSize={0.3}
       text="Vcc = 2.7V to 5.5V"
@@ -262,38 +296,7 @@ const USBToSerialBreakout = () => (
       schY={-8}
       anchor="center_left"
     />
-
-    <trace from={selectors.JP1.GND} to="net.GND" />
-    <trace from={selectors.JP1.TXLED} to="net.TXLED" />
-    <trace from={selectors.JP1.RXLED} to="net.RXLED" />
-    <trace from={selectors.JP1.VCC} to="net.VCC" />
-    <trace from={selectors.JP1.V3_3} to="net.V3_3" />
-    <trace from={selectors.JP1.CTS} to="net.CTS" />
-    <trace from={selectors.JP1.SLEEP} to="net.SLEEP" />
-    <trace from={selectors.JP1.TXDEN} to="net.TXDEN" />
-    <trace from={selectors.JP1.PWREN} to="net.PWREN" />
-
-    <trace from={selectors.JP2.TXD} to="net.TXD" />
-    <trace from={selectors.JP2.DTR} to="net.DTR" />
-    <trace from={selectors.JP2.RTS} to="net.RTS" />
-    <trace from={selectors.JP2.VCCIO} to="net.VCCIO" />
-    <trace from={selectors.JP2.RXD} to="net.RXD" />
-    <trace from={selectors.JP2.RI} to="net.RI" />
-    <trace from={selectors.JP2.GND} to="net.GND" />
-    <trace from={selectors.JP2.DSR} to="net.DSR" />
-    <trace from={selectors.JP2.DCD} to="net.DCD" />
-
-    <trace from={selectors.JP3.VCC} to="net.VCC" />
-    <trace from={selectors.JP3.TXD} to="net.TXD" />
-    <trace from={selectors.JP3.RXD} to="net.RXD" />
-    <trace from={selectors.JP3.GND} to="net.GND" />
-    <trace from={sel.SW3.pin1} to="net.VCCIO" />
-    <trace from={sel.SW3.pin2} to="net.V3_3" />
-    <trace from={sel.SW3.pin3} to="net.VCC" />
-
-    <trace from={sel.R2.pin1} to={sel.LED2.pin1} />
-    <trace from={sel.R1.pin1} to={sel.LED1.pin1} />
-    <trace from={sel.F1.pin1} to={sel.USBC.VCC} />
   </board>
 )
+
 export default USBToSerialBreakout

@@ -17,6 +17,11 @@ export const MST22D18G2_125 = (props: ChipProps<typeof pinLabels>) => {
       supplierPartNumbers={{
         jlcpcb: ["C2906280"],
       }}
+      connections={{
+        pin1: "net.VCCIO",
+        pin2: "net.V3_3",
+        pin3: "net.VCC",
+      }}
       manufacturerPartNumber="MST22D18G2_125"
       footprint={
         <footprint>
