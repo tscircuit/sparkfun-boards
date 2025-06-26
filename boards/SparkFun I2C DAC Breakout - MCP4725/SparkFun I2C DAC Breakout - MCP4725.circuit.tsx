@@ -50,7 +50,7 @@ const I2CDACBREAKOUT = () => (
       pcbY={-3.81}
       pcbX={1.905}
       footprint="0603"
-      schY={-2.647}
+      schY={-2.6}
       schX={0}
       connections={{
         pin1: sel.net.GND,
@@ -83,8 +83,8 @@ const I2CDACBREAKOUT = () => (
       pcbX={-6.35}
       pcbY={5.08}
       pcbRotation={90}
-      schY={0.2}
-      schX={-3}
+      schY={0.1}
+      schX={-3.2}
       connections={{
         pin1: sel.net.GND,
       }}
@@ -200,7 +200,7 @@ const I2CDACBREAKOUT = () => (
       pcbY="-5.245"
       pcbRotation={90}
       schY={-2.5}
-      schX={2}
+      schX={1.8}
       schRotation={180}
       connections={{
         pin1: sel.net.VCC,
