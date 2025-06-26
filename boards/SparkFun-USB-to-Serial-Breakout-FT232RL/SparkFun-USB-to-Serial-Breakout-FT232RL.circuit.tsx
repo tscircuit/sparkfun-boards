@@ -274,7 +274,27 @@ const USBToSerialBreakout = () => (
       }}
     />
     <MST22D18G2_125 name="SW3" schX={-5} schY={-6} pcbY={5} />
-
+    <netlabel
+      schX={-4.62}
+      schY={-6.07}
+      anchorSide="left"
+      net="VCC"
+      connectsTo={[sel.SW3.pin3]}
+    />
+    <netlabel
+      schX={-4.62}
+      schY={-5.83}
+      anchorSide="left"
+      net="V3_3"
+      connectsTo={[sel.SW3.pin2]}
+    />
+    <netlabel
+      schX={-5.37}
+      schY={-5.98}
+      anchorSide="right"
+      net="VCCIO"
+      connectsTo={[sel.SW3.pin1]}
+    />
     <schematictext
       fontSize={0.3}
       text="Vcc = 2.7V to 5.5V"
