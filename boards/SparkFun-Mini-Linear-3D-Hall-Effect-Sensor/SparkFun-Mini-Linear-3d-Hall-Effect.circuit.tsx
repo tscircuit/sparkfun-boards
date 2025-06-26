@@ -1,6 +1,6 @@
 import { sel } from "@tscircuit/core"
 import { TMAG5273 } from "./TMAG5273"
-import { JumperFootprint } from "./jumper-footprint"
+import { jstsh4_ra_1mm } from "./jumper-footprint"
 
 const jumperPinLabels = {
   pin1: "GND",
@@ -10,7 +10,7 @@ const jumperPinLabels = {
 }
 
 export default () => (
-  <board width="25.4mm" height="12.7mm" autorouter="auto-cloud">
+  <board width="25.4mm" height="12.7mm">
     <schematictext
       text="Power-On Reset"
       schX={-1}
@@ -269,7 +269,7 @@ export default () => (
     />
     <jumper
       name="J1"
-      footprint={<JumperFootprint />}
+      footprint={jstsh4_ra_1mm}
       pcbX={-8.001}
       pcbY={2.54}
       schX={3}
@@ -303,7 +303,7 @@ export default () => (
 
     <jumper
       name="J2"
-      footprint={<JumperFootprint />}
+      footprint={jstsh4_ra_1mm}
       pcbX={8.001}
       pcbY={2.54}
       schX={7}

@@ -1,4 +1,4 @@
-export const JumperFootprint = () => (
+export const jstsh4_ra_1mm = (
   <footprint name="jstsh4_ra_1mm">
     <smtpad
       portHints={["pin1"]}
