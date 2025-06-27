@@ -10,7 +10,7 @@ const jumperPinLabels = {
 }
 
 export default () => (
-  <board width="25.4mm" height="12.7mm">
+  <board width="25.4mm" height="12.7mm" autorouter="auto-cloud">
     <schematictext
       text="Power-On Reset"
       schX={-1}
@@ -97,7 +97,6 @@ export default () => (
         },
       }}
       connections={{
-        TEST: sel.U1.GND,
         GND: sel.net.GND,
         SCL: sel.net.SCL,
         SDA: sel.net.SDA,
@@ -115,8 +114,23 @@ export default () => (
       net="GND"
       schX={2.5}
       schY={-0.6}
-      connection="U1.pin2"
+      connectsTo={["U1.pin2", "U1.pin3"]}
       anchorSide="top"
+    />
+    <netlabel
+      net="N_INT"
+      schX={5.3}
+      schY={-0.2}
+      connection="U1.pin5"
+      anchorSide="left"
+    />
+    <netlabel net="SDA" schX={5.3} connection="U1.pin6" anchorSide="left" />
+    <netlabel
+      net="SCL"
+      schX={5.3}
+      schY={0.2}
+      connection="U1.pin1"
+      anchorSide="left"
     />
 
     <capacitor
@@ -253,12 +267,39 @@ export default () => (
     />
     <netlabel
       net="V3_3"
-      schX={-0.4}
-      schY={-4.6}
+      schX={-1}
+      schY={-5}
       connection="J3.pin2"
       anchorSide="bottom"
     />
-
+    <netlabel
+      net="SDA"
+      schX={-0.6}
+      schY={-6.1}
+      connection="J3.pin3"
+      anchorSide="left"
+    />
+    <netlabel
+      net="SCL"
+      schX={-0.6}
+      schY={-5.9}
+      connection="J3.pin4"
+      anchorSide="left"
+    />
+    <netlabel
+      net="DISABLE"
+      schX={-0.6}
+      schY={-5.7}
+      connection="J3.pin5"
+      anchorSide="left"
+    />
+    <netlabel
+      net="N_INT"
+      schX={-0.6}
+      schY={-5.5}
+      connection="J3.pin6"
+      anchorSide="left"
+    />
     <schematictext
       text="Qwiic Connectors"
       schX={5}
@@ -288,17 +329,31 @@ export default () => (
 
     <netlabel
       net="GND"
-      schX={5}
+      schX={4.8}
       schY={-6.5}
       connection="J1.pin1"
       anchorSide="top"
     />
     <netlabel
       net="V3_3"
-      schX={5}
+      schX={4.8}
       schY={-5}
       connection="J1.pin2"
       anchorSide="bottom"
+    />
+    <netlabel
+      net="SDA"
+      schX={5.2}
+      schY={-5.9}
+      connection="J1.pin3"
+      anchorSide="left"
+    />
+    <netlabel
+      net="SCL"
+      schX={5.2}
+      schY={-5.7}
+      connection="J1.pin4"
+      anchorSide="left"
     />
 
     <jumper
@@ -320,17 +375,31 @@ export default () => (
 
     <netlabel
       net="GND"
-      schX={9}
+      schX={8.8}
       schY={-6.5}
       connection="J2.pin1"
       anchorSide="top"
     />
     <netlabel
       net="V3_3"
-      schX={9}
+      schX={8.8}
       schY={-5}
       connection="J2.pin2"
       anchorSide="bottom"
+    />
+    <netlabel
+      net="SDA"
+      schX={9.2}
+      schY={-5.9}
+      connection="J2.pin3"
+      anchorSide="left"
+    />
+    <netlabel
+      net="SCL"
+      schX={9.2}
+      schY={-5.7}
+      connection="J2.pin4"
+      anchorSide="left"
     />
 
     <schematictext
