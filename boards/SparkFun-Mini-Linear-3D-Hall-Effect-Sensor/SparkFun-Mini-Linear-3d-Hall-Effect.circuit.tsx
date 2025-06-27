@@ -1,6 +1,6 @@
 import { sel } from "@tscircuit/core"
 import { TMAG5273 } from "./TMAG5273"
-import { jstsh4_ra_1mm } from "./jumper-footprint"
+import { jstsh4_vert_1mm } from "./jumper-footprint"
 
 const jumperPinLabels = {
   pin1: "GND",
@@ -42,7 +42,7 @@ export default () => (
 
     <mosfet
       name="Q1"
-      footprint="sot23_3"
+      footprint="sot23"
       channelType="p"
       mosfetMode="enhancement"
       pcbRotation={180}
@@ -199,7 +199,7 @@ export default () => (
 
     <netlabel
       net="SDA"
-      schX={9}
+      schX={9.4}
       schY={-2}
       connection="R2.pin1"
       anchorSide="left"
@@ -218,7 +218,7 @@ export default () => (
     />
     <netlabel
       net="SCL"
-      schX={11}
+      schX={11.4}
       schY={-2}
       connection="R5.pin1"
       anchorSide="left"
@@ -310,12 +310,12 @@ export default () => (
     />
     <jumper
       name="J1"
-      footprint={jstsh4_ra_1mm}
+      footprint={jstsh4_vert_1mm}
       pcbX={-8.001}
       pcbY={2.54}
       schX={3}
       schY={-6}
-      pcbRotation={-90}
+      pcbRotation={90}
       pinLabels={jumperPinLabels}
       connections={{
         GND: sel.net.GND,
@@ -358,12 +358,12 @@ export default () => (
 
     <jumper
       name="J2"
-      footprint={jstsh4_ra_1mm}
+      footprint={jstsh4_vert_1mm}
       pcbX={8.001}
       pcbY={2.54}
       schX={7}
       schY={-6}
-      pcbRotation={90}
+      pcbRotation={270}
       pinLabels={jumperPinLabels}
       connections={{
         GND: sel.net.GND,
@@ -509,7 +509,7 @@ export default () => (
     />
     <netlabel
       net="INT"
-      schX={14.7}
+      schX={15}
       schY={-9}
       connection="R4.pin1"
       anchorSide="left"

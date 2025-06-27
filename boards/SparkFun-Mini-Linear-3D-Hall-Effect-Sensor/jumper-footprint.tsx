@@ -1,51 +1,51 @@
-export const jstsh4_ra_1mm = (
-  <footprint name="jstsh4_ra_1mm">
+export const jstsh4_vert_1mm = (
+  <footprint name="jstsh4_vert_1mm">
     <smtpad
       portHints={["pin1"]}
       pcbX="-1.5mm"
-      pcbY="0mm"
+      pcbY="0.775mm"
       width="0.6mm"
-      height="1.35mm"
+      height="1.55mm"
       shape="rect"
     />
     <smtpad
       portHints={["pin2"]}
       pcbX="-0.5mm"
-      pcbY="0mm"
+      pcbY="0.775mm"
       width="0.6mm"
-      height="1.35mm"
+      height="1.55mm"
       shape="rect"
     />
     <smtpad
       portHints={["pin3"]}
       pcbX="0.5mm"
-      pcbY="0mm"
+      pcbY="0.775mm"
       width="0.6mm"
-      height="1.35mm"
+      height="1.55mm"
       shape="rect"
     />
     <smtpad
       portHints={["pin4"]}
       pcbX="1.5mm"
-      pcbY="0mm"
+      pcbY="0.775mm"
       width="0.6mm"
-      height="1.35mm"
+      height="1.55mm"
       shape="rect"
     />
     <smtpad
       portHints={["NC2"]}
       pcbX="-2.8mm"
-      pcbY="-3.675mm"
+      pcbY="3.2mm"
       width="1.2mm"
-      height="2.0mm"
+      height="2mm"
       shape="rect"
     />
     <smtpad
       portHints={["NC1"]}
       pcbX="2.8mm"
-      pcbY="-3.675mm"
+      pcbY="3.2mm"
       width="1.2mm"
-      height="2.0mm"
+      height="2mm"
       shape="rect"
     />
   </footprint>
