@@ -3,10 +3,11 @@ import { sel } from "@tscircuit/core"
 // https://tscircuit.com/MustafaMulla29/HMC6343_Breakout#files
 
 const HMC6343Breakout = () => (
-  <board>
+  <board width="20.32mm" height="20.32mm">
     <HMC6343
       name="U1"
       schWidth="1.4mm"
+      pcbY={1.27}
       connections={{
         VDD1: sel.net.V3_3,
         VDD2: sel.net.V3_3,
@@ -40,17 +41,16 @@ const HMC6343Breakout = () => (
         },
       }}
     />
-
-    <hole diameter="3.2mm" pcbX={-11.5} pcbY={10} />
-    <hole diameter="3.2mm" pcbX={11.5} pcbY={-4} />
+    <hole diameter="3.2mm" pcbX={-7.62} pcbY={-7.62} />
+    <hole diameter="3.2mm" pcbX={7.62} pcbY={7.62} />
 
     <resistor
       name="R1"
       resistance="10k"
-      footprint="0402"
-      pcbX={7}
-      pcbY={2}
-      pcbRotation="90deg"
+      footprint="0603"
+      pcbX={-2.54}
+      pcbY={8.89}
+      pcbRotation="180deg"
       schX={2}
       schY={1.5}
       schRotation="90deg"
@@ -63,10 +63,10 @@ const HMC6343Breakout = () => (
     <resistor
       name="R2"
       resistance="10k"
-      footprint="0402"
-      pcbX={9.5}
-      pcbY={2}
-      pcbRotation="90deg"
+      footprint="0603"
+      pcbX={-2.54}
+      pcbY={7.62}
+      pcbRotation="180deg"
       schX={3}
       schY={1.5}
       schRotation="90deg"
@@ -78,12 +78,13 @@ const HMC6343Breakout = () => (
 
     <solderjumper
       name="SJ1"
-      footprint="solderjumper3"
-      pcbX={7.5}
-      pcbY={7}
+      footprint="solderjumper3_p0.8128_pw0.635_ph1.270"
+      pcbX={-6.35}
+      pcbY={7.62}
       schX={2.5}
       schY={3}
       pinCount={3}
+      pcbRotation="90deg"
       schRotation="180deg"
     />
 
@@ -92,9 +93,11 @@ const HMC6343Breakout = () => (
     <capacitor
       name="C1"
       capacitance="100nF"
-      footprint="0402"
-      pcbY={8}
+      footprint="0603"
+      pcbX={-6.985}
+      pcbY={1.27}
       schX={-4.5}
+      pcbRotation={270}
       schRotation="-90deg"
       connections={{
         pin1: sel.net.V3_3,
@@ -105,10 +108,12 @@ const HMC6343Breakout = () => (
     <capacitor
       name="C2"
       capacitance="100nF"
-      footprint="0402"
-      pcbY={10.5}
+      footprint="0603"
+      pcbX={-8.89}
+      pcbY={1.27}
       schX={-3.5}
       schRotation="90deg"
+      pcbRotation={270}
       connections={{
         pin1: sel.net.GND,
         pin2: sel.net.V3_3,
@@ -117,11 +122,10 @@ const HMC6343Breakout = () => (
 
     <jumper
       name="JP1"
-      footprint="pinrow4"
-      pcbX={-12}
-      pcbY={0}
+      footprint="pinrow4__p2.54_id1.016_od1.8796"
+      pcbX={2.54}
+      pcbY={-8.89}
       schX={-6.5}
-      pcbRotation="-90deg"
     />
 
     <trace from={sel.JP1.pin4} to={sel.net.SCL} />
