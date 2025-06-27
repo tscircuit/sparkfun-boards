@@ -9,14 +9,14 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@tscircuit/cli": "^0.1.149",
-		"@tscircuit/props": "^0.0.245",
+		"@tscircuit/cli": "^0.1.150",
+		"@tscircuit/props": "^0.0.246",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.508"
+		"tscircuit": "^0.0.511"
 	}
 }
