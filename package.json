@@ -8,15 +8,15 @@
 		"format:check": "biome format ."
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@tscircuit/cli": "^0.1.149",
-		"@tscircuit/props": "^0.0.245",
-		"@types/bun": "latest"
+		"@biomejs/biome": "^2.0.6",
+		"@tscircuit/cli": "^0.1.150",
+		"@tscircuit/props": "^0.0.246",
+		"@types/bun": "^1.2.17"
 	},
 	"peerDependencies": {
-		"typescript": "^5"
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.508"
+		"tscircuit": "^0.0.511"
 	}
 }
