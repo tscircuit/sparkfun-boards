@@ -6,7 +6,7 @@
 	"scripts": {
 		"format": "biome format --write .",
 		"format:check": "biome format .",
-		"build": "tsci build --ignore-errors ",
+		"tsci-build": "tsci build",
 		"snapshot": "tsci snapshot",
 		"snapshot:update": "tsci snapshot --update"
 	},
