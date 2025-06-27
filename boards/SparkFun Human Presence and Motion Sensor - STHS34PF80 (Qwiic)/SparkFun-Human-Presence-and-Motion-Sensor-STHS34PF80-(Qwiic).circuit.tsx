@@ -1,4 +1,5 @@
 import { STHS34PF80 } from "./STHS34PF80"
+import { jstsh4_ra_1mm } from "./jumperFootprint"
 import { sel } from "@tscircuit/core"
 
 const MotionSensor = () => (
@@ -259,58 +260,7 @@ const MotionSensor = () => (
 
     <jumper
       name="J2"
-      footprint={
-        <footprint name="jstsh4_ra_1mm">
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="-0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin4"]}
-            pcbX="1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC2"]}
-            pcbX="-2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC1"]}
-            pcbX="2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-        </footprint>
-      }
+      footprint={jstsh4_ra_1mm}
       schX={3.5}
       schY={-5}
       pinLabels={{ 1: "GND", 2: "VCC", 3: "SDA", 4: "SCL" }}
@@ -348,58 +298,7 @@ const MotionSensor = () => (
 
     <jumper
       name="J1"
-      footprint={
-        <footprint name="jstsh4_ra_1mm">
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="-0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="0.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin4"]}
-            pcbX="1.5mm"
-            pcbY="0mm"
-            width="0.6mm"
-            height="1.35mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC2"]}
-            pcbX="-2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["NC1"]}
-            pcbX="2.8mm"
-            pcbY="-3.675mm"
-            width="1.2mm"
-            height="2.0mm"
-            shape="rect"
-          />
-        </footprint>
-      }
+      footprint={jstsh4_ra_1mm}
       schX={0}
       schY={-5}
       pinLabels={{ 1: "GND", 2: "VCC", 3: "SDA", 4: "SCL" }}
