@@ -1,5 +1,5 @@
 import { STHS34PF80 } from "./STHS34PF80"
-import { jstsh4_ra_1mm } from "./jumperFootprint"
+import { JST04_1MM_RA } from "./jumperFootprint"
 import { sel } from "@tscircuit/core"
 
 const MotionSensor = () => (
@@ -260,7 +260,7 @@ const MotionSensor = () => (
 
     <jumper
       name="J2"
-      footprint={jstsh4_ra_1mm}
+      footprint={JST04_1MM_RA}
       schX={3.5}
       schY={-5}
       pinLabels={{ 1: "GND", 2: "VCC", 3: "SDA", 4: "SCL" }}
@@ -298,7 +298,7 @@ const MotionSensor = () => (
 
     <jumper
       name="J1"
-      footprint={jstsh4_ra_1mm}
+      footprint={JST04_1MM_RA}
       schX={0}
       schY={-5}
       pinLabels={{ 1: "GND", 2: "VCC", 3: "SDA", 4: "SCL" }}

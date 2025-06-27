@@ -1,5 +1,5 @@
-export const jstsh4_ra_1mm = (
-  <footprint name="jstsh4_ra_1mm">
+export const JST04_1MM_RA = (
+  <footprint name="JST04_1MM_RA">
     <smtpad
       portHints={["pin1"]}
       pcbX="-1.5mm"
