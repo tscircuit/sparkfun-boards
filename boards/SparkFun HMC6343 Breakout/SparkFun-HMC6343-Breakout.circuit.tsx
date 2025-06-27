@@ -122,7 +122,7 @@ const HMC6343Breakout = () => (
 
     <jumper
       name="JP1"
-      footprint="pinrow4"
+      footprint="pinrow4__p2.54_id1.016_od1.8796"
       pcbX={2.54}
       pcbY={-8.89}
       schX={-6.5}
