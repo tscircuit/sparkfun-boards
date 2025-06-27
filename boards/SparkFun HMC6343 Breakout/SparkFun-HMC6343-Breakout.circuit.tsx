@@ -78,7 +78,34 @@ const HMC6343Breakout = () => (
 
     <solderjumper
       name="SJ1"
-      footprint="solderjumper3_p0.8128_pw0.635_ph1.270"
+      footprint={
+        <footprint name="sj3_paste123">
+          <smtpad
+            portHints={["1"]}
+            pcbX="-0.813mm"
+            pcbY="0.000mm"
+            width="0.635mm"
+            height="1.270mm"
+            shape="rect"
+          />
+          <smtpad
+            portHints={["2"]}
+            pcbX="0.000mm"
+            pcbY="0.000mm"
+            width="0.635mm"
+            height="1.270mm"
+            shape="rect"
+          />
+          <smtpad
+            portHints={["3"]}
+            pcbX="0.813mm"
+            pcbY="0.000mm"
+            width="0.635mm"
+            height="1.270mm"
+            shape="rect"
+          />
+        </footprint>
+      }
       pcbX={-6.35}
       pcbY={7.62}
       schX={2.5}
@@ -123,7 +150,7 @@ const HMC6343Breakout = () => (
     <jumper
       name="JP1"
       footprint="pinrow4__p2.54_id1.016_od1.8796"
-      pcbX={2.54}
+      pcbX={0}
       pcbY={-8.89}
       schX={-6.5}
     />
