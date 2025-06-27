@@ -5,7 +5,10 @@
 	"private": true,
 	"scripts": {
 		"format": "biome format --write .",
-		"format:check": "biome format ."
+		"format:check": "biome format .",
+		"build": "tsci build --ignore-errors ",
+		"snapshot": "tsci snapshot",
+		"snapshot:update": "tsci snapshot --update"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
