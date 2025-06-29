@@ -223,7 +223,6 @@ export default () => (
       schRotation={90}
       connections={{
         pin1: sel.net.SCL,
-        pin2: ".I2C > .pin2",
       }}
     />
     <netlabel
@@ -452,7 +451,6 @@ export default () => (
       schRotation={-90}
       connections={{
         anode: sel.R3.pin1,
-        cathode: ".LED > .pin1",
       }}
     />
     <solderjumper
@@ -518,7 +516,6 @@ export default () => (
       schRotation={90}
       connections={{
         pin1: sel.net.N_INT,
-        pin2: ".INT_JP > ,pin2",
       }}
     />
     <netlabel
