@@ -196,7 +196,7 @@ export default () => (
     />
     <solderjumper
       name="I2C"
-      footprint="solderjumper3_bridged123_p1.041_pw0.660_ph1.270"
+      footprint="solderjumper3_bridged123_p1.0414_pw0.6604_ph1.27"
       bridgedPins={[
         ["1", "2"],
         ["2", "3"],
@@ -482,7 +482,7 @@ export default () => (
     />
     <solderjumper
       name="LED"
-      footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
+      footprint="solderjumper2_bridged12_p1.0414_pw0.6604_ph1.27"
       bridgedPins={[["1", "2"]]}
       pcbX={2.921}
       pcbY={-0.127}
@@ -512,7 +512,7 @@ export default () => (
     />
     <solderjumper
       name="INT_JP"
-      footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
+      footprint="solderjumper2_bridged12_p1.0414_pw0.6604_ph1.27"
       bridgedPins={[["1", "2"]]}
       pcbX={-6.35}
       pcbY={-2.794}
