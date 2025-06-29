@@ -1,6 +1,7 @@
 import { sel } from "@tscircuit/core"
 import { TMAG5273 } from "./TMAG5273"
 import { jstsh4_vert_1mm } from "./jumper-footprint"
+import { mosfetFootprint } from "./mosfet-footprint"
 // https://tscircuit.com/editor?package_id=36d67d71-5fbc-4b05-9926-5751550fd569&file_path=index.tsx
 
 const jumperPinLabels = {
@@ -43,34 +44,7 @@ export default () => (
 
     <mosfet
       name="Q1"
-      footprint={
-        <footprint name="q1_footprint">
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-0.95mm"
-            pcbY="-1mm"
-            width="0.8mm"
-            height="0.9mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="0.95mm"
-            pcbY="-1mm"
-            width="0.8mm"
-            height="0.9mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="0mm"
-            pcbY="1.1mm"
-            width="0.8mm"
-            height="0.9mm"
-            shape="rect"
-          />
-        </footprint>
-      }
+      footprint={mosfetFootprint}
       channelType="p"
       mosfetMode="enhancement"
       pcbRotation={270}
