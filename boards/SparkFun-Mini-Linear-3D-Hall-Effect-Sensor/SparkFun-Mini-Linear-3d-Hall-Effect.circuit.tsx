@@ -42,10 +42,37 @@ export default () => (
 
     <mosfet
       name="Q1"
-      footprint="sot23"
+      footprint={
+        <footprint name="q1_footprint">
+          <smtpad
+            portHints={["pin1"]}
+            pcbX="-0.95mm"
+            pcbY="-1mm"
+            width="0.8mm"
+            height="0.9mm"
+            shape="rect"
+          />
+          <smtpad
+            portHints={["pin2"]}
+            pcbX="0.95mm"
+            pcbY="-1mm"
+            width="0.8mm"
+            height="0.9mm"
+            shape="rect"
+          />
+          <smtpad
+            portHints={["pin3"]}
+            pcbX="0mm"
+            pcbY="1.1mm"
+            width="0.8mm"
+            height="0.9mm"
+            shape="rect"
+          />
+        </footprint>
+      }
       channelType="p"
       mosfetMode="enhancement"
-      pcbRotation={180}
+      pcbRotation={270}
       pcbX={-5.08}
       pcbY={1.27}
     />
