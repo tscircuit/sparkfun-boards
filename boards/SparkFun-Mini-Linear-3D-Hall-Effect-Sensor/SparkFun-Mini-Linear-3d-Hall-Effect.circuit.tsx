@@ -82,8 +82,8 @@ export default () => (
     <TMAG5273
       name="U1"
       layer="bottom"
-      pcbX={-0.1778}
-      pcbY={1.5748}
+      pcbX={-0.178}
+      pcbY={1.5725}
       schX={4}
       pcbRotation={180}
       schPinArrangement={{
@@ -195,6 +195,10 @@ export default () => (
       schX={9}
       schY={-1}
       schRotation={90}
+      connections={{
+        pin1: sel.net.SDA,
+        pin2: ".I2C > .pin3",
+      }}
     />
 
     <netlabel
@@ -215,6 +219,10 @@ export default () => (
       schY={-1}
       pcbRotation={180}
       schRotation={90}
+      connections={{
+        pin1: sel.net.SCL,
+        pin2: ".I2C > .pin2",
+      }}
     />
     <netlabel
       net="SCL"
@@ -372,7 +380,6 @@ export default () => (
         SCL: sel.net.SCL,
       }}
     />
-
     <netlabel
       net="GND"
       schX={8.8}
@@ -414,7 +421,7 @@ export default () => (
       resistance="4.7k"
       footprint="0603"
       name="R3"
-      pcbRotation={-90}
+      pcbRotation={270}
       pcbX={6.096}
       pcbY={2.54}
       schX={12}
@@ -435,12 +442,16 @@ export default () => (
       name="D1"
       footprint="0603"
       color="red"
-      pcbRotation={-90}
+      pcbRotation={270}
       pcbX={4.699}
       pcbY={2.54}
       schX={12}
-      schY={-7.3}
+      schY={-8}
       schRotation={-90}
+      connections={{
+        anode: sel.R3.pin1,
+        cathode: ".LED > .pin1",
+      }}
     />
     <solderjumper
       name="LED"
@@ -449,7 +460,7 @@ export default () => (
       pcbX={2.921}
       pcbY={-0.127}
       schX={12}
-      schY={-8.8}
+      schY={-9.5}
       pinCount={2}
       schRotation={-90}
       connections={{
@@ -460,7 +471,7 @@ export default () => (
     <netlabel
       net="GND"
       schX={12}
-      schY={-9.8}
+      schY={-10.5}
       connection="LED.pin2"
       anchorSide="top"
     />
@@ -501,16 +512,17 @@ export default () => (
       pcbX={-1.651}
       pcbY={-1.778}
       schX={14.7}
-      schY={-7.5}
+      schY={-8}
       schRotation={90}
       connections={{
         pin1: sel.net.N_INT,
+        pin2: ".INT_JP > ,pin2",
       }}
     />
     <netlabel
       net="INT"
       schX={15}
-      schY={-9}
+      schY={-9.5}
       connection="R4.pin1"
       anchorSide="left"
     />
