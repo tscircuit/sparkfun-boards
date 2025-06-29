@@ -1,6 +1,7 @@
 import { sel } from "@tscircuit/core"
 import { TMAG5273 } from "./TMAG5273"
 import { jstsh4_vert_1mm } from "./jumper-footprint"
+// https://tscircuit.com/editor?package_id=36d67d71-5fbc-4b05-9926-5751550fd569&file_path=index.tsx
 
 const jumperPinLabels = {
   pin1: "GND",
