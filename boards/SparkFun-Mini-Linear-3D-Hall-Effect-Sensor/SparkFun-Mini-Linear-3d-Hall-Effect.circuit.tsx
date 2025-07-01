@@ -16,7 +16,7 @@ export default () => (
     <schematictext
       text="Power-On Reset"
       schX={-1}
-      schY={2}
+      schY={2.5}
       color="brown"
       anchor="center"
       fontSize={0.3}
@@ -76,10 +76,34 @@ export default () => (
     <schematictext
       text="Hall-Effect Sensor - TMAG5273"
       schX={4.5}
-      schY={2}
+      schY={2.5}
       color="brown"
       anchor="center"
       fontSize={0.3}
+    />
+    <schematictext
+      text="Input voltage ange:"
+      schX={4.5}
+      schY={2}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
+    />
+    <schematictext
+      text="1.7V - 3.6V"
+      schX={4.5}
+      schY={1.7}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
+    />
+    <schematictext
+      text="7 - bit unshifted I2C Address: 0x22"
+      schX={4.5}
+      schY={1.4}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
     />
     <TMAG5273
       name="U1"
@@ -164,10 +188,18 @@ export default () => (
     <schematictext
       text="I2C Pullup"
       schX={10}
-      schY={2}
+      schY={2.5}
       color="brown"
       anchor="center"
       fontSize={0.3}
+    />
+    <schematictext
+      text="Cut traces to disable I2C pullups"
+      schX={10}
+      schY={2}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
     />
     <solderjumper
       name="I2C"
@@ -199,7 +231,6 @@ export default () => (
       schRotation={90}
       connections={{
         pin1: sel.net.SDA,
-        pin2: ".I2C > .pin3",
       }}
     />
 
@@ -234,9 +265,9 @@ export default () => (
     />
 
     <schematictext
-      text="0.1 Header"
-      schX={-2}
-      schY={-4}
+      text='0.1" Header'
+      schX={-1.2}
+      schY={-3.5}
       color="brown"
       anchor="center"
       fontSize={0.3}
@@ -244,7 +275,7 @@ export default () => (
     <pinheader
       name="J3"
       pinCount={6}
-      footprint="pinrow6__p2.54_id1.016_od1.88_nosquareplating"
+      footprint="pinrow6_p2.54_id1.016_od1.88_nosquareplating"
       gender="female"
       pitch="2.54mm"
       schPinArrangement={{
@@ -311,18 +342,35 @@ export default () => (
     />
     <schematictext
       text="Qwiic Connectors"
-      schX={5}
-      schY={-4}
+      schX={6}
+      schY={-3.5}
       color="brown"
       anchor="center"
       fontSize={0.3}
     />
+    <schematictext
+      text="Vertical Qwiic Connector"
+      schX={4}
+      schY={-6.7}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
+    />
+    <schematictext
+      text="Vertical Qwiic Connector"
+      schX={7.5}
+      schY={-6.7}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
+    />
     <jumper
       name="J1"
       footprint={jstsh4_vert_1mm}
+      schWidth={0.6}
       pcbX={-8.001}
       pcbY={2.54}
-      schX={3}
+      schX={3.5}
       schY={-6}
       pcbRotation={90}
       pinLabels={jumperPinLabels}
@@ -338,28 +386,28 @@ export default () => (
 
     <netlabel
       net="GND"
-      schX={4.8}
+      schX={4.5}
       schY={-6.5}
       connection="J1.pin1"
       anchorSide="top"
     />
     <netlabel
       net="V3_3"
-      schX={4.8}
+      schX={4.5}
       schY={-5}
       connection="J1.pin2"
       anchorSide="bottom"
     />
     <netlabel
       net="SDA"
-      schX={5.2}
+      schX={4.9}
       schY={-5.9}
       connection="J1.pin3"
       anchorSide="left"
     />
     <netlabel
       net="SCL"
-      schX={5.2}
+      schX={4.9}
       schY={-5.7}
       connection="J1.pin4"
       anchorSide="left"
@@ -368,6 +416,7 @@ export default () => (
     <jumper
       name="J2"
       footprint={jstsh4_vert_1mm}
+      schWidth={0.6}
       pcbX={8.001}
       pcbY={2.54}
       schX={7}
@@ -383,28 +432,28 @@ export default () => (
     />
     <netlabel
       net="GND"
-      schX={8.8}
+      schX={8}
       schY={-6.5}
       connection="J2.pin1"
       anchorSide="top"
     />
     <netlabel
       net="V3_3"
-      schX={8.8}
+      schX={8}
       schY={-5}
       connection="J2.pin2"
       anchorSide="bottom"
     />
     <netlabel
       net="SDA"
-      schX={9.2}
+      schX={8.4}
       schY={-5.9}
       connection="J2.pin3"
       anchorSide="left"
     />
     <netlabel
       net="SCL"
-      schX={9.2}
+      schX={8.4}
       schY={-5.7}
       connection="J2.pin4"
       anchorSide="left"
@@ -413,10 +462,18 @@ export default () => (
     <schematictext
       text="Power LED"
       schX={12}
-      schY={-4}
+      schY={-3.5}
       color="brown"
       anchor="center"
       fontSize={0.3}
+    />
+    <schematictext
+      text="Cut trace to disable LED"
+      schX={12}
+      schY={-3.9}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
     />
     <resistor
       resistance="4.7k"
@@ -446,7 +503,7 @@ export default () => (
       pcbRotation={270}
       pcbX={4.699}
       pcbY={2.54}
-      schX={12}
+      schX={11.996}
       schY={-8}
       schRotation={-90}
       connections={{
@@ -478,10 +535,18 @@ export default () => (
     <schematictext
       text="INT Pullup"
       schX={15}
-      schY={-4}
+      schY={-3.5}
       color="brown"
       anchor="center"
       fontSize={0.3}
+    />
+    <schematictext
+      text="Cut trace to remove pullup"
+      schX={15}
+      schY={-3.9}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
     />
     <solderjumper
       name="INT_JP"
