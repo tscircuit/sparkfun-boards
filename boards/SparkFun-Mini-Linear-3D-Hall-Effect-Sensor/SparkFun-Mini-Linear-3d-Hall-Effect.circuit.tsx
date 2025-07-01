@@ -21,13 +21,29 @@ export default () => (
       anchor="center"
       fontSize={0.3}
     />
+    <schematictext
+      text="20V/4.2A/52mΩ/1.4W"
+      schX={0.6}
+      schY={0.7}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
+    />
+    <schematictext
+      text="Q1"
+      schX={-0.25}
+      schY={0.4}
+      color="gray"
+      anchor="center"
+      fontSize={0.2}
+    />
     <resistor
       resistance="10k"
       footprint="0603"
       name="R7"
       pcbX={-5.461}
       pcbY={3.81}
-      schX={-0.8}
+      schX={-2}
       schY={-1}
       schRotation={90}
       connections={{
@@ -36,7 +52,7 @@ export default () => (
     />
     <netlabel
       net="GND"
-      schX={-0.8}
+      schX={-2}
       schY={-1.8}
       connection="R7.pin1"
       anchorSide="top"
@@ -50,24 +66,25 @@ export default () => (
       pcbRotation={270}
       pcbX={-5.08}
       pcbY={1.27}
+      schX={-1}
     />
     <netlabel
       net="V3_3"
-      schX={0.305}
+      schX={-0.696}
       schY={1}
       connection="Q1.pin1"
       anchorSide="bottom"
     />
     <netlabel
       net="V3_3_SW"
-      schX={0.9}
+      schX={0}
       schY={-0.5}
       connection="Q1.pin2"
       anchorSide="bottom"
     />
     <netlabel
       net="DISABLE"
-      schX={-1.3}
+      schX={-2.5}
       schY={-0.1}
       connection="Q1.pin3"
       anchorSide="right"
