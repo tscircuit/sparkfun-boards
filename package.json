@@ -11,15 +11,15 @@
 		"snapshot:update": "tsci snapshot --update"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.0.6",
-		"@tscircuit/cli": "latest",
-		"@tscircuit/props": "^0.0.247",
+		"@biomejs/biome": "^1.9.4",
+		"@tscircuit/cli": "^0.1.154",
+		"@tscircuit/props": "^0.0.245",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
-		"typescript": "^5.8.3"
+		"typescript": "^5"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.514"
+		"tscircuit": "^0.0.508"
 	}
 }
