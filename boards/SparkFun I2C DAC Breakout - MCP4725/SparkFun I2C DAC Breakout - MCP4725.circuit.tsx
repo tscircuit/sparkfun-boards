@@ -175,6 +175,11 @@ const I2CDACBREAKOUT = () => (
     <solderjumper
       cadModel={null}
       name="SJ1"
+      pinLabels={{
+        pin1: "SDA_PU",
+        pin2: "VCC",
+        pin3: "SCL_PU"
+      }}
       pinCount={3}
       bridgedPins={[
         ["pin1", "pin2"],
@@ -194,6 +199,11 @@ const I2CDACBREAKOUT = () => (
     <solderjumper
       cadModel={null}
       name="SJ2"
+      pinLabels={{
+        pin1: "VCC",
+        pin2: "ADDR",
+        pin3: "GND"
+      }}
       pinCount={3}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       pcbX="0"

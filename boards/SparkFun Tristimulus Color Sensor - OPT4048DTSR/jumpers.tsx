@@ -7,6 +7,11 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
   <group schX={x} schY={y}>
     <solderjumper
       name="I2C_PU"
+      pinLabels={{
+        pin1: "SDA_PU",
+        pin2: "VCC",
+        pin3: "SCL_PU"
+      }}
       pinCount={3}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       schRotation={180}
@@ -74,6 +79,10 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
     <trace from=".D1 > .pin1  " to=".R4 > .pin1" />
     <solderjumper
       name="LED"
+      pinLabels={{
+        pin1: "LED_GND",
+        pin2: "NC"
+      }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       schRotation={90}

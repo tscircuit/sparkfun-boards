@@ -1,3 +1,8 @@
+interface DisplacementProps {
+  x?: number
+  y?: number
+}
+
 export default ({ x = 0, y = 0 }: DisplacementProps) => (
   <group name="addresses" schY={y} schX={x}>
     <resistor
@@ -13,6 +18,10 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
     <trace from=".R5 > .pin1" to=".OX45 > .pin1" />
     <solderjumper
       name="OX45"
+      pinLabels={{
+        pin1: "ADDR_1",
+        pin2: "VCC"
+      }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       schRotation={180}
@@ -21,6 +30,10 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
     />
     <solderjumper
       name="OX46"
+      pinLabels={{
+        pin1: "ADDR_2",
+        pin2: "SDA"
+      }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       schRotation={180}
@@ -30,6 +43,10 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
     <trace from=".OX46 > .pin1" to="net.SDA" />
     <solderjumper
       name="OX44"
+      pinLabels={{
+        pin1: "GND",
+        pin2: "ADDR_0"
+      }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       schRotation={180}
