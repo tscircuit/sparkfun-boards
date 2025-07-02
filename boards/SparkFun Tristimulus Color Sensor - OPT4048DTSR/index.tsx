@@ -1,4 +1,4 @@
-import manualEdits from "./manual-edits.json";
+import manualEdits from "./manual-edits.json"
 import Jumpers from "./jumpers"
 import Sensor from "./color-sensor"
 import Address from "./address"
@@ -13,9 +13,4 @@ export default () => (
   </board>
 )
 
-export {
-  Jumpers,
-  Sensor,
-  Address,
-  Connectors
-}
+export { Jumpers, Sensor, Address, Connectors }

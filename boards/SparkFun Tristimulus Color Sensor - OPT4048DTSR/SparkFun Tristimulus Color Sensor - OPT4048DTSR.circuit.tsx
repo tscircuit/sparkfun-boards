@@ -1,4 +1,4 @@
-import manualEdits from "./manual-edits.json";
+import manualEdits from "./manual-edits.json"
 import Jumpers from "./jumpers"
 import Sensor from "./color-sensor"
 import Address from "./address"
