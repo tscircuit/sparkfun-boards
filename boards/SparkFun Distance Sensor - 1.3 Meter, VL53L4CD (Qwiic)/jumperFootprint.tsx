@@ -1,0 +1,55 @@
+export const JST04_1MM_RA = (
+  <footprint name="JST04_1MM_RA">
+    {/* Signal pads, 1mm pitch */}
+    <smtpad
+      portHints={["pin1"]}
+      pcbX="-1.5mm"
+      pcbY="0mm"
+      width="0.6mm"
+      height="1.35mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["pin2"]}
+      pcbX="-0.5mm"
+      pcbY="0mm"
+      width="0.6mm"
+      height="1.35mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["pin3"]}
+      pcbX="0.5mm"
+      pcbY="0mm"
+      width="0.6mm"
+      height="1.35mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["pin4"]}
+      pcbX="1.5mm"
+      pcbY="0mm"
+      width="0.6mm"
+      height="1.35mm"
+      shape="rect"
+    />
+
+    {/* Mechanical anchor pads (NC1/NC2) */}
+    <smtpad
+      portHints={["NC2"]}
+      pcbX="-2.8mm"
+      pcbY="-3.675mm"
+      width="1.2mm"
+      height="2.0mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["NC1"]}
+      pcbX="2.8mm"
+      pcbY="-3.675mm"
+      width="1.2mm"
+      height="2.0mm"
+      shape="rect"
+    />
+  </footprint>
+)
