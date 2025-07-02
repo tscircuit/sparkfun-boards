@@ -106,7 +106,7 @@ const DistanceSensor = () => (
         pin1: "R1.pin2",
       }}
       pcbX="-4.699"
-      pcbY="0"
+      pcbY="-0.5207"
       pcbRotation="-90"
       layer="bottom"
     />
@@ -134,6 +134,7 @@ const DistanceSensor = () => (
       schX={4}
       schRotation={180}
       pcbY="5.08"
+      pcbX={1.0414}
     />
     <resistor
       resistance="2.2k"
@@ -265,7 +266,7 @@ const DistanceSensor = () => (
       connections={{
         pin2: sel.D1.pin2,
       }}
-      pcbX="-10.668"
+      pcbX="-10.1473"
       pcbY="-5.715"
     />
     <netlabel
