@@ -78,6 +78,11 @@ const HMC6343Breakout = () => (
 
     <solderjumper
       name="SJ1"
+      pinLabels={{
+        pin1: "SDA_PU",
+        pin2: "VCC",
+        pin3: "SCL_PU"
+      }}
       footprint={
         <footprint name="sj3_paste123">
           <smtpad
@@ -149,6 +154,12 @@ const HMC6343Breakout = () => (
 
     <jumper
       name="JP1"
+      pinLabels={{
+        pin1: "GND",
+        pin2: "VCC",
+        pin3: "SDA",
+        pin4: "SCL"
+      }}
       footprint="pinrow4__p2.54_id1.016_od1.8796"
       pcbX={0}
       pcbY={-8.89}

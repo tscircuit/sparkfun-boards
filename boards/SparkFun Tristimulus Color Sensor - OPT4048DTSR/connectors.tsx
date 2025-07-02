@@ -1,5 +1,9 @@
-import type { ChipProps } from "@tscircuit/props"
 import { sel } from "@tscircuit/core"
+
+interface DisplacementProps {
+  x?: number
+  y?: number
+}
 
 const pinLabelsJ2: Record<`pin${number}`, string> = {
   pin4: "SCL",

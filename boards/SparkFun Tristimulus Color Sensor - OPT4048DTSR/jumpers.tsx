@@ -1,3 +1,8 @@
+interface DisplacementProps {
+  x?: number
+  y?: number
+}
+
 export default ({ x = 0, y = 0 }: DisplacementProps) => (
   <group schX={x} schY={y}>
     <solderjumper
