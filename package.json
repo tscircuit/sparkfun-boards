@@ -12,7 +12,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@tscircuit/cli": "^0.1.154",
+		"@tscircuit/cli": "^0.1.155",
 		"@tscircuit/props": "^0.0.245",
 		"@types/bun": "latest"
 	},
