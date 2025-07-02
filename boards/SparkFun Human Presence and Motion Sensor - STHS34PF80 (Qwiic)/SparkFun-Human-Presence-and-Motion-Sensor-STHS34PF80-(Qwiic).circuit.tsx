@@ -62,11 +62,6 @@ const MotionSensor = () => (
     <net name="V3_3" />
     <solderjumper
       name="JP1"
-      pinLabels={{
-        pin1: "SDA_PU",
-        pin2: "VCC",
-        pin3: "SCL_PU"
-      }}
       pinCount={3}
       bridgedPins={[
         ["1", "2"],
@@ -161,10 +156,6 @@ const MotionSensor = () => (
     />
     <solderjumper
       name="JP3"
-      pinLabels={{
-        pin1: "GND",
-        pin2: "LED"
-      }}
       pinCount={2}
       footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
       bridgedPins={[["1", "2"]]}
@@ -195,10 +186,6 @@ const MotionSensor = () => (
     />
     <solderjumper
       name="JP2"
-      pinLabels={{
-        pin1: "INT_PU",
-        pin2: "VCC"
-      }}
       pinCount={2}
       footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
       bridgedPins={[["1", "2"]]}
@@ -239,10 +226,6 @@ const MotionSensor = () => (
     />
     <solderjumper
       name="JP4"
-      pinLabels={{
-        pin1: "CS_PU",
-        pin2: "VCC"
-      }}
       pinCount={2}
       footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
       bridgedPins={[["1", "2"]]}

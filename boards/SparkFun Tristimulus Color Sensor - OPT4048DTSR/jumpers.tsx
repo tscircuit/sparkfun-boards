@@ -10,7 +10,7 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
       pinLabels={{
         pin1: "SDA_PU",
         pin2: "VCC",
-        pin3: "SCL_PU"
+        pin3: "SCL_PU",
       }}
       pinCount={3}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
@@ -81,7 +81,7 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
       name="LED"
       pinLabels={{
         pin1: "LED_GND",
-        pin2: "NC"
+        pin2: "NC",
       }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"

@@ -20,7 +20,7 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
       name="OX45"
       pinLabels={{
         pin1: "ADDR_1",
-        pin2: "VCC"
+        pin2: "VCC",
       }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
@@ -32,7 +32,7 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
       name="OX46"
       pinLabels={{
         pin1: "ADDR_2",
-        pin2: "SDA"
+        pin2: "SDA",
       }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
@@ -45,7 +45,7 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
       name="OX44"
       pinLabels={{
         pin1: "GND",
-        pin2: "ADDR_0"
+        pin2: "ADDR_0",
       }}
       pinCount={2}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
