@@ -1,0 +1,132 @@
+{
+  "pcb_placements": [
+    {
+      "selector": "U1",
+      "center": {
+        "x": -4.271595397714835,
+        "y": 5.489940467407534
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "J3",
+      "center": {
+        "x": -9.7924038088105,
+        "y": -4.66635641732182
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R3",
+      "center": {
+        "x": -0.7428201996109323,
+        "y": 10.268075769661783
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "I2C_PU",
+      "center": {
+        "x": 4.313605873343384,
+        "y": 9.102196869514735
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C1",
+      "center": {
+        "x": -9.97045563897699,
+        "y": 5.3760595657787995
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R1",
+      "center": {
+        "x": 2.067744559807096,
+        "y": 6.097195496867082
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "J2",
+      "center": {
+        "x": 0.5832100040481549,
+        "y": -2.7569927464094697
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "J1",
+      "center": {
+        "x": 0.4241527302168393,
+        "y": -7.104558231132076
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "D1",
+      "center": {
+        "x": 10.237398247324702,
+        "y": 7.316634596240499
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R2",
+      "center": {
+        "x": 6.5213482270839265,
+        "y": 5.832100040481555
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R4",
+      "center": {
+        "x": 10.391741890312588,
+        "y": 10.550799164143909
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "LED",
+      "center": {
+        "x": 10.396455521156014,
+        "y": 3.97643184578288
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R5",
+      "center": {
+        "x": 11.080990076914958,
+        "y": -1.1134009168192094
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "OX45",
+      "center": {
+        "x": 8.063615504963398,
+        "y": -3.6052982068431447
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "OX46",
+      "center": {
+        "x": 8.010596413686283,
+        "y": -6.6804055009152385
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "OX44",
+      "center": {
+        "x": 8.01059641368629,
+        "y": -9.914570068818648
+      },
+      "relative_to": "group_center"
+    }
+  ]
+}
