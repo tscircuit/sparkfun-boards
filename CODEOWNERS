@@ -1,0 +1,23 @@
+# Code owners for SparkFun boards repository
+# Each board directory is owned by its original creator
+
+# SparkFun HMC6343 Breakout
+/boards/SparkFun\ HMC6343\ Breakout/ @MustafaMulla29
+
+# SparkFun Human Presence and Motion Sensor - STHS34PF80 (Qwiic)
+/boards/SparkFun\ Human\ Presence\ and\ Motion\ Sensor\ -\ STHS34PF80\ \(Qwiic\)/ @Anshgrover23
+
+# SparkFun I2C DAC Breakout - MCP4725
+/boards/SparkFun\ I2C\ DAC\ Breakout\ -\ MCP4725/ @shibosoftwaredev
+
+# SparkFun RFM69 Breakout (915MHz)
+/boards/SparkFun\ RFM69\ Breakout\ \(915MHz\)/ @Anshgrover23
+
+# SparkFun Mini Linear 3D Hall Effect Sensor
+/boards/SparkFun-Mini-Linear-3D-Hall-Effect-Sensor/ @MustafaMulla29
+
+# SparkFun Transceiver Breakout MAX3232
+/boards/SparkFun-Transceiver-Breakout-MAX3232/ @abdaslam13
+
+# SparkFun USB to Serial Breakout FT232RL
+/boards/SparkFun-USB-to-Serial-Breakout-FT232RL/ @techmannih
