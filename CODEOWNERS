@@ -1,4 +1,7 @@
 # Code owners for SparkFun boards repository
+
+* @ShiboSoftwareDev
+
 # Each board directory is owned by its original creator
 
 /boards/SparkFun-HMC6343-Breakout/ @MustafaMulla29
@@ -7,7 +10,7 @@
 /boards/SparkFun-Human-Presence-and-Motion-Sensor-STHS34PF80-Qwiic/ @Anshgrover23
 /boards/SparkFun-RFM69-Breakout-915MHz/ @Anshgrover23
 
-/boards/SparkFun-I2C-DAC-Breakout-MCP4725/ @shibosoftwaredev
+/boards/SparkFun-I2C-DAC-Breakout-MCP4725/ @ShiboSoftwareDev
 
 /boards/SparkFun-Transceiver-Breakout-MAX3232/ @abdaslam13
 
