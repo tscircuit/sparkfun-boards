@@ -3,6 +3,13 @@ import { VL53L5CX } from "./VL53L5CX"
 import { VL53L5CX_footprint, JST04_RA_1mm, footprint_0603 } from "./footprints"
 // https://tscircuit.com/MustafaMulla29/sparkfun-VL535CX
 
+const pinHeaderPinLabels = {
+  pin1: "GND",
+  pin2: "VCC",
+  pin3: "SDA",
+  pin4: "SCL",
+}
+
 export default () => (
   <board width="25.4mm" height="25.4mm" autorouter="auto-cloud">
     <schematictext
@@ -32,6 +39,13 @@ export default () => (
       }}
       schRotation="180deg"
     />
+    <silkscreentext
+      text="PSU"
+      layer="bottom"
+      pcbY={-5.95}
+      anchorAlignment="center"
+    />
+
     <schematictext
       text="PSU"
       schY={-0.6}
@@ -91,6 +105,8 @@ export default () => (
       connection="JP7.pin2"
       anchorSide="bottom"
     />
+    <silkscreentext text="LED" layer="bottom" pcbX={-10.2} pcbY={-6.3} />
+
     <schematictext
       text="PWR_LED"
       schY={0}
@@ -128,6 +144,8 @@ export default () => (
         cathode: sel.net.GND,
       }}
     />
+    <silkscreentext text="PWR" layer="top" pcbX={-10.16} pcbY={-7} />
+
     <netlabel
       net="GND"
       schX={2.5}
@@ -377,6 +395,8 @@ export default () => (
         pin1: sel.R1.pin2,
       }}
     />
+    <silkscreentext text="INT" layer="bottom" pcbX={-10.3} pcbY={7.5} />
+
     <netlabel
       net="VDDIO"
       schX={12.5}
@@ -525,10 +545,10 @@ export default () => (
       schX={0.6}
       schY={-13}
       connections={{
-        pin1: sel.net.GND,
-        pin2: sel.net.V3_3,
-        pin3: sel.net.SDA,
-        pin4: sel.net.SCL,
+        GND: sel.net.GND,
+        VCC: sel.net.V3_3,
+        SDA: sel.net.SDA,
+        SCL: sel.net.SCL,
       }}
     />
     <netlabel
@@ -563,7 +583,7 @@ export default () => (
     <pinheader
       name="J3"
       pinCount={4}
-      footprint="pinrow4_p2.54_id1.016_od1.8769_nosquareplating"
+      footprint="pinrow4_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       pinLabels={["GND", "VCC", "SDA", "SCL"]}
@@ -580,10 +600,10 @@ export default () => (
       schX={4.3}
       schY={-13}
       connections={{
-        pin1: sel.net.GND,
-        pin2: sel.net.V3_3,
-        pin3: sel.net.SDA,
-        pin4: sel.net.SCL,
+        GND: sel.net.GND,
+        VCC: sel.net.V3_3,
+        SDA: sel.net.SDA,
+        SCL: sel.net.SCL,
       }}
     />
     <netlabel
@@ -636,12 +656,14 @@ export default () => (
       schX={0.6}
       schY={-18}
       connections={{
-        pin1: sel.net.GND,
-        pin2: sel.net.V3_3,
-        pin3: sel.net.SDA,
-        pin4: sel.net.SCL,
+        GND: sel.net.GND,
+        VCC: sel.net.V3_3,
+        SDA: sel.net.SDA,
+        SCL: sel.net.SCL,
       }}
     />
+    <silkscreentext text="qwiic" layer="top" pcbX={10.3} pcbY={-4} />
+
     <netlabel
       net="GND"
       schX={-0.6}
@@ -673,16 +695,17 @@ export default () => (
     <pinheader
       name="J5"
       pinCount={1}
-      footprint="pinrow1_id1.016_od1.8769_nosquareplating"
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
+      pinLabels={["INT"]}
       pcbX={3.81}
       pcbY={-11.43}
       schX={4.3}
       schY={-17}
       connections={{
-        pin1: sel.net.INT,
+        INT: sel.net.INT,
       }}
     />
     <netlabel
@@ -696,17 +719,18 @@ export default () => (
     <pinheader
       name="J1"
       pinCount={1}
-      footprint="pinrow1_id1.016_od1.8769_nosquareplating"
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
       pcbX={2.54}
       pcbY={11.43}
+      pinLabels={["N_LP"]}
       pitch="2.54mm"
       schX={4.3}
       schY={-18}
       connections={{
-        pin1: sel.net().N_LP,
+        N_LP: sel.net().N_LP,
       }}
     />
     <netlabel
@@ -720,17 +744,18 @@ export default () => (
     <pinheader
       name="J6"
       pinCount={1}
-      footprint="pinrow1_id1.016_od1.8769_nosquareplating"
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
       pitch="2.54mm"
+      pinLabels={["RST"]}
       schX={4.3}
       schY={-19}
       pcbX={6.35}
       pcbY={-11.43}
       connections={{
-        pin1: sel.net().RST,
+        RST: sel.net().RST,
       }}
     />
     <netlabel
@@ -744,17 +769,18 @@ export default () => (
     <pinheader
       name="J7"
       pinCount={1}
-      footprint="pinrow1_id1.016_od1.8769_nosquareplating"
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
       pitch="2.54mm"
+      pinLabels={["VDDIO"]}
       pcbX={0}
       pcbY={11.43}
       schX={6.3}
       schY={-17}
       connections={{
-        pin1: sel.net().VDDIO,
+        VDDIO: sel.net().VDDIO,
       }}
     />
     <netlabel
@@ -768,17 +794,18 @@ export default () => (
     <pinheader
       name="J8"
       pinCount={1}
-      footprint="pinrow1_id1.016_od1.8769_nosquareplating"
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
       pitch="2.54mm"
+      pinLabels={["VDDA"]}
       pcbX={-2.54}
       pcbY={11.43}
       schX={6.3}
       schY={-18.4}
       connections={{
-        pin1: sel.net().VDDA,
+        VDDA: sel.net().VDDA,
       }}
     />
     <netlabel
