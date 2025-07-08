@@ -699,13 +699,12 @@ export default () => (
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
-      pinLabels={["INT"]}
       pcbX={3.81}
       pcbY={-11.43}
       schX={4.3}
       schY={-17}
       connections={{
-        INT: sel.net.INT,
+        pin1: sel.net.INT,
       }}
     />
     <netlabel
@@ -725,12 +724,11 @@ export default () => (
       schWidth={0.5}
       pcbX={2.54}
       pcbY={11.43}
-      pinLabels={["N_LP"]}
       pitch="2.54mm"
       schX={4.3}
       schY={-18}
       connections={{
-        N_LP: sel.net().N_LP,
+        pin1: sel.net().N_LP,
       }}
     />
     <netlabel
@@ -749,13 +747,12 @@ export default () => (
       schFacingDirection="left"
       schWidth={0.5}
       pitch="2.54mm"
-      pinLabels={["RST"]}
       schX={4.3}
       schY={-19}
       pcbX={6.35}
       pcbY={-11.43}
       connections={{
-        RST: sel.net().RST,
+        pin1: sel.net().RST,
       }}
     />
     <netlabel
@@ -774,13 +771,12 @@ export default () => (
       schFacingDirection="left"
       schWidth={0.5}
       pitch="2.54mm"
-      pinLabels={["VDDIO"]}
       pcbX={0}
       pcbY={11.43}
       schX={6.3}
       schY={-17}
       connections={{
-        VDDIO: sel.net().VDDIO,
+        pin1: sel.net().VDDIO,
       }}
     />
     <netlabel
@@ -799,13 +795,12 @@ export default () => (
       schFacingDirection="left"
       schWidth={0.5}
       pitch="2.54mm"
-      pinLabels={["VDDA"]}
       pcbX={-2.54}
       pcbY={11.43}
       schX={6.3}
       schY={-18.4}
       connections={{
-        VDDA: sel.net().VDDA,
+        pin1: sel.net().VDDA,
       }}
     />
     <netlabel
