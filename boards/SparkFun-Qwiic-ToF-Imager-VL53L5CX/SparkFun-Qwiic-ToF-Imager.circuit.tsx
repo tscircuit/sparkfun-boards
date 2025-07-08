@@ -3,13 +3,6 @@ import { VL53L5CX } from "./VL53L5CX"
 import { VL53L5CX_footprint, JST04_RA_1mm, footprint_0603 } from "./footprints"
 // https://tscircuit.com/MustafaMulla29/sparkfun-VL535CX
 
-const pinHeaderPinLabels = {
-  pin1: "GND",
-  pin2: "VCC",
-  pin3: "SDA",
-  pin4: "SCL",
-}
-
 export default () => (
   <board width="25.4mm" height="25.4mm" autorouter="auto-cloud">
     <schematictext
