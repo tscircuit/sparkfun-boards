@@ -183,7 +183,7 @@ const USBToSerialBreakout = () => (
       schRotation={90}
       pcbRotation={90}
       polarized
-      connections={{ pin1: "net.GND", pin2: sel.F1.pin2 }}
+      connections={{ pin2: sel.F1.pin2, pin1: sel.net.GND }}
     />
 
     <jumper
