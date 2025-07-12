@@ -191,24 +191,3 @@ export const VL53L5CX_footprint = (
     />
   </footprint>
 )
-
-export const footprint_0603 = (
-  <footprint name="0603">
-    <smtpad
-      portHints={["1"]}
-      pcbX="-0.85mm"
-      pcbY="0mm"
-      width="1.1mm"
-      height="1.0mm"
-      shape="rect"
-    />
-    <smtpad
-      portHints={["2"]}
-      pcbX="0.85mm"
-      pcbY="0mm"
-      width="1.1mm"
-      height="1.0mm"
-      shape="rect"
-    />
-  </footprint>
-)

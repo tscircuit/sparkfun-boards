@@ -1,6 +1,6 @@
 import { sel } from "@tscircuit/core"
 import { VL53L5CX } from "./VL53L5CX"
-import { VL53L5CX_footprint, JST04_RA_1mm, footprint_0603 } from "./footprints"
+import { VL53L5CX_footprint, JST04_RA_1mm } from "./footprints"
 // https://tscircuit.com/MustafaMulla29/sparkfun-VL535CX
 
 export default () => (
@@ -111,7 +111,7 @@ export default () => (
     />
     <resistor
       resistance="1k"
-      footprint={footprint_0603}
+      footprint="0603"
       name="R3"
       pcbX={-10.16}
       pcbY={-4.445}
@@ -125,7 +125,7 @@ export default () => (
     />
     <led
       name="D1"
-      footprint={footprint_0603}
+      footprint="0603"
       color="RED"
       pcbX={-10.16}
       pcbY={-6.096}
@@ -149,7 +149,7 @@ export default () => (
     <capacitor
       name="C1"
       capacitance="4.7uF"
-      footprint={footprint_0603}
+      footprint="0603"
       pcbX={3.81}
       pcbY={-3.81}
       schX={4}
@@ -177,7 +177,7 @@ export default () => (
     <capacitor
       name="C4"
       capacitance="0.1uF"
-      footprint={footprint_0603}
+      footprint="0603"
       pcbX={0}
       pcbY={-3.81}
       schX={5}
@@ -258,7 +258,7 @@ export default () => (
     />
     <resistor
       resistance="47k"
-      footprint={footprint_0603}
+      footprint="0603"
       name="R7"
       pcbX={0}
       pcbY={3.81}
@@ -331,7 +331,7 @@ export default () => (
     />
     <resistor
       resistance="47k"
-      footprint={footprint_0603}
+      footprint="0603"
       name="R6"
       pcbX={5.08}
       pcbRotation={90}
@@ -352,7 +352,7 @@ export default () => (
     />
     <resistor
       resistance="47k"
-      footprint={footprint_0603}
+      footprint="0603"
       name="R2"
       pcbX={-3.81}
       pcbY={-3.81}
@@ -408,7 +408,7 @@ export default () => (
     />
     <resistor
       resistance="47k"
-      footprint={footprint_0603}
+      footprint="0603"
       name="R1"
       schX={12.5}
       pcbX={-5.08}
@@ -449,7 +449,7 @@ export default () => (
     />
     <resistor
       resistance="2.2k"
-      footprint={footprint_0603}
+      footprint="0603"
       name="R4"
       pcbX={3.81}
       pcbY={3.81}
@@ -463,7 +463,7 @@ export default () => (
 
     <resistor
       resistance="2.2k"
-      footprint={footprint_0603}
+      footprint="0603"
       name="R5"
       pcbX={-3.81}
       pcbY={3.81}
