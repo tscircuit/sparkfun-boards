@@ -289,7 +289,7 @@ export default () => (
     <pinheader
       name="JP3"
       pinCount={3}
-      footprint="pinrow3_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel"
+      footprint="pinrow3_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
       schPinArrangement={{
         rightSide: {
@@ -307,6 +307,7 @@ export default () => (
         pin2: sel.net().A,
         pin3: sel.net().B,
       }}
+      pcbPinLabels={{ pin1: "G", pin2: "A", pin3: "B" }}
     />
     <netlabel
       net="GND"
