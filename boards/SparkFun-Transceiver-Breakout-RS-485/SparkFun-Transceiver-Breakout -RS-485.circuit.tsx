@@ -19,7 +19,7 @@ export default () => (
       pcbX={-8.89}
       pcbRotation={270}
     />
-    <silkscreentext text="RST" fontSize={1} pcbX={-8} pcbY={-7} />
+    <silkscreentext text="RST" fontSize={1.5} pcbX={-8} pcbY={-7.8} />
     <silkscreentext text="RS485 Breakout" fontSize={1.5} pcbX={0} pcbY={9} />
 
     <resistor
@@ -187,6 +187,7 @@ export default () => (
           pins: ["pin1", "pin2", "pin3", "pin4"],
         },
       }}
+      pcbPinLabels={{ pin1: "5", pin2: "3", pin3: "2", pin4: "1" }}
       pitch="1mm"
       pcbY={-12.7}
       schX={13}
