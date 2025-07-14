@@ -4,7 +4,7 @@ import { VL53L5CX_footprint, JST04_RA_1mm } from "./footprints"
 // https://tscircuit.com/MustafaMulla29/sparkfun-VL535CX
 
 export default () => (
-  <board width="25.4mm" height="25.4mm" autorouter="auto-cloud">
+  <board width="25.4mm" height="25.4mm">
     <schematictext
       text="VL53L5CX ToF Sensor Array"
       schX={7}
