@@ -3,11 +3,12 @@ import { RS485SOIC } from "./RS485SOIC"
 import { RJ45_8PTH, SCREWTERMINAL_3_5MM_3 } from "./footprints"
 
 export default () => (
-  <board width="22.86mm" height="27.94mm" autorouter="auto-cloud">
+  <board width="22.86mm" height="27.94mm">
     <pinheader
       name="JP9"
       pinCount={5}
-      footprint="pinrow5_p2.54_id1.016_od1.8769_nosquareplating"
+      footprint="pinrow5_p2.54_id1.016_od1.8769_nosquareplating_nopinlabels"
+      showSilkscreenPinLabels={false}
       gender="female"
       connections={{
         pin1: sel.net.VCC,
@@ -19,7 +20,7 @@ export default () => (
       pcbX={-8.89}
       pcbRotation={270}
     />
-    <silkscreentext text="RST" fontSize={1.5} pcbX={-8} pcbY={-7.8} />
+    <silkscreentext text="RTS" fontSize={1.5} pcbX={-8} pcbY={-7.8} />
     <silkscreentext text="RS485 Breakout" fontSize={1.5} pcbX={0} pcbY={9} />
 
     <resistor
