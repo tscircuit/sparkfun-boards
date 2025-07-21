@@ -37,6 +37,10 @@ export default () => (
       pcbX={6.35}
       connections={{ pin1: sel.net.V3_3, pin2: sel.net.GND }}
     />
+    <silkscreentext text="Flash" pcbY={5.5} fontSize={1} />
+    <silkscreentext text="Breakout" pcbY={4.5} fontSize={1} />
+    <silkscreentext text="SPARK X" pcbY={4.5} fontSize={2} layer="bottom" />
+
     <jumper
       pinLabels={jumperPinLabels}
       schDirection={"left"}
