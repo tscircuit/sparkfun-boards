@@ -21,9 +21,9 @@ const RFM69BREAKOUT = () => {
         pcbX={-12.7}
         pcbY={-7.62}
         showSilkscreenPinLabels={true}
-        pinLabels={["3.3V", "GND"]}
+        pinLabels={["V3_3", "GND"]}
         connections={{
-          pin1: "U1.pin13",
+          pin1: sel.U1.pin13,
         }}
       />
       <netlabel

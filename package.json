@@ -12,7 +12,6 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@tscircuit/cli": "^0.1.174",
 		"@tscircuit/props": "^0.0.257",
 		"@types/bun": "latest"
 	},
@@ -20,6 +19,6 @@
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.543"
+		"tscircuit": "^0.0.553"
 	}
 }
