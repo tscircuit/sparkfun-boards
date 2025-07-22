@@ -14,7 +14,7 @@ const jumperPinLabels = {
   pin8: ["GND"],
 }
 export default () => (
-  <board width="20.7mm" height="12.70mm" manualEdits={manualEdits}>
+  <board width="20.32mm" height="12.70mm" manualEdits={manualEdits}>
     {/* X: 10.16 6.35 */}
     <W25Q128JVPIQ
       name="U4"
@@ -45,7 +45,6 @@ export default () => (
       pinLabels={jumperPinLabels}
       schDirection={"left"}
       schWidth={0.6}
-      pcbX={-0.3}
       name="JP1"
       footprint="pinrow8_od1.88_id1.016_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_backsidelabel"
       pcbRotation={180}
