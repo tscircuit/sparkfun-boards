@@ -1,0 +1,20 @@
+{
+  "schematic_placements": [
+    {
+      "selector": "JP1",
+      "center": {
+        "x": 4.601015927832828,
+        "y": 0.027721613465555392
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C29",
+      "center": {
+        "x": -2.2066643811571724,
+        "y": 0.024550663575516718
+      },
+      "relative_to": "group_center"
+    }
+  ]
+}

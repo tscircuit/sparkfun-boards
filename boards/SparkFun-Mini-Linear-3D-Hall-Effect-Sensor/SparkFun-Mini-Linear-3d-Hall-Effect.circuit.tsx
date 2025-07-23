@@ -12,7 +12,7 @@ const jumperPinLabels = {
 }
 
 export default () => (
-  <board width="25.4mm" height="12.7mm" autorouter="auto-cloud">
+  <board width="25.4mm" height="12.7mm">
     <schematictext
       text="Power-On Reset"
       schX={-1}
