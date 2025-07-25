@@ -43,7 +43,7 @@ const manualEdits = {
   ],
 }
 export default () => (
-  <board width="8.2mm" height="13.97mm" manualEdits={manualEdits}>
+  <board width="7.62mm" height="13.97mm" manualEdits={manualEdits}>
     {/* X: 3.81 Y:6.35 */}
     <resistor
       resistance="100"
