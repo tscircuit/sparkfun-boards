@@ -3,6 +3,7 @@ import Jumpers from "./jumpers"
 import Sensor from "./color-sensor"
 import Address from "./address"
 import Connectors from "./connectors"
+import Holes from "./holes"
 
 export default () => (
   <board width="25.4mm" height="25.4mm" manualEdits={manualEdits}>
@@ -13,4 +14,4 @@ export default () => (
   </board>
 )
 
-export { Jumpers, Sensor, Address, Connectors }
+export { Holes, Jumpers, Sensor, Address, Connectors }

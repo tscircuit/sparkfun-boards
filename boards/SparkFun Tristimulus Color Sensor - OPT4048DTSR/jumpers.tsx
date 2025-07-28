@@ -1,17 +1,8 @@
-interface DisplacementProps {
-  x?: number
-  y?: number
-}
-
 export default ({ x = 0, y = 0 }: DisplacementProps) => (
   <group schX={x} schY={y}>
     <solderjumper
       name="I2C_PU"
-      pinLabels={{
-        pin1: "SDA_PU",
-        pin2: "VCC",
-        pin3: "SCL_PU",
-      }}
+      bridgedPins={[["1", "2", "3"]]}
       pinCount={3}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       schRotation={180}
@@ -79,11 +70,8 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
     <trace from=".D1 > .pin1  " to=".R4 > .pin1" />
     <solderjumper
       name="LED"
-      pinLabels={{
-        pin1: "LED_GND",
-        pin2: "NC",
-      }}
       pinCount={2}
+      bridgedPins={[["1", "2"]]}
       footprint="solderjumper3_p0.8_pw0.635_ph1.270"
       schRotation={90}
       schX={2.5}
@@ -91,10 +79,11 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
     />
     <schematictext
       fontSize={0.1}
-      schX={3.1}
+      schX={3.6}
       schY={-2.2}
       text="Cut trace to disconnect Power LED."
     />
     <trace from=".LED > .pin1" to="net.GND" />
+    <trace from=".LED > .pin2" to=".D1 > .pin2" />
   </group>
 )

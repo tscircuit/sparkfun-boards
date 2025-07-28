@@ -1,9 +1,5 @@
+import { ChipProps } from "@tscircuit/props"
 import { sel } from "@tscircuit/core"
-
-interface DisplacementProps {
-  x?: number
-  y?: number
-}
 
 const pinLabelsJ2: Record<`pin${number}`, string> = {
   pin4: "SCL",
@@ -23,12 +19,12 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
     <jumper
       name="J3"
       schX={-3}
-      pcbRotation={-90}
+      schPinSpacing={0.3}
       footprint="pinrow5_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
     />
-    <trace from=".J3 > .pin5" to="net.INT" />
-    <trace from=".J3 > .pin4" to="net.SCL" />
-    <trace from=".J3 > .pin3" to="net.SDA" />
+    <netlabel net="INT" connection=".J3 > .pin5" anchorSide="left" />
+    <netlabel net="SCL" connection=".J3 > .pin4" anchorSide="left" />
+    <netlabel net="SDA" connection=".J3 > .pin3" anchorSide="left" />
     <netlabel
       net="V3_3"
       schX={-2}
@@ -58,6 +54,7 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
       manufacturerPartNumber="QWIIC_RIGHT_ANGLE"
       name="J1"
       schY={-1}
+      schPinSpacing={0.3}
       pinLabels={pinLabelsJ2}
       footprint="pinrow4_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
     />
