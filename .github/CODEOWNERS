@@ -6,12 +6,20 @@
 
 /boards/SparkFun-HMC6343-Breakout/ @MustafaMulla29
 /boards/SparkFun-Mini-Linear-3D-Hall-Effect-Sensor/ @MustafaMulla29
+/boards/SparkFun-Qwiic-ToF-Imager-VL53L5CX/ @MustafaMulla29
+/boards/SparkFun-Transceiver-Breakout-RS-485/ @MustafaMulla29
 
 /boards/SparkFun-Human-Presence-and-Motion-Sensor-STHS34PF80-Qwiic/ @Anshgrover23
 /boards/SparkFun-RFM69-Breakout-915MHz/ @Anshgrover23
 
 /boards/SparkFun-I2C-DAC-Breakout-MCP4725/ @ShiboSoftwareDev
+/boards/SparkFun-Level-Shifter-8-Channel-TXS0108E/ @ShiboSoftwareDev
+/boards/SparkFun-Level-Translator-Breakout-PCA9306/ @ShiboSoftwareDev
+/boards/SparkFun-ESLOV-to-Qwiic-Bridge/ @ShiboSoftwareDev
 
 /boards/SparkFun-Transceiver-Breakout-MAX3232/ @Abse2001
+/boards/SparkFun-Serial-Flash-Breakout-Assembled-128Mbit/ @Abse2001
+/boards/SparkFun-Line-Sensor-Breakout-QRE1113-Analog/ @Abse2001
+/boards/SparkFun-Line-Sensor-Breakout-QRE1113-Digital/ @Abse2001
 
 /boards/SparkFun-USB-to-Serial-Breakout-FT232RL/ @techmannih
