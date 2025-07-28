@@ -201,15 +201,15 @@ export default () => (
       net="A"
       anchorSide="left"
       connection="R4.pin2"
-      schX={15}
-      schY={2.7}
+      schX={15.5}
+      schY={2.55}
     />
     <netlabel
       net="B"
       anchorSide="left"
       connection="R4.pin1"
-      schX={15}
-      schY={1.3}
+      schX={15.5}
+      schY={1.45}
     />
     <pinheader
       name="JP3"
