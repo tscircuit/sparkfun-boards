@@ -197,7 +197,20 @@ export default () => (
         pin2: sel.net().A,
       }}
     />
-
+    <netlabel
+      net="A"
+      anchorSide="left"
+      connection="R4.pin2"
+      schX={15}
+      schY={2.7}
+    />
+    <netlabel
+      net="B"
+      anchorSide="left"
+      connection="R4.pin1"
+      schX={15}
+      schY={1.3}
+    />
     <pinheader
       name="JP3"
       pinCount={3}
