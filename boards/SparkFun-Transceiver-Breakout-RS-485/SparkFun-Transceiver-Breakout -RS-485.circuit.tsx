@@ -39,7 +39,7 @@ export default () => (
     />
     <led
       name="LED3"
-      footprint="0603"
+      footprint="0603_textbottom"
       pcbX={-3.81}
       pcbRotation={0}
       pcbY={-7.874}
@@ -69,26 +69,13 @@ export default () => (
       connection="JP9.pin1"
       anchorSide="bottom"
     />
-    <netlabel
-      net="RX_I"
-      schX={1}
-      schY={0.2}
-      connection="JP9.pin2"
-      anchorSide="left"
-    />
-    <netlabel
-      net="TX_O"
-      schX={1}
-      schY={0}
-      connection="JP9.pin3"
-      anchorSide="left"
-    />
 
     <RS485SOIC
       name="U2"
       connections={{
         RO: sel.net().TX_O,
         DE: sel.U2.pin2,
+        pin2: sel.net().RTS,
         DI: sel.net().RX_I,
         GND: sel.net.GND,
         A: sel.net().A,
@@ -100,46 +87,11 @@ export default () => (
       pcbY={0}
     />
     <netlabel
-      net="TX_O"
-      schX={5.5}
-      schY={0.3}
-      connection="U2.pin1"
-      anchorSide="right"
-    />
-    <netlabel
-      net="RTS"
-      schX={5.5}
-      schY={0.1}
-      connection="U2.pin2"
-      anchorSide="right"
-    />
-    <netlabel
-      net="RX_I"
-      schX={5.5}
-      schY={-0.3}
-      connection="U2.pin4"
-      anchorSide="right"
-    />
-    <netlabel
       net="GND"
       schX={8.5}
       schY={-0.5}
       connection="U2.pin5"
       anchorSide="top"
-    />
-    <netlabel
-      net="A"
-      schX={8.5}
-      schY={-0.1}
-      connection="U2.pin6"
-      anchorSide="left"
-    />
-    <netlabel
-      net="B"
-      schX={8.5}
-      schY={0.1}
-      connection="U2.pin7"
-      anchorSide="left"
     />
     <netlabel
       net="VCC"
@@ -194,41 +146,12 @@ export default () => (
       schX={13}
       schY={4}
       connections={{
-        pin1: sel.net().FIVE,
-        pin2: sel.net().THREE,
-        pin3: sel.net().TWO,
-        pin4: sel.net().ONE,
+        pin1: sel.net().N5,
+        pin2: sel.net().N3,
+        pin3: sel.net().N2,
+        pin4: sel.net().N1,
       }}
     />
-    <netlabel
-      net="FIVE"
-      schX={14}
-      schY={3.7}
-      connection="JP1.pin1"
-      anchorSide="left"
-    />
-    <netlabel
-      net="THREE"
-      schX={14}
-      schY={3.9}
-      connection="JP1.pin2"
-      anchorSide="left"
-    />
-    <netlabel
-      net="TWO"
-      schX={14}
-      schY={4.1}
-      connection="JP1.pin3"
-      anchorSide="left"
-    />
-    <netlabel
-      net="ONE"
-      schX={14}
-      schY={4.3}
-      connection="JP1.pin4"
-      anchorSide="left"
-    />
-
     <pinheader
       name="JP2"
       pinCount={3}
@@ -274,20 +197,7 @@ export default () => (
         pin2: sel.net().A,
       }}
     />
-    <netlabel
-      net="A"
-      schX={15.5}
-      schY={1}
-      connection="R4.pin1"
-      anchorSide="left"
-    />
-    <netlabel
-      net="B"
-      schX={15.5}
-      schY={3}
-      connection="R4.pin2"
-      anchorSide="left"
-    />
+
     <pinheader
       name="JP3"
       pinCount={3}
@@ -318,20 +228,6 @@ export default () => (
       connection="JP3.pin1"
       anchorSide="top"
     />
-    <netlabel
-      net="A"
-      schX={14}
-      schY={-0.5}
-      connection="JP3.pin2"
-      anchorSide="left"
-    />
-    <netlabel
-      net="B"
-      schX={14}
-      schY={-0.3}
-      connection="JP3.pin3"
-      anchorSide="left"
-    />
 
     <pinheader
       name="JP4"
@@ -345,12 +241,12 @@ export default () => (
       pcbX={8.89}
       pcbRotation={90}
       connections={{
-        pin1: sel.net().ONE,
-        pin2: sel.net().TWO,
-        pin3: sel.net().THREE,
+        pin1: sel.net().N1,
+        pin2: sel.net().N2,
+        pin3: sel.net().N3,
         pin4: sel.JP4.pin5,
         pin5: sel.net.GND,
-        pin6: sel.net().FIVE,
+        pin6: sel.net().N5,
         pin7: sel.net().B,
         pin8: sel.net().A,
       }}
@@ -362,48 +258,6 @@ export default () => (
       schY={-3.5}
       connection="JP4.pin5"
       anchorSide="top"
-    />
-    <netlabel
-      net="ONE"
-      schX={15}
-      schY={-2.3}
-      connection="JP4.pin1"
-      anchorSide="left"
-    />
-    <netlabel
-      net="TWO"
-      schX={15}
-      schY={-2.5}
-      connection="JP4.pin2"
-      anchorSide="left"
-    />
-    <netlabel
-      net="THREE"
-      schX={15}
-      schY={-2.7}
-      connection="JP4.pin3"
-      anchorSide="left"
-    />
-    <netlabel
-      net="FIVE"
-      schX={15}
-      schY={-3.3}
-      connection="JP4.pin6"
-      anchorSide="left"
-    />
-    <netlabel
-      net="B"
-      schX={15}
-      schY={-3.5}
-      connection="JP4.pin7"
-      anchorSide="left"
-    />
-    <netlabel
-      net="A"
-      schX={15}
-      schY={-3.7}
-      connection="JP4.pin8"
-      anchorSide="left"
     />
     <schematictext
       text="RJ45-8PTH"
