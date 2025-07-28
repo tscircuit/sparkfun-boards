@@ -1,13 +1,4 @@
-import { ChipProps } from "@tscircuit/props"
-import { sel } from "@tscircuit/core"
-
 const pinLabelsJ2: Record<`pin${number}`, string> = {
-  pin4: "SCL",
-  pin3: "SDA",
-  pin2: "VCC",
-  pin1: "GND",
-}
-const pinLabelsJ3: Record<`pin${number}`, string> = {
   pin4: "SCL",
   pin3: "SDA",
   pin2: "VCC",

@@ -46,8 +46,13 @@ export default ({ x = 0, y = 0 }: DisplacementProps) => (
       connection="OX44.pin1"
       anchorSide="top"
     />
-    <trace from=".OX44 > .pin2" to="net.ADDR" />
-    <trace from=".OX45 > .pin2" to="net.ADDR" />
-    <trace from=".OX46 > .pin2" to="net.ADDR" />
+
+    <netlabel
+      net="ADDR"
+      schX={-1.3}
+      schY={-1.3}
+      anchorSide="right"
+      connectsTo={[".OX44 > .pin2", ".OX45 > .pin2", ".OX46 > .pin2"]}
+    />
   </group>
 )

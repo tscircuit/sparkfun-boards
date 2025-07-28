@@ -1,4 +1,4 @@
-import { ChipProps } from "@tscircuit/props"
+import type { ChipProps } from "@tscircuit/props"
 import { sel } from "@tscircuit/core"
 
 const pinLabels: Record<`pin${number}`, string> = {
