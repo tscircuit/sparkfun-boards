@@ -42,18 +42,22 @@ export default () => (
       pcbRotation={270}
       pcbX={0}
       pcbY={0}
+      connections={{
+        pin1: sel.JP1.pin2,
+        pin14: sel.JP2.pin2,
+      }}
     />
     <netlabel
       net="V3_3"
       anchorSide="bottom"
-      connectsTo={["U1.pin1", "SJ1.pin2", "JP1.pin2"]}
+      connectsTo={["U1.pin1", "SJ1.pin2"]}
       schY={2.5}
       schX={-0.2}
     />
     <netlabel
       net="V5"
       anchorSide="bottom"
-      connectsTo={["U1.pin14", "JP2.pin2"]}
+      connection="U1.pin14"
       schY={2.5}
       schX={0.2}
     />
@@ -202,7 +206,7 @@ export default () => (
       net="DE"
       anchorSide="left"
       connection="JP2.pin7"
-      schX={3}
+      schX={3.1}
       schY={0.8}
     />
     <netlabel
