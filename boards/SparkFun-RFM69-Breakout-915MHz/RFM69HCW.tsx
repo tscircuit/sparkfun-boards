@@ -13,7 +13,7 @@ export const pinLabels = {
   pin10: "GND",
   pin11: "DIO3",
   pin12: "DIO4",
-  pin13: "3.3V",
+  pin13: "V3_3",
   pin14: "DIO0",
   pin15: "DIO1",
   pin16: "DIO2",
@@ -27,7 +27,7 @@ export const RFM69HCW = (props: ChipProps<typeof pinLabels>) => (
     schPinArrangement={{
       leftSide: {
         direction: "top-to-bottom",
-        pins: ["3.3V", "MISO", "MOSI", "SCK", "NSS", "RESET"],
+        pins: ["V3_3", "MISO", "MOSI", "SCK", "NSS", "RESET"],
       },
       rightSide: {
         direction: "top-to-bottom",
