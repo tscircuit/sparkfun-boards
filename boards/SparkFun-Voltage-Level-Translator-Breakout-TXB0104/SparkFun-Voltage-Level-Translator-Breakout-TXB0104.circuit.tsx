@@ -73,7 +73,7 @@ export default () => (
     <pinheader
       name="JP1"
       pinCount={7}
-      footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel"
+      footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel"
       pitch="2.54mm"
       gender="female"
       schX={-4}
@@ -180,7 +180,7 @@ export default () => (
       name="JP2"
       pinCount={7}
       schFacingDirection="left"
-      footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel"
+      footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel"
       pitch="2.54mm"
       gender="female"
       schX={4}
