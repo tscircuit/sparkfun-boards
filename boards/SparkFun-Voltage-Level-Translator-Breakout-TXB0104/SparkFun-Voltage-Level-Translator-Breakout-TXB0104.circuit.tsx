@@ -3,6 +3,15 @@ import { TXB0104 } from "./TXB0104"
 
 export default () => (
   <board width="12.7mm" height="17.78mm">
+    <silkscreentext
+      text="TXB0104"
+      fontSize={1.5}
+      pcbRotation={90}
+      layer="bottom"
+      pcbY={5}
+    />
+    <silkscreentext text="OE" fontSize={1.5} pcbY={6.1} />
+
     <TXB0104
       name="U1"
       schPinArrangement={{
@@ -206,8 +215,8 @@ export default () => (
       net="DE"
       anchorSide="left"
       connection="JP2.pin7"
-      schX={3.1}
-      schY={0.8}
+      schX={3.4}
+      schY={1}
     />
     <netlabel
       net="GND"

@@ -19,6 +19,7 @@ export const TXB0104 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       pinLabels={pinLabels}
+      manufacturerPartNumber="TXB0104PWRSOIC14"
       footprint={
         <footprint name="SO14">
           <smtpad
