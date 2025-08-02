@@ -7,8 +7,8 @@
 		"format": "biome format --write .",
 		"format:check": "biome format .",
 		"tsci-build": "tsci build",
-		"snapshot": "tsci snapshot",
-		"snapshot:update": "tsci snapshot --update"
+		"snapshot": "tsci snapshot --3d",
+		"snapshot:update": "tsci snapshot --update --3d"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
@@ -19,6 +19,6 @@
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.573"
+		"tscircuit": "^0.0.577"
 	}
 }
