@@ -41,6 +41,30 @@ export default () => (
         pcbRotation={-90}
         schRotation={-90}
       />
+      <schematictext
+        text="VCC = 3.6V Max"
+        fontSize={0.2}
+        color="gray"
+        schY={-2}
+      />
+      <schematictext
+        text="Slave Address: 0x60"
+        fontSize={0.2}
+        color="gray"
+        schY={-2.3}
+      />
+      <schematictext
+        text="Read Address: 0xC1"
+        fontSize={0.2}
+        color="gray"
+        schY={-2.6}
+      />
+      <schematictext
+        text="Write Address: 0xC0"
+        fontSize={0.2}
+        color="gray"
+        schY={-2.9}
+      />
       <silkscreentext text="MPL3115A2" fontSize={1.5} layer="bottom" pcbY={1} />
       <silkscreentext
         text="Altitude"
@@ -134,6 +158,7 @@ export default () => (
         schDirection="left"
         pinLabels={jumperPinLabels}
         cadModel={null}
+        manufacturerPartNumber="M06SIP"
       />
       <netlabel
         net="INT2"
