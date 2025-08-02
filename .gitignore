@@ -41,3 +41,5 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 # Aider and VS Code
 .aider*
 .vscode
+
+*.diff.svg
