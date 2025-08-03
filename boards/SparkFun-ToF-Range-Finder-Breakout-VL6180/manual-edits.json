@@ -1,0 +1,84 @@
+{
+  "schematic_placements": [
+    {
+      "selector": "C2",
+      "center": {
+        "x": 4.6,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C1",
+      "center": {
+        "x": 5.6,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP1",
+      "center": {
+        "x": -7.7,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "UNNAMED_subcircuit_source_group_0",
+      "center": {
+        "x": -3.540385941285712,
+        "y": 0.08314017866032983
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R4",
+      "center": {
+        "x": 0.3,
+        "y": 1.5
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R3",
+      "center": {
+        "x": -4.1,
+        "y": 0.4
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R2",
+      "center": {
+        "x": -2.7,
+        "y": 0.4
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R1",
+      "center": {
+        "x": -1.1,
+        "y": 1.2
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP2",
+      "center": {
+        "x": -3.4,
+        "y": 1.8
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "U1",
+      "center": {
+        "x": 2.2,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    }
+  ]
+}
