@@ -35,6 +35,20 @@ export default () => (
       layer="bottom"
       pcbY={6}
     />
+    <schematictext
+      text="Default Address: 0x29"
+      color="gray"
+      schY={-2}
+      schX={2.2}
+      fontSize={0.2}
+    />
+    <schematictext
+      text="NOTE: this part is 1.8v - 2.8v tolerant"
+      color="gray"
+      schY={-2.6}
+      schX={2.87}
+      fontSize={0.2}
+    />
 
     <resistor
       resistance="47k"
