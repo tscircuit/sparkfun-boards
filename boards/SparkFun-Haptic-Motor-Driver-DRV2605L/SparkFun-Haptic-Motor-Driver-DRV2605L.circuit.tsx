@@ -33,11 +33,41 @@ export default () => (
       }}
     />
     <schematictext
+      text="Clear jumper to remove"
+      fontSize={0.18}
+      schY={3.3}
+      schX={-1.6}
+      color="gray"
+    />
+    <schematictext
+      text="pull-ups from I2C bus"
+      fontSize={0.18}
+      schY={3}
+      schX={-1.6}
+      color="gray"
+    />
+    <schematictext
+      text="JUMPER-PAD-3-NC_BY_PASTE"
+      fontSize={0.18}
+      schY={2.5}
+      schX={-1.6}
+      color="gray"
+    />
+    <schematictext
+      text="VCC:2-5.2V"
+      fontSize={0.18}
+      schY={1}
+      schX={2.3}
+      color="gray"
+    />
+
+    <schematictext
       text="7-Bit I2C Address: 0x5A"
       fontSize={0.18}
       schY={-1.5}
       color="gray"
     />
+
     <silkscreentext text="DRV2605L" fontSize={2} pcbY={8} />
     <silkscreentext text="DRV2605L" fontSize={2} pcbY={8} layer="bottom" />
     <silkscreentext
@@ -71,6 +101,7 @@ export default () => (
       name="JP1"
       cadModel={null}
       footprint="pinrow6_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating_doublesidedpinlabel"
+      manufacturerPartNumber="M06SILK_FEMALE_PTH"
     />
     <jumper
       schWidth={0.65}
@@ -82,6 +113,7 @@ export default () => (
       name="JP2"
       cadModel={null}
       footprint="pinrow2_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_doublesidedpinlabel"
+      manufacturerPartNumber="M02PTH"
     />
     <resistor
       name="R1"
