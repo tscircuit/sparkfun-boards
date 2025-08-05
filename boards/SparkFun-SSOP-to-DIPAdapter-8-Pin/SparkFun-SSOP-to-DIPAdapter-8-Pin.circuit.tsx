@@ -46,7 +46,7 @@ export default () => (
     />
     <silkscreentext text="1" pcbX={-4.8} pcbY={4} />
     <silkscreentext text="8" pcbX={4.8} pcbY={4} />
-    <silkscreentext text="SSOP8" pcbY={4.5} />
-    <silkscreentext text="Adapter" pcbY={3.5} />
+    <silkscreentext text="SSOP8" pcbY={4.5} layer="bottom" />
+    <silkscreentext text="Adapter" pcbY={3.5} layer="bottom" />
   </board>
 )
