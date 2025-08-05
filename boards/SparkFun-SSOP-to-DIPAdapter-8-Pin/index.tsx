@@ -1,3 +1,3 @@
-import SSOP8TODIP from "./SparkFun-Haptic-Motor-Driver-DRV2605L.circuit"
+import SSOP8TODIP from "./SparkFun-SSOP-to-DIPAdapter-8-Pin.circuit"
 
 export default SSOP8TODIP
