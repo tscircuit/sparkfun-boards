@@ -267,6 +267,20 @@ export default () => (
       pcbX={2.2}
       pcbY={9.7}
     />
+    <silkscreentext
+      text="1"
+      layer="bottom"
+      fontSize="1mm"
+      pcbX={0.2}
+      pcbY={9.7}
+    />
+    <silkscreentext
+      text="0"
+      layer="bottom"
+      fontSize="1mm"
+      pcbX={-3.5}
+      pcbY={9.7}
+    />
     <netlabel
       net="GND"
       anchorSide="top"
