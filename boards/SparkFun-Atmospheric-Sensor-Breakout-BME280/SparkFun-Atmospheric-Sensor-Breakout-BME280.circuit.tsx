@@ -171,7 +171,6 @@ export default () => (
       name="R3"
       footprint="0603"
       resistance="4.7k"
-      footprint="0603"
       schRotation={90}
       schX={5.4}
       schY={1.2}
