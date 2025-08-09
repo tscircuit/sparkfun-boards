@@ -19,6 +19,6 @@
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.577"
+		"tscircuit": "^0.0.585"
 	}
 }
