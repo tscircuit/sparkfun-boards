@@ -1,0 +1,76 @@
+{
+  "schematic_placements": [
+    {
+      "selector": "JP1",
+      "center": {
+        "x": 7,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R4",
+      "center": {
+        "x": 2.6,
+        "y": -1.2
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R3",
+      "center": {
+        "x": 3.2,
+        "y": 1.6
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R2",
+      "center": {
+        "x": 2.2,
+        "y": 1.6
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R1",
+      "center": {
+        "x": 1.2,
+        "y": 1.6
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "unnamed_chip1",
+      "center": {
+        "x": 0.1,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C1",
+      "center": {
+        "x": -2,
+        "y": -0.1
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP2",
+      "center": {
+        "x": 2.7,
+        "y": 2.5
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP3",
+      "center": {
+        "x": 2.6,
+        "y": -2.5
+      },
+      "relative_to": "group_center"
+    }
+  ]
+}
