@@ -1,3 +1,3 @@
-import SI7021_A20_IM1R from "./ SparkFun-Humidity-and-Temperature-Sensor-Breakout-Si7021.circuit"
+import TMP102AIDRLR from "./SparkFun-Digital-Temperature-Sensor-Breakout-TMP102.circuit"
 
-export default SI7021_A20_IM1R
+export default TMP102AIDRLR

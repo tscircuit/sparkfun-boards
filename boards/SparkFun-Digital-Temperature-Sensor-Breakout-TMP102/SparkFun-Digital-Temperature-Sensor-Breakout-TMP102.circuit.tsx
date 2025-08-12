@@ -104,7 +104,15 @@ export default () => (
       schX={3.8}
       schY={-3}
     />
-    <silkscreentext text="TMP102" fontSize={3} pcbY={4} />
+    <silkscreentext text="TMP102" fontSize={2} pcbY={4} />
+    <silkscreentext
+      text="1.4-3.6V"
+      layer="top"
+      fontSize={0.5}
+      pcbRotation={-90}
+      pcbX={-4.3}
+      pcbY={-4.2}
+    />
 
     <hole diameter={3.048} pcbX={-5.08} pcbY={5.08} />
     <hole diameter={3.048} pcbX={5.08} pcbY={5.08} />
