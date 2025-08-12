@@ -34,7 +34,7 @@ export default () => (
       }}
       name="JP1"
       manufacturerPartNumber="M04PTH"
-      footprint="pinrow4_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
+      footprint="pinrow4_id1mm_od1.88,,_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
       schDirection="left"
       pcbRotation={-90}
       pcbX={-6.5}
