@@ -20,7 +20,7 @@ export default () => (
         pin8: ["EN"],
       }}
       name="U1"
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["VREF1", "SCL1", "SDA1", "GND"],
@@ -234,7 +234,7 @@ export default () => (
         pin4: "SCL2",
         pin5: "EN",
       }}
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["EN", "SCL2", "SDA2", "VREF2", "GND"],

@@ -11,7 +11,7 @@ export default () => (
       cadModel={null}
       footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
       schX={-2}
-      schPortArrangement={{
+      schPinArrangement={{
         rightSide: {
           direction: "bottom-to-top",
           pins: [
@@ -78,7 +78,7 @@ export default () => (
       cadModel={null}
       footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
       schX={2}
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: [

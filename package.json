@@ -12,7 +12,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@tscircuit/props": "^0.0.257",
+		"@tscircuit/props": "^0.0.282",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {

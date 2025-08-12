@@ -26,7 +26,7 @@ export default () => (
     <jumper
       schWidth={0.6}
       pinLabels={jumperPinLabels}
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["pin4", "pin3", "pin2", "pin1"],

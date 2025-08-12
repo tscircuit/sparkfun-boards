@@ -29,7 +29,7 @@ export default () => (
   <board width="27.95mm" height="12.7mm">
     <TXS0108EQWRKSRQ1
       name="U1"
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["A1", "A2", "A3", "A4", "VCCA", "OE", "A5", "A6", "A7", "A8"],
@@ -252,7 +252,7 @@ export default () => (
         GND: sel.net.GND,
         VCCB: selectors.net.VCCB,
       }}
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["GND", "VCCB", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8"],

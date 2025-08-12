@@ -14,7 +14,7 @@ export default () => (
         pin3: "SWITCH",
         pin4: "GND",
       }}
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["B", "A", "SWITCH", "GND"],
@@ -48,7 +48,7 @@ export default () => (
         pin6: "NC",
       }}
       schX={-2}
-      schPortArrangement={{
+      schPinArrangement={{
         rightSide: {
           direction: "top-to-bottom",
           pins: ["SWITCH", "GND"],
