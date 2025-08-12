@@ -70,6 +70,7 @@ export default () => (
       schRotation={90}
     />
     <jumper
+      cadModel={null}
       schWidth={0.6}
       pinLabels={jumperPinLabels}
       name="JP1"
@@ -87,6 +88,7 @@ export default () => (
       layer="bottom"
       schRotation={180}
       connections={{ pin1: sel.R3.pin2, pin3: sel.R2.pin2 }}
+      cadModel={null}
     />
     <schematictext
       text="I2C Address:"
@@ -129,10 +131,42 @@ export default () => (
       schY={0.2}
       color="gray"
     />
-    <silkscreentext text="ISL29125" pcbX={-8} pcbRotation={90} />
+    <silkscreentext text="ISL29125" pcbX={-8} pcbRotation={-90} />
     <silkscreentext text="ISL29125" pcbY={1} fontSize={1.2} layer="bottom" />
     <silkscreentext text="RGB" fontSize={1.2} layer="bottom" />
     <silkscreentext text="Sensor" pcbY={-1} fontSize={1.2} layer="bottom" />
+    <silkscreentext
+      text="SDA"
+      pcbY={0}
+      pcbX={6.4}
+      pcbRotation={90}
+      fontSize={0.6}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="SCL"
+      pcbY={-4}
+      pcbX={8.2}
+      pcbRotation={90}
+      fontSize={0.6}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="V3_3"
+      pcbY={-4}
+      pcbX={7.4}
+      pcbRotation={90}
+      fontSize={0.6}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="I2c 0x44"
+      pcbY={-6.4}
+      pcbX={-8}
+      pcbRotation={90}
+      fontSize={0.6}
+      layer="bottom"
+    />
 
     <hole diameter={3.302} pcbX={-6.35} pcbY={5.745} />
     <hole diameter={3.302} pcbX={6.35} pcbY={5.745} />
