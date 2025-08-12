@@ -139,7 +139,7 @@ export default () => (
       text="SDA"
       pcbY={0}
       pcbX={6.4}
-      pcbRotation={90}
+      pcbRotation={-90}
       fontSize={0.6}
       layer="bottom"
     />
@@ -147,7 +147,7 @@ export default () => (
       text="SCL"
       pcbY={-4}
       pcbX={8.2}
-      pcbRotation={90}
+      pcbRotation={-90}
       fontSize={0.6}
       layer="bottom"
     />
@@ -155,15 +155,15 @@ export default () => (
       text="V3_3"
       pcbY={-4}
       pcbX={7.4}
-      pcbRotation={90}
+      pcbRotation={-90}
       fontSize={0.6}
       layer="bottom"
     />
     <silkscreentext
-      text="I2c 0x44"
+      text="I2C 0x44"
       pcbY={-6.4}
       pcbX={-8}
-      pcbRotation={90}
+      pcbRotation={-90}
       fontSize={0.6}
       layer="bottom"
     />
