@@ -72,7 +72,7 @@ export default () => (
       }}
       schX={4.5}
       schY={-2.8}
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["SCL", "SDA", "VCC", "GND"],
@@ -98,7 +98,7 @@ export default () => (
       }}
       schX={-5}
       schY={-2.5}
-      schPortArrangement={{
+      schPinArrangement={{
         rightSide: {
           direction: "top-to-bottom",
           pins: ["5V", "INT", "SCL", "SDA", "GND"],
@@ -158,7 +158,7 @@ export default () => (
       }
       schX={4.5}
       schY={-4.8}
-      schPortArrangement={{
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
           pins: ["INT"],
