@@ -194,29 +194,19 @@ export default () => (
       }}
       schFacingDirection="left"
     />
-    <silkscreentext
-      text="RFID"
-      fontSize={2}
-      layer="bottom"
-      pcbY={3.5}
-      />
-    <silkscreentext
-      text="Breakout"
-      fontSize={2}
-      layer="bottom"
-      pcbY={2}
-      />
+    <silkscreentext text="RFID" fontSize={2} layer="bottom" pcbY={3.5} />
+    <silkscreentext text="Breakout" fontSize={2} layer="bottom" pcbY={2} />
     <schematictext
       text="Works with ID-20LA, ID-12LA, ID-2LA"
       color="gray"
       fontSize={0.2}
       schY={1.8}
-      />
+    />
     <schematictext
       text="VCC is 2.8 to 5V"
       color="gray"
       fontSize={0.2}
       schY={1.55}
-      />
+    />
   </board>
 )
