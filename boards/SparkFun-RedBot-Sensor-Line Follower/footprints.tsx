@@ -1,0 +1,91 @@
+export const JP1_FOOTPRINT = (
+  <footprint>
+    <smtpad
+      portHints={["pin1"]}
+      pcbX="-2.54mm"
+      pcbY="5mm"
+      width="1mm"
+      height="3mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["pin2"]}
+      pcbX="0mm"
+      pcbY="5mm"
+      width="1mm"
+      height="3mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["pin3"]}
+      pcbX="2.54mm"
+      pcbY="5mm"
+      width="1mm"
+      height="3mm"
+      shape="rect"
+    />
+  </footprint>
+)
+
+export const D1_FOOTPRINT = (
+  <footprint>
+    <smtpad
+      portHints={["anode"]}
+      pcbX="-1.8mm"
+      pcbY="-0.9mm"
+      width="1.2mm"
+      height="0.6mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["cathode"]}
+      pcbX="-1.8mm"
+      pcbY="0.9mm"
+      width="1.2mm"
+      height="0.6mm"
+      shape="rect"
+    />
+  </footprint>
+)
+
+export const Q1_FOOTPRINT = (
+  <footprint>
+    <smtpad
+      portHints={["emitter"]}
+      pcbX="1.8mm"
+      pcbY="-0.9mm"
+      width="1.2mm"
+      height="0.6mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["collector"]}
+      pcbX="1.8mm"
+      pcbY="0.9mm"
+      width="1.2mm"
+      height="0.6mm"
+      shape="rect"
+    />
+  </footprint>
+)
+
+export const R_FOOTPRINT = (
+  <footprint>
+    <smtpad
+      portHints={["pin1"]}
+      pcbX="-0.65mm"
+      pcbY="0mm"
+      width="0.7mm"
+      height="0.9mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["pin2"]}
+      pcbX="0.65mm"
+      pcbY="0mm"
+      width="0.7mm"
+      height="0.9mm"
+      shape="rect"
+    />
+  </footprint>
+)
