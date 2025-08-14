@@ -21,6 +21,8 @@ export default () => (
       pinLabels={pinLabels}
       manufacturerPartNumber="RFID"
       layer="bottom"
+      pcbX={0}
+      pcbY={0}
       footprint={
         <footprint name="ID_PACKAGE">
           <platedhole
@@ -146,6 +148,7 @@ export default () => (
       pinCount={6}
       schX={-2.3}
       pcbX={-11.43}
+      pcbY={-1.27}
       pcbRotation={90}
       schPinArrangement={{
         rightSide: {
@@ -177,12 +180,12 @@ export default () => (
       schX={2.3}
       schY={-0.1}
       pcbX={11.43}
-      pcbY={1.25}
+      pcbY={-0}
       pcbRotation={270}
       schPinArrangement={{
         rightSide: {
           direction: "top-to-bottom",
-          pins: [1, 2, 3, 4, 5, 6],
+          pins: [1, 2, 3, 4, 5],
         },
       }}
       connections={{
