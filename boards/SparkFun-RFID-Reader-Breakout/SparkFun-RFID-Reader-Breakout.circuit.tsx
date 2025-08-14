@@ -208,5 +208,9 @@ export default () => (
       fontSize={0.2}
       schY={1.55}
     />
+    <hole diameter="3.302mm" pcbX={8.89} pcbY={-12.7} />
+    <hole diameter="3.302mm" pcbX={-8.89} pcbY={-12.7} />
+    <hole diameter="3.302mm" pcbX={8.89} pcbY={12.7} />
+    <hole diameter="3.302mm" pcbX={-8.89} pcbY={12.7} />
   </board>
 )
