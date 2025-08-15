@@ -1,10 +1,5 @@
 import { sel } from "@tscircuit/core"
-import {
-  JP1_FOOTPRINT,
-  D1_FOOTPRINT,
-  Q1_FOOTPRINT,
-  R_FOOTPRINT,
-} from "./footprints"
+import { JP1_FOOTPRINT, U1_FOOTPRINT, R_FOOTPRINT } from "./footprints"
 
 export default () => (
   <board width="7.62mm" height="24.13mm">
@@ -74,7 +69,7 @@ export default () => (
     <netlabel
       net="GND"
       anchorSide="top"
-      connectsTo={["JP1.pin1", "Q1.pin2", "D1.pin2"]}
+      connectsTo={["JP1.pin1", "U1.pin2", "U1.pin4"]}
       schX={1}
       schY={-1.5}
     />
@@ -91,9 +86,6 @@ export default () => (
       schRotation={90}
       schX={2.3}
       schY={1}
-      connections={{
-        pin1: sel.Q1.drain,
-      }}
       footprint={R_FOOTPRINT}
       pcbX={-1.27}
       pcbY={5.715}
@@ -105,41 +97,42 @@ export default () => (
       schRotation={90}
       schX={3.3}
       schY={1}
-      connections={{
-        pin1: sel.D1.pin1,
-      }}
       footprint={R_FOOTPRINT}
       pcbX={1.27}
       pcbY={5.715}
       pcbRotation={270}
     />
-    <mosfet
-      name="Q1"
-      channelType="n"
-      mosfetMode="depletion"
-      footprint={Q1_FOOTPRINT}
-      schX={2}
-      schY={-0.7}
-      pcbX={-0.002}
-      pcbY={9.525}
+
+    <chip
+      name="U1"
+      manufacturerPartNumber="QRE1113"
+      schPinArrangement={{
+        topSide: {
+          direction: "top-to-bottom",
+          pins: [1, 3],
+        },
+        bottomSide: {
+          direction: "top-to-bottom",
+          pins: [4, 2],
+        },
+      }}
       pcbRotation={180}
-    />
-    <diode
-      name="D1"
-      schRotation={-90}
-      schX={3.3}
+      schPinStyle={{
+        pin1: {
+          rightMargin: 0.4,
+        },
+        pin2: {
+          rightMargin: 0.4,
+        },
+      }}
+      connections={{
+        pin1: sel.R2.pin1,
+        pin3: sel.R1.pin1,
+      }}
+      footprint={U1_FOOTPRINT}
+      schX={2.6}
       schY={-0.74}
-      pcbX={0.002}
       pcbY={9.525}
-      pcbRotation={180}
-      footprint={D1_FOOTPRINT}
-    />
-    <schematictext
-      text="QRE1113"
-      fontSize={0.2}
-      color="gray"
-      schX={3.9}
-      schY={-0.3}
     />
     <hole diameter="3.302mm" pcbY={0.635} />
     <silkscreentext text="QRE1113" fontSize={1} pcbY={-8} />

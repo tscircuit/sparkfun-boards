@@ -27,10 +27,10 @@ export const JP1_FOOTPRINT = (
   </footprint>
 )
 
-export const D1_FOOTPRINT = (
+export const U1_FOOTPRINT = (
   <footprint>
     <smtpad
-      portHints={["anode"]}
+      portHints={["pin1"]}
       pcbX="-1.8mm"
       pcbY="-0.9mm"
       width="1.2mm"
@@ -38,29 +38,24 @@ export const D1_FOOTPRINT = (
       shape="rect"
     />
     <smtpad
-      portHints={["cathode"]}
-      pcbX="-1.8mm"
+      portHints={["pin2"]}
+      pcbX="1.8mm"
+      pcbY="-0.9mm"
+      width="1.2mm"
+      height="0.6mm"
+      shape="rect"
+    />
+    <smtpad
+      portHints={["pin3"]}
+      pcbX="1.8mm"
       pcbY="0.9mm"
       width="1.2mm"
       height="0.6mm"
       shape="rect"
     />
-  </footprint>
-)
-
-export const Q1_FOOTPRINT = (
-  <footprint>
     <smtpad
-      portHints={["emitter"]}
-      pcbX="1.8mm"
-      pcbY="-0.9mm"
-      width="1.2mm"
-      height="0.6mm"
-      shape="rect"
-    />
-    <smtpad
-      portHints={["collector"]}
-      pcbX="1.8mm"
+      portHints={["pin4"]}
+      pcbX="-1.8mm"
       pcbY="0.9mm"
       width="1.2mm"
       height="0.6mm"
