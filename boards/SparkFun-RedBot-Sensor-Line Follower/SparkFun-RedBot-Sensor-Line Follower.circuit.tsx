@@ -69,7 +69,7 @@ export default () => (
     <netlabel
       net="GND"
       anchorSide="top"
-      connectsTo={["JP1.pin1", "U1.pin2", "U1.pin4"]}
+      connectsTo={["JP1.pin1", "U1.pin4", "U1.pin2"]}
       schX={1}
       schY={-1.5}
     />
@@ -108,26 +108,26 @@ export default () => (
       manufacturerPartNumber="QRE1113"
       schPinArrangement={{
         topSide: {
-          direction: "top-to-bottom",
-          pins: [1, 3],
+          direction: "left-to-right",
+          pins: [3, 1],
         },
         bottomSide: {
-          direction: "top-to-bottom",
+          direction: "left-to-right",
           pins: [4, 2],
         },
       }}
       pcbRotation={180}
       schPinStyle={{
         pin1: {
-          rightMargin: 0.4,
+          leftMargin: 0.4,
         },
         pin2: {
-          rightMargin: 0.4,
+          leftMargin: 0.4,
         },
       }}
       connections={{
-        pin1: sel.R2.pin1,
-        pin3: sel.R1.pin1,
+        pin1: sel.R1.pin1,
+        pin3: sel.R2.pin1,
       }}
       footprint={U1_FOOTPRINT}
       schX={2.6}
