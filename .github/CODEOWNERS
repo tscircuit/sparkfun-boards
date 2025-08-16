@@ -4,31 +4,29 @@
 
 # Each board directory is owned by its original creator
 
-/boards/SparkFun-HMC6343-Breakout/ @MustafaMulla29
-/boards/SparkFun-Mini-Linear-3D-Hall-Effect-Sensor/ @MustafaMulla29
-/boards/SparkFun-Qwiic-ToF-Imager-VL53L5CX/ @MustafaMulla29
-/boards/SparkFun-Transceiver-Breakout-RS-485/ @MustafaMulla29
-/boards/SparkFun-Voltage-Level-Translator-Breakout-TXB0104 @MustafaMulla29
+/boards/SparkFun-Altitude-Pressure-Sensor-Breakout-MPL3115A2/ @Abse2001
 /boards/SparkFun-Atmospheric-Sensor-Breakout-BME280 @MustafaMulla29
-/boards/SparkFun-RedBot-Sensor-Line Follower @MustafaMulla29
 /boards/SparkFun-RFID-Reader-Breakout @MustafaMulla29
 
 /boards/SparkFun-Human-Presence-and-Motion-Sensor-STHS34PF80-Qwiic/ @Anshgrover23
-/boards/SparkFun-RFM69-Breakout-915MHz/ @Anshgrover23
-
+/boards/SparkFun-Humidity-and-Temperature-Sensor-Breakout-Si7021 @Abse2001
 /boards/SparkFun-I2C-DAC-Breakout-MCP4725/ @ShiboSoftwareDev
 /boards/SparkFun-Level-Shifter-8-Channel-TXS0108E/ @ShiboSoftwareDev
 /boards/SparkFun-Level-Translator-Breakout-PCA9306/ @ShiboSoftwareDev
-/boards/SparkFun-ESLOV-to-Qwiic-Bridge/ @ShiboSoftwareDev
-/boards/SparkFun-SOIC-to-DIP-Adapter-20-Pin/ @ShiboSoftwareDev
-/boards/SparkFun-Roller-Encoder-Breakout/ @ShiboSoftwareDev
-
-/boards/SparkFun-Transceiver-Breakout-MAX3232/ @Abse2001
-/boards/SparkFun-Serial-Flash-Breakout-Assembled-128Mbit/ @Abse2001
 /boards/SparkFun-Line-Sensor-Breakout-QRE1113-Analog/ @Abse2001
 /boards/SparkFun-Line-Sensor-Breakout-QRE1113-Digital/ @Abse2001
-/boards/SparkFun-Altitude-Pressure-Sensor-Breakout-MPL3115A2/ @Abse2001
-/boards/SparkFun-Haptic-Motor-Driver-DRV2605L/ @Abse2001
+/boards/SparkFun-Mini-Linear-3D-Hall-Effect-Sensor/ @MustafaMulla29
+/boards/SparkFun-Qwiic-ToF-Imager-VL53L5CX/ @MustafaMulla29
+/boards/SparkFun-RFID-Reader-Breakout @MustafaMulla29
+/boards/SparkFun-RFM69-Breakout-915MHz/ @Anshgrover23
+/boards/SparkFun-RGB-Light-Sensor-ISL29125 @Abse2001
+/boards/SparkFun-Roller-Encoder-Breakout/ @ShiboSoftwareDev
+/boards/SparkFun-SOIC-to-DIP-Adapter-20-Pin/ @ShiboSoftwareDev
+/boards/SparkFun-SOIC-to-DIP-Adapter-8-Pin @ShiboSoftwareDev
 /boards/SparkFun-SSOP-to-DIPAdapter-8-Pin/ @Abse2001
-
+/boards/SparkFun-Serial-Flash-Breakout-Assembled-128Mbit/ @Abse2001
+/boards/SparkFun-ToF-Range-Finder-Breakout-VL6180 @Abse2001
+/boards/SparkFun-Transceiver-Breakout-MAX3232/ @Abse2001
+/boards/SparkFun-Transceiver-Breakout-RS-485/ @MustafaMulla29
 /boards/SparkFun-USB-to-Serial-Breakout-FT232RL/ @techmannih
+/boards/SparkFun-Voltage-Level-Translator-Breakout-TXB0104 @MustafaMulla29
