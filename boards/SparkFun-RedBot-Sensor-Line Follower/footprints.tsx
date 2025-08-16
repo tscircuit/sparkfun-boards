@@ -1,7 +1,7 @@
 export const JP1_FOOTPRINT = (
   <footprint>
     <smtpad
-      portHints={["pin1"]}
+      portHints={["pin3"]}
       pcbX="-2.54mm"
       pcbY="5mm"
       width="1mm"
@@ -17,7 +17,7 @@ export const JP1_FOOTPRINT = (
       shape="rect"
     />
     <smtpad
-      portHints={["pin3"]}
+      portHints={["pin1"]}
       pcbX="2.54mm"
       pcbY="5mm"
       width="1mm"
