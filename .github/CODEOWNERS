@@ -32,6 +32,7 @@
 /boards/SparkFun-Roller-Encoder-Breakout/ @ShiboSoftwareDev
 /boards/SparkFun-SOIC-to-DIP-Adapter-20-Pin/ @ShiboSoftwareDev
 /boards/SparkFun-SOIC-to-DIP-Adapter-8-Pin @ShiboSoftwareDev
+/boards/SparkFun-SSOP-to-DIP-Adapter-16-Pin @ShiboSoftwareDev
 
 /boards/SparkFun-Human-Presence-and-Motion-Sensor-STHS34PF80-Qwiic/ @Anshgrover23
 /boards/SparkFun-RFM69-Breakout-915MHz/ @Anshgrover23
