@@ -1,0 +1,44 @@
+{
+  "schematic_placements": [
+    {
+      "selector": "JP1",
+      "center": {
+        "x": 4.3,
+        "y": 0.2
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP2",
+      "center": {
+        "x": -4.8,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP3",
+      "center": {
+        "x": 0.3,
+        "y": -3.8
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R1",
+      "center": {
+        "x": -3.5,
+        "y": -1.8
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C1",
+      "center": {
+        "x": 0,
+        "y": 2.8
+      },
+      "relative_to": "group_center"
+    }
+  ]
+}
