@@ -98,12 +98,40 @@ export default () => (
     />
     <jumper
       cadModel={null}
+      pinLabels={{
+        pin1: ["P"],
+        pin2: ["N"],
+      }}
       name="JP3"
-      footprint="pinrow2_id1.016mm_od1.88mm_p2.62mm"
+      footprint="pinrow2_id1.016mm_od1.88mm_p2.62mm_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
       schDirection="left"
       pcbRotation={90}
       pcbX={7.62}
       connections={{ pin1: sel.U1.pin9, pin2: sel.U1.pin10 }}
+    />
+    <silkscreenline
+      x1={9.32}
+      y1={4.01}
+      x2={9.32}
+      y2={2.98}
+      layer="top"
+      strokeWidth={0.15}
+    />
+    <silkscreenline
+      x1={9.32}
+      y1={-4.01}
+      x2={9.32}
+      y2={-2.98}
+      layer="top"
+      strokeWidth={0.15}
+    />
+    <silkscreenline
+      x1={8.8}
+      y1={-3.49}
+      x2={9.8}
+      y2={-3.49}
+      layer="top"
+      strokeWidth={0.15}
     />
     <jumper
       name="JP4"
@@ -113,7 +141,7 @@ export default () => (
       pinLabels={JP4PinLabels}
       footprint="pinrow7_id1.016mm_od1.88mm_p2.62mm_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal_nosquareplating_doublesidedpinlabel"
       pcbRotation={-90}
-      pcbX={-7.62}
+      pcbX={-8.89}
     />
     <hole diameter={3.302} pcbX={6.985} pcbY={6.985} />
     <hole diameter={3.302} pcbX={6.985} pcbY={-6.985} />
