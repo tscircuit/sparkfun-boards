@@ -7,18 +7,18 @@
 		"format": "biome format --write .",
 		"format:check": "biome format .",
 		"tsci-build": "tsci build",
-		"snapshot": "tsci snapshot",
-		"snapshot:update": "tsci snapshot --update"
+		"snapshot": "tsci snapshot --3d",
+		"snapshot:update": "tsci snapshot --update --3d"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@tscircuit/props": "^0.0.257",
+		"@tscircuit/props": "^0.0.282",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
 	"dependencies": {
-		"tscircuit": "^0.0.561"
+		"tscircuit": "^0.0.585"
 	}
 }

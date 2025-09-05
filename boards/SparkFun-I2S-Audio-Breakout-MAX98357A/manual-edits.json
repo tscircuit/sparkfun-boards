@@ -1,0 +1,76 @@
+{
+  "schematic_placements": [
+    {
+      "selector": "JP3",
+      "center": {
+        "x": 2.5,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP2",
+      "center": {
+        "x": -2.2,
+        "y": -8.7
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP1",
+      "center": {
+        "x": -7.4,
+        "y": -7.2
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C2",
+      "center": {
+        "x": -4.5,
+        "y": 0.3
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "C1",
+      "center": {
+        "x": -3.4,
+        "y": 0.3
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "U1",
+      "center": {
+        "x": 0,
+        "y": 0
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "JP4",
+      "center": {
+        "x": 1.2,
+        "y": -7.5
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R1",
+      "center": {
+        "x": -6.3,
+        "y": -7.3
+      },
+      "relative_to": "group_center"
+    },
+    {
+      "selector": "R2",
+      "center": {
+        "x": -2.2,
+        "y": -7.4
+      },
+      "relative_to": "group_center"
+    }
+  ]
+}
