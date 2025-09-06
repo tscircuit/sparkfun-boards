@@ -156,7 +156,7 @@ export default () => {
       <SM04B_SRSS_TB_LF__SN
         name="JP2"
         pcbRotation={90}
-        pcbX={9.85}
+        pcbX={9.5}
         schWidth={0.7}
         schPinArrangement={{
           leftSide: {
@@ -170,7 +170,7 @@ export default () => {
       <SM04B_SRSS_TB_LF__SN
         name="JP5"
         pcbRotation={-90}
-        pcbX={-9.85}
+        pcbX={-9.5}
         schWidth={0.7}
         schPinArrangement={{
           leftSide: {
