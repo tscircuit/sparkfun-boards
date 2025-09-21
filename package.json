@@ -8,7 +8,8 @@
 		"format:check": "biome format .",
 		"tsci-build": "tsci build",
 		"snapshot": "tsci snapshot --3d",
-		"snapshot:update": "tsci snapshot --update --3d"
+		"snapshot:update": "tsci snapshot --update --3d",
+		"start": "bunx tsci dev"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
