@@ -72,7 +72,7 @@ export default () => (
     <chip
       name="U7"
       pcbX={7.087}
-      pcbY={7.112}
+      pcbY={5.3}
       schX={-8}
       manufacturerPartNumber="SCD41_D_R1"
       schY={-4.8}
