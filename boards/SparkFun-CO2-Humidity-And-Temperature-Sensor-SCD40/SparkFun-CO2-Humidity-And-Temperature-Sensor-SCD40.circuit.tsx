@@ -27,11 +27,46 @@ export default () => (
       fontSize={0.25}
     />
     <schematictext
+      schX={-8}
+      schY={2.5}
+      text="Cut Jumper to"
+      color="gray"
+      fontSize={0.15}
+    />
+    <schematictext
+      schX={-8}
+      schY={2.3}
+      text="disable LED"
+      color="gray"
+      fontSize={0.15}
+    />
+    <schematictext
       schX={0}
       schY={4.2}
       text="SCD4X CO2 Sensor"
       color="red"
       fontSize={0.25}
+    />
+    <schematictext
+      schX={0}
+      schY={-1.3}
+      text="7-bit unshifted address: 0x62"
+      color="gray"
+      fontSize={0.15}
+    />
+    <schematictext
+      schX={0}
+      schY={3.9}
+      text="Input: 2.4V-5.5V"
+      color="gray"
+      fontSize={0.15}
+    />
+    <schematictext
+      schX={0}
+      schY={3.7}
+      text="This board runs 3.3V only."
+      color="gray"
+      fontSize={0.15}
     />
     <schematictext
       schX={8}
