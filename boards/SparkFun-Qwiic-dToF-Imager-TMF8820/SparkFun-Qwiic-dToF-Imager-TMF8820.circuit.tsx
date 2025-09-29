@@ -321,20 +321,8 @@ export default () => (
     <silkscreentext text="dToF" pcbX={7.7} pcbY={5} layer="bottom" />
     <silkscreentext text="TMF8820" pcbX={7.7} pcbY={3.5} layer="bottom" />
     <silkscreentext text="TMF8821" pcbX={7.7} pcbY={1.4} layer="bottom" />
-    <silkscreentext
-      text="I2C"
-      pcbX={3.25}
-      pcbY={1}
-      pcbRotation={90}
-      layer="top"
-    />
-    <silkscreentext
-      text="LED"
-      pcbX={-5.2}
-      pcbY={0}
-      pcbRotation={90}
-      layer="top"
-    />
+    <silkscreentext text="I2C" pcbY={-3} layer="bottom" />
+    <silkscreentext text="LED" pcbX={-8} pcbY={4} layer="bottom" />
     <silkscreentext
       text="qwiic"
       pcbX={-10.3}
