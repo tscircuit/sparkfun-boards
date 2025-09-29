@@ -318,9 +318,30 @@ export default () => (
       connections={{ pin1: sel.R6.pin2, pin2: sel.net.V3_3 }}
       schRotation={90}
     />
-    <silkscreentext text="dToF" pcbX={7.7} pcbY={5} layer="bottom" />
-    <silkscreentext text="TMF8820" pcbX={7.7} pcbY={3.5} layer="bottom" />
-    <silkscreentext text="TMF8821" pcbX={7.7} pcbY={1.4} layer="bottom" />
+    <silkscreentext
+      text="dToF"
+      pcbX={0}
+      pcbY={7}
+      fontSize={1.5}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="TMF882X"
+      pcbX={0}
+      pcbY={5.7}
+      fontSize={1.5}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="Def Addr:0x41"
+      pcbX={0}
+      pcbY={-1}
+      fontSize={1.5}
+      layer="bottom"
+    />
+    <silkscreentext text="dToF" pcbX={0} pcbY={9} fontSize={1.5} layer="top" />
+    <silkscreentext text="TMF8820" pcbX={0} pcbY={6.7} layer="top" />
+    <silkscreentext text="TMF8821" pcbX={0} pcbY={4.5} layer="top" />
     <silkscreentext text="I2C" pcbY={-3} layer="bottom" />
     <silkscreentext text="LED" pcbX={-8} pcbY={4} layer="bottom" />
     <silkscreentext
