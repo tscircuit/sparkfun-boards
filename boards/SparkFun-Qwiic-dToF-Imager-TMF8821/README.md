@@ -1,0 +1,5 @@
+# SparkFun-Qwiic-Mini-dToF-Imager-TMF8820
+
+For more information about this board, visit the official SparkFun product page:
+
+[https://www.sparkfun.com/sparkfun-qwiic-dtof-imager-tmf8821.html](https://www.sparkfun.com/sparkfun-qwiic-dtof-imager-tmf8821.html) 
