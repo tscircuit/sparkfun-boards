@@ -1,4 +1,4 @@
-import { sel } from "tscircuit"
+import { sel } from "@tscircuit/core"
 
 export default () => (
   <board width="22mm" height="16mm">
