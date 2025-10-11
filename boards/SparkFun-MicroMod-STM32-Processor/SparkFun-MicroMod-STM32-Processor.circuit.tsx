@@ -1,3 +1,5 @@
+import { sel } from "tscircuit"
+
 export default () => (
   <board width="22mm" height="16mm">
     <chip
@@ -77,7 +79,7 @@ export default () => (
       pcbX={0}
       pcbY={-8}
     />
-    <silkscreentext text="STM32" fontSize="1.5mm" pcbX={-8} pcbY={-6} />
-    <silkscreentext text="F405" fontSize="1.2mm" pcbX={-8} pcbY={-7.5} />
+    <silkscreentext text="STM32" fontSize={2} pcbX={-8} pcbY={-6} />
+    <silkscreentext text="F405" fontSize={2} pcbX={-8} pcbY={-7.5} />
   </board>
 )
