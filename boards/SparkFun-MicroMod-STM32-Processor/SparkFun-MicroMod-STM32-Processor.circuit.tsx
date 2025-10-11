@@ -8,9 +8,7 @@ export default () => (
       footprint="lqfp64"
       pcbX={0}
       pcbY={0}
-      schX={0}
-      schY={0}
     />
-    <silkscreentext text="STM32" pcbX={-8} pcbY={-6} />
+    <silkscreentext text="STM32" pcbY={-6} />
   </board>
 )
