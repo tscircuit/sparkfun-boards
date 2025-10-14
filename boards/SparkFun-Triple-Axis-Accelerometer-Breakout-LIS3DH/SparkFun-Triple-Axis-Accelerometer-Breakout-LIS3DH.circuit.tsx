@@ -34,6 +34,8 @@ export default () => (
         pin16: sel.net().ADC1,
         pin15: sel.net().ADC2,
         pin13: sel.net().ADC3,
+        pin7: sel.R3.pin1,
+        pin10: sel.U1.pin5,
       }}
     />
     <silkscreentext
