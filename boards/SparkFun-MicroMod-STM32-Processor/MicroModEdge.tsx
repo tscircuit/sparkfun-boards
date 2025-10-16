@@ -97,7 +97,7 @@ export const MicroModEdge = (props: ChipProps<typeof pinLabels>) => {
         },
       }}
       footprint={
-        <footprint>
+        <footprint should_not_route_to={["R4"]}>
           {/* M.2 edge connector - 75 pads across 22mm board width, pads on both sides */}
           {/* Use shared X columns: each column has a top (odd) and bottom (even) pad at the same X */}
           {(() => {

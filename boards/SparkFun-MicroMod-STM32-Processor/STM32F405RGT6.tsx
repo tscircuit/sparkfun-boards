@@ -1,3 +1,4 @@
+import React from "react"
 import type { ChipProps } from "@tscircuit/props"
 
 const pinLabels = {
@@ -83,14 +84,16 @@ export const STM32F405RGT6 = (props: ChipProps<typeof pinLabels>) => {
             const pinNum = i + 1
             const x = -3.75 + i * 0.5
             return (
-              <smtpad
-                portHints={[`pin${pinNum}`]}
-                pcbX={x}
-                pcbY={-5.5}
-                width={0.3}
-                height={0.7}
-                shape="rect"
-              />
+              <React.Fragment key={`pin${pinNum}`}>
+                <smtpad
+                  portHints={[`pin${pinNum}`]}
+                  pcbX={x}
+                  pcbY={-5.5}
+                  width={0.3}
+                  height={0.7}
+                  shape="rect"
+                />
+              </React.Fragment>
             )
           })}
           {/* Right side pins 17-32 */}
@@ -98,14 +101,16 @@ export const STM32F405RGT6 = (props: ChipProps<typeof pinLabels>) => {
             const pinNum = i + 17
             const y = -3.75 + i * 0.5
             return (
-              <smtpad
-                portHints={[`pin${pinNum}`]}
-                pcbX={5.5}
-                pcbY={y}
-                width={0.7}
-                height={0.3}
-                shape="rect"
-              />
+              <React.Fragment key={`pin${pinNum}`}>
+                <smtpad
+                  portHints={[`pin${pinNum}`]}
+                  pcbX={5.5}
+                  pcbY={y}
+                  width={0.7}
+                  height={0.3}
+                  shape="rect"
+                />
+              </React.Fragment>
             )
           })}
           {/* Top side pins 33-48 */}
@@ -113,14 +118,16 @@ export const STM32F405RGT6 = (props: ChipProps<typeof pinLabels>) => {
             const pinNum = i + 33
             const x = 3.75 - i * 0.5
             return (
-              <smtpad
-                portHints={[`pin${pinNum}`]}
-                pcbX={x}
-                pcbY={5.5}
-                width={0.3}
-                height={0.7}
-                shape="rect"
-              />
+              <React.Fragment key={`pin${pinNum}`}>
+                <smtpad
+                  portHints={[`pin${pinNum}`]}
+                  pcbX={x}
+                  pcbY={5.5}
+                  width={0.3}
+                  height={0.7}
+                  shape="rect"
+                />
+              </React.Fragment>
             )
           })}
           {/* Left side pins 49-64 */}
@@ -128,14 +135,16 @@ export const STM32F405RGT6 = (props: ChipProps<typeof pinLabels>) => {
             const pinNum = i + 49
             const y = 3.75 - i * 0.5
             return (
-              <smtpad
-                portHints={[`pin${pinNum}`]}
-                pcbX={-5.5}
-                pcbY={y}
-                width={0.7}
-                height={0.3}
-                shape="rect"
-              />
+              <React.Fragment key={`pin${pinNum}`}>
+                <smtpad
+                  portHints={[`pin${pinNum}`]}
+                  pcbX={-5.5}
+                  pcbY={y}
+                  width={0.7}
+                  height={0.3}
+                  shape="rect"
+                />
+              </React.Fragment>
             )
           })}
           {/* Silkscreen outline */}

@@ -33,7 +33,7 @@ const outline = outlineBuilder(1, 0)
   .toArray()
 
 export default () => (
-  <board outline={outline}>
+  <board outline={outline} routingDisabled={true}>
     {/* MicroMod Edge Connector */}
     <MicroModEdge
       name="J1"
@@ -396,6 +396,9 @@ export default () => (
       pcbY={7.55}
       pcbRotation={270}
     />
+
+    <netlabel net="GND" connection="R4.pin1" />
+    <netlabel net="GND" connection="R4.pin2" />
 
     {/* Fiducials - spread in corners */}
     <hole name="FD1" diameter="0.635mm" pcbX={20.825} pcbY={7.077} />
