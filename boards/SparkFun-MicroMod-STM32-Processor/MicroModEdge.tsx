@@ -23,9 +23,9 @@ const MicroModEdge = (props: any) => (
       pin17: "SDIO_D1",
       pin18: "SDIO_D2",
       pin19: "SDIO_D3",
-      pin20: "RESET_N",
-      pin21: "BOOT_N",
-      pin22: "STAT_LED",
+      pin20: "NRST", // <-- rename to match MCU
+      pin21: "STAT_LED", // ok to keep
+      pin22: "V3V3", // or any other signal you expose
     }}
     {...props}
   />
