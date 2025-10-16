@@ -387,7 +387,7 @@ export default () => (
       schY={4}
     />
 
-    {/* DNP Resistor - Near left crystals */}
+    {/* DNP Resistor - Pull-up on RESET (Do Not Populate) */}
     <resistor
       name="R4"
       resistance="0"
@@ -396,6 +396,8 @@ export default () => (
       pcbY={7.55}
       pcbRotation={270}
     />
+    <netlabel net="V3_3" connection="R4.pin2" />
+    <netlabel net="RESET" connection="R4.pin1" />
 
     <netlabel net="GND" connection="R4.pin1" />
     <netlabel net="GND" connection="R4.pin2" />
