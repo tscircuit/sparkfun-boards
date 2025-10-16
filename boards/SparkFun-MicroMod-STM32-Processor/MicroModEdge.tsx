@@ -1,3 +1,4 @@
+import React from "react"
 import type { ChipProps } from "@tscircuit/props"
 
 const pinLabels = {
@@ -116,31 +117,33 @@ export const MicroModEdge = (props: ChipProps<typeof pinLabels>) => {
               // Top side (odd pins)
               if (oddPin <= 75) {
                 pads.push(
-                  <smtpad
-                    key={`pin${oddPin}`}
-                    portHints={[`pin${oddPin}`]}
-                    pcbX={x}
-                    pcbY={0}
-                    width={PAD_W}
-                    height={1.5}
-                    shape="rect"
-                    layer="top"
-                  />,
+                  <React.Fragment key={`pin${oddPin}`}>
+                    <smtpad
+                      portHints={[`pin${oddPin}`]}
+                      pcbX={x}
+                      pcbY={0}
+                      width={PAD_W}
+                      height={1.5}
+                      shape="rect"
+                      layer="top"
+                    />
+                  </React.Fragment>,
                 )
               }
               // Bottom side (even pins)
               if (evenPin <= 75) {
                 pads.push(
-                  <smtpad
-                    key={`pin${evenPin}`}
-                    portHints={[`pin${evenPin}`]}
-                    pcbX={x}
-                    pcbY={0}
-                    width={PAD_W}
-                    height={1.5}
-                    shape="rect"
-                    layer="bottom"
-                  />,
+                  <React.Fragment key={`pin${evenPin}`}>
+                    <smtpad
+                      portHints={[`pin${evenPin}`]}
+                      pcbX={x}
+                      pcbY={0}
+                      width={PAD_W}
+                      height={1.5}
+                      shape="rect"
+                      layer="bottom"
+                    />
+                  </React.Fragment>,
                 )
               }
             }
