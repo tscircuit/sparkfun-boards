@@ -4,7 +4,7 @@ import W25Q128 from "./W25Q128"
 import MicroModEdge from "./MicroModEdge"
 
 const Board = () => (
-  <board width="50mm" height="22mm" name="SparkFun MicroMod STM32 Processor">
+  <board width="50mm" height="50mm" name="SparkFun MicroMod STM32 Processor">
     <MicroModEdge
       name="J1"
       schX={0}
@@ -39,6 +39,9 @@ const Board = () => (
       name="U1"
       schX={0}
       schY={0}
+      // keep inside outline; opens a wider left corridor
+      pcbX="0mm"
+      pcbY="0mm"
       connections={{
         // power & refs
         V3V3: "net.V3V3",
@@ -100,6 +103,10 @@ const Board = () => (
       name="U2"
       schX={-80} // move flash to left
       schY={-20}
+      // farther up-left so routes don't cross the U1 pad row (FLASH_* pins)
+      pcbX="-20mm"
+      pcbY="-3mm" // if this goes down instead of up in your viewer, use "+10mm"
+      pcbRotation={180}
       connections={{
         V3V3: "net.V3V3",
         GND: "net.GND",

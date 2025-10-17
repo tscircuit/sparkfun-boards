@@ -8,6 +8,7 @@ const STM32F405RG = (props: any) => (
       // Power / special
       pin1: "VBAT",
       pin7: "NRST",
+      pin8: "VSSA",
       pin9: "GND",
       pin10: "VDDA",
       pin18: "GND",
@@ -34,6 +35,12 @@ const STM32F405RG = (props: any) => (
       // I2C1
       pin58: "I2C_SCL",
       pin59: "I2C_SDA",
+
+      // Boot configuration
+      pin60: "BOOT0",
+
+      // Status LED (GPIO)
+      pin33: "STAT_LED",
 
       // UART1
       pin37: "UART_TX",
