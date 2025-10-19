@@ -2,17 +2,17 @@ import React from "react"
 
 const W25Q128 = (props: any) => (
   <chip
-    name="U2"
+    name="U3"
     footprint="soic8_208mil"
     pinLabels={{
-      pin1: "FLASH_CS_N",
-      pin2: "FLASH_SO", // DO
-      pin3: "FLASH_WP_N",
+      pin1: "CS_N",
+      pin5: "DO_DI",
+      pin2: "D1_DO",
       pin4: "GND",
-      pin5: "FLASH_SI", // DI
-      pin6: "FLASH_SCK",
-      pin7: "FLASH_HOLD_N",
-      pin8: "V3V3",
+      pin3: "D2_WP",
+      pin6: "CLK",
+      pin7: "D3_HOLD",
+      pin8: "VDD",
     }}
     {...props}
   />

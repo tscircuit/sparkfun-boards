@@ -5,70 +5,70 @@ const STM32F405RG = (props: any) => (
     name="U1"
     footprint="qfp64_p0.5mm"
     pinLabels={{
-      // Power / special
       pin1: "VBAT",
+      pin2: "PC13",
+      pin3: "PC14",
+      pin4: "PC15",
+      pin5: "PH0",
+      pin6: "PH1",
       pin7: "NRST",
-      pin8: "VSSA",
-      pin9: "GND",
-      pin10: "VDDA",
-      pin18: "GND",
-      pin19: "V3V3",
+      pin8: "PC0",
+      pin9: "PC1",
+      pin10: "PC2",
+      pin11: "PC3",
+      pin12: "VSSA",
+      pin13: "VDDA",
+      pin14: "PA0",
+      pin15: "PA1",
+      pin16: "PA2_UART2_TX",
+      pin17: "PA3_UART2_RX",
+      pin18: "VSS1",
+      pin19: "VDD1",
+      pin20: "PA4_SPI1_NSS",
+      pin21: "PA5_SPI1_SCK",
+      pin22: "PA6_SPI1_MISO",
+      pin23: "PA7_SPI1_MOSI",
+      pin24: "PC4",
+      pin25: "PC5",
+      pin26: "PB0",
+      pin27: "PB1",
+      pin28: "PB2_BOOT1",
+      pin29: "PB10",
+      pin30: "PB11",
       pin31: "VCAP1",
+      pin32: "VDD2",
+      pin33: "PB12_I2S2_WS",
+      pin34: "PB13_I2S2_CK",
+      pin35: "PB14_I2S2_XD",
+      pin36: "PB15_I2S2_SD",
+      pin37: "PC6_I2S2_MCK",
+      pin38: "PC7",
+      pin39: "PC8_SDIO_D0",
+      pin40: "PC9_SDIO_D1",
+      pin41: "PA8",
+      pin42: "PA9_UART1_TX",
+      pin43: "PA10_UART1_RX",
+      pin44: "PA11",
+      pin45: "PA12",
+      pin46: "PA13_JTMS",
       pin47: "VCAP2",
-      pin63: "GND",
-      pin64: "V3V3",
-
-      // Clocks
-      pin5: "PH0_HSE",
-      pin6: "PH1_HSE",
-      pin3: "PC14_LSE",
-      pin4: "PC15_LSE",
-
-      // USB
-      pin44: "USB_DM",
-      pin45: "USB_DP",
-
-      // SWD
-      pin46: "SWDIO",
-      pin49: "SWCLK",
-
-      // I2C1
-      pin58: "I2C_SCL",
-      pin59: "I2C_SDA",
-
-      // Boot configuration
+      pin48: "VDD3",
+      pin49: "PA14_JTCK",
+      pin50: "PA15_JTDI",
+      pin51: "PC10_SDIO_D2",
+      pin52: "PC11_SDIO_D3",
+      pin53: "PC12_SDIO_CLK",
+      pin54: "PD2_SDIO_CMD",
+      pin55: "PB3_JTDO",
+      pin56: "PB4_JTRST",
+      pin57: "PB5",
+      pin58: "PB6",
+      pin59: "PB7",
       pin60: "BOOT0",
-
-      // Status LED (GPIO)
-      pin33: "STAT_LED",
-
-      // UART1
-      pin37: "UART_TX",
-      pin38: "UART_RX",
-
-      // SPI2 (for edge SPI)
-      pin51: "SPI_SCK",
-      pin52: "SPI_MISO",
-      pin53: "SPI_MOSI",
-      pin50: "SPI_NSS",
-
-      // SDIO
-      pin56: "SDIO_CLK",
-      pin54: "SDIO_CMD",
-      pin40: "SDIO_D0",
-      pin41: "SDIO_D1",
-      pin42: "SDIO_D2",
-      pin43: "SDIO_D3",
-
-      // On-board flash (names must match U2 exactly)
-      // Map these to unused GPIOs that you intend to use for the flash
-      // (the exact pins don’t matter to the schematic connectivity)
-      pin20: "FLASH_CS_N",
-      pin21: "FLASH_SO", // MISO from flash
-      pin22: "FLASH_SI", // MOSI to flash
-      pin23: "FLASH_SCK",
-      pin24: "FLASH_WP_N",
-      pin25: "FLASH_HOLD_N",
+      pin61: "PB8",
+      pin62: "PB9",
+      pin63: "VSS2",
+      pin64: "VDD4",
     }}
     {...props}
   />

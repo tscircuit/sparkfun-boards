@@ -4,28 +4,76 @@ const MicroModEdge = (props: any) => (
   <chip
     name="J1"
     pinLabels={{
-      pin1: "V3V3",
-      pin2: "GND",
-      pin3: "USB_DM",
-      pin4: "USB_DP",
-      pin5: "SWDIO",
-      pin6: "SWCLK",
-      pin7: "I2C_SCL",
-      pin8: "I2C_SDA",
-      pin9: "UART_TX",
-      pin10: "UART_RX",
-      pin11: "SPI_SCK",
-      pin12: "SPI_MISO",
-      pin13: "SPI_MOSI",
-      pin14: "SDIO_CMD",
-      pin15: "SDIO_CLK",
-      pin16: "SDIO_D0",
-      pin17: "SDIO_D1",
-      pin18: "SDIO_D2",
-      pin19: "SDIO_D3",
-      pin20: "NRST", // <-- rename to match MCU
-      pin21: "STAT_LED", // ok to keep
-      pin22: "V3V3", // or any other signal you expose
+      // ---- Left column ----
+      pin2: "VBUS1",
+      pin6: "RESET",
+      pin8: "G11",
+      pin11: "BOOT",
+      pin4: "3V3_EN",
+      pin72: "RTC_3V",
+      pin9: "USB_VIN",
+      pin5: "USB_DN",
+      pin3: "USB_DP",
+      pin37: "USBHOST_DN",
+      pin35: "USBHOST_DP",
+      pin43: "CAN_TX",
+      pin41: "CAN_RX",
+      pin23: "SWDIO",
+      pin21: "SWDCK",
+      pin58: "AUD_MCLK",
+      pin56: "AUD_OUT_CAM_MCLK",
+      pin52: "AUD_LRCLK",
+      pin54: "AUD_IN_CAM_PCLK",
+      pin50: "AUD_BCLK",
+      pin14: "I2C_SCL",
+      pin12: "I2C_SDA",
+      pin16: "I2C_INT",
+      pin53: "I2C_SCL1",
+      pin51: "I2C_SDA1",
+      pin49: "BATT_VIN_3",
+      pin1: "GND",
+
+      // ---- Right column ----
+      pin60: "SPI_SCK1_SDIO_CLK",
+      pin62: "SPI_SDO1_SDIO_CMD",
+      pin64: "SPI_SDI1_SDIO_DATA0",
+      pin66: "SDIO_DATA1",
+      pin68: "SDIO_DATA2",
+      pin70: "SPI_CS1_SDIO_DATA3",
+
+      pin57: "SPI_SCK",
+      pin59: "SPI_SDO",
+      pin61: "SPI_SDI",
+      pin55: "SPI_CS",
+
+      pin34: "A0",
+      pin38: "A1",
+
+      pin32: "PWM0",
+      pin47: "PWM1",
+
+      pin10: "D0",
+      pin18: "D1_CAM_TRIG",
+
+      pin17: "TX1",
+      pin19: "RX1",
+      pin13: "RTS1",
+      pin15: "CTS1",
+      pin22: "TX2",
+      pin20: "RX2",
+
+      pin40: "G0_BUS0",
+      pin42: "G1_BUS1",
+      pin44: "G2_BUS2",
+      pin46: "G3_BUS3",
+      pin48: "G4_BUS4",
+      pin73: "G5_BUS5",
+      pin71: "G6_BUS6",
+      pin69: "G7_BUS7",
+      pin67: "G8",
+      pin65: "G9_ADC_DN_CAM_HSYNC",
+      pin63: "G10_ADC_DP_CAM_VSYNC",
+      //pin61: "G11", // Add if defined (some variants use 61/65 for bottom G pins)
     }}
     {...props}
   />
