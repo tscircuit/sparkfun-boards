@@ -5,10 +5,10 @@ const MicroModEdge = (props: any) => (
     name="J1"
     pinLabels={{
       // ---- Left column ----
-      pin2: "VBUS1",
-      pin6: "RESET",
+      pin2: "V3_3",
+      pin6: "RESET_N",
       pin8: "G11",
-      pin11: "BOOT",
+      pin11: "BOOT_N",
       pin4: "3V3_EN",
       pin72: "RTC_3V",
       pin9: "USB_VIN",
@@ -27,7 +27,7 @@ const MicroModEdge = (props: any) => (
       pin50: "AUD_BCLK",
       pin14: "I2C_SCL",
       pin12: "I2C_SDA",
-      pin16: "I2C_INT",
+      pin16: "I2C_INT_N",
       pin53: "I2C_SCL1",
       pin51: "I2C_SDA1",
       pin49: "BATT_VIN_3",

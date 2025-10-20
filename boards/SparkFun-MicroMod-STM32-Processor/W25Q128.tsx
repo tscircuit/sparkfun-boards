@@ -12,7 +12,7 @@ const W25Q128 = (props: any) => (
       pin3: "D2_WP",
       pin6: "CLK",
       pin7: "D3_HOLD",
-      pin8: "VDD",
+      pin8: "V3_3",
     }}
     {...props}
   />

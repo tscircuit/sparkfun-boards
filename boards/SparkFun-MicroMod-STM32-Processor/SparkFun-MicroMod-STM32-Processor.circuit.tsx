@@ -12,9 +12,9 @@ const Board = () => (
       schX={30}
       schY={0}
       connections={{
-        VBUS1: "net.VBUS1",
-        RESET: "net.RESET",
-        BOOT: "net.BOOT",
+        V3_3: "net.V3_3",
+        RESET_N: "net.RESET_N",
+        BOOT_N: "net.BOOT_N",
 
         SWDIO: "net.SWDIO",
         SWDCK: "net.SWCLK",
@@ -46,6 +46,7 @@ const Board = () => (
         SPI_SDO: "net.C0P1",
         SPI_SDI: "net.C1P0",
         SPI_CS: "net.CS",
+        I2C_INT_N: "net.INT_N",
       }}
     />
 
@@ -66,7 +67,7 @@ const Board = () => (
         PA7_SPI1_MOSI: "net.C0P1",
         PA8: "net.G1",
         PB0: "net.A1",
-        PB1: "net.INT",
+        PB1: "net.INT_N",
         PB10: "net.SCL",
         PB11: "net.SDA",
         PB12_I2S2_WS: "net.HOST_ID",
@@ -87,7 +88,7 @@ const Board = () => (
         PC12_SDIO_CLK: "net.FLASH_SDI",
         PC13: "net.G5",
         PC2: "net.G6",
-        PC3: "net.FLASH_CS",
+        PC3: "net.FLASH_CS_N",
         PC4: "net.CS",
         PC5: "net.A0",
         PC7: "net.PWM1",
@@ -106,7 +107,7 @@ const Board = () => (
       pcbY="-3mm" // if this goes down instead of up in your viewer, use "+10mm"
       pcbRotation={180}
       connections={{
-        VDD: "net.VDD",
+        V3_3: "net.V3_3",
         GND: "net.GND",
         CS_N: "net.FLASH_CS_N",
         CLK: "net.FLASH_SCK",
@@ -285,7 +286,7 @@ const Board = () => (
       footprint="0402"
       schX={15}
       schY={0}
-      connections={{ pin1: "net.VDD", pin2: "net.BOOT" }} // change to "BOOT_N" if that's your edge net
+      connections={{ pin1: "net.V3_3", pin2: "net.BOOT" }} // change to "BOOT_N" if that's your edge net
     />
     <chip
       name="Q1"
@@ -295,7 +296,7 @@ const Board = () => (
       pinLabels={{ pin1: "G", pin2: "S", pin3: "D" }} // label pins as generic transistor pins
       connections={{
         pin1: "net.BOOT", // Gate connected to BOOT signal
-        pin2: "net.VDD", // Source to 3.3V
+        pin2: "net.V3_3", // Source to 3.3V
         pin3: "net.BOOT0", // Drain to BOOT0 node
       }}
     />
@@ -314,7 +315,7 @@ const Board = () => (
       resistance="5.1k"
       schX={15}
       schY={-3}
-      connections={{ pin1: "U1.pin7", pin2: "net.VDD" }}
+      connections={{ pin1: "U1.pin7", pin2: "net.V3_3" }}
     />
     <capacitor
       name="C15"
@@ -355,8 +356,21 @@ const Board = () => (
       schX={3}
       schY={-13}
       schRotation={90}
-      connections={{ pin1: "U2.pin1", pin2: "net.VDD" }}
+      connections={{ pin1: "U2.pin1", pin2: "net.V3_3" }}
     />
+
+    {/* connections*/}
+    <trace from="U1.pin42" to="U1.pin43" />
+    <trace from="U1.pin42" to="U1.pin13" />
+    <trace from="U1.pin13" to="U1.pin64" />
+    <trace from="U1.pin64" to="U1.pin48" />
+    <trace from="U1.pin48" to="U1.pin32" />
+    <trace from="U1.pin32" to="U1.pin19" />
+    <trace from="U1.pin11" to="U2.pin1" />
+    <trace from="U1.pin51" to="U2.pin6" />
+    <trace from="U1.pin52" to="U2.pin2" />
+    <trace from="U1.pin53" to="U2.pin5" />
+    <trace from="U2.pin7" to="U2.pin3" />
   </board>
 )
 
