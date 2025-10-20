@@ -5,7 +5,7 @@ import MicroModEdge from "./MicroModEdge"
 import { sel } from "@tscircuit/core"
 
 const Board = () => (
-  <board width={100} height={100} name="SparkFun MicroMod STM32 Processor">
+  <board width="110mm" height="110mm" name="SparkFun MicroMod STM32 Processor">
     <MicroModEdge
       name="J1"
       schX={30}
@@ -128,6 +128,26 @@ const Board = () => (
       pcbX={-5}
       pcbY={15}
       pcbRotation={0}
+      footprint={
+        <footprint>
+          <smtpad
+            shape="rect"
+            width="1.4mm"
+            height="1.2mm"
+            pcbX="-1.1mm"
+            pcbY="0mm"
+            portHints={["pin1"]}
+          />
+          <smtpad
+            shape="rect"
+            width="1.4mm"
+            height="1.2mm"
+            pcbX="1.1mm"
+            pcbY="0mm"
+            portHints={["pin2"]}
+          />
+        </footprint>
+      }
       connections={{ pin1: "net.U1_PH0_HSE", pin2: "net.U1_PH1_HSE" }}
     />
     <capacitor
@@ -162,6 +182,26 @@ const Board = () => (
       pcbX={5}
       pcbY={20}
       pcbRotation={0}
+      footprint={
+        <footprint>
+          <smtpad
+            shape="rect"
+            width="1.0mm"
+            height="1.1mm"
+            pcbX="-0.95mm"
+            pcbY="0mm"
+            portHints={["pin1"]}
+          />
+          <smtpad
+            shape="rect"
+            width="1.0mm"
+            height="1.1mm"
+            pcbX="0.95mm"
+            pcbY="0mm"
+            portHints={["pin2"]}
+          />
+        </footprint>
+      }
       connections={{ pin1: "U1.pin4", pin2: "U1.pin3" }}
     />
     <capacitor
@@ -371,6 +411,151 @@ const Board = () => (
     <trace from="U2.pin5" to="U1.pin52" />
     <trace from="U2.pin2" to="U1.pin51" />
     <trace from="U2.pin1" to="U1.pin3" />
+
+    <pinheader
+      name="J2"
+      gender="female"
+      footprint="pinrow40_p2.54_id1.016_od1.8796_doublesidedpinlabel_pinlabelorthogonal_pinlabeltextalignright_pinlabelverticallyinverted"
+      pinCount={40}
+      pinLabels={[
+        "GND",
+        "V3_3",
+        "USB_DN",
+        "USB_DP",
+        "USB_VIN",
+        "RESET_N",
+        "BOOT_N",
+        "SWDIO",
+        "SWDCK",
+        "AUD_MCLK",
+        "AUD_LRCLK",
+        "AUD_BCLK",
+        "I2C_SCL",
+        "I2C_SDA",
+        "A0",
+        "A1",
+        "PWM0",
+        "PWM1",
+        "D0",
+        "D1_CAM_TRIG",
+        "TX1",
+        "RX1",
+        "G0_BUS0",
+        "G1_BUS1",
+        "G2_BUS2",
+        "G3_BUS3",
+        "G4_BUS4",
+        "G5_BUS5",
+        "G6_BUS6",
+        "G8",
+        "G10_ADC_DP_CAM_VSYNC",
+        "G11",
+        "SPI_SCK",
+        "SPI_SDO",
+        "SPI_SDI",
+        "SPI_CS",
+        "I2C_INT_N",
+        "CAN_TX",
+        "CAN_RX",
+        "RTC_3V",
+      ]}
+      schRotation={0}
+      schX={35}
+      schY={0}
+      schWidth={0.6}
+      schPinArrangement={{
+        rightSide: {
+          direction: "bottom-to-top",
+          pins: [
+            "pin1",
+            "pin2",
+            "pin3",
+            "pin4",
+            "pin5",
+            "pin6",
+            "pin7",
+            "pin8",
+            "pin9",
+            "pin10",
+            "pin11",
+            "pin12",
+            "pin13",
+            "pin14",
+            "pin15",
+            "pin16",
+            "pin17",
+            "pin18",
+            "pin19",
+            "pin20",
+            "pin21",
+            "pin22",
+            "pin23",
+            "pin24",
+            "pin25",
+            "pin26",
+            "pin27",
+            "pin28",
+            "pin29",
+            "pin30",
+            "pin31",
+            "pin32",
+            "pin33",
+            "pin34",
+            "pin35",
+            "pin36",
+            "pin37",
+            "pin38",
+            "pin39",
+            "pin40",
+          ],
+        },
+      }}
+      connections={{
+        pin1: "net.GND",
+        pin2: "net.V3_3",
+        pin3: "net.USB_DN",
+        pin4: "net.USB_DP",
+        pin5: "net.USB_VIN",
+        pin6: "net.RESET_N",
+        pin7: "net.BOOT_N",
+        pin8: "net.SWDIO",
+        pin9: "net.SWCLK",
+        pin10: "net.AUD_MCLK",
+        pin11: "net.AUD_LRCLK",
+        pin12: "net.AUD_BCLK",
+        pin13: "net.I2C_SCL",
+        pin14: "net.I2C_SDA",
+        pin15: "net.A0",
+        pin16: "net.A1",
+        pin17: "net.PWM0",
+        pin18: "net.PWM1",
+        pin19: "net.D0",
+        pin20: "net.D1",
+        pin21: "net.TX1",
+        pin22: "net.RX1",
+        pin23: "net.G0",
+        pin24: "net.G1",
+        pin25: "net.G2",
+        pin26: "net.G3",
+        pin27: "net.G4",
+        pin28: "net.G5",
+        pin29: "net.G6",
+        pin30: "net.G8",
+        pin31: "net.HOST_VBUS",
+        pin32: "net.G11",
+        pin33: "net.SCK",
+        pin34: "net.C0P1",
+        pin35: "net.C1P0",
+        pin36: "net.CS",
+        pin37: "net.INT_N",
+        pin38: "net.CAN_TX",
+        pin39: "net.CAN_RX",
+        pin40: "net.RTC_3V",
+      }}
+      pcbX={45}
+      pcbY={0}
+      pcbRotation={90}
+    />
   </board>
 )
 
