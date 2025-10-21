@@ -7,62 +7,41 @@ import {
   DecouplingCapacitor_10uF,
   DecouplingCapacitor_1uF,
 } from "./PowerComponents"
-import {
-  Crystal_12MHz,
-  Crystal_32kHz,
-  CrystalLoadCapacitor_18pF,
-  CrystalLoadCapacitor_10pF,
-} from "./CrystalComponents"
-import {
-  ResetButton,
-  BootButton,
-  PowerLED,
-  StatusLED,
-  PullupResistor_10k,
-  CurrentLimitingResistor_1k,
-  FlashMemory,
-} from "./SupportingComponents"
 
 export default () => (
-  <board width="22mm" height="44mm">
+  <board width="40mm" height="60mm">
     {/* Main microcontroller */}
-    <RP2040 name="U1" pcbX={0} pcbY={10} />
+    <RP2040 name="U1" pcbX={0} pcbY={0} />
 
     {/* MicroMod M.2 connector */}
-    <MicroModConnector name="J1" pcbX={0} pcbY={-15} />
+    <MicroModConnector name="J1" pcbX={0} pcbY={-25} />
 
-    {/* Power regulation */}
-    <VoltageRegulator_3V3 name="U2" pcbX={-8} pcbY={15} />
-    <VoltageRegulator_1V1 name="U3" pcbX={-8} pcbY={12} />
+    {/* Power regulation - well separated */}
+    <VoltageRegulator_3V3 name="U2" pcbX={-15} pcbY={15} />
+    <VoltageRegulator_1V1 name="U3" pcbX={-15} pcbY={5} />
 
-    {/* Basic decoupling capacitors */}
-    <DecouplingCapacitor_10uF name="C1" pcbX={-6} pcbY={15} />
-    <DecouplingCapacitor_100nF name="C2" pcbX={2} pcbY={12} />
+    {/* Basic decoupling capacitors - good spacing */}
+    <DecouplingCapacitor_10uF name="C1" pcbX={-10} pcbY={15} />
+    <DecouplingCapacitor_100nF name="C2" pcbX={-10} pcbY={5} />
 
-    {/* Power connections */}
+    {/* Power connections with net labels for better routing */}
     <trace from=".J1 > .pin65" to=".U2 > .pin1" />
     <trace from=".U2 > .pin5" to=".U1 > .pin1" />
     <trace from=".U3 > .pin5" to=".U1 > .pin25" />
 
     {/* Ground connections */}
     <trace from=".J1 > .pin1" to=".U1 > .pin57" />
+    <trace from=".U2 > .pin2" to=".J1 > .pin1" />
+    <trace from=".U3 > .pin2" to=".J1 > .pin1" />
 
-    {/* Capacitor connections - power decoupling */}
-    <trace from=".C1 > .pin1" to=".U1 > .pin1" />
-    <trace from=".C1 > .pin2" to=".U1 > .pin57" />
-    <trace from=".C2 > .pin1" to=".U1 > .pin25" />
-    <trace from=".C2 > .pin2" to=".U1 > .pin57" />
+    {/* Capacitor connections */}
+    <trace from=".C1 > .pin1" to=".U2 > .pin5" />
+    <trace from=".C1 > .pin2" to=".J1 > .pin1" />
+    <trace from=".C2 > .pin1" to=".U3 > .pin5" />
+    <trace from=".C2 > .pin2" to=".J1 > .pin1" />
 
     {/* USB connections */}
-    <trace from=".J1 > .pin5" to=".U1 > .USB_DP" />
-    <trace from=".J1 > .pin6" to=".U1 > .USB_DM" />
-
-    {/* GPIO connections to MicroMod connector */}
-    <trace from=".U1 > .GPIO0" to=".J1 > .pin34" />
-    <trace from=".U1 > .GPIO1" to=".J1 > .pin35" />
-
-    {/* I2C connections */}
-    <trace from=".U1 > .GPIO22" to=".J1 > .pin15" />
-    <trace from=".U1 > .GPIO23" to=".J1 > .pin16" />
+    <trace from=".J1 > .pin5" to=".U1 > .pin50" />
+    <trace from=".J1 > .pin6" to=".U1 > .pin49" />
   </board>
 )

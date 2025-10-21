@@ -1,0 +1,12 @@
+{
+  "autorouter": {
+    "maxIterations": 10000,
+    "timeout": 300,
+    "minViaSpacing": 0.3,
+    "minTraceSpacing": 0.2
+  },
+  "build": {
+    "ignoreErrors": false,
+    "outputFormat": "json"
+  }
+}
