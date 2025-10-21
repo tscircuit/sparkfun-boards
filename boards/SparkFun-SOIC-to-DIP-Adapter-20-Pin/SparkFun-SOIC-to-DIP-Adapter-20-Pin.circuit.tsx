@@ -1,9 +1,9 @@
 import { sel } from "@tscircuit/core"
 
 export default () => (
-  <board width="17.78mm" height="25.4mm">
-    <silkscreentext text="1" pcbX={-6} pcbY={11.7} fontSize={1.5} />
-    <silkscreentext text="20" pcbX={5.5} pcbY={11.7} fontSize={1.5} />
+  <board width="40mm" height="25.4mm">
+    <silkscreentext text="1" pcbX={-7} pcbY={11.7} fontSize={1.5} />
+    <silkscreentext text="20" pcbX={6.5} pcbY={11.7} fontSize={1.5} />
     <silkscreentext text="SOIC-20" pcbY={-11.5} fontSize={1.5} />
 
     <jumper
@@ -28,7 +28,7 @@ export default () => (
           ],
         },
       }}
-      pcbX={-7.62}
+      pcbX={-15.0}
       pcbRotation={90}
       pinLabels={{
         pin1: "IN1",
@@ -95,7 +95,7 @@ export default () => (
           ],
         },
       }}
-      pcbX={7.62}
+      pcbX={15.0}
       pcbRotation={270}
       pinLabels={{
         pin1: "IN11",

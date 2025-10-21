@@ -1,11 +1,13 @@
 {
   "autorouter": {
-    "maxIterations": 100000,
-    "timeout": 1200,
-    "minViaSpacing": 0.5,
-    "minTraceSpacing": 0.4,
-    "maxCandidates": 2000,
-    "allowIterationWarnings": true
+    "maxIterations": 500000,
+    "timeout": 3600,
+    "minViaSpacing": 0.6,
+    "minTraceSpacing": 0.5,
+    "maxCandidates": 5000,
+    "allowIterationWarnings": true,
+    "solverType": "hybrid",
+    "routingStrategy": "simple"
   },
   "build": {
     "ignoreErrors": true,

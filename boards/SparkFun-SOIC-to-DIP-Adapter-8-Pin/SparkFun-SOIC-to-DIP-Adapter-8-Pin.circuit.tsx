@@ -1,7 +1,7 @@
 import { sel } from "tscircuit"
 
 export default () => (
-  <board width="20.83mm" height="20.83mm">
+  <board width="30mm" height="20.83mm">
     <chip
       name="U1"
       cadModel={null}

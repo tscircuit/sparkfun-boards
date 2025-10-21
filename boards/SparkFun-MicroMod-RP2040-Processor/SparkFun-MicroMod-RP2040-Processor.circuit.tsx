@@ -3,15 +3,15 @@ import { MicroModConnector } from "./MicroModConnector"
 import { VoltageRegulator_3V3 } from "./PowerComponents"
 
 export default () => (
-  <board width="60mm" height="80mm">
-    {/* Main microcontroller */}
-    <RP2040 name="U1" pcbX={0} pcbY={10} />
+  <board width="80mm" height="100mm">
+    {/* Main microcontroller - well centered */}
+    <RP2040 name="U1" pcbX={0} pcbY={0} />
 
-    {/* MicroMod M.2 connector */}
-    <MicroModConnector name="J1" pcbX={0} pcbY={-35} />
+    {/* MicroMod M.2 connector - maximum separation */}
+    <MicroModConnector name="J1" pcbX={0} pcbY={-40} />
 
-    {/* Power regulation - essential only */}
-    <VoltageRegulator_3V3 name="U2" pcbX={-25} pcbY={25} />
+    {/* Power regulation - far from other components */}
+    <VoltageRegulator_3V3 name="U2" pcbX={-30} pcbY={30} />
 
     {/* Basic power connections */}
     <trace from=".J1 > .pin65" to=".U2 > .pin1" />
