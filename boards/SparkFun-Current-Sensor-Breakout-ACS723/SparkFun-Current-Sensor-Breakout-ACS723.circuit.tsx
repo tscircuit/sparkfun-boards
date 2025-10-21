@@ -1,5 +1,6 @@
 import { sel } from "tscircuit"
 import { ACS723 } from "./ACS723"
+import { boardProps } from "@tscircuit/props"
 
 export default () => {
   return (
@@ -7,6 +8,7 @@ export default () => {
       <jumper
         cadModel={null}
         pcbX={10}
+        pcbY={1.27}
         pcbRotation={-90}
         pinLabels={{ pin1: ["VCC"], pin2: ["VOUT"], pin3: ["GND"] }}
         name="JP1"
@@ -29,6 +31,7 @@ export default () => {
         connections={{ pin1: sel.U1.pin1 }}
         schX={-3.8}
         schY={1.3}
+        pinLabels={{ pin1: ["IP_POS"] }}
         footprint="pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft"
       />
       <jumper
@@ -52,6 +55,7 @@ export default () => {
         schWidth={0.8}
         schX={-3.8}
         schY={-1.3}
+        pinLabels={{ pin1: ["IP_NEG"] }}
         connections={{ pin1: sel.U1.pin3 }}
         footprint="pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft"
       />
@@ -65,6 +69,10 @@ export default () => {
         footprint="solderjumper2_pw0.635_ph1.27_p0.8"
         connections={{ pin2: sel.R1.pin1, pin1: sel.net().GND }}
       />
+      <silkscreentext text="ACS723" pcbX={0} pcbY={-5.2} fontSize={1.5} />
+      <silkscreentext text="Current Sensor" pcbX={0} pcbY={-6.5} />
+
+      <silkscreentext text="BW_SEL" pcbX={0} layer="bottom" pcbY={0} />
       <group>
         <ACS723
           schWidth={1.6}
@@ -83,6 +91,7 @@ export default () => {
           footprint="0603"
           connections={{ pin2: sel.net().VCC }}
         />
+        <hole diameter={3.048} pcbY={-5.08} pcbX={9.525} />
         <capacitor
           name="C1"
           capacitance="0.1uF"
@@ -94,8 +103,7 @@ export default () => {
           schRotation={-90}
           footprint="cap0603"
           connections={{
-            pin1: [sel.U1.pin8, sel.R1.pin2],
-            pin2: sel.net().GND,
+            pin1: sel.net().VCC,
           }}
         />
         <capacitor
@@ -108,7 +116,7 @@ export default () => {
           schX={2.3}
           schRotation={-90}
           footprint="cap0603"
-          connections={{ pin1: sel.U1.pin7, pin2: sel.net().GND }}
+          connections={{ pin1: sel.U1.pin7 }}
         />
       </group>
       <netlabel
@@ -117,6 +125,20 @@ export default () => {
         schY={-2.05}
         schX={1.7}
         connectsTo={sel.U1.pin5}
+      />
+      <netlabel
+        net="GND"
+        anchorSide="top"
+        schY={-2.05}
+        schX={2.3}
+        connectsTo={sel.C2.pin2}
+      />
+      <netlabel
+        net="GND"
+        anchorSide="top"
+        schY={-2.05}
+        schX={3}
+        connectsTo={sel.C1.pin2}
       />
       <netlabel
         net="BW_SEL"
