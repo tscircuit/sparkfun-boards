@@ -1,6 +1,6 @@
+import { sel } from "tscircuit"
 import { FS3000_1015 } from "./ FS3000_1015"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
-import { sel } from "tscircuit"
 
 export default () => {
   return (

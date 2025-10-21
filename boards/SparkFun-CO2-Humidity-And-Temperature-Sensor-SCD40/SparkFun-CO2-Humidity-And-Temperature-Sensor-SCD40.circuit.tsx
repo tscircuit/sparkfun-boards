@@ -1,5 +1,5 @@
-import { SCD40_D_R1 } from "./ SCD40_D_R1"
 import { sel } from "tscircuit"
+import { SCD40_D_R1 } from "./ SCD40_D_R1"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 
 export default () => (

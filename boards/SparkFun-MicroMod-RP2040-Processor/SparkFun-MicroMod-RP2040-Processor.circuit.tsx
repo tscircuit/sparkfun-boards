@@ -1,6 +1,6 @@
-import { RP2040 } from "./RP2040"
 import { MicroModConnector } from "./MicroModConnector"
 import { VoltageRegulator_3V3 } from "./PowerComponents"
+import { RP2040 } from "./RP2040"
 
 export default () => (
   <board width="80mm" height="100mm">

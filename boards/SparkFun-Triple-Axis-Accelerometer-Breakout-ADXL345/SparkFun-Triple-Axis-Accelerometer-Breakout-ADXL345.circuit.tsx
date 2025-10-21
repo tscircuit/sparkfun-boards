@@ -1,5 +1,5 @@
-import { ADXL345BCCZ_RL7 } from "./ADXL345"
 import { sel } from "tscircuit"
+import { ADXL345BCCZ_RL7 } from "./ADXL345"
 
 const jumperPinLabels = {
   pin1: ["GND"],

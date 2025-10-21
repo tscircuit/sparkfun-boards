@@ -1,5 +1,5 @@
-import { LIS3DHTR } from "./LIS3DH"
 import { sel } from "tscircuit"
+import { LIS3DHTR } from "./LIS3DH"
 
 const JP1PinLabels = {
   pin1: ["GND"],

@@ -1,6 +1,6 @@
-import { VCNL4040M3OE } from "./VCNL4040M3OE"
-import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { sel } from "tscircuit"
+import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { VCNL4040M3OE } from "./VCNL4040M3OE"
 
 const JPPinlabel = {
   pin4: ["SCL"],

@@ -1,5 +1,5 @@
-import { USB_SMT_04F_S1_B1_R11 } from "./USB_SMT_04F_S1_B1_R11"
 import { sel } from "tscircuit"
+import { USB_SMT_04F_S1_B1_R11 } from "./USB_SMT_04F_S1_B1_R11"
 
 const JP1PinLabels = {
   pin1: ["VCC"],

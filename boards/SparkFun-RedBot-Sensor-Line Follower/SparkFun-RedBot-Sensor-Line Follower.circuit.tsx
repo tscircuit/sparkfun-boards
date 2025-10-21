@@ -1,5 +1,5 @@
 import { sel } from "@tscircuit/core"
-import { JP1_FOOTPRINT, U1_FOOTPRINT, R_FOOTPRINT } from "./footprints"
+import { JP1_FOOTPRINT, R_FOOTPRINT, U1_FOOTPRINT } from "./footprints"
 
 export default () => (
   <board width="7.62mm" height="24.13mm">

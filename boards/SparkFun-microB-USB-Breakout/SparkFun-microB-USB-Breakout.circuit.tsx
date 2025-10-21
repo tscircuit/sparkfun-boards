@@ -1,5 +1,5 @@
-import { USB_MICRO_XNJ_JB } from "./USB_MICRO_XNJ_JB"
 import { sel } from "tscircuit"
+import { USB_MICRO_XNJ_JB } from "./USB_MICRO_XNJ_JB"
 
 const pinlabels = {
   pin1: "GND",

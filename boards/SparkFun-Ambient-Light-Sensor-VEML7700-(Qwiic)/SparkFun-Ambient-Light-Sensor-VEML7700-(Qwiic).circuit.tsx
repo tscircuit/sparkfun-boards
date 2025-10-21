@@ -1,6 +1,6 @@
 import { sel } from "tscircuit"
-import { VEML7700 } from "./VEML7700"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { VEML7700 } from "./VEML7700"
 
 const jumperPinLabels = {
   pin1: ["GND"],

@@ -1,6 +1,6 @@
 import { sel } from "@tscircuit/core"
 import { VL53L5CX } from "./VL53L5CX"
-import { VL53L5CX_footprint, JST04_RA_1mm } from "./footprints"
+import { JST04_RA_1mm, VL53L5CX_footprint } from "./footprints"
 // https://tscircuit.com/MustafaMulla29/sparkfun-VL535CX
 
 export default () => (

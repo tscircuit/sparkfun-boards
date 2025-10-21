@@ -1,4 +1,4 @@
-import { type ChipProps } from "@tscircuit/props"
+import type { ChipProps } from "@tscircuit/props"
 
 export const pinLabels = {
   pin1: "SCL",

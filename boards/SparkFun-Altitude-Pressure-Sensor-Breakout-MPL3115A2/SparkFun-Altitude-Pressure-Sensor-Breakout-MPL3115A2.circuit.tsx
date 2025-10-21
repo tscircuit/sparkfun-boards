@@ -1,6 +1,6 @@
-import manualEdits from "./manual-edits.json"
-import { MPL3115A2R1 } from "./MPL3115A2R1"
 import { sel } from "tscircuit"
+import { MPL3115A2R1 } from "./MPL3115A2R1"
+import manualEdits from "./manual-edits.json"
 
 const jumperPinLabels = {
   pin1: ["INT2"],

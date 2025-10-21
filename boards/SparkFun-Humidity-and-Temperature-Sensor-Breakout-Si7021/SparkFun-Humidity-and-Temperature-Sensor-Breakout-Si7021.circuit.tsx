@@ -1,6 +1,6 @@
-import manualEdits from "./manual-edits.json"
-import { SI7021_A20_IM1R } from "./SI7021_A20_IM1R"
 import { sel } from "tscircuit"
+import { SI7021_A20_IM1R } from "./SI7021_A20_IM1R"
+import manualEdits from "./manual-edits.json"
 
 const jumperPinLabels = {
   pin1: ["GND"],

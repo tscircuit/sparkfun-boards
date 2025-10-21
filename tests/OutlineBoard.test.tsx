@@ -25,7 +25,7 @@ test("OutlineBoard", () => {
     .toArray()
 
   const circuit = new Circuit()
-  circuit.add(<board outline={outline}></board>)
+  circuit.add(<board outline={outline} />)
   expect(outline).toMatchInlineSnapshot(`
     [
       {

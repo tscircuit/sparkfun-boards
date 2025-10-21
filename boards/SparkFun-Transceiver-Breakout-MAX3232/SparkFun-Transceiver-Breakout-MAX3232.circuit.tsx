@@ -1,7 +1,7 @@
-import manualEdits from "./manual-edits.json"
+import { sel } from "tscircuit"
 import { JP } from "./JP"
 import { MAX3232ESE_UMW } from "./MAX3232ESE_UMW"
-import { sel } from "tscircuit"
+import manualEdits from "./manual-edits.json"
 
 const selectors = {
   U1: sel.U1(MAX3232ESE_UMW),

@@ -1,5 +1,5 @@
-import { ADXL362BCCZ_R2 } from "./ADXL362BCCZ_R2"
 import { sel } from "tscircuit"
+import { ADXL362BCCZ_R2 } from "./ADXL362BCCZ_R2"
 
 const JP1PinLabels = {
   pin1: ["SCK"],

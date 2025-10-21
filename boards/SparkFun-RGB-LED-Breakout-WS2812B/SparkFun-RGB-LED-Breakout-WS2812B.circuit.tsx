@@ -1,5 +1,5 @@
-import { WS2812B_V5_W } from "./WS2812B_V5_W"
 import { sel } from "tscircuit"
+import { WS2812B_V5_W } from "./WS2812B_V5_W"
 
 const JP1PinLabels = {
   pin1: ["GND"],

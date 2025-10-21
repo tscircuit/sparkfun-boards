@@ -1,6 +1,6 @@
+import { sel } from "@tscircuit/core"
 import { STHS34PF80 } from "./STHS34PF80"
 import { JST04_1MM_RA } from "./jumperFootprint"
-import { sel } from "@tscircuit/core"
 
 const MotionSensor = () => (
   <board width="25.4mm" height="25.4mm">

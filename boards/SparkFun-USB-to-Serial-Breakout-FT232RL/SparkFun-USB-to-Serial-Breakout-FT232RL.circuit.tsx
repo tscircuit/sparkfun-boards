@@ -1,7 +1,7 @@
-import { FT232RL } from "./FT232RL"
-import { TYPE_C_31_M_12 } from "./TYPE_C_31_M_12"
-import { MST22D18G2_125 } from "./MST22D18G2_125"
 import { sel } from "@tscircuit/core"
+import { FT232RL } from "./FT232RL"
+import { MST22D18G2_125 } from "./MST22D18G2_125"
+import { TYPE_C_31_M_12 } from "./TYPE_C_31_M_12"
 
 const selectors = {
   U1: sel.U1(FT232RL),

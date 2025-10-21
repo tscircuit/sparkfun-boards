@@ -1,7 +1,7 @@
 import { sel } from "tscircuit"
+import { AP2112K } from "./AP2112K"
 import { JST04_1MM_RA } from "./JST04_1MM_RA"
 import { JST05_1MM_RA } from "./JST05_1MM_RA"
-import { AP2112K } from "./AP2112K"
 export default () => (
   <board width="22.86mm" height="8.88mm">
     <AP2112K

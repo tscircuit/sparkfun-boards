@@ -1,6 +1,6 @@
-import manualEdits from "./manual-edits.json"
 import { sel } from "tscircuit"
 import { DRV2605LDGST } from "./DRV2605LDGST"
+import manualEdits from "./manual-edits.json"
 
 const JP1PinLabels = {
   pin1: ["EN"],

@@ -1,6 +1,6 @@
-import manualEdits from "./manual-edits.json"
-import { TMP102AIDRLR } from "./TMP102AIDRLR"
 import { sel } from "tscircuit"
+import { TMP102AIDRLR } from "./TMP102AIDRLR"
+import manualEdits from "./manual-edits.json"
 
 const jumperPinLabels = {
   pin1: ["GND"],

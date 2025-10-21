@@ -1,5 +1,5 @@
-import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { sel } from "tscircuit"
+import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 
 const pinLabels = {
   pin1: ["GND"],

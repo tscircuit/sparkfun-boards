@@ -1,6 +1,6 @@
-import manualEdits from "./manual-edits.json"
-import { MAX98357AETE_T } from "./MAX98357AETE_T"
 import { sel } from "tscircuit"
+import { MAX98357AETE_T } from "./MAX98357AETE_T"
+import manualEdits from "./manual-edits.json"
 
 const outline = [
   // Top edge

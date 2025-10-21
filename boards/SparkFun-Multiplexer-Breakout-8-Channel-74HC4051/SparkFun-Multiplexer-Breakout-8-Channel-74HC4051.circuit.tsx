@@ -261,7 +261,7 @@ export default () => (
     />
     <schematictable schX={12} schY={-1}>
       <schematicrow height={0.7}>
-        <schematiccell></schematiccell>
+        <schematiccell />
         <schematiccell>Min</schematiccell>
         <schematiccell>Typ</schematiccell>
         <schematiccell>Max</schematiccell>

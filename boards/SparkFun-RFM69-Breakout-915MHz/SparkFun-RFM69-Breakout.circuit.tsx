@@ -1,5 +1,5 @@
-import { RFM69HCW } from "./RFM69HCW"
 import { sel } from "@tscircuit/core"
+import { RFM69HCW } from "./RFM69HCW"
 
 const RFM69BREAKOUT = () => {
   return (

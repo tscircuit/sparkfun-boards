@@ -1,6 +1,6 @@
 import { sel } from "tscircuit"
-import { TMF8820_1AM } from "./TMF8820_1AM"
 import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Qwiic-Adapter/SM04B_SRSS_TB_LF__SN"
+import { TMF8820_1AM } from "./TMF8820_1AM"
 
 export default () => (
   <board width="25.4mm" height="12.7mm">

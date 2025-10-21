@@ -1,6 +1,6 @@
+import { sel } from "tscircuit"
 import { MLX90640ESF } from "./MLX90640ESF"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
-import { sel } from "tscircuit"
 
 export default () => (
   <board width={25.4} height={25.4}>

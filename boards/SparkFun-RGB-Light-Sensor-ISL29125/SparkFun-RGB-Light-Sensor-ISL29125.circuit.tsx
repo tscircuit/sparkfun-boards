@@ -1,6 +1,6 @@
-import manualEdits from "./manual-edits.json"
-import { ISL29125IROZ_T7 } from "./ISL29125IROZ_T7"
 import { sel } from "tscircuit"
+import { ISL29125IROZ_T7 } from "./ISL29125IROZ_T7"
+import manualEdits from "./manual-edits.json"
 
 const jumperPinLabels = {
   pin5: ["N_INT"],

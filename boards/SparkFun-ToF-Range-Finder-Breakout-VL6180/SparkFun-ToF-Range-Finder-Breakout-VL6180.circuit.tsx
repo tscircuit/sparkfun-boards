@@ -1,6 +1,6 @@
-import manualEdits from "./manual-edits.json"
-import { VL6180V1NR_1 } from "./VL6180V1NR_1"
 import { sel } from "tscircuit"
+import { VL6180V1NR_1 } from "./VL6180V1NR_1"
+import manualEdits from "./manual-edits.json"
 
 const jumperPinLabels = {
   pin1: ["GND"],
