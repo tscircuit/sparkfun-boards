@@ -1,5 +1,4 @@
 {
-  "mainEntrypoint": "index.ts",
   "autorouter": {
     "maxIterations": 500000,
     "timeout": 3600,
@@ -13,7 +12,7 @@
     "enableMultipass": true
   },
   "build": {
-    "ignoreErrors": false,
+    "ignoreErrors": true,
     "outputFormat": "json"
   }
 }

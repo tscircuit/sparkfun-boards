@@ -1,0 +1,19 @@
+{
+  "autorouter": {
+    "maxIterations": 1000000,
+    "timeout": 7200,
+    "minViaSpacing": 0.3,
+    "minTraceSpacing": 0.2,
+    "maxCandidates": 15000,
+    "allowIterationWarnings": true,
+    "solverType": "hybrid",
+    "routingStrategy": "simple",
+    "relaxConstraints": true,
+    "enableMultipass": true,
+    "retryCount": 5
+  },
+  "build": {
+    "ignoreErrors": true,
+    "outputFormat": "json"
+  }
+}
