@@ -127,6 +127,13 @@ export default () => {
         connectsTo={sel.U1.pin5}
       />
       <netlabel
+        net="VCC"
+        anchorSide="bottom"
+        schY={0.4}
+        schX={1.7}
+        connectsTo={sel.U1.pin8}
+      />
+      <netlabel
         net="GND"
         anchorSide="top"
         schY={-2.05}
