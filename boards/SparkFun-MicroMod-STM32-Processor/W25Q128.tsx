@@ -2,7 +2,7 @@ import React from "react"
 
 const W25Q128 = (props: any) => (
   <chip
-    name="U3"
+    name="U2"
     footprint="soic8_208mil"
     pinLabels={{
       pin1: "CS_N",
