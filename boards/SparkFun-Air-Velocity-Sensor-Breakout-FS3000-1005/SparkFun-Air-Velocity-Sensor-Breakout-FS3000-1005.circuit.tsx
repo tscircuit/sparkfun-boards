@@ -461,6 +461,12 @@ export default () => {
         schY={-8}
         pcbX={-9.5}
         pcbRotation={-90}
+        cadModel={{
+          objUrl:
+            "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=96ff162c26934a308e7bbf01d083d593&pn=C160404",
+          rotationOffset: { x: 0, y: 0, z: 0 },
+          positionOffset: { x: 0, y: 1.5, z: 0 },
+        }}
       />
 
       <hole diameter={3.302} pcbX={10.16} pcbY={-10.16} />
