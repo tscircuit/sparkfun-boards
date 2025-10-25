@@ -1,7 +1,7 @@
 import { sel } from "tscircuit"
 
 export default () => (
-  <board width="17.78mm" height="35.56mm">
+  <board width="17.78mm" height="35.56mm" routingDisabled>
     <chip
       name="U1"
       footprint="soic28_pillpads_w11.30mm_pw0.762_pl1.524"
@@ -98,7 +98,6 @@ export default () => (
         },
       }}
     />
-
     <silkscreentext
       text="28-SOIC"
       pcbX={0}
