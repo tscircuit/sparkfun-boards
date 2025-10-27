@@ -3,7 +3,7 @@ import React from "react"
 const pinsPerSide = 16
 const pitch = 0.5
 const padLength = 0.25
-const padWidth = 1.5 // <-- this is the thing you want to increase
+const padWidth = 1.3
 const bodyHalfSize = 5
 const halfSpan = ((pinsPerSide - 1) / 2) * pitch
 
@@ -19,7 +19,7 @@ const createLeftPads = () =>
     <smtpad
       portHints={[`pin${pin}`]}
       pcbX={`-${mm(bodyHalfSize + padLength / 2)}`}
-      pcbY={mm(halfSpan - idx * pitch)}
+      pcbY={mm(halfSpan - idx * pitch + 0.75)}
       width={mm(padWidth)}
       height={mm(padLength)}
       shape="rect"
@@ -30,8 +30,8 @@ const createRightPads = () =>
   rightPins.map((pin, idx) => (
     <smtpad
       portHints={[`pin${pin}`]}
-      pcbX={mm(bodyHalfSize + padLength / 2)}
-      pcbY={mm(-halfSpan + idx * pitch)}
+      pcbX={mm(bodyHalfSize + padLength / 2 + 0.85)}
+      pcbY={mm(-halfSpan + idx * pitch + 0.75)}
       width={mm(padWidth)}
       height={mm(padLength)}
       shape="rect"
@@ -42,8 +42,8 @@ const createBottomPads = () =>
   bottomPins.map((pin, idx) => (
     <smtpad
       portHints={[`pin${pin}`]}
-      pcbY={`-${mm(bodyHalfSize + padLength / 2)}`}
-      pcbX={mm(-halfSpan + idx * pitch)}
+      pcbY={`-${mm(bodyHalfSize + padLength / 2 - 0.4)}`}
+      pcbX={mm(-halfSpan + idx * pitch + 0.5)}
       width={mm(padLength)}
       height={mm(padWidth)} // flipped because pads are rotated
       shape="rect"
@@ -54,8 +54,8 @@ const createTopPads = () =>
   topPins.map((pin, idx) => (
     <smtpad
       portHints={[`pin${pin}`]}
-      pcbY={mm(bodyHalfSize + padLength / 2)}
-      pcbX={mm(halfSpan - idx * pitch)}
+      pcbY={mm(bodyHalfSize + padLength / 2 + 1.05)}
+      pcbX={mm(halfSpan - idx * pitch + 0.5)}
       width={mm(padLength)}
       height={mm(padWidth)} // flipped here too
       shape="rect"
