@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" style="background-color: rgb(245, 241, 237)" data-real-to-screen-transform="matrix(175.4693805931,0,0,-175.4693805931,1761.8997484939,300)" data-software-used-string="@tscircuit/core@0.0.783"><style>
+              .boundary { fill: rgb(245, 241, 237); }
+              .schematic-boundary { fill: none; stroke: #fff; }
+              .component { fill: none; stroke: rgb(132, 0, 0); }
+              .chip { fill: rgb(255, 255, 194); stroke: rgb(132, 0, 0); }
+              .component-pin { fill: none; stroke: rgb(132, 0, 0); }
+              /* Basic per-trace hover fallback */
+              .trace:hover {
+                filter: invert(1);
+              }
+              .trace:hover .trace-crossing-outline {
+                opacity: 0;
+              }
+              .trace:hover .trace-junction {
+                filter: invert(1);
+              }
+              /* Net-hover highlighting: when a trace or its overlays are hovered,
+                 invert color for all traces (base + overlays) sharing the same
+                 subcircuit connectivity key. Also hide crossing outline during hover. */
+              
+              .text { font-family: sans-serif; fill: rgb(0, 150, 0); }
+              .pin-number { fill: rgb(169, 0, 0); }
+              .port-label { fill: rgb(0, 100, 100); }
+              .component-name { fill: rgb(0, 100, 100); }
+            </style><rect class="boundary" x="0" y="0" width="1200" height="600"/><g data-circuit-json-type="schematic_component" data-schematic-component-id="schematic_component_0"><rect class="component chip" x="252.86307539324002" y="212.26530970345" width="210.56325671172" height="175.46938059310003" stroke-width="3.509387611862px" fill="rgb(255, 255, 194)" stroke="rgb(132, 0, 0)"/><rect class="component-overlay" x="252.86307539324002" y="212.26530970345" width="210.56325671172" height="175.46938059310003" fill="transparent"/><text x="252.86307539324002" y="410.545709773653" fill="#006464" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="31.584488506758px" transform="rotate(0, 252.86307539324002, 410.545709773653)">SIM_007_P8</text><text x="252.86307539324002" y="189.45429022634698" fill="#006464" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="31.584488506758px" transform="rotate(0, 252.86307539324002, 189.45429022634698)">U1</text><line class="component-pin" x1="252.86307539324002" y1="352.64081417793" x2="182.6753231560001" y2="352.64081417793" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_0"><rect x="179.1659355441381" y="349.131426566068" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="217.76919927461995" y="349.131426566068" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">1</text><line class="component-pin" x1="252.86307539324002" y1="317.54693805931" x2="182.6753231560001" y2="317.54693805931" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_1"><rect x="179.1659355441381" y="314.037550447448" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="217.76919927461995" y="314.037550447448" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">2</text><line class="component-pin" x1="252.86307539324002" y1="282.45306194069" x2="182.6753231560001" y2="282.45306194069" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_2"><rect x="179.1659355441381" y="278.943674328828" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="217.76919927461995" y="278.94367432882797" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">3</text><line class="component-pin" x1="252.86307539324002" y1="247.35918582207" x2="182.6753231560001" y2="247.35918582207" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_3"><rect x="179.1659355441381" y="243.849798210208" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="217.76919927461995" y="243.849798210208" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">4</text><line class="component-pin" x1="463.42633210496" y1="247.35918582207" x2="533.6140843421999" y2="247.35918582207" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_4"><rect x="530.1046967303379" y="243.849798210208" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="498.5202082235801" y="243.849798210208" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">5</text><line class="component-pin" x1="463.42633210496" y1="282.45306194069" x2="533.6140843421999" y2="282.45306194069" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_5"><rect x="530.1046967303379" y="278.943674328828" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="498.5202082235801" y="278.943674328828" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">6</text><line class="component-pin" x1="463.42633210496" y1="317.54693805931" x2="533.6140843421999" y2="317.54693805931" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_6"><rect x="530.1046967303379" y="314.037550447448" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="498.5202082235801" y="314.037550447448" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">7</text><line class="component-pin" x1="463.42633210496" y1="352.64081417793" x2="533.6140843421999" y2="352.64081417793" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_7"><rect x="530.1046967303379" y="349.131426566068" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="498.5202082235801" y="349.131426566068" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">8</text></g><g data-circuit-json-type="schematic_component" data-schematic-component-id="schematic_component_1"><rect class="component chip" x="823.138562320815" y="142.07755746621" width="122.82856641516992" height="315.84488506758" stroke-width="3.509387611862px" fill="rgb(255, 255, 194)" stroke="rgb(132, 0, 0)"/><rect class="component-overlay" x="823.138562320815" y="142.07755746621" width="122.82856641516992" height="315.84488506758" fill="transparent"/><text x="823.138562320815" y="480.73346201089294" fill="#006464" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="31.584488506758px" transform="rotate(0, 823.138562320815, 480.73346201089294)"></text><text x="823.138562320815" y="119.26653798910704" fill="#006464" text-anchor="start" dominant-baseline="middle" font-family="sans-serif" font-size="31.584488506758px" transform="rotate(0, 823.138562320815, 119.26653798910704)">JP1</text><line class="component-pin" x1="945.9671287359849" y1="422.82856641517" x2="1016.154880973225" y2="422.82856641517" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_8"><rect x="1012.6454933613629" y="419.319178803308" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="419.319178803308" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">1</text><text class="pin-number" x="928.420190676675" y="422.82856641517" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">VCC</text><line class="component-pin" x1="945.9671287359849" y1="387.73469029654996" x2="1016.154880973225" y2="387.73469029654996" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_9"><rect x="1012.6454933613629" y="384.22530268468796" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="384.225302684688" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">2</text><text class="pin-number" x="928.420190676675" y="387.73469029654996" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">RST</text><line class="component-pin" x1="945.9671287359849" y1="352.64081417793" x2="1016.154880973225" y2="352.64081417793" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_10"><rect x="1012.6454933613629" y="349.131426566068" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="349.131426566068" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">3</text><text class="pin-number" x="928.420190676675" y="352.64081417793" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">CLK</text><line class="component-pin" x1="945.9671287359849" y1="317.54693805931" x2="1016.154880973225" y2="317.54693805931" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_11"><rect x="1012.6454933613629" y="314.037550447448" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="314.037550447448" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">4</text><text class="pin-number" x="928.420190676675" y="317.54693805931" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">SW1</text><line class="component-pin" x1="945.9671287359849" y1="282.45306194068996" x2="1016.154880973225" y2="282.45306194068996" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_12"><rect x="1012.6454933613629" y="278.94367432882797" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="278.94367432882797" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">5</text><text class="pin-number" x="928.420190676675" y="282.45306194068996" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">SW2</text><line class="component-pin" x1="945.9671287359849" y1="247.35918582207" x2="1016.154880973225" y2="247.35918582207" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_13"><rect x="1012.6454933613629" y="243.849798210208" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="243.849798210208" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">6</text><text class="pin-number" x="928.420190676675" y="247.35918582207" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">I_O</text><line class="component-pin" x1="945.9671287359849" y1="212.26530970345" x2="1016.154880973225" y2="212.26530970345" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_14"><rect x="1012.6454933613629" y="208.755922091588" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="208.755922091588" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">7</text><text class="pin-number" x="928.420190676675" y="212.26530970345" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">VPP</text><line class="component-pin" x1="945.9671287359849" y1="177.17143358483003" x2="1016.154880973225" y2="177.17143358483003" stroke-width="3.509387611862px"/><g data-schematic-port-id="source_port_15"><rect x="1012.6454933613629" y="173.66204597296803" width="7.018775223724" height="7.018775223724" opacity="0"/></g><text class="pin-number" x="981.061004854605" y="173.662045972968" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="middle" dominant-baseline="auto" font-size="26.320407088965px" transform="">8</text><text class="pin-number" x="928.420190676675" y="177.17143358483003" style="font-family: sans-serif;" fill="rgb(169, 0, 0)" text-anchor="end" dominant-baseline="middle" font-size="26.320407088965px" transform="">GND</text></g><g class="schematic-port-hover" data-schematic-port-id="source_port_0"><circle cx="182.6753231560001" cy="352.64081417793" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_1"><circle cx="182.6753231560001" cy="317.54693805931" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_2"><circle cx="182.6753231560001" cy="282.45306194069" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_3"><circle cx="182.6753231560001" cy="247.35918582207" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_4"><circle cx="533.6140843421999" cy="247.35918582207" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_5"><circle cx="533.6140843421999" cy="282.45306194069" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_6"><circle cx="533.6140843421999" cy="317.54693805931" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_7"><circle cx="533.6140843421999" cy="352.64081417793" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_8"><circle cx="1016.154880973225" cy="422.82856641517" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_9"><circle cx="1016.154880973225" cy="387.73469029654996" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_10"><circle cx="1016.154880973225" cy="352.64081417793" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_11"><circle cx="1016.154880973225" cy="317.54693805931" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_12"><circle cx="1016.154880973225" cy="282.45306194068996" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_13"><circle cx="1016.154880973225" cy="247.35918582207" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_14"><circle cx="1016.154880973225" cy="212.26530970345" r="7.018775223724" fill="red" opacity="0"/></g><g class="schematic-port-hover" data-schematic-port-id="source_port_15"><circle cx="1016.154880973225" cy="177.17143358483003" r="7.018775223724" fill="red" opacity="0"/></g><path class="net-label" d="
+    M 182.6753231560001,352.64081417793
+    L 173.19997660397271,371.5915072819848
+    L 87.7346902964268,371.5915072819848
+    L 87.7346902964268,333.69012107387516
+    L 173.19997660397271,333.6901210738752
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="166.8830789026211" y="352.64081417793" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">SW1</text><path class="net-label" d="
+    M 1016.154880973225,317.54693805931
+    L 1025.6302275252524,298.5962449552552
+    L 1111.0955138327984,298.5962449552552
+    L 1111.0955138327984,336.49763116336476
+    L 1025.6302275252524,336.49763116336476
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="317.54693805931" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">SW1</text><path class="net-label" d="
+    M 182.6753231560001,317.54693805931
+    L 173.19997660397271,336.49763116336476
+    L 94.75346552015081,336.49763116336476
+    L 94.75346552015081,298.59624495525514
+    L 173.19997660397271,298.5962449552552
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="166.8830789026211" y="317.54693805931" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">CLK</text><path class="net-label" d="
+    M 1016.154880973225,352.64081417793
+    L 1025.6302275252524,333.6901210738752
+    L 1104.0767386090743,333.6901210738752
+    L 1104.0767386090743,371.5915072819848
+    L 1025.6302275252524,371.5915072819848
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="352.64081417793" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">CLK</text><path class="net-label" d="
+    M 182.6753231560001,282.45306194069
+    L 173.19997660397271,301.4037550447448
+    L 92.41387377890946,301.4037550447448
+    L 92.41387377890946,263.5023688366352
+    L 173.19997660397271,263.50236883663524
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="166.8830789026211" y="282.45306194069" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">RST</text><path class="net-label" d="
+    M 1016.154880973225,387.73469029654996
+    L 1025.6302275252524,368.7839971924952
+    L 1106.4163303503155,368.7839971924952
+    L 1106.4163303503155,406.68538340060474
+    L 1025.6302275252524,406.68538340060474
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="387.73469029654996" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">RST</text><path class="net-label" d="
+    M 182.6753231560001,247.35918582207
+    L 173.19997660397271,266.3098789261248
+    L 90.07428203766814,266.3098789261248
+    L 90.07428203766814,228.4084927180152
+    L 173.19997660397271,228.4084927180152
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="166.8830789026211" y="247.35918582207" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">VCC</text><path class="net-label" d="
+    M 1016.154880973225,422.82856641517
+    L 1025.6302275252524,403.8778733111152
+    L 1108.7559220915568,403.8778733111152
+    L 1108.7559220915568,441.77925951922475
+    L 1025.6302275252524,441.77925951922475
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="422.82856641517" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">VCC</text><path class="net-label" d="
+    M 533.6140843421999,247.35918582207
+    L 543.0894308942273,228.4084927180152
+    L 629.7245130723938,228.4084927180152
+    L 629.7245130723938,266.3098789261248
+    L 543.0894308942273,266.3098789261248
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="549.4063285955789" y="247.35918582207" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">GND</text><path class="net-label" d="
+    M 1016.154880973225,177.17143358483003
+    L 1025.6302275252524,158.22074048077522
+    L 1112.265309703419,158.22074048077522
+    L 1112.265309703419,196.12212668888483
+    L 1025.6302275252524,196.12212668888483
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="177.17143358483003" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">GND</text><path class="net-label" d="
+    M 533.6140843421999,282.45306194069
+    L 543.0894308942273,263.50236883663524
+    L 623.8755337192906,263.50236883663524
+    L 623.8755337192906,301.4037550447448
+    L 543.0894308942273,301.4037550447448
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="549.4063285955789" y="282.45306194069" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">VPP</text><path class="net-label" d="
+    M 1016.154880973225,212.26530970345
+    L 1025.6302275252524,193.31461659939518
+    L 1106.4163303503155,193.31461659939518
+    L 1106.4163303503155,231.2160028075048
+    L 1025.6302275252524,231.2160028075048
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="212.26530970345" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">VPP</text><path class="net-label" d="
+    M 533.6140843421999,317.54693805931
+    L 543.0894308942273,298.5962449552552
+    L 613.3473708837046,298.5962449552552
+    L 613.3473708837046,336.49763116336476
+    L 543.0894308942273,336.49763116336476
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="549.4063285955789" y="317.54693805931" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">I_O</text><path class="net-label" d="
+    M 1016.154880973225,247.35918582207
+    L 1025.6302275252524,228.4084927180152
+    L 1095.8881675147295,228.4084927180152
+    L 1095.8881675147295,266.3098789261248
+    L 1025.6302275252524,266.3098789261248
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="247.35918582207" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">I_O</text><path class="net-label" d="
+    M 533.6140843421999,352.64081417793
+    L 543.0894308942273,333.6901210738752
+    L 628.5547172017732,333.6901210738752
+    L 628.5547172017732,371.5915072819848
+    L 543.0894308942273,371.5915072819848
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="549.4063285955789" y="352.64081417793" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">SW2</text><path class="net-label" d="
+    M 1016.154880973225,282.45306194068996
+    L 1025.6302275252524,263.5023688366352
+    L 1111.0955138327984,263.5023688366352
+    L 1111.0955138327984,301.40375504474474
+    L 1025.6302275252524,301.40375504474474
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="3.509387611862px"/><text class="net-label-text" x="1031.947125226604" y="282.45306194068996" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="31.584488506758px" transform="">SW2</text></svg>
