@@ -49,7 +49,7 @@ export default () => (
       pcbRotation={-90}
       pcbX={-11.4}
     />
-    <hole diameter={3.3} pcbX={-10} pcbY={13} />
-    <hole diameter={3.3} pcbX={-10} pcbY={-13} />
+    <hole diameter={3.3} pcbX={-8.8} pcbY={13} />
+    <hole diameter={3.3} pcbX={-8.8} pcbY={-13} />
   </board>
 )
