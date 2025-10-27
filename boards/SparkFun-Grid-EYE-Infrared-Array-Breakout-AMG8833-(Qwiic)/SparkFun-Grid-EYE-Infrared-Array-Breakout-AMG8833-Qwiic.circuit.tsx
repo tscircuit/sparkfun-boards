@@ -132,11 +132,10 @@ export default () => {
         schX={8}
         schY={-1}
         schRotation={-90}
-        footprint="solderjumper2_bridged12_p1.0414_pw0.6604_ph1.27"
+        footprint="solderjumper2_p1.0414_pw0.6604_ph1.27"
         layer={"bottom"}
         pcbX={9.34}
         pcbY={-6.9}
-        bridgedPins={[["1", "2"]]}
       />
       <jumper
         name="JP3"
