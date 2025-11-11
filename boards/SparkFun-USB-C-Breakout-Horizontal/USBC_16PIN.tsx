@@ -54,42 +54,46 @@ export const USBC_16PIN = (props: ChipProps<typeof pinLabels>) => {
           />
           <platedhole
             portHints={["pin13"]}
-            pcbX="4.320031999999969mm"
+            pcbX="-4.320032000000083mm"
             pcbY="-2.1999574999999822mm"
-            outerHeight="1.1999987999999999mm"
-            outerWidth="2mm"
-            holeHeight="0.5999987999999999mm"
-            holeWidth="1.3mm"
+            outerHeight="1.7999964mm"
+            outerWidth="1.1999975999999999mm"
+            holeHeight="1.3999972mm"
+            holeWidth="0.7999983999999999mm"
+            pcbRotation={90}
             shape="pill"
           />
           <platedhole
             portHints={["pin14"]}
-            pcbX="-4.320032000000083mm"
-            pcbY="-2.1999574999999822mm"
-            outerHeight="1.1999987999999999mm"
-            outerWidth="2mm"
-            holeHeight="0.5999987999999999mm"
-            holeWidth="1.3mm"
+            pcbX="4.320031999999969mm"
+            pcbY="1.9498945000000276mm"
+            outerHeight="1.9999959999999999mm"
+            outerWidth="1.1999975999999999mm"
+            holeHeight="1.5999968mm"
+            holeWidth="0.7999983999999999mm"
+            pcbRotation={90}
             shape="pill"
           />
           <platedhole
             portHints={["pin15"]}
-            pcbX="4.320031999999969mm"
+            pcbX="-4.320032000000083mm"
             pcbY="1.9498945000000276mm"
-            outerHeight="1.1999987999999999mm"
-            outerWidth="2mm"
-            holeHeight="0.5999987999999999mm"
-            holeWidth="1.3mm"
+            outerHeight="1.9999959999999999mm"
+            outerWidth="1.1999975999999999mm"
+            holeHeight="1.5999968mm"
+            holeWidth="0.7999983999999999mm"
+            pcbRotation={90}
             shape="pill"
           />
           <platedhole
             portHints={["pin16"]}
-            pcbX="-4.320032000000083mm"
-            pcbY="1.9498945000000276mm"
-            outerHeight="1.1999987999999999mm"
-            outerWidth="2mm"
-            holeHeight="0.5999987999999999mm"
-            holeWidth="1.3mm"
+            pcbX="4.320031999999969mm"
+            pcbY="-2.1999574999999822mm"
+            outerHeight="1.7999964mm"
+            outerWidth="1.1999975999999999mm"
+            holeHeight="1.3999972mm"
+            holeWidth="0.7999983999999999mm"
+            pcbRotation={90}
             shape="pill"
           />
           <smtpad
