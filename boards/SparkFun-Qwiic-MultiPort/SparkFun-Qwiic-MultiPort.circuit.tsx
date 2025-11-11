@@ -234,5 +234,27 @@ export default () => (
       schX={11}
       schY={2.5}
     />
+
+    <schematictext
+      text="Power LED"
+      color="brown"
+      fontSize={0.3}
+      schX={11}
+      schY={2.5}
+    />
+    <schematictext
+      text="Cut this jumper to"
+      color="gray"
+      fontSize={0.15}
+      schX={12.3}
+      schY={0}
+    />
+    <schematictext
+      text="Cdisable the power LED"
+      color="gray"
+      fontSize={0.15}
+      schX={12.3}
+      schY={-0.2}
+    />
   </board>
 )
