@@ -12,58 +12,54 @@ export const MLX90640ESF = (props: ChipProps<typeof pinLabels>) => {
     <chip
       pinLabels={pinLabels}
       supplierPartNumbers={{
-        jlcpcb: ["C17380659"],
+        jlcpcb: ["C488251"],
       }}
-      manufacturerPartNumber="MLX90640ESF_BAA_000_TU"
+      manufacturerPartNumber="MLX90640ESF_BAB_000_TU"
       footprint={
         <footprint>
           <platedhole
-            portHints={["pin1"]}
-            pcbX="-2.9199839999999995mm"
-            pcbY="-0.00012700000002041634mm"
-            outerDiameter="1.524mm"
-            holeDiameter="0.9144mm"
-            shape="circle"
-          />
-          <platedhole
-            portHints={["pin4"]}
-            pcbX="-2.065020000000004mm"
-            pcbY="2.0648930000000973mm"
-            outerDiameter="1.524mm"
-            holeDiameter="0.9144mm"
+            portHints={["pin2"]}
+            pcbX="-1.1000739999999496mm"
+            pcbY="-2.700019999999995mm"
+            outerDiameter="1.7999964mm"
+            holeDiameter="1.1999975999999999mm"
             shape="circle"
           />
           <platedhole
             portHints={["pin3"]}
-            pcbX="2.9199839999999995mm"
-            pcbY="-0.12712699999997312mm"
-            outerDiameter="1.524mm"
-            holeDiameter="0.9144mm"
+            pcbX="1.1000739999999496mm"
+            pcbY="-2.700019999999995mm"
+            outerDiameter="1.7999964mm"
+            holeDiameter="1.1999975999999999mm"
             shape="circle"
           />
           <platedhole
-            portHints={["pin2"]}
-            pcbX="2.064766000000077mm"
-            pcbY="-2.0648929999999837mm"
-            outerDiameter="1.524mm"
-            holeDiameter="0.9144mm"
+            portHints={["pin4"]}
+            pcbX="1.1000739999999496mm"
+            pcbY="2.700019999999995mm"
+            outerDiameter="1.7999964mm"
+            holeDiameter="1.1999975999999999mm"
             shape="circle"
           />
-          <silkscreenpath
-            route={[
-              { x: -4.952999999999861, y: 1.015873000000056 },
-              { x: -5.587999999999965, y: 1.2698729999999614 },
-              { x: -5.080000000000041, y: 2.6668730000000096 },
-              { x: -4.444999999999936, y: 2.4128729999999905 },
-            ]}
+          <platedhole
+            portHints={["pin1"]}
+            pcbX="-1.1000739999999496mm"
+            pcbY="2.700019999999995mm"
+            outerDiameter="1.7999964mm"
+            holeDiameter="1.1999975999999999mm"
+            shape="circle"
           />
         </footprint>
       }
       cadModel={{
         objUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=c3f716bb660742748361c9217a1ca19b&pn=C17380659",
+          "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=a7fbf34a12ad4e7b8098685fc14d6700&pn=C488251",
         rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: 0, y: 0, z: 11.4 },
+        positionOffset: {
+          x: -0.000025400000026820635,
+          y: 0.4000499999999647,
+          z: 0,
+        },
       }}
       {...props}
     />
