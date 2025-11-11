@@ -26,7 +26,6 @@ export default () => (
           pins: ["pin1", "pin2", "pin3", "pin4", "pin5", "pin6"],
         },
       }}
-      cadModel={null}
       connections={{
         pin6: sel.net().VBUS,
         pin4: sel.net().CC1,
