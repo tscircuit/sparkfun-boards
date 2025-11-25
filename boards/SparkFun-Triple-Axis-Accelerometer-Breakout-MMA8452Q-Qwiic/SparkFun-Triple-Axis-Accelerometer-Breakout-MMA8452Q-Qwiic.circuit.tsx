@@ -1,5 +1,7 @@
 import { MMA8452QR1 } from "./MMA8452Q"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
+
 import { sel } from "tscircuit"
 
 const JPPinlabel = {
@@ -11,7 +13,7 @@ const JPPinlabel = {
 
 export default () => {
   return (
-    <board width="25.40mm" height="25.40mm">
+    <board width="25.40mm" height="25.40mm" routingDisabled>
       <MMA8452QR1 name="U1" />
       <capacitor
         name="C5"
@@ -155,7 +157,7 @@ export default () => {
         schY={-8}
         schX={-3}
       />
-      <SM04B_SRSS_TB_LF__SN
+      <SM04B_SRSS_TB_LF__SN2
         name="JP5"
         pcbRotation={-90}
         pcbX={-9.5}
