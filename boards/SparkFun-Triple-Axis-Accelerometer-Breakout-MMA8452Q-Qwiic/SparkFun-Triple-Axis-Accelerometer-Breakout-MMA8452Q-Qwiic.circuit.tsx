@@ -341,12 +341,12 @@ export default () => {
         schX={7}
       />
       <schematictext
-        text="JUMPER-SMT_3_2-NC_TRACE_SILK"
+        text="JUMPER-SMT_3_2-NC_PASTE_SILK"
         color="gray"
         schRotation={-90}
         fontSize={0.2}
-        schY={1}
-        schX={2.75}
+        schY={0.3}
+        schX={2.6}
       />
     </board>
   )
