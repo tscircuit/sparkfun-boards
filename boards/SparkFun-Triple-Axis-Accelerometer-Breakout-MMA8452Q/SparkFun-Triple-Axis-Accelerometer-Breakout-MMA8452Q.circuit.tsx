@@ -32,7 +32,7 @@ export default () => {
         schY={1.3}
         schX={3}
         resistance="10k"
-        footprint="cap0603"
+        footprint="0603"
         pcbY={6}
         pcbX={-1}
         pcbRotation={-90}
@@ -46,7 +46,7 @@ export default () => {
         schX={5}
         schY={0.2}
         resistance="10k"
-        footprint="cap0603"
+        footprint="0603"
         pcbX={1.5}
         pcbY={-4}
         pcbRotation={-90}
@@ -83,7 +83,7 @@ export default () => {
         schRotation={-90}
         schX={-3}
         schY={-0.5}
-        footprint="res0603"
+        footprint="cap0603"
         pcbX={3.8}
         pcbY={-1.2}
         pcbRotation={180}
@@ -124,7 +124,15 @@ export default () => {
         layer="top"
         fontSize={1.4}
         pcbY={0}
-        pcbX={7}
+        pcbX={6.8}
+        pcbRotation={-90}
+      />
+      <silkscreentext
+        text="SA0"
+        layer="bottom"
+        fontSize={1.2}
+        pcbY={0}
+        pcbX={2}
         pcbRotation={-90}
       />
       <netlabel
