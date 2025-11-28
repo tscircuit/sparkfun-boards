@@ -81,7 +81,7 @@ export const AP2112K = (props: ChipProps<typeof pinLabels>) => {
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=8c971aea3af54c53b74baeb1f489d393&pn=C23380830",
-        rotationOffset: { x: 0, y: 0, z: 0 },
+        rotationOffset: { x: 0, y: 0, z: 90 },
         positionOffset: { x: 0, y: 0, z: 0 },
       }}
       {...props}
