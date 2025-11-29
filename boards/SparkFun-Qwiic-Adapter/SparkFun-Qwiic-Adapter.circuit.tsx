@@ -1,4 +1,5 @@
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 import { sel } from "tscircuit"
 
 const pinLabels = {
@@ -11,7 +12,7 @@ const pinLabels = {
 export default () => (
   <board width="22.86mm" height="7.62mm">
     <SM04B_SRSS_TB_LF__SN name="JP1" pcbRotation={-90} pcbX={-8.4} schX={-3} />
-    <SM04B_SRSS_TB_LF__SN name="JP2" pcbRotation={90} pcbX={8.4} schX={-6} />
+    <SM04B_SRSS_TB_LF__SN2 name="JP2" pcbRotation={90} pcbX={8.4} schX={-6} />
     <jumper
       pcbRotation={180}
       schPinArrangement={{
