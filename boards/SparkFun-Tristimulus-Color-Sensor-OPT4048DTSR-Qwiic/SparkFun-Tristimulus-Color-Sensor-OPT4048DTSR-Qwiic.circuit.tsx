@@ -245,8 +245,7 @@ export default () => {
         name="I2C_PU"
         footprint="solderjumper3_bridged123_pw0.66_pl1.270_p1"
         layer="bottom"
-      /> 
-     
+      />
 
       <resistor
         resistance="2.2k"
@@ -442,12 +441,12 @@ export default () => {
       />
 
       <netlabel
-      net="V3_3"
-      schX={-2.15}
-      schY={-4}
-      connectsTo={[sel.JP1.pin2, sel.JP2.pin2]}
-      anchorSide="bottom"
-    />
+        net="V3_3"
+        schX={-2.15}
+        schY={-4}
+        connectsTo={[sel.JP1.pin2, sel.JP2.pin2]}
+        anchorSide="bottom"
+      />
 
       <hole diameter={3.302} pcbX={10.16} pcbY={-10.16} />
       <hole diameter={3.302} pcbX={-10.16} pcbY={-10.16} />
