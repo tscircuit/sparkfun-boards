@@ -7,7 +7,7 @@ const pinLabels = {
   pin4: ["SCL"],
 } as const
 
-export const SM04B_SRSS_TB_LF__SN = (props: ChipProps<typeof pinLabels>) => {
+export const SM04B_SRSS_TB_LF__SN2 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       schWidth={0.7}
@@ -98,7 +98,7 @@ export const SM04B_SRSS_TB_LF__SN = (props: ChipProps<typeof pinLabels>) => {
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=96ff162c26934a308e7bbf01d083d593&pn=C160404",
         rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: 0, y: 1.5, z: 0 },
+        positionOffset: { x: 0, y: -1.5, z: 0 },
       }}
       {...props}
     />
