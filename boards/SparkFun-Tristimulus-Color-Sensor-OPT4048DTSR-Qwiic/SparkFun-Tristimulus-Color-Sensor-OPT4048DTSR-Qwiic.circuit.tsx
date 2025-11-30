@@ -240,7 +240,7 @@ export default () => {
         bridgedPins={[["1"], ["2"], ["3"]]}
         schX={4}
         schY={6}
-        pcbX={3.81}
+        pcbX={4.81}
         pcbY={-1.27}
         name="I2C_PU"
         footprint="solderjumper3_bridged123_pw0.66_pl1.270_p1"
@@ -256,7 +256,7 @@ export default () => {
         schRotation={90}
         pcbX={5.3009}
         pcbY={0}
-        pcbRotation={90}
+        pcbRotation={-90}
       />
       <resistor
         resistance="2.2k"
@@ -267,7 +267,7 @@ export default () => {
         schRotation={90}
         pcbX={3.81}
         pcbY={0}
-        pcbRotation={90}
+        pcbRotation={-90}
       />
       <netlabel
         net="SDA"
