@@ -28,7 +28,7 @@ export default () => (
     <jumper
       name="JP1"
       pcbX={0}
-      pcbY={-10}
+      pcbY={-8.8}
       pcbRotation={180}
       pinLabels={{
         pin1: ["SH"],
