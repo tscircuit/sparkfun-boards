@@ -1,13 +1,13 @@
 import { sel } from "@tscircuit/core"
-import { R_RJ45R08P_C000 } from "./R_RJ45R08P_C000"
+import { RJ45 } from "./RJ45"
 
 export default () => (
   <board width="33.02mm" height="22.86mm">
-    <R_RJ45R08P_C000
+    <RJ45
       name="J1"
       pcbX={0}
-      pcbY={4.8}
-      pcbRotation={180}
+      pcbY={2.6}
+      pcbRotation={0}
       connections={{
         pin1: sel.net().P1,
         pin2: sel.net().P2,
@@ -29,7 +29,7 @@ export default () => (
       name="JP1"
       pcbX={0}
       pcbY={-8.8}
-      pcbRotation={180}
+      pcbRotation={0}
       pinLabels={{
         pin1: ["SH"],
         pin2: ["G_neg"],
