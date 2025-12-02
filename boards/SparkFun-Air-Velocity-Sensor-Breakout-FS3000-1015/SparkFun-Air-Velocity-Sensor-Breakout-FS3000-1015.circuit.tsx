@@ -1,7 +1,6 @@
 import { FS3000_1015 } from "./ FS3000_1015"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { sel } from "tscircuit"
-import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 
 export default () => {
   return (
@@ -456,7 +455,7 @@ export default () => {
         connectsTo={sel.JP6.pin1}
         anchorSide="top"
       />
-      <SM04B_SRSS_TB_LF__SN2
+      <SM04B_SRSS_TB_LF__SN
         name="JP7"
         schX={-4}
         schY={-8}
