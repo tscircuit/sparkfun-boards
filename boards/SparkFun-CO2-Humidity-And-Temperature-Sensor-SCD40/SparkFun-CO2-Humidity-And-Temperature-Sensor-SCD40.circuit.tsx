@@ -1,6 +1,7 @@
 import { SCD40_D_R1 } from "./ SCD40_D_R1"
 import { sel } from "tscircuit"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 
 export default () => (
   <board width="25.4mm" height="25.4mm">
@@ -137,7 +138,7 @@ export default () => (
         pin1: sel.net.GND,
       }}
     />
-    <SM04B_SRSS_TB_LF__SN
+    <SM04B_SRSS_TB_LF__SN2
       name="JP5"
       pcbX="-9.7"
       pcbRotation={-90}
