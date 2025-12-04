@@ -58,36 +58,40 @@ export default () => {
         />
       ))}
 
-      {channelConfigs.map((channel, idx) => (
-        <resistor
-          key={`${channel.name}-hv-res`}
-          name={channelResistorNames[idx].hv}
-          resistance="10k"
-          footprint={"0603"}
-          pcbX={channel.pcbX}
-          pcbY={2.54}
-          schX={channel.schX}
-          schY={2.5}
-          schRotation={90}
-          connections={{ pin1: sel.net().HV, pin2: channel.hvNet }}
-        />
-      ))}
-
-      {channelConfigs.map((channel, idx) => (
-        <resistor
-          key={`${channel.name}-lv-res`}
-          name={channelResistorNames[idx].lv}
-          resistance="10k"
-          footprint={"0603"}
-          pcbX={channel.pcbX}
-          pcbY={-2.54}
-          schX={channel.schX}
-          schY={-2.5}
-          schRotation={90}
-          connections={{ pin1: sel.net().LV, pin2: channel.lvNet }}
-        />
-      ))}
-
+      {channelConfigs.map((channel, idx) => {
+        const resistorName = channelResistorNames[idx]!
+        return (
+          <resistor
+            key={`${channel.name}-hv-res`}
+            name={resistorName.hv}
+            resistance="10k"
+            footprint={"0603"}
+            pcbX={channel.pcbX}
+            pcbY={2.54}
+            schX={channel.schX}
+            schY={2.5}
+            schRotation={90}
+            connections={{ pin1: sel.net().HV, pin2: channel.hvNet }}
+          />
+        )
+      })}
+      {channelConfigs.map((channel, idx) => {
+        const resistorName = channelResistorNames[idx]!
+        return (
+          <resistor
+            key={`${channel.name}-lv-res`}
+            name={resistorName.lv}
+            resistance="10k"
+            footprint={"0603"}
+            pcbX={channel.pcbX}
+            pcbY={-2.54}
+            schX={channel.schX}
+            schY={-2.5}
+            schRotation={90}
+            connections={{ pin1: sel.net().LV, pin2: channel.lvNet }}
+          />
+        )
+      })}
       <jumper
         name="JP1"
         footprint={
