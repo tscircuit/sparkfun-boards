@@ -116,7 +116,6 @@ export default () => {
         schY={-5.5}
         schRotation={90}
       />
-      
 
       <jumper
         name="JP2"
@@ -147,7 +146,7 @@ export default () => {
         schRotation={90}
       />
 
-            <schematictext
+      <schematictext
         text="Low Voltage"
         fontSize={0.2}
         color="gray"
@@ -158,7 +157,7 @@ export default () => {
         text="High Voltage"
         fontSize={0.2}
         color="gray"
-           schX={4.5}
+        schX={4.5}
         schY={-4.5}
       />
 
