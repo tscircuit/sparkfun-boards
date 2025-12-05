@@ -1,4 +1,4 @@
-import { sel } from "tscircuit"
+import { SchematicText, sel } from "tscircuit"
 import { DS1037_09MNAKT74_0CC } from "./DS1037_09MNAKT74_0CC"
 
 export default () => {
@@ -22,18 +22,12 @@ export default () => {
         }}
         schPinArrangement={{
           leftSide: {
-            direction: "bottom-to-top",
-            pins: [
-              "pin1",
-              "pin2",
-              "pin3",
-              "pin4",
-              "pin5",
-              "pin6",
-              "pin7",
-              "pin8",
-              "pin9",
-            ],
+            direction: "top-to-bottom",
+            pins: ["pin1", "pin2", "pin3", "pin4", "pin5"],
+          },
+          rightSide: {
+            direction: "top-to-bottom",
+            pins: ["pin6", "pin7", "pin8", "pin9"],
           },
         }}
       />
@@ -45,7 +39,7 @@ export default () => {
         schDirection="right"
         schPinArrangement={{
           rightSide: {
-            direction: "bottom-to-top",
+            direction: "top-to-bottom",
             pins: [
               "pin1",
               "pin2",
@@ -59,8 +53,8 @@ export default () => {
             ],
           },
         }}
-        schX={-3}
-        schY={0}
+        schX={-2}
+        schY={-0.4}
         pcbX={10}
         pcbY={0}
         pcbRotation={90}
@@ -74,8 +68,8 @@ export default () => {
         pinLabels={{
           pin1: ["GND"],
         }}
-        schX={-3}
-        schY={-2}
+        schX={-2}
+        schY={-3}
         pcbX={10}
         pcbY={12.75}
         pcbRotation={90}
@@ -90,8 +84,8 @@ export default () => {
         pinLabels={{
           pin1: ["GND"],
         }}
-        schX={-3}
-        schY={-3}
+        schX={-2}
+        schY={-3.5}
         pcbX={10}
         pcbY={-12.75}
         pcbRotation={90}
@@ -100,10 +94,17 @@ export default () => {
 
       <netlabel
         net="GND"
-        schX={-2}
-        schY={-3.5}
+        schX={-1.07}
+        schY={-4}
         anchorSide="top"
         connectsTo={sel.J4.pin1}
+      />
+      <schematictext
+        text="D-Sub Male Connector - DE9"
+        schX={-1}
+        schY={2}
+        fontSize={0.28}
+        color="blue"
       />
 
       <hole diameter={3.302} pcbY={12.7} pcbX={5.08} />
