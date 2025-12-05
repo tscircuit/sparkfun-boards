@@ -204,7 +204,7 @@ export default () => (
       schY={-3.9}
     />
     <schematictext
-      text="Dafault Address: 0x48 (HIGH)"
+      text="Default Address: 0x48 (HIGH)"
       fontSize={0.2}
       schX={-6.8}
       schY={-4.1}
