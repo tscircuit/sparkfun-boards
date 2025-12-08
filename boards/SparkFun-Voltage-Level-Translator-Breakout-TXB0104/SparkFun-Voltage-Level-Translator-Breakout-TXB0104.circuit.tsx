@@ -1,5 +1,5 @@
 import { sel } from "@tscircuit/core"
-import { TXB0104 } from "./TXB0104"
+import { TXB0104D } from "./TXB0104D"
 
 export default () => (
   <board width="12.7mm" height="17.78mm">
@@ -12,7 +12,7 @@ export default () => (
     />
     <silkscreentext text="OE" fontSize={1.5} pcbY={6.1} />
 
-    <TXB0104
+    <TXB0104D
       name="U1"
       schPinArrangement={{
         leftSide: {
