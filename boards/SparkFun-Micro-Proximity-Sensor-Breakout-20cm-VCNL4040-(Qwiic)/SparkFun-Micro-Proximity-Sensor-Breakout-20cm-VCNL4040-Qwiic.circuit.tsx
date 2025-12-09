@@ -11,7 +11,7 @@ const JPPinlabel = {
 
 export default () => {
   return (
-    <board width="19.05mm" height="7.62mm" routingDisabled>
+    <board width="19.05mm" height="7.62mm">
       <VCNL4040M3OE
         name="U1"
         connections={{
@@ -50,13 +50,11 @@ export default () => {
         schX={3.2}
         schY={4.6}
         footprint="0402"
-        pcbRotation={90}
-        connections={{ pin2: sel.JP9.pin2 }}
       />
       <resistor
         name="R2"
         resistance="1k"
-        connections={{ pin1: sel.D1.pin1 }}
+        connections={{ pin1: sel.D1.pin2 }}
         schRotation={90}
         schX={6.6}
         footprint="0402"
@@ -90,12 +88,12 @@ export default () => {
         bridgedPins={[["1", "2"]]}
       />
       <led
-        connections={{ pin2: sel.net().GND }}
+        connections={{ pin1: sel.net().GND }}
         name="D1"
         footprint="0402"
-        pcbX={-8.2}
+        pcbX={-8.3}
         pcbY={-2.8}
-        schRotation={-90}
+        schRotation={90}
         schX={6.6}
         schY={4}
       />
@@ -211,6 +209,7 @@ export default () => {
         schY={-2.5}
         schX={-3}
       />
+      <copperpour connectsTo="net.GND" layer="top" />
     </board>
   )
 }
