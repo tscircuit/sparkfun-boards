@@ -15,7 +15,7 @@ export default () => {
         name="C1"
         capacitance="2.2uF"
         footprint="cap0402"
-        pcbX={4}
+        pcbX={7}
         pcbY={2}
       />
       <netlabel net="GND" connectsTo={sel.C1.pin2} />
@@ -24,7 +24,7 @@ export default () => {
         name="C2"
         capacitance="100nF"
         footprint="cap0402"
-        pcbX={-4}
+        pcbX={-7}
         pcbY={2}
       />
       <netlabel net="GND" connectsTo={sel.C2.pin2} />
