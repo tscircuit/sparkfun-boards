@@ -1,6 +1,6 @@
 import { sel } from "tscircuit"
-import { STM32F405 } from "./STM32F405"
 import { MicroModEdge } from "./MicroModEdge"
+import { STM32F405 } from "./STM32F405"
 
 // sparkfun micromod stm32 processor
 // https://www.sparkfun.com/products/21326
@@ -19,8 +19,8 @@ export default () => {
         pcbX={3}
         pcbY={6}
         connections={{
-          pin1: sel.U1.OSC_IN,
-          pin2: sel.U1.OSC_OUT,
+          pin1: "U1.pin6",
+          pin2: "U1.pin7",
         }}
       />
       <crystal
@@ -31,8 +31,8 @@ export default () => {
         pcbX={-3}
         pcbY={6}
         connections={{
-          pin1: sel.U1.OSC32_IN,
-          pin2: sel.U1.OSC32_OUT,
+          pin1: "U1.pin8",
+          pin2: "U1.pin9",
         }}
       />
 
@@ -42,7 +42,7 @@ export default () => {
         footprint="cap0402"
         pcbX={2}
         pcbY={2}
-        connections={{ pin1: sel.U1.VCAP1, pin2: sel.net().GND }}
+        connections={{ pin1: "U1.pin1", pin2: sel.net().GND }}
       />
       <capacitor
         name="C2"
@@ -50,7 +50,7 @@ export default () => {
         footprint="cap0402"
         pcbX={-2}
         pcbY={2}
-        connections={{ pin1: sel.U1.VCAP2, pin2: sel.net().GND }}
+        connections={{ pin1: "U1.pin2", pin2: sel.net().GND }}
       />
 
       <chip
@@ -70,10 +70,10 @@ export default () => {
           pin8: ["VCC"],
         }}
         connections={{
-          pin1: sel.U1.NSCS,
-          pin2: sel.U1.MISO1,
-          pin5: sel.U1.MOSI1,
-          pin6: sel.U1.SCK1,
+          pin1: "U1.pin25",
+          pin2: "U1.pin26",
+          pin5: "U1.pin27",
+          pin6: "U1.pin28",
           pin4: sel.net().GND,
         }}
       />
@@ -106,7 +106,7 @@ export default () => {
         footprint="0402"
         pcbX={-4}
         pcbY={5}
-        connections={{ pin1: sel.U1.NRST, pin2: sel.J1.RESET }}
+        connections={{ pin1: "U1.pin10", pin2: "J1.pin12" }}
       />
       <resistor
         name="R2"
@@ -114,7 +114,7 @@ export default () => {
         footprint="0402"
         pcbX={-4}
         pcbY={3}
-        connections={{ pin1: sel.U1.BOOT0, pin2: sel.net().GND }}
+        connections={{ pin1: "U1.pin11", pin2: sel.net().GND }}
       />
 
       <silkscreentext text="MicroMod" pcbX={0} pcbY={8} />
