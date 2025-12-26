@@ -7,115 +7,30 @@ import { STM32F405 } from "./STM32F405"
 
 export default () => {
   return (
-    <board width={22} height={22}>
-      <STM32F405 name="U1" pcbX={0} pcbY={4} schX={0} schY={0} />
-      <MicroModEdge name="J1" pcbX={0} pcbY={-8} schX={8} schY={0} />
-
-      <crystal
-        name="Y1"
-        frequency="12MHz"
-        footprint="0402"
-        loadCapacitance="10pF"
-        pcbX={3}
-        pcbY={6}
-        connections={{
-          pin1: "U1.pin6",
-          pin2: "U1.pin7",
-        }}
-      />
-      <crystal
-        name="Y2"
-        frequency="32.768kHz"
-        footprint="0402"
-        loadCapacitance="7pF"
-        pcbX={-3}
-        pcbY={6}
-        connections={{
-          pin1: "U1.pin8",
-          pin2: "U1.pin9",
-        }}
-      />
+    <board width={22} height={22} autorouter="auto">
+      <STM32F405 name="U1" pcbX={0} pcbY={2} schX={0} schY={0} />
+      <MicroModEdge name="J1" pcbX={0} pcbY={-6} schX={8} schY={0} />
 
       <capacitor
         name="C1"
         capacitance="2.2uF"
         footprint="cap0402"
-        pcbX={2}
+        pcbX={4}
         pcbY={2}
-        connections={{ pin1: "U1.pin1", pin2: sel.net().GND }}
       />
+      <netlabel net="GND" connectsTo={sel.C1.pin2} />
+
       <capacitor
         name="C2"
-        capacitance="2.2uF"
+        capacitance="100nF"
         footprint="cap0402"
-        pcbX={-2}
+        pcbX={-4}
         pcbY={2}
-        connections={{ pin1: "U1.pin2", pin2: sel.net().GND }}
       />
+      <netlabel net="GND" connectsTo={sel.C2.pin2} />
 
-      <chip
-        name="U2"
-        manufacturerPartNumber="W25Q128JVSIQ"
-        footprint="soic8"
-        pcbX={5}
-        pcbY={0}
-        pinLabels={{
-          pin1: ["CS"],
-          pin2: ["DO"],
-          pin3: ["WP"],
-          pin4: ["GND"],
-          pin5: ["DI"],
-          pin6: ["CLK"],
-          pin7: ["HOLD"],
-          pin8: ["VCC"],
-        }}
-        connections={{
-          pin1: "U1.pin25",
-          pin2: "U1.pin26",
-          pin5: "U1.pin27",
-          pin6: "U1.pin28",
-          pin4: sel.net().GND,
-        }}
-      />
-      <netlabel
-        net="V3_3"
-        schX={6}
-        schY={2}
-        connectsTo={sel.U2.VCC}
-        anchorSide="bottom"
-      />
-
-      <netlabel
-        net="GND"
-        schX={0}
-        schY={-10}
-        connectsTo={sel.J1.GND}
-        anchorSide="top"
-      />
-      <netlabel
-        net="V3_3"
-        schX={1}
-        schY={-10}
-        connectsTo={sel.J1.V3_3}
-        anchorSide="bottom"
-      />
-
-      <resistor
-        name="R1"
-        resistance="10k"
-        footprint="0402"
-        pcbX={-4}
-        pcbY={5}
-        connections={{ pin1: "U1.pin10", pin2: "J1.pin12" }}
-      />
-      <resistor
-        name="R2"
-        resistance="10k"
-        footprint="0402"
-        pcbX={-4}
-        pcbY={3}
-        connections={{ pin1: "U1.pin11", pin2: sel.net().GND }}
-      />
+      <netlabel net="GND" connectsTo={sel.J1.GND} />
+      <netlabel net="V3_3" connectsTo={sel.J1.V3_3} />
 
       <silkscreentext text="MicroMod" pcbX={0} pcbY={8} />
       <silkscreentext text="STM32" pcbX={0} pcbY={7} />
