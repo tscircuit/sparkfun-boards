@@ -19,6 +19,7 @@ export default () => {
         pcbY={2}
       />
       <netlabel net="GND" connectsTo={sel.C1.pin2} />
+      <netlabel net="V3_3" connectsTo={sel.C1.pin1} />
 
       <capacitor
         name="C2"
@@ -28,6 +29,7 @@ export default () => {
         pcbY={2}
       />
       <netlabel net="GND" connectsTo={sel.C2.pin2} />
+      <netlabel net="V3_3" connectsTo={sel.C2.pin1} />
 
       <netlabel net="GND" connectsTo={sel.J1.GND} />
       <netlabel net="V3_3" connectsTo={sel.J1.V3_3} />
