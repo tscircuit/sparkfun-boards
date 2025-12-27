@@ -2,7 +2,7 @@ import { sel } from "tscircuit"
 import { MicroModEdge } from "./MicroModEdge"
 import { STM32F405 } from "./STM32F405"
 
-// sparkfun micromod stm32 processor
+// SparkFun MicroMod STM32 Processor
 // https://www.sparkfun.com/products/21326
 
 export default () => {
