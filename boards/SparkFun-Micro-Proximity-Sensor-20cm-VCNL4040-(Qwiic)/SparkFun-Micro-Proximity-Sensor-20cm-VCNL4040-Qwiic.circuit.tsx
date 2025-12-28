@@ -226,7 +226,7 @@ export default () => (
     <led
       name="D1"
       color="red"
-      footprint="0603"
+      footprint="0402"
       schX={12.3}
       schY={2.4}
       schRotation={-90}
