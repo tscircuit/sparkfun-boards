@@ -312,7 +312,7 @@ export const SparkFunMicroModRP2040 = () => (
       pcbY={0}
       connections={{
         "1": net.XIN,
-        "2": net.XOUT
+        "2": net.XOUT,
       }}
     />
 
