@@ -3,7 +3,7 @@ import { W25Q128 } from "./W25Q128"
 import { MicroModEdge } from "./MicroModEdge"
 import { sel } from "@tscircuit/core"
 
-const net = sel.net
+const net: any = sel.net
 
 export const SparkFunMicroModRP2040 = () => (
     <board width="22mm" height="22mm">
@@ -65,12 +65,18 @@ export const SparkFunMicroModRP2040 = () => (
                 "47": net.USB_DP,
 
                 // Power (All VDDIO/ADC_VDD/USB_VDD/LDO_IN)
-                "1": net.V3V3, "10": net.V3V3, "22": net.V3V3, "33": net.V3V3, "42": net.V3V3, "49": net.V3V3,
+                "1": net.V3V3,
+                "10": net.V3V3,
+                "22": net.V3V3,
+                "33": net.V3V3,
+                "42": net.V3V3,
+                "49": net.V3V3,
                 "43": net.V3V3, // ADC_VDD
                 "44": net.V3V3, // LDO_IN
                 "48": net.V3V3, // USB_VDD
                 "57": net.GND, // EPAD
-                "23": net.V1V1, "50": net.V1V1
+                "23": net.V1V1,
+                "50": net.V1V1,
             }}
         />
 
@@ -86,7 +92,7 @@ export const SparkFunMicroModRP2040 = () => (
                 nWP: net.QSPI_SD2,
                 nHOLD: net.QSPI_SD3,
                 VCC: net.V3V3,
-                GND: net.GND
+                GND: net.GND,
             }}
         />
 
@@ -96,8 +102,15 @@ export const SparkFunMicroModRP2040 = () => (
             schY={0}
             connections={{
                 // Power & System
-                "2": net.V3V3, "74": net.V3V3,
-                "1": net.GND, "7": net.GND, "33": net.GND, "36": net.GND, "39": net.GND, "45": net.GND, "75": net.GND,
+                "2": net.V3V3,
+                "74": net.V3V3,
+                "1": net.GND,
+                "7": net.GND,
+                "33": net.GND,
+                "36": net.GND,
+                "39": net.GND,
+                "45": net.GND,
+                "75": net.GND,
 
                 "6": net.RESET,
                 "11": net.BOOT,
@@ -123,7 +136,10 @@ export const SparkFunMicroModRP2040 = () => (
                 "16": net.UART_TX2,
 
                 // G-Pins / SPI
-                "71": net.G6, "69": net.G7, "48": net.G4, "73": net.G5,
+                "71": net.G6,
+                "69": net.G7,
+                "48": net.G4,
+                "73": net.G5,
 
                 // Audio / I2S
                 "50": net.AUD_BCLK,
@@ -161,30 +177,106 @@ export const SparkFunMicroModRP2040 = () => (
             }}
         />
 
-        <capacitor name="C1" capacitance="2.2uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C2" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C3" capacitance="2.2uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C4" capacitance="2.2uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C5" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C6" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C7" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C8" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C9" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C10" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C12" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C14" capacitance="0.1uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
-        <capacitor name="C15" capacitance="2.2uF" connections={{ pin1: net.V3V3, pin2: net.GND }} />
+        <capacitor
+            name="C1"
+            capacitance="2.2uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C2"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C3"
+            capacitance="2.2uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C4"
+            capacitance="2.2uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C5"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C6"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C7"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C8"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C9"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C10"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C12"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C14"
+            capacitance="0.1uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
+        <capacitor
+            name="C15"
+            capacitance="2.2uF"
+            connections={{ pin1: net.V3V3, pin2: net.GND }}
+        />
 
-        <capacitor name="C11" capacitance="15pF" connections={{ pin1: net.XIN, pin2: net.GND }} />
-        <capacitor name="C13" capacitance="15pF" connections={{ pin1: net.XOUT, pin2: net.GND }} />
+        <capacitor
+            name="C11"
+            capacitance="15pF"
+            connections={{ pin1: net.XIN, pin2: net.GND }}
+        />
+        <capacitor
+            name="C13"
+            capacitance="15pF"
+            connections={{ pin1: net.XOUT, pin2: net.GND }}
+        />
 
-        <resistor name="R4" resistance="10k" connections={{ pin1: net.QSPI_SS, pin2: net.V3V3 }} />
-        <resistor name="R5" resistance="10k" connections={{ pin1: net.RESET, pin2: net.V3V3 }} />
+        <resistor
+            name="R4"
+            resistance="10k"
+            connections={{ pin1: net.QSPI_SS, pin2: net.V3V3 }}
+        />
+        <resistor
+            name="R5"
+            resistance="10k"
+            connections={{ pin1: net.RESET, pin2: net.V3V3 }}
+        />
 
-        <resistor name="Y1" resistance="0" footprint="crystal_smd" connections={{ pin1: net.XIN, pin2: net.XOUT }} />
+        <resistor
+            name="Y1"
+            resistance="0"
+            footprint="crystal_smd"
+            connections={{ pin1: net.XIN, pin2: net.XOUT }}
+        />
 
-        <capacitor name="C_Reg" capacitance="2.2uF" connections={{ pin1: net.V1V1, pin2: net.GND }} />
-
+        <capacitor
+            name="C_Reg"
+            capacitance="2.2uF"
+            connections={{ pin1: net.V1V1, pin2: net.GND }}
+        />
     </board>
 )
 
