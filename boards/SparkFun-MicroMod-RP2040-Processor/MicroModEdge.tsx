@@ -1,0 +1,45 @@
+import { chip } from "@tscircuit/core"
+
+export const MicroModEdge = (props: any) => (
+    <chip
+        {...props}
+        name="J1"
+        footprint="micromod_processor_edge" // Using likely accurate name, can be refined if footprint definition exists
+        pinLabels={{
+            "1": "GND", "2": "3.3V",
+            "3": "USB_D+", "4": "3.3V_EN",
+            "5": "USB_D-", "6": "!RESET!",
+            "7": "GND", "8": "G11",
+            "9": "USB_VIN", "10": "D0",
+            "11": "!BOOT!", "12": "I2C_SDA",
+            "13": "RTS1", "14": "I2C_SCL",
+            "15": "CTS1", "16": "I2C_!INT!",
+            "17": "TX1", "18": "D1/CAM_TRIG",
+            "19": "RX1", "20": "RX2",
+            "21": "SWDCK", "22": "TX2",
+            "23": "SWDIO",
+            "32": "PWM0", "33": "GND",
+            "34": "A0", "35": "USBHOST_D+",
+            "36": "GND", "37": "USBHOST_D-",
+            "38": "A1", "39": "GND",
+            "40": "G0/BUS0", "41": "CAN-RX",
+            "42": "G1/BUS1", "43": "CAN-TX",
+            "44": "G2/BUS2", "45": "GND",
+            "46": "G3/BUS3", "47": "PWM1",
+            "48": "G4/BUS4", "49": "BATT_VIN/3",
+            "50": "AUD_BCLK", "51": "I2C_SDA1",
+            "52": "AUD_LRCLK", "53": "I2C_SCL1",
+            "54": "AUD_IN/CAM_PCLK", "55": "SPI_!CS!",
+            "56": "AUD_OUT/CAM_MCLK", "57": "SPI_SCK",
+            "58": "AUD_MCLK", "59": "SPI_SDO",
+            "60": "SPI_SCK1/SDIO_CLK", "61": "SPI_SDI",
+            "62": "SPI_SDO1/SDIO_CMD", "63": "G10/ADC_D+/CAM_VSYNC",
+            "64": "SPI_SDI1/SDIO_DATA0", "65": "G9/ADC_D-/CAM_HSYNC",
+            "66": "SDIO_DATA1", "67": "G8",
+            "68": "SDIO_DATA2", "69": "G7/BUS7",
+            "70": "SPI_!CS1!/SDIO_DATA3", "71": "G6/BUS6",
+            "72": "RTC_3V", "73": "G5/BUS5",
+            "74": "3.3V", "75": "GND"
+        }}
+    />
+)
