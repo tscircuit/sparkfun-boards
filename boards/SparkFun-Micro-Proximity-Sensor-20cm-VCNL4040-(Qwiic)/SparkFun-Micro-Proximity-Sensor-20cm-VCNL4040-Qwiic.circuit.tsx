@@ -51,7 +51,7 @@ export default () => (
         pin8: { marginRight: 0.2 },
         pin6: { marginRight: 0.2 },
       }}
-      pcbX={0}
+      pcbX={0.025}
       pcbY={0}
       pcbRotation={0}
       connections={{
@@ -72,8 +72,6 @@ export default () => (
       schX={-5.5}
       schY={2.9}
       schRotation={-90}
-      pcbX={-1.2}
-      pcbY={2.6}
     />
     <capacitor
       name="C2"
@@ -82,8 +80,6 @@ export default () => (
       schX={-7.2}
       schY={2.9}
       schRotation={-90}
-      pcbX={1.8}
-      pcbY={2.6}
     />
     <netlabel
       net="V3_3"
@@ -162,8 +158,8 @@ export default () => (
       schX={0.7}
       schY={4.8}
       schRotation={90}
-      pcbX={0.5}
-      pcbY={1.9}
+      pcbX={0.025}
+      pcbY={1.915}
       pcbRotation={0}
       layer="bottom"
     />
@@ -175,8 +171,6 @@ export default () => (
       schX={0.7}
       schY={3.6}
       schRotation={90}
-      pcbX={1.8}
-      pcbY={-2.5}
       connections={{ pin1: "net.INT" }}
     />
     <netlabel
@@ -199,8 +193,8 @@ export default () => (
       schX={12.3}
       schY={4.8}
       schRotation={90}
-      pcbX={0.5}
-      pcbY={-2.1}
+      pcbX={0.025}
+      pcbY={-1.895}
       pcbRotation={0}
       layer="bottom"
     />
@@ -219,8 +213,6 @@ export default () => (
       schX={12.3}
       schY={3.7}
       schRotation={-90}
-      pcbX={-1.2}
-      pcbY={-2.5}
       connections={{ pin2: "D1.pin1" }}
     />
     <led
@@ -230,8 +222,8 @@ export default () => (
       schX={12.3}
       schY={2.4}
       schRotation={-90}
-      pcbX={-8.1}
-      pcbY={-3}
+      pcbX={-8.23}
+      pcbY={-3.165}
       connections={{ pin2: "net.GND" }}
     />
 
@@ -242,24 +234,14 @@ export default () => (
       anchorSide="top"
       connectsTo={sel.D1.pin2}
     />
-
-    <jumper
+    <hole diameter={3.1} pcbX={-6.96} pcbY={0} />
+    <JST04_1MM_RA
       name="J2"
-      footprint={<JST04_1MM_RA />}
-      schWidth={1.5}
-      schHeight={1.5}
       schX={-3.0}
       schY={-6.0}
-      pcbX={4.2}
+      pcbX={4.787}
       pcbY={0}
       pcbRotation={90}
-      pinLabels={{ pin1: "GND", pin2: "3V3", pin3: "SDA", pin4: "SCL" }}
-      schPinArrangement={{
-        leftSide: {
-          direction: "top-to-bottom",
-          pins: ["pin4", "pin3", "pin2", "pin1"],
-        },
-      }}
       connections={{
         pin1: "net.GND",
         pin2: "net.V3_3",
@@ -274,8 +256,8 @@ export default () => (
       padDiameter="0.9mm"
       schX={-4.3}
       schY={-4.9}
-      pcbX={8.1}
-      pcbY={1.3}
+      pcbX={8.28}
+      pcbY={0.963}
       connections={{ pin1: "net.SCL" }}
     />
     <testpoint
@@ -284,8 +266,8 @@ export default () => (
       padDiameter="0.9mm"
       schX={-4.5}
       schY={-4.6}
-      pcbX={8.1}
-      pcbY={-1.1}
+      pcbX={8.28}
+      pcbY={-0.943}
       connections={{ pin1: "net.SDA" }}
     />
 
@@ -293,10 +275,11 @@ export default () => (
       name="J1"
       schWidth={0.45}
       schX={2.2}
-      schY={-7}
-      pcbX={-6}
-      pcbY={-1.8}
+      schY={-6}
+      pcbX={-5.7}
+      pcbY={-2.53}
       footprint="pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+      cadModel={null}
       pinLabels={{ pin1: "INT" }}
       schPinArrangement={{
         leftSide: { direction: "top-to-bottom", pins: ["pin1"] },
@@ -349,9 +332,16 @@ export default () => (
     <netlabel
       net="INT"
       schX={1.5}
-      schY={-7}
+      schY={-6}
       anchorSide="right"
       connectsTo={sel.J1.pin1}
+    />
+    <schematictext
+      text="I2C controller must have pull-ups on I2C lines"
+      schX={-3.1}
+      schY={-8.5}
+      fontSize={0.23}
+      color="#808080"
     />
   </board>
 )

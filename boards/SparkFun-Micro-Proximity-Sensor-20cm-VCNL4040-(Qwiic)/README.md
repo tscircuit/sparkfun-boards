@@ -2,4 +2,4 @@
 
 For more information about this board, visit the official SparkFun product page:
 
-[https://www.sparkfun.com/products/15159](https://www.sparkfun.com/products/15159)
+[https://www.sparkfun.com/sparkfun-micro-proximity-sensor-20cm-vcnl4040-qwiic.html](https://www.sparkfun.com/sparkfun-micro-proximity-sensor-20cm-vcnl4040-qwiic.html)
