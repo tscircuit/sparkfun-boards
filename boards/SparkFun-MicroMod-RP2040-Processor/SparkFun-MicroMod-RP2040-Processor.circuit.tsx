@@ -305,13 +305,15 @@ export const SparkFunMicroModRP2040 = () => (
       connections={{ pin1: net.RESET, pin2: net.V3V3 }}
     />
 
-    <crystal
+    <chip
       name="Y1"
-      frequency="12MHz"
       footprint="crystal_smd"
       pcbX={-6}
       pcbY={0}
-      connections={{ pin1: net.XIN, pin2: net.XOUT }}
+      connections={{
+        "1": net.XIN,
+        "2": net.XOUT
+      }}
     />
 
     <capacitor
