@@ -68,17 +68,21 @@ export default () => (
     <capacitor
       name="C1"
       capacitance="2.2uF"
-      footprint="0603"
+      footprint="0402"
       schX={-5.5}
       schY={2.9}
+      pcbX={-1.245}
+      pcbY={2.232}
       schRotation={-90}
     />
     <capacitor
       name="C2"
       capacitance="0.1uF"
-      footprint="0603"
+      footprint="0402"
       schX={-7.2}
       schY={2.9}
+      pcbX={1.295}
+      pcbY={2.232}
       schRotation={-90}
     />
     <netlabel
@@ -167,9 +171,11 @@ export default () => (
     <resistor
       name="R1"
       resistance="10k"
-      footprint="0603"
+      footprint="0402"
       schX={0.7}
       schY={3.6}
+      pcbX={1.295}
+      pcbY={-2.213}
       schRotation={90}
       connections={{ pin1: "net.INT" }}
     />
@@ -209,9 +215,11 @@ export default () => (
     <resistor
       name="R2"
       resistance="1k"
-      footprint="0603"
+      footprint="0402"
       schX={12.3}
       schY={3.7}
+      pcbX={-1.245}
+      pcbY={-2.213}
       schRotation={-90}
       connections={{ pin2: "D1.pin1" }}
     />
@@ -239,7 +247,7 @@ export default () => (
       name="J2"
       schX={-3.0}
       schY={-6.0}
-      pcbX={4.787}
+      pcbX={6.487}
       pcbY={0}
       pcbRotation={90}
       connections={{
