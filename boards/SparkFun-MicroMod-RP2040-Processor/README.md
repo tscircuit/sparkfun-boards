@@ -1,21 +1,19 @@
 # SparkFun MicroMod RP2040 Processor
+A defined board for the [SparkFun MicroMod RP2040 Processor](https://www.sparkfun.com/products/17720).
 
-This is a tscircuit definition for the SparkFun MicroMod RP2040 Processor Board.
+## Specs
+- **Microcontroller**: Raspberry Pi RP2040 (Dual-core Cortex-M0+ @ 133MHz)
+- **Flash**: 128Mbit (16MB) QSPI Flash
+- **Form Factor**: MicroMod (M.2 Key E standard)
+- **Status LED**: Connected to GPIO25
+- **Crystal**: 12MHz
+
+## Pins
+- **UART**: UART1 (TX/RX), UART2 (TX/RX)
+- **I2C**: I2C0 (SDA/SCL)
+- **SPI**: SPI0 (SCK/SDO/SDI)
+- **Audio**: I2S (MCLK/BCLK/LRCLK/DIN/DOUT)
+- **ADC**: ADC0-ADC3 (shared with some GPIOs)
 
 ## Usage
-
-```tsx
-import { SparkFunMicroModRP2040 } from "./SparkFun-MicroMod-RP2040-Processor"
-
-export const MyProject = () => (
-  <board width="100mm" height="100mm">
-    <SparkFunMicroModRP2040 name="U1" />
-  </board>
-)
-```
-
-## Features
-
-- RP2040 Dual-core Cortex M0+ Processor
-- 128Mbit SPI Flash/RAM (W25Q128)
-- MicroMod M.2 Connector interface
+To blink the status LED, toggle GPIO25.

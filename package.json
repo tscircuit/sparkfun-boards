@@ -13,6 +13,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@tscircuit/math-utils": "^0.0.29",
 		"@tscircuit/props": "^0.0.429",
 		"@types/bun": "latest"
 	},
