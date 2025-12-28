@@ -87,8 +87,7 @@ export const SparkFunMicroModRP2040 = () => (
       schX={-15}
       schY={0}
       pcbX={0}
-      pcbY={6}
-      rotation="90deg"
+      pcbY={7.5}
       connections={{
         nCS: net.QSPI_SS,
         CLK: net.QSPI_SCLK,
@@ -187,122 +186,122 @@ export const SparkFunMicroModRP2040 = () => (
     <capacitor
       name="C1"
       capacitance="2.2uF"
-      pcbX={-4.5}
+      pcbX={-2}
       pcbY={-4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C2"
       capacitance="0.1uF"
-      pcbX={-5.5}
+      pcbX={-3.5}
       pcbY={-4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C3"
       capacitance="2.2uF"
-      pcbX={4.5}
+      pcbX={2}
       pcbY={-4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C4"
       capacitance="2.2uF"
-      pcbX={5.5}
+      pcbX={3.5}
       pcbY={-4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C5"
       capacitance="0.1uF"
-      pcbX={-4.5}
-      pcbY={3}
+      pcbX={-2}
+      pcbY={4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C6"
       capacitance="0.1uF"
-      pcbX={-5.5}
-      pcbY={3}
+      pcbX={-3.5}
+      pcbY={4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C7"
       capacitance="0.1uF"
-      pcbX={4.5}
-      pcbY={3}
+      pcbX={2}
+      pcbY={4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C8"
       capacitance="0.1uF"
-      pcbX={5.5}
-      pcbY={3}
+      pcbX={3.5}
+      pcbY={4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C9"
       capacitance="0.1uF"
-      pcbX={-6}
-      pcbY={4.5}
+      pcbX={-5.5}
+      pcbY={5.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C10"
       capacitance="0.1uF"
-      pcbX={6}
-      pcbY={4.5}
+      pcbX={5.5}
+      pcbY={5.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C12"
       capacitance="0.1uF"
-      pcbX={-4.5}
-      pcbY={-3}
+      pcbX={-5}
+      pcbY={-4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C14"
       capacitance="0.1uF"
-      pcbX={4.5}
-      pcbY={-3}
+      pcbX={5}
+      pcbY={-4.5}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
     <capacitor
       name="C15"
       capacitance="2.2uF"
-      pcbX={0}
-      pcbY={3}
+      pcbX={6}
+      pcbY={0}
       connections={{ pin1: net.V3V3, pin2: net.GND }}
     />
 
     <capacitor
       name="C11"
       capacitance="15pF"
-      pcbX={-6.5}
-      pcbY={0}
+      pcbX={-7.5}
+      pcbY={1}
       connections={{ pin1: net.XIN, pin2: net.GND }}
     />
     <capacitor
       name="C13"
       capacitance="15pF"
-      pcbX={-6.5}
-      pcbY={-2}
+      pcbX={-7.5}
+      pcbY={-1}
       connections={{ pin1: net.XOUT, pin2: net.GND }}
     />
 
     <resistor
       name="R4"
       resistance="10k"
-      pcbX={-7.5}
-      pcbY={4}
+      pcbX={-5}
+      pcbY={6.5}
       connections={{ pin1: net.QSPI_SS, pin2: net.V3V3 }}
     />
     <resistor
       name="R5"
       resistance="10k"
-      pcbX={7.5}
-      pcbY={4}
+      pcbX={5}
+      pcbY={6.5}
       connections={{ pin1: net.RESET, pin2: net.V3V3 }}
     />
 
@@ -310,8 +309,8 @@ export const SparkFunMicroModRP2040 = () => (
       name="Y1"
       frequency="12MHz"
       footprint="crystal_smd"
-      pcbX={-5.5}
-      pcbY={-1}
+      pcbX={-6}
+      pcbY={0}
       connections={{ pin1: net.XIN, pin2: net.XOUT }}
     />
 
@@ -319,7 +318,7 @@ export const SparkFunMicroModRP2040 = () => (
       name="C_Reg"
       capacitance="2.2uF"
       pcbX={0}
-      pcbY={-6}
+      pcbY={-6.5}
       connections={{ pin1: net.V1V1, pin2: net.GND }}
     />
   </board>
