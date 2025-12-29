@@ -4,7 +4,36 @@ export const MicroModEdge = (props: any) => (
   <chip
     {...props}
     name="J1"
-    footprint="micromod_processor_edge" // Using likely accurate name, can be refined if footprint definition exists
+    footprint="micromod_processor_edge"
+    schPortArrangement={{
+      leftSide: {
+        pins: [
+          "6", "11", "4", "72", // System
+          "9", "5", "3", // USB
+          "37", "35", // USB Host
+          "43", "41", // CAN
+          "23", "21", // SWD
+          "58", "56", "54", "52", "50", // Audio
+          "14", "12", "16", "53", "51", // I2C
+          "49" // BATT
+        ],
+      },
+      rightSide: {
+        pins: [
+          "60", "62", "64", "66", "68", "70", // SPI/SDIO
+          "57", "59", "61", "55", // SPI
+          "34", "38", "32", "47", "10", "18", // ADC/PWM/Digital
+          "17", "19", "13", "15", "22", "20", // UART
+          "40", "42", "44", "46", "48", "73", "71", "69", "67", "65", "63", "8" // G-Pins
+        ],
+      },
+      topSide: {
+        pins: ["2", "74"], // 3.3V
+      },
+      bottomSide: {
+        pins: ["1", "7", "33", "36", "39", "45", "75"], // GND
+      },
+    }}
     pinLabels={{
       "1": "GND",
       "2": "3.3V",
@@ -76,3 +105,4 @@ export const MicroModEdge = (props: any) => (
     }}
   />
 )
+
