@@ -6,7 +6,7 @@ const pinLabels = {
   pin3: ["VDD"],
   pin4: ["ANODE"],
   pin5: ["CATHODE_LED"],
-  pin6: ["INT"],
+  pin6: ["N_INT"],
   pin7: ["SDA"],
   pin8: ["SCL"],
 } as const

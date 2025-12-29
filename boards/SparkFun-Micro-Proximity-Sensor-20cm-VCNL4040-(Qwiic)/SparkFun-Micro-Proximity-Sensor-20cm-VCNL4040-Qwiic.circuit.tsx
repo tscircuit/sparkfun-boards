@@ -143,7 +143,7 @@ export default () => (
       connectsTo={sel.U4.pin8}
     />
     <netlabel
-      net="INT"
+      net="N_INT"
       schX={1.2}
       schY={2.6}
       anchorSide="left"
@@ -338,7 +338,7 @@ export default () => (
       connectsTo={sel.J2.pin1}
     />
     <netlabel
-      net="INT"
+      net="N_INT"
       schX={1.5}
       schY={-6}
       anchorSide="right"
