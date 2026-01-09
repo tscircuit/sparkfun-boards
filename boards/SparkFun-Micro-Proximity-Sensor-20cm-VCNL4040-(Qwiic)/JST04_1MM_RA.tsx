@@ -98,7 +98,7 @@ export const JST04_1MM_RA = (props: ChipProps<typeof pinLabels>) => {
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=96ff162c26934a308e7bbf01d083d593&pn=C160404",
         rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: -1.5, y: -0.5, z: 0 },
+        positionOffset: { x: 0, y: -1.5, z: 0 },
       }}
       {...props}
     />
