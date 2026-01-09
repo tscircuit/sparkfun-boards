@@ -161,7 +161,7 @@ export const DRV2605LDGST = (props: ChipProps<typeof pinLabels>) => {
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=854098f5cce54b6caab82164a7d3deef&pn=C425927",
-        rotationOffset: { x: 0, y: 0, z: 0 },
+        rotationOffset: { x: 0, y: 0, z: 90 },
         positionOffset: { x: 0, y: 0, z: 0 },
       }}
       {...props}
