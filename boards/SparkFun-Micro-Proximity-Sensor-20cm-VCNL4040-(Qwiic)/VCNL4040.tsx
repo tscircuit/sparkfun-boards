@@ -116,7 +116,7 @@ export const VCNL4040 = (props: ChipProps<typeof pinLabels>) => (
     cadModel={{
       objUrl:
         "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=263d838dce3c462a9139718e05588e07&pn=C142526",
-      rotationOffset: { x: 0, y: 0, z: 0 },
+      rotationOffset: { x: 0, y: 0, z: 90 },
       positionOffset: { x: 0, y: 0, z: 0 },
     }}
     {...props}
