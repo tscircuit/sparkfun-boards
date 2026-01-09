@@ -6,9 +6,10 @@ const nets = sel.net as any
 
 export const SparkFunMicroModRP2040 = () => (
   <board width="22mm" height="22mm">
-
-    <RP2040 name="U3"
-      schX={0} schY={0}
+    <RP2040
+      name="U3"
+      schX={0}
+      schY={0}
       footprint="qfn56_7x7"
       connections={{
         pin1: nets.V3_3, // IOVDD
@@ -71,8 +72,10 @@ export const SparkFunMicroModRP2040 = () => (
       }}
     />
 
-    <MicroModConnector name="J1"
-      schX={-25} schY={0}
+    <MicroModConnector
+      name="J1"
+      schX={-25}
+      schY={0}
       connections={{
         pin1: nets.GND,
         pin2: nets.V3_3,
@@ -138,17 +141,27 @@ export const SparkFunMicroModRP2040 = () => (
         pin72: nets.V3_3, // RTC_3V
         pin73: nets.V3_3,
         pin74: nets.V3_3,
-        pin75: nets.GND
+        pin75: nets.GND,
       }}
     />
 
     {/* Flash Memory - W25Q128 */}
-    <chip name="U1" manufacturerPartNumber="W25Q128" footprint="soic8"
+    <chip
+      name="U1"
+      manufacturerPartNumber="W25Q128"
+      footprint="soic8"
       pinLabels={{
-        pin1: ["CS#"], pin2: ["DO/IO1"], pin3: ["WP#/IO2"], pin4: ["GND"],
-        pin5: ["DI/IO0"], pin6: ["CLK"], pin7: ["HOLD#/IO3"], pin8: ["VCC"]
+        pin1: ["CS#"],
+        pin2: ["DO/IO1"],
+        pin3: ["WP#/IO2"],
+        pin4: ["GND"],
+        pin5: ["DI/IO0"],
+        pin6: ["CLK"],
+        pin7: ["HOLD#/IO3"],
+        pin8: ["VCC"],
       }}
-      schX={15} schY={10}
+      schX={15}
+      schY={10}
       connections={{
         pin1: nets.QSPI_SS,
         pin2: nets.QSPI_SD1,
@@ -157,7 +170,7 @@ export const SparkFunMicroModRP2040 = () => (
         pin5: nets.QSPI_SD0,
         pin6: nets.QSPI_SCLK,
         pin7: nets.QSPI_SD3,
-        pin8: nets.V3_3
+        pin8: nets.V3_3,
       }}
     />
 
@@ -165,24 +178,53 @@ export const SparkFunMicroModRP2040 = () => (
     {/* Using 'component' generic */}
     <component name="Y1" pcbX={5} pcbY={-5} schX={10} schY={-10}>
       <footprint>
-        <smtpad shape="rect" width="1mm" height="1mm" layer="top" pcbX={-1} pcbY={0} portHints={["pin1"]} />
-        <smtpad shape="rect" width="1mm" height="1mm" layer="top" pcbX={1} pcbY={0} portHints={["pin2"]} />
+        <smtpad
+          shape="rect"
+          width="1mm"
+          height="1mm"
+          layer="top"
+          pcbX={-1}
+          pcbY={0}
+          portHints={["pin1"]}
+        />
+        <smtpad
+          shape="rect"
+          width="1mm"
+          height="1mm"
+          layer="top"
+          pcbX={1}
+          pcbY={0}
+          portHints={["pin2"]}
+        />
       </footprint>
     </component>
-    <chip name="Y1_Logic"
+    <chip
+      name="Y1_Logic"
       pinLabels={{ pin1: ["XIN"], pin2: ["XOUT"] }}
-      schX={10} schY={-10}
+      schX={10}
+      schY={-10}
       connections={{ pin1: nets.XIN, pin2: nets.XOUT }}
     />
 
-
     {/* USB Mux - FSUSB30MUX */}
-    <chip name="U2" manufacturerPartNumber="FSUSB30MUX" footprint="msop10"
+    <chip
+      name="U2"
+      manufacturerPartNumber="FSUSB30MUX"
+      footprint="msop10"
       pinLabels={{
-        pin1: ["VCC"], pin2: ["S"], pin3: ["OE#"], pin4: ["HSD1-"], pin5: ["HSD1+"],
-        pin6: ["HSD2+"], pin7: ["HSD2-"], pin8: ["GND"], pin9: ["D-"], pin10: ["D+"]
+        pin1: ["VCC"],
+        pin2: ["S"],
+        pin3: ["OE#"],
+        pin4: ["HSD1-"],
+        pin5: ["HSD1+"],
+        pin6: ["HSD2+"],
+        pin7: ["HSD2-"],
+        pin8: ["GND"],
+        pin9: ["D-"],
+        pin10: ["D+"],
       }}
-      schX={-15} schY={15}
+      schX={-15}
+      schY={15}
       connections={{
         pin1: nets.V3_3,
         pin2: nets.USB_MUX_SIG,
@@ -192,41 +234,80 @@ export const SparkFunMicroModRP2040 = () => (
         pin7: nets.USB_D_N, // HSD2- -> J1
         pin8: nets.GND,
         pin9: nets.RP_D_N_MUX, // D- -> RP2040 (via R11)
-        pin10: nets.RP_D_P_MUX // D+ -> RP2040 (via R10)
+        pin10: nets.RP_D_P_MUX, // D+ -> RP2040 (via R10)
       }}
     />
 
     {/* LED D2 (Blue) - Status LED */}
-    <led name="D2" color="blue" footprint="0603" schX={10} schY={15}
+    <led
+      name="D2"
+      color="blue"
+      footprint="0603"
+      schX={10}
+      schY={15}
       connections={{ anode: nets.LED_ANODE, cathode: nets.GND }}
     />
-    <resistor name="R1" resistance="1k" footprint="0402" schX={5} schY={15}
+    <resistor
+      name="R1"
+      resistance="1k"
+      footprint="0402"
+      schX={5}
+      schY={15}
       connections={{ pin1: nets.LED_ANODE, pin2: nets.LED_SIG }}
     />
 
     {/* USB Resistors */}
-    <resistor name="R10" resistance="27" footprint="0402" schX={-5} schY={5}
+    <resistor
+      name="R10"
+      resistance="27"
+      footprint="0402"
+      schX={-5}
+      schY={5}
       connections={{ pin1: nets.RP_D_P_MUX, pin2: nets.RP_D_P }}
     />
-    <resistor name="R11" resistance="27" footprint="0402" schX={-5} schY={7}
+    <resistor
+      name="R11"
+      resistance="27"
+      footprint="0402"
+      schX={-5}
+      schY={7}
       connections={{ pin1: nets.RP_D_N_MUX, pin2: nets.RP_D_N }}
     />
 
     {/* USB VBUS Divider */}
-    <resistor name="R18" resistance="1k" footprint="0402" schX={-20} schY={18}
+    <resistor
+      name="R18"
+      resistance="1k"
+      footprint="0402"
+      schX={-20}
+      schY={18}
       connections={{ pin1: nets.USB_VIN, pin2: nets.USB_MUX_SIG }}
     />
-    <resistor name="R5" resistance="10k" footprint="0402" schX={-20} schY={20}
+    <resistor
+      name="R5"
+      resistance="10k"
+      footprint="0402"
+      schX={-20}
+      schY={20}
       connections={{ pin1: nets.GND, pin2: nets.USB_MUX_SIG }}
     />
 
     {/* Caps */}
-    <capacitor name="C3" capacitance="2.2uF" footprint="0402" schX={0} schY={-15}
+    <capacitor
+      name="C3"
+      capacitance="2.2uF"
+      footprint="0402"
+      schX={0}
+      schY={-15}
       connections={{ pin1: nets.V3_3, pin2: nets.GND }}
     />
-    <capacitor name="C4" capacitance="2.2uF" footprint="0402" schX={2} schY={-15}
+    <capacitor
+      name="C4"
+      capacitance="2.2uF"
+      footprint="0402"
+      schX={2}
+      schY={-15}
       connections={{ pin1: nets.V3_3, pin2: nets.GND }}
     />
-
   </board>
 )
