@@ -43,4 +43,4 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .vscode
 
 *.diff.svg
-*.diff.png
+*.diff.pngpackage-lock.json
