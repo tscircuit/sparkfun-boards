@@ -176,7 +176,15 @@ export const SparkFunMicroModRP2040 = () => (
 
     {/* Crystal 12MHz */}
     {/* Using 'component' generic */}
-    <component name="Y1" pcbX={5} pcbY={-5} schX={10} schY={-10}>
+    <chip
+      name="Y1"
+      pcbX={5}
+      pcbY={-5}
+      schX={10}
+      schY={-10}
+      pinLabels={{ pin1: ["1"], pin2: ["2"] }}
+      connections={{ pin1: nets.XIN, pin2: nets.XOUT }}
+    >
       <footprint>
         <smtpad
           shape="rect"
@@ -197,14 +205,7 @@ export const SparkFunMicroModRP2040 = () => (
           portHints={["pin2"]}
         />
       </footprint>
-    </component>
-    <chip
-      name="Y1_Logic"
-      pinLabels={{ pin1: ["XIN"], pin2: ["XOUT"] }}
-      schX={10}
-      schY={-10}
-      connections={{ pin1: nets.XIN, pin2: nets.XOUT }}
-    />
+    </chip>
 
     {/* USB Mux - FSUSB30MUX */}
     <chip
