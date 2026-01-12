@@ -35,7 +35,7 @@ export default () => (
         S1: sel.JP3.pin5,
         S2: sel.JP3.pin6,
         S3: sel.JP3.pin7,
-        EN: sel.JP3.pin3,
+        N_EN: sel.JP3.pin3,
       }}
     />
 
@@ -182,7 +182,6 @@ export default () => (
       connections={{
         pin1: sel.U1.GND,
         pin2: sel.U1.pin24,
-        pin3: sel.U1.EN,
         pin4: sel.U1.pin10,
         pin5: sel.U1.pin11,
         pin6: sel.U1.pin14,

@@ -15,7 +15,7 @@ const pinLabels = {
   pin12: "GND",
   pin13: "S3",
   pin14: "S2",
-  pin15: "EN",
+  pin15: "N_EN",
   pin16: "CHAN15",
   pin17: "CHAN14",
   pin18: "CHAN13",
@@ -56,7 +56,7 @@ export const CD74HC4067 = (props: ChipProps<typeof pinLabels>) => {
         },
         rightSide: {
           direction: "top-to-bottom",
-          pins: ["VCC", "EN", "S0", "S1", "S2", "S3", "COM", "GND"],
+          pins: ["VCC", "N_EN", "S0", "S1", "S2", "S3", "COM", "GND"],
         },
       }}
       supplierPartNumbers={{
