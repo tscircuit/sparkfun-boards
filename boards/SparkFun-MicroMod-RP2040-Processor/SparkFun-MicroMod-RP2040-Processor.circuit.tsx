@@ -180,7 +180,7 @@ export default () => (
     {/* M.2 Edge Connector (MicroMod interface) */}
     <jumper
       name="J1"
-      footprint="soic75_p0.5mm"
+      footprint="soic76_p0.5mm"
       pinLabels={micromodPinLabels}
       pcbX={0}
       pcbY={-8}
