@@ -128,7 +128,6 @@ export default () => (
       name="Y1"
       frequency="12MHz"
       loadCapacitance="18pF"
-      pinLabels={{ pin1: ["1"], pin2: ["2"] }}
       footprint="crystal_3.2x2.5mm"
       pcbX={-5}
       pcbY={5}
