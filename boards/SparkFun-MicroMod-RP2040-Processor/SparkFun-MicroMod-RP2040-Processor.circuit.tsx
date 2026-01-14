@@ -26,8 +26,8 @@ const micromodPinLabels = {
   pin3: ["3V3"],
   pin4: ["3V3"],
   // USB
-  pin5: ["USB_D-"],
-  pin6: ["USB_D+"],
+  pin5: ["USB_DN"],
+  pin6: ["USB_DP"],
   // Reset and Boot
   pin7: ["RESET"],
   pin8: ["BOOT"],
@@ -180,7 +180,7 @@ export default () => (
     {/* M.2 Edge Connector (MicroMod interface) */}
     <jumper
       name="J1"
-      footprint="m2_key_e_75pos"
+      footprint="soic75_p0.5mm"
       pinLabels={micromodPinLabels}
       pcbX={0}
       pcbY={-8}
@@ -192,8 +192,8 @@ export default () => (
           pins: [
             "GND",
             "3V3",
-            "USB_D-",
-            "USB_D+",
+            "USB_DN",
+            "USB_DP",
             "RESET",
             "BOOT",
             "I2C_SDA",
