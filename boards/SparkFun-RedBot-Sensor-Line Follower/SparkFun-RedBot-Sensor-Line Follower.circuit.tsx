@@ -1,11 +1,10 @@
 import { sel } from "@tscircuit/core"
-import { JP1_FOOTPRINT, U1_FOOTPRINT, R_FOOTPRINT } from "./footprints"
+import { U1_FOOTPRINT, R_FOOTPRINT } from "./footprints"
 
 export default () => (
   <board width="7.62mm" height="24.13mm">
     <pinheader
-      gender="female"
-      footprint={JP1_FOOTPRINT}
+      footprint={"pinrow3_smd_rightangle"}
       pinCount={3}
       name="JP1"
       schPinArrangement={{
@@ -17,8 +16,7 @@ export default () => (
       connections={{
         pin3: sel.R2.pin1,
       }}
-      pcbY={-0.97}
-      pcbRotation={180}
+      pcbY={-7.62}
       layer="bottom"
     />
     <silkscreentext
