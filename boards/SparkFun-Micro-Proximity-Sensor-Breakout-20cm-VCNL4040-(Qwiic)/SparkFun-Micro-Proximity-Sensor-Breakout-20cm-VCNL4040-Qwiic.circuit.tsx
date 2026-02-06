@@ -56,6 +56,7 @@ export default () => {
         resistance="1k"
         connections={{ pin1: sel.D1.pin2 }}
         schRotation={90}
+        pcbX={-5.2}
         schX={6.6}
         footprint="0402"
         schY={5.2}
@@ -133,7 +134,7 @@ export default () => {
         pcbY={-2.8}
         pcbX={-6.2}
       />
-      <hole diameter={3.302} pcbX={-7.5} pcbY={0} />
+      <hole diameter={3.302} pcbX={-7.7} pcbY={0} />
 
       <netlabel
         net="VDD"
