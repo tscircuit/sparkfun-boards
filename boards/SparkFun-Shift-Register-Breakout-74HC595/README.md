@@ -1,0 +1,5 @@
+# SparkFun Shift Register Breakout - 74HC595
+
+For more information about this board, visit the official SparkFun product page:
+
+[https://www.sparkfun.com/sparkfun-shift-register-breakout-74hc595.html](https://www.sparkfun.com/sparkfun-shift-register-breakout-74hc595.html) 
