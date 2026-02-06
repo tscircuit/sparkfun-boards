@@ -1,5 +1,5 @@
 import { sel } from "@tscircuit/core"
-import { U1_FOOTPRINT, R_FOOTPRINT } from "./footprints"
+import { QRE1113GR } from "./ C232862"
 
 export default () => (
   <board width="7.62mm" height="24.13mm">
@@ -84,7 +84,7 @@ export default () => (
       schRotation={90}
       schX={2.3}
       schY={1}
-      footprint={R_FOOTPRINT}
+      footprint={"0603"}
       pcbX={-1.27}
       pcbY={5.715}
       pcbRotation={270}
@@ -95,13 +95,13 @@ export default () => (
       schRotation={90}
       schX={3.3}
       schY={1}
-      footprint={R_FOOTPRINT}
+      footprint={"0603"}
       pcbX={1.27}
       pcbY={5.715}
       pcbRotation={270}
     />
 
-    <chip
+    <QRE1113GR
       name="U1"
       manufacturerPartNumber="QRE1113"
       schPinArrangement={{
@@ -127,7 +127,6 @@ export default () => (
         pin1: sel.R1.pin1,
         pin3: sel.R2.pin1,
       }}
-      footprint={U1_FOOTPRINT}
       schX={2.6}
       schY={-0.74}
       pcbY={9.525}
