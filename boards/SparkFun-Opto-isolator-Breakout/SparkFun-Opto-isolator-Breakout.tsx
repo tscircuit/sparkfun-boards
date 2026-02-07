@@ -128,7 +128,7 @@ export default () => (
     <jumper
       name="J2"
       footprint={
-        "pinrow4_nosquareplating_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal"
+        "pinrow4_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal"
       }
       pcbX={-6.35}
       schX={-6}
@@ -148,7 +148,7 @@ export default () => (
     <jumper
       name="JP1"
       footprint={
-        "pinrow4_nosquareplating_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal"
+        "pinrow4_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal"
       }
       pcbX={6.35}
       schX={10}
