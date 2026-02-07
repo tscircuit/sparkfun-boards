@@ -9,17 +9,38 @@ const pinLabels = {
   pin6: ["pin6"],
   pin7: ["pin7"],
   pin8: ["pin8"],
-  pin9: ["LED-G_POS"],
-  pin10: ["LED-G_NEG"],
-  pin11: ["LED-Y_NEG"],
-  pin12: ["LED-Y_POS"],
-  pin13: ["SHELL1"],
-  pin14: ["pin13_alt1"],
+  pin9: ["G_LED_POS"],
+  pin10: ["G_LED_NEG"],
+  pin11: ["Y_LED_NEG"],
+  pin12: ["Y_LED_POS"],
+  pin13: ["SHIELD"],
+  pin14: ["SHIELD"],
 } as const
 
 export const RJ45 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
+      schPinArrangement={{
+        leftSide: {
+          direction: "top-to-bottom",
+          pins: [
+            "pin1",
+            "pin2",
+            "pin3",
+            "pin4",
+            "pin5",
+            "pin6",
+            "pin7",
+            "pin8",
+            "pin13",
+            "pin14",
+          ],
+        },
+        rightSide: {
+          direction: "top-to-bottom",
+          pins: ["pin9", "pin10", "pin11", "pin12"],
+        },
+      }}
       pinLabels={pinLabels}
       supplierPartNumbers={{
         jlcpcb: ["C2836689"],
