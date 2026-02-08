@@ -54,11 +54,12 @@ const HMC6343Qwiic = () => (
     <capacitor
       name="C1"
       capacitance="1.0uF"
-      footprint="0402"
+      footprint="0603"
       schX={9.985}
       schY={12.4}
       pcbX={-5.715}
       pcbY={0.952}
+      pcbRotation={270}
       schRotation={-90}
     />
     <netlabel
@@ -211,7 +212,7 @@ const HMC6343Qwiic = () => (
     <resistor
       name="R3"
       resistance="4.7k"
-      footprint="0402"
+      footprint="0603"
       schX={27.032}
       schY={12.22}
       pcbX={-9.843}
