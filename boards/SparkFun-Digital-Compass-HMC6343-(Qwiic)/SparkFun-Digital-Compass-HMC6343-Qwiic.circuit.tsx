@@ -487,7 +487,7 @@ const HMC6343Qwiic = () => (
       layer="top"
     />
 
-    <silkscreentext text="PWR" pcbX={-8} pcbY={-5.4} fontSize={1} layer="top" />
+    <silkscreentext text="PWR" pcbX={-7.3} pcbY={-5} fontSize={1} layer="top" />
 
     <silkscreentext
       text="GND"
@@ -529,13 +529,7 @@ const HMC6343Qwiic = () => (
       pcbRotation={90}
       layer="top"
     />
-    <silkscreentext
-      text="sparkfun"
-      pcbX={0}
-      pcbY={2.5}
-      fontSize={2}
-      layer="bottom"
-    />
+
     <silkscreentext
       text="Digital Compass"
       pcbX={0}
