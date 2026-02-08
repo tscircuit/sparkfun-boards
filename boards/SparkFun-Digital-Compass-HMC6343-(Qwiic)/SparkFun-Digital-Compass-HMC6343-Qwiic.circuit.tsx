@@ -1,7 +1,7 @@
 import { JST05_1MM_RA } from "./JST05_1MM_RA"
 import { HMC6343 } from "./HMC6343"
 import { JST04_1MM_RA } from "./JST04_1MM_RA"
-import { sel } from "@tscircuit/core"
+import { sel, SilkscreenText } from "@tscircuit/core"
 
 const HMC6343Qwiic = () => (
   <board width="25.4mm" height="25.4mm">
@@ -458,6 +458,177 @@ const HMC6343Qwiic = () => (
       color="blue"
       schY={8}
       schX={18}
+    />
+
+    <silkscreentext
+      text="Digital Compass"
+      pcbX={0}
+      pcbY={9.5}
+      fontSize={1.4}
+      layer="top"
+    />
+    <silkscreentext
+      text="HMC6343"
+      pcbX={0}
+      pcbY={7.8}
+      fontSize={1.4}
+      layer="top"
+    />
+
+    <silkscreentext text="Y" pcbX={7.5} pcbY={8} fontSize={1} layer="top" />
+    <silkscreentext text="X" pcbX={9.9} pcbY={5.5} fontSize={1} layer="top" />
+    <silkscreentext text="Z" pcbX={7.5} pcbY={5.5} fontSize={1} layer="top" />
+
+    <silkscreentext
+      text="qwiic"
+      pcbX={-8.7}
+      pcbY={3.9}
+      fontSize={1.2}
+      layer="top"
+    />
+
+    <silkscreentext text="PWR" pcbX={-8} pcbY={-5.4} fontSize={1} layer="top" />
+
+    <silkscreentext
+      text="GND"
+      pcbX={-5.1}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="top"
+    />
+    <silkscreentext
+      text="3V3"
+      pcbX={-2.3}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="top"
+    />
+    <silkscreentext
+      text="SDA"
+      pcbX={0.1}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="top"
+    />
+    <silkscreentext
+      text="SCL"
+      pcbX={2.9}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="top"
+    />
+    <silkscreentext
+      text="DRDY"
+      pcbX={5.0}
+      pcbY={-9.2}
+      fontSize={1}
+      pcbRotation={90}
+      layer="top"
+    />
+    <silkscreentext
+      text="sparkfun"
+      pcbX={0}
+      pcbY={2.5}
+      fontSize={2}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="Digital Compass"
+      pcbX={0}
+      pcbY={0}
+      fontSize={1.2}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="HMC6343"
+      pcbX={0}
+      pcbY={-2}
+      fontSize={1.2}
+      layer="bottom"
+    />
+
+    <silkscreentext text="Y" pcbX={7.4} pcbY={8} fontSize={1} layer="bottom" />
+    <silkscreentext
+      text="X"
+      pcbX={9.8}
+      pcbY={5.5}
+      fontSize={1}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="Z"
+      pcbX={7.4}
+      pcbY={5.5}
+      fontSize={1}
+      layer="bottom"
+    />
+
+    <silkscreentext
+      text="qwiic"
+      pcbX={8.7}
+      pcbY={-3.9}
+      fontSize={1.2}
+      layer="bottom"
+    />
+
+    <silkscreentext
+      text="LED"
+      pcbX={-4}
+      pcbY={-5.4}
+      fontSize={1}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="I2C"
+      pcbX={6.5}
+      pcbY={-5.4}
+      fontSize={1}
+      layer="bottom"
+    />
+
+    <silkscreentext
+      text="GND"
+      pcbX={-5.1}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="3V3"
+      pcbX={-2.3}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="SDA"
+      pcbX={0.1}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="SCL"
+      pcbX={2.9}
+      pcbY={-9.5}
+      fontSize={1}
+      pcbRotation={90}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="DRDY"
+      pcbX={5.0}
+      pcbY={-9.2}
+      fontSize={1}
+      pcbRotation={90}
+      layer="bottom"
     />
   </board>
 )
