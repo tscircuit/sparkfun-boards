@@ -270,7 +270,7 @@ export const L298N = (props: ChipProps<typeof pinLabels>) => {
           />
         </footprint>
       }
-        cadModel={{
+      cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=89c73df5b23b4905a2b0574d75ba4d41&pn=C434589",
         rotationOffset: { x: 0, y: 0, z: 0 },

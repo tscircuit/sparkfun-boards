@@ -7,18 +7,12 @@ export default () => (
     height="24.13mm"
     title="SparkFun Full Bridge Motor Driver Breakout - L298N"
   >
-    <L298N name="U1"  schPinArrangement={{
+    <L298N
+      name="U1"
+      schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
-          pins: [
-            "pin4",
-            "pin9",
-            "pin6",
-            "pin11",
-            "pin1",
-            "pin15",
-            "pin8",
-          ],
+          pins: ["pin4", "pin9", "pin6", "pin11", "pin1", "pin15", "pin8"],
         },
         rightSide: {
           direction: "top-to-bottom",
@@ -33,17 +27,16 @@ export default () => (
             "pin14",
           ],
         },
-        
-       }}
-       schPinStyle={{
-        ENB:{
-          marginBottom: 0.2
-        }
-       }}
-       manufacturerPartNumber="L298N"
-       schX={-2.5}
-       schY={-0.4}
-      />
+      }}
+      schPinStyle={{
+        ENB: {
+          marginBottom: 0.2,
+        },
+      }}
+      manufacturerPartNumber="L298N"
+      schX={-2.5}
+      schY={-0.4}
+    />
     <jumper
       name="JP1"
       footprint={"pinrow15_nosquareplating_id1.016_od1.880_p2.54"}
@@ -74,7 +67,7 @@ export default () => (
           ],
         },
       }}
-      connections={{ 
+      connections={{
         pin1: sel.U1.pin14,
         pin2: sel.U1.pin12,
         pin3: sel.U1.pin10,
