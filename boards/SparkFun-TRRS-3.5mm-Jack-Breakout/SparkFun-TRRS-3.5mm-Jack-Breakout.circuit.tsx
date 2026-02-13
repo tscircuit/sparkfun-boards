@@ -10,7 +10,7 @@ const jumperPinLabels = {
 export default () => {
   return (
     <board width={"12.70mm"} height={"17.78mm"}>
-      <PJ_320D_4A name="U1" pcbY={4} pcbRotation={90} pcbX={0.8} schX={-2}/>
+      <PJ_320D_4A name="U1" pcbY={4} pcbRotation={90} pcbX={0.8} schX={-2} />
       <jumper
         name="J1"
         schDirection="left"
