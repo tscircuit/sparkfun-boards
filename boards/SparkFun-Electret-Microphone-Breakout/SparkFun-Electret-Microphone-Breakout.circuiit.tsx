@@ -46,6 +46,7 @@ export default () => {
           },
         }}
         connections={{
+          pin1: sel.C1.pin1,
           pin2: sel.net().GND,
         }}
       />
@@ -72,7 +73,6 @@ export default () => {
         schX={-6}
         schY={1}
         connections={{
-          pin1: sel.MIC.pin1,
           pin2: sel.R4.pin2,
         }}
       />
