@@ -1,4 +1,4 @@
-import { sel } from "tscircuit"
+import { sel, SilkscreenText } from "tscircuit"
 import { L298N } from "./C434589"
 
 export default () => (
@@ -45,6 +45,23 @@ export default () => (
       pcbX={0}
       pcbY={-10}
       pcbRotation={180}
+      pinLabels={{
+        pin1: ["OUT4"],
+        pin2: ["IN4"],
+        pin3: ["IN3"],
+        pin4: ["CSB"],
+        pin5: ["OUT3"],
+        pin6: ["ENB"],
+        pin7: ["VLS"],
+        pin8: ["IN2"],
+        pin9: ["IN1"],
+        pin10: ["OUT2"],
+        pin11: ["CSA"],
+        pin12: ["GND"],
+        pin13: ["ENA"],
+        pin14: ["VS"],
+        pin15: ["OUT1"],
+      }}
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
@@ -90,5 +107,12 @@ export default () => (
     <hole diameter={3.1} pcbX={-12.7} pcbY={9} />
     <hole diameter={3.1} pcbX={17.7} pcbY={7} />
     <hole diameter={3.1} pcbX={-17.7} pcbY={7} />
+    <silkscreentext
+      text="L298N"
+      pcbX={18}
+      pcbY={1.5}
+      pcbRotation={90}
+      fontSize={2}
+    />
   </board>
 )
