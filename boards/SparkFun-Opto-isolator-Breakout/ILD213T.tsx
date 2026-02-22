@@ -176,7 +176,7 @@ export const ILD213T = (props: ChipProps<typeof pinLabels>) => {
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=61eacee788cc4ebfb3195079c1eb215f&pn=C435834",
         rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: 0, y: 0, z: -2.5398968000000197 },
+        positionOffset: { x: 0, y: 0, z: 0 },
       }}
       {...props}
     />
