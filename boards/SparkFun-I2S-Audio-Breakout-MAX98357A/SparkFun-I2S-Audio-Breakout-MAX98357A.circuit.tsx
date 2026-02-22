@@ -51,7 +51,7 @@ const JP4PinLabels = {
 }
 
 export default () => (
-  <board outline={outline} manualEdits={manualEdits}>
+  <board outline={outline} manualEdits={manualEdits} routingDisabled>
     <MAX98357AETE_T name="U1" pcbX={-1.016} pcbRotation={-90} />
     <capacitor
       name="C1"

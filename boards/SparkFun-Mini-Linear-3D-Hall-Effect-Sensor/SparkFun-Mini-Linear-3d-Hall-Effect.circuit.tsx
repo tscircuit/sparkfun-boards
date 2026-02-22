@@ -12,7 +12,7 @@ const jumperPinLabels = {
 }
 
 export default () => (
-  <board width="25.4mm" height="12.7mm">
+  <board width="25.4mm" height="12.7mm" routingDisabled>
     <schematictext
       text="Power-On Reset"
       schX={-1}

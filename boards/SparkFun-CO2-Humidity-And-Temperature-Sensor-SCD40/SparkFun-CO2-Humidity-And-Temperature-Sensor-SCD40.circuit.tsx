@@ -4,7 +4,7 @@ import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 
 export default () => (
-  <board width="25.4mm" height="25.4mm">
+  <board width="25.4mm" height="25.4mm" routingDisabled>
     <silkscreentext text="SCD40" pcbX={10} pcbY={7.3} layer="top" />
     <silkscreentext text="SCD41" pcbX={10} pcbY={5.3} layer="top" />
     <silkscreentext text="qwiic" pcbX={-10} pcbY={-5.3} layer="top" />

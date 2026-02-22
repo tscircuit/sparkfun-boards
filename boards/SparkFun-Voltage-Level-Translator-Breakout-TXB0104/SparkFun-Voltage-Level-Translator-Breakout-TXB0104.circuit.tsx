@@ -2,7 +2,7 @@ import { sel } from "@tscircuit/core"
 import { TXB0104D } from "./TXB0104D"
 
 export default () => (
-  <board width="12.7mm" height="17.78mm">
+  <board width="12.7mm" height="17.78mm" routingDisabled>
     <silkscreentext
       text="TXB0104"
       fontSize={1.5}

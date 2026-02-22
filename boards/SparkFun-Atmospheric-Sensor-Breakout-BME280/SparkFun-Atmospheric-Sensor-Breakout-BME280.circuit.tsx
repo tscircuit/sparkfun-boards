@@ -2,7 +2,7 @@ import { sel } from "@tscircuit/core"
 import { BME280 } from "./BME280"
 
 export default () => (
-  <board width="12.7mm" height="20.32mm">
+  <board width="12.7mm" height="20.32mm" routingDisabled>
     <BME280
       name="U1"
       schWidth={1.8}

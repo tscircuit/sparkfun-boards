@@ -2,7 +2,7 @@ import { sel } from "@tscircuit/core"
 import { A_74HC4051BQ_115 } from "./A_74HC4051BQ_115"
 
 export default () => (
-  <board width="12.7mm" height="27.94mm">
+  <board width="12.7mm" height="27.94mm" routingDisabled>
     <A_74HC4051BQ_115
       name="U1"
       pcbRotation={270}
@@ -261,7 +261,6 @@ export default () => (
     />
     <schematictable schX={12} schY={-1}>
       <schematicrow height={0.7}>
-        <schematiccell></schematiccell>
         <schematiccell>Min</schematiccell>
         <schematiccell>Typ</schematiccell>
         <schematiccell>Max</schematiccell>

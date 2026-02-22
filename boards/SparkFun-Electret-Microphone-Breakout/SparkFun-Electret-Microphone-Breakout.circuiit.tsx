@@ -4,7 +4,7 @@ import { OPA344NA_250 } from "./OPA344"
 
 export default () => {
   return (
-    <board width={"20.32mm"} height={"10.16mm"}>
+    <board width={"20.32mm"} height={"10.16mm"} routingDisabled>
       <OPA344NA_250
         name="U1"
         layer={"bottom"}

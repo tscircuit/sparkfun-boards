@@ -3,7 +3,7 @@ import { TMF8821_1AM } from "./TMF8821_1AM"
 import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Qwiic-Adapter/SM04B_SRSS_TB_LF__SN"
 
 export default () => (
-  <board width="25.4mm" height="25.4mm">
+  <board width="25.4mm" height="25.4mm" routingDisabled>
     <TMF8821_1AM name="U1" schX={0} schY={0} pcbRotation={-90} />
     <netlabel
       net="N_INT"

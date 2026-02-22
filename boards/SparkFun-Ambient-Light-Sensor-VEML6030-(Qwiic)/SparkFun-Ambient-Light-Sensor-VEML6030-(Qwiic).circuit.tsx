@@ -10,7 +10,7 @@ const jumperPinLabels = {
   pin5: ["N_INT"],
 }
 export default () => (
-  <board width="25.4mm" height="25.4mm">
+  <board width="25.4mm" height="25.4mm" routingDisabled>
     <VEML6030 name="U1" schY={1.5} pcbRotation={-90} />
     <SM04B_SRSS_TB_LF__SN
       name="J1"

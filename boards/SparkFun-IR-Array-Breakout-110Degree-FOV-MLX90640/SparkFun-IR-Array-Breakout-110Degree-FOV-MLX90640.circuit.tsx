@@ -3,7 +3,7 @@ import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { sel } from "tscircuit"
 
 export default () => (
-  <board width={25.4} height={25.4}>
+  <board width={25.4} height={25.4} routingDisabled>
     <MLX90640ESF
       schHeight={0.8}
       pcbX={0}

@@ -14,7 +14,7 @@ const jumperPinLabels = {
   pin10: ["D2"],
 }
 export default () => (
-  <board width="39.37mm" height="35.56mm">
+  <board width="39.37mm" height="35.56mm" routingDisabled>
     <SD name="U1" pcbX={1.5} pcbRotation={90} />
     <jumper
       manufacturerPartNumber="M10"

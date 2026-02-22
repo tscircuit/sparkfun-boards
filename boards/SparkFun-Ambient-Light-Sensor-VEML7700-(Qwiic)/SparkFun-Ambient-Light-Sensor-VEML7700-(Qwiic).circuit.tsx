@@ -9,7 +9,7 @@ const jumperPinLabels = {
   pin4: ["SCL"],
 }
 export default () => (
-  <board width="25.4mm" height="25.4mm">
+  <board width="25.4mm" height="25.4mm" routingDisabled>
     <VEML7700 name="U1" schY={1.5} />
     <SM04B_SRSS_TB_LF__SN
       name="JP1"

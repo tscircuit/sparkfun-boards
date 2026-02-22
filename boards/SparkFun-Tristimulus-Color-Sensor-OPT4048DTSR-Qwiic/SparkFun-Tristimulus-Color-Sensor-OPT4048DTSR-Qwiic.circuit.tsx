@@ -13,7 +13,7 @@ const jumperPinLabels = {
 
 export default () => {
   return (
-    <board width={25.4} height={25.4}>
+    <board width={25.4} height={25.4} routingDisabled>
       {/* Color Sensor */}
       <schematictext
         text="Color Sensor - OPT4048DTSR"

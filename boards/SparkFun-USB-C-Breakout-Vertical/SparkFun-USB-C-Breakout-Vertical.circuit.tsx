@@ -2,7 +2,7 @@ import { sel } from "tscircuit"
 import { TYPE_C_14PLC_H10_0 } from "./TYPE_C_14PLC_H10_0"
 
 export default () => (
-  <board width="11.43mm" height="20.32mm">
+  <board width="11.43mm" height="20.32mm" routingDisabled>
     <TYPE_C_14PLC_H10_0
       name="USBC"
       pcbY={0}

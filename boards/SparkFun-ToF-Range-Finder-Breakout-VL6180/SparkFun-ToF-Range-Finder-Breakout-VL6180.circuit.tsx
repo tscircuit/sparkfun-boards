@@ -11,7 +11,12 @@ const jumperPinLabels = {
   pin6: ["GPIO1"],
 }
 export default () => (
-  <board width="17.78mm" height="15.24mm" manualEdits={manualEdits}>
+  <board
+    width="17.78mm"
+    height="15.24mm"
+    manualEdits={manualEdits}
+    routingDisabled
+  >
     {/* X=8.89 Y=7.62 */}
     <silkscreentext text="VL6180 Time Of Flight" pcbY={7} />
     <silkscreentext text="Range Finder" pcbY={6} />

@@ -26,7 +26,7 @@ const selectors = {
 }
 
 export default () => (
-  <board width="27.95mm" height="12.7mm">
+  <board width="27.95mm" height="12.7mm" routingDisabled>
     <TXS0108EQWRKSRQ1
       name="U1"
       schPinArrangement={{

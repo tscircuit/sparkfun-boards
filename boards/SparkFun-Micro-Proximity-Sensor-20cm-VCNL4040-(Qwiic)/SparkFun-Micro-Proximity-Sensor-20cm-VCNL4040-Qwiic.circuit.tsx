@@ -21,7 +21,7 @@ const SectionTitle = ({
 )
 
 export default () => (
-  <board width="19.05mm" height="7.62mm">
+  <board width="19.05mm" height="7.62mm" routingDisabled>
     <SectionTitle text="Proximity Sensor" schX={-1.5} schY={6.5} />
     <SectionTitle text="LED" schX={11.5} schY={6.5} />
     <SectionTitle text="Connectors" schX={-4.5} schY={-4.2} />

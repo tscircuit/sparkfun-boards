@@ -6,6 +6,7 @@ export default () => (
     width="15.24mm"
     height="12.70mm"
     title="SparkFun Opto-isolator Breakout"
+    routingDisabled
   >
     <ILD213T
       name="U1"

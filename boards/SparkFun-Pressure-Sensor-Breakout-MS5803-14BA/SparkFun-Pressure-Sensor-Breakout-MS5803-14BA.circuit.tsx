@@ -2,7 +2,7 @@ import { MS580314BA01_00 } from "./MS5803-14BA"
 
 export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
   return (
-    <board width={20.32} height={17.78}>
+    <board width={20.32} height={17.78} routingDisabled>
       <group pcbX={0} pcbY={0}>
         <MS580314BA01_00
           name="U1"
