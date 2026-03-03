@@ -1,3 +1,4 @@
 {
-  "mainEntrypoint": "index.ts"
+  "mainEntrypoint": "index.ts",
+  "alwaysUseLatestTscircuitOnCloud": true
 }
