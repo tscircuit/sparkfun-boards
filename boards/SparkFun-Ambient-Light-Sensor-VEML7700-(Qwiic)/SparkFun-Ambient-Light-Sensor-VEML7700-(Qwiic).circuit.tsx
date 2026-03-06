@@ -1,6 +1,7 @@
 import { sel } from "tscircuit"
 import { VEML7700 } from "./VEML7700"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 
 const jumperPinLabels = {
   pin1: ["GND"],
@@ -18,7 +19,7 @@ export default () => (
       schX={8}
       schY={4}
     />
-    <SM04B_SRSS_TB_LF__SN
+    <SM04B_SRSS_TB_LF__SN2
       name="JP2"
       pcbX="-9.7"
       pcbRotation={-90}
