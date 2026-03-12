@@ -157,7 +157,7 @@ export const MST22D18G2_125 = (props: ChipProps<typeof pinLabels>) => {
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=a98562e0d24740e1809e54f73242e180&pn=C2906280",
         rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: 0, y: 0, z: 0 },
+        positionOffset: { x: 0, y: 0, z: 0.85 },
       }}
       {...props}
     />
