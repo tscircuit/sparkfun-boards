@@ -241,8 +241,8 @@ export const TYPE_C_31_M_12 = (props: ChipProps<typeof pinLabels>) => {
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=2a4bc2358b36497d9ab2a66ab6419ba3&pn=C165948",
-        rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: 0, y: 0, z: 0 },
+        rotationOffset: { x: 0, y: 0, z: 180 },
+        positionOffset: { x: 0, y: 2.5, z: 0 },
       }}
       {...props}
     />
