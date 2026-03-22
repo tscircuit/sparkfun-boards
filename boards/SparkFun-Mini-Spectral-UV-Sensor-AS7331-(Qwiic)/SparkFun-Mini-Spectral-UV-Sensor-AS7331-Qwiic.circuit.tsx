@@ -14,22 +14,22 @@ export default () => {
         layer="top"
         pcbRotation={-90}
         connections={{
-          pin1: sel.net.AGND,
-          pin2: sel.net.AGND,
+          pin1: "net.AGND",
+          pin2: "net.AGND",
           pin3: sel.net().VDDA,
           pin4: sel.R7.pin1,
-          pin5: sel.net.AGND,
-          pin6: sel.net.AGND,
-          pin7: sel.A1.pin2,
-          pin8: sel.net.SYNC,
-          pin9: sel.net.READY_INT,
+          pin5: "net.AGND",
+          pin6: "net.AGND",
+          pin7: "A1.pin2",
+          pin8: "net.SYNC",
+          pin9: "net.READY_INT",
           pin10: sel.net().VDDA,
-          pin11: sel.net.DGND,
+          pin11: "net.DGND",
           pin12: sel.net.SDA,
           pin13: sel.net.SCL,
-          pin14: sel.A0.pin2,
-          pin15: sel.net.AGND,
-          pin16: sel.net.AGND,
+          pin14: "A0.pin2",
+          pin15: "net.AGND",
+          pin16: "net.AGND",
         }}
       />
 
@@ -42,7 +42,7 @@ export default () => {
         layer="bottom"
         pcbRotation={90}
         connections={{
-          pin1: sel.net.DGND,
+          pin1: "net.DGND",
           pin2: sel.net.V3_3,
           pin3: sel.net.SDA,
           pin4: sel.net.SCL,
@@ -58,7 +58,7 @@ export default () => {
         layer="bottom"
         pcbRotation={-90}
         connections={{
-          pin1: sel.net.DGND,
+          pin1: "net.DGND",
           pin2: sel.net.V3_3,
           pin3: sel.net.SDA,
           pin4: sel.net.SCL,
@@ -85,9 +85,9 @@ export default () => {
         layer="bottom"
         pcbRotation={180}
         connections={{
-          pin1: sel.net.DGND,
-          pin2: sel.net.SYNC,
-          pin3: sel.net.READY_INT,
+          pin1: "net.DGND",
+          pin2: "net.SYNC",
+          pin3: "net.READY_INT",
           pin4: sel.net.SDA,
           pin5: sel.net.SCL,
           pin6: sel.net.V3_3,
@@ -103,7 +103,7 @@ export default () => {
         schRotation={90}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin1: sel.net.SCL, pin2: sel.I2C.pin3 }}
+        connections={{ pin1: sel.net.SCL, pin2: "I2C.pin3" }}
       />
       <resistor
         name="R2"
@@ -114,7 +114,7 @@ export default () => {
         schRotation={90}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin1: sel.net.SDA, pin2: sel.I2C.pin1 }}
+        connections={{ pin1: sel.net.SDA, pin2: "I2C.pin1" }}
       />
       <solderjumper
         name="I2C"
@@ -137,7 +137,7 @@ export default () => {
         schRotation={-90}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin1: sel.net().VDDA, pin2: sel.A0.pin1 }}
+        connections={{ pin1: sel.net().VDDA, pin2: "A0.pin1" }}
       />
       <resistor
         name="R4"
@@ -148,7 +148,7 @@ export default () => {
         schRotation={-90}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin1: sel.net().VDDA, pin2: sel.A1.pin1 }}
+        connections={{ pin1: sel.net().VDDA, pin2: "A1.pin1" }}
       />
       <solderjumper
         name="A0"
@@ -159,7 +159,7 @@ export default () => {
         schY={1.0}
         schRotation={-90}
         pcbRotation={-90}
-        connections={{ pin3: sel.net.AGND }}
+        connections={{ pin3: "net.AGND" }}
       />
       <solderjumper
         name="A1"
@@ -170,7 +170,7 @@ export default () => {
         schY={-1}
         schRotation={-90}
         pcbRotation={-90}
-        connections={{ pin3: sel.net.AGND }}
+        connections={{ pin3: "net.AGND" }}
       />
 
       <resistor
@@ -196,7 +196,7 @@ export default () => {
         pcbX={-4.45}
         pcbY={0.55}
         pcbRotation={90}
-        connections={{ pin1: sel.net().VDDA, pin2: sel.net.DGND }}
+        connections={{ pin1: sel.net().VDDA, pin2: "net.DGND" }}
       />
       <capacitor
         name="C2"
@@ -209,7 +209,7 @@ export default () => {
         pcbX={-2.9}
         pcbY={0.55}
         pcbRotation={90}
-        connections={{ pin1: sel.net().VDDA, pin2: sel.net.AGND }}
+        connections={{ pin1: sel.net().VDDA, pin2: "net.AGND" }}
       />
       <resistor
         name="R7"
@@ -220,7 +220,7 @@ export default () => {
         schRotation={-90}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin2: sel.net.AGND }}
+        connections={{ pin2: "net.AGND" }}
       />
 
       <solderjumper
@@ -243,7 +243,7 @@ export default () => {
         schRotation={90}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin1: sel.D1.pin1, pin2: sel.PWR.pin1 }}
+        connections={{ pin1: "D1.pin1", pin2: "PWR.pin1" }}
       />
       <led
         name="D1"
@@ -256,7 +256,7 @@ export default () => {
         pcbY={3}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin2: sel.net().DGND }}
+        connections={{ pin2: "net.DGND" }}
       />
 
       <schematicrect
