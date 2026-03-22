@@ -1,12 +1,12 @@
 import type { ChipProps } from "@tscircuit/props"
 
 const pinLabels = {
-  pin1: ["VSSA1"],
-  pin2: ["VSSA2"],
+  pin1: ["VSSA"],
+  pin2: ["VSSA"],
   pin3: ["VDDA"],
   pin4: ["REXT"],
-  pin5: ["VSSA3"],
-  pin6: ["VSSA4"],
+  pin5: ["VSSA"],
+  pin6: ["VSSA"],
   pin7: ["A1"],
   pin8: ["SYN"],
   pin9: ["READY"],
@@ -15,8 +15,8 @@ const pinLabels = {
   pin12: ["SDA"],
   pin13: ["SCL"],
   pin14: ["A0"],
-  pin15: ["VSSA5"],
-  pin16: ["VSSA6"],
+  pin15: ["VSSA"],
+  pin16: ["VSSA"],
 } as const
 
 export const AS7331_AQFM_OLGA16_LF_T_R = (
@@ -25,6 +25,20 @@ export const AS7331_AQFM_OLGA16_LF_T_R = (
   return (
     <chip
       pinLabels={pinLabels}
+      displayName="AS7331"
+      schWidth={1.55}
+      schHeight={2.6}
+      schPinSpacing={0.32}
+      schPinArrangement={{
+        leftSide: {
+          direction: "top-to-bottom",
+          pins: ["pin10", "pin3", "pin4", "pin11", "pin1", "pin2"],
+        },
+        rightSide: {
+          direction: "top-to-bottom",
+          pins: ["pin13", "pin12", "pin9", "pin14", "pin8", "pin7"],
+        },
+      }}
       supplierPartNumbers={{
         jlcpcb: ["C20482877"],
       }}
