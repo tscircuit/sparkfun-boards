@@ -1,5 +1,5 @@
 import { AS7331_AQFM_OLGA16_LF_T_R } from "./AS7331"
-import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Qwiic-Adapter/SM04B_SRSS_TB_LF__SN"
+import { A1001WV_S_04P } from "./C371588"
 import { sel } from "tscircuit"
 
 export default () => {
@@ -11,6 +11,7 @@ export default () => {
         schY={1.0}
         pcbX={0}
         pcbY={1.9}
+        layer={"bottom"}
         pcbRotation={-90}
         connections={{
           pin1: sel.net.AGND,
@@ -31,12 +32,12 @@ export default () => {
           pin16: sel.net.AGND,
         }}
       />
-   
-      <SM04B_SRSS_TB_LF__SN
+
+      <A1001WV_S_04P
         name="J1"
         schX={-4.95}
         schY={-4.9}
-        pcbX={9.9}
+        pcbX={10.55}
         pcbY={2.9}
         pcbRotation={90}
         connections={{
@@ -46,12 +47,12 @@ export default () => {
           pin4: sel.net.SCL,
         }}
       />
- 
-      <SM04B_SRSS_TB_LF__SN
+
+      <A1001WV_S_04P
         name="J2"
         schX={-3.0}
         schY={-4.9}
-        pcbX={-9}
+        pcbX={-10.55}
         pcbY={2.9}
         pcbRotation={-90}
         connections={{
@@ -96,8 +97,6 @@ export default () => {
         schX={1.95}
         schY={2.95}
         schRotation={90}
-        pcbX={2.7}
-        pcbY={4.85}
         pcbRotation={90}
         connections={{ pin1: sel.net.SCL, pin2: sel.I2C.pin3 }}
       />
@@ -108,8 +107,6 @@ export default () => {
         schX={2.95}
         schY={2.95}
         schRotation={90}
-        pcbX={4.0}
-        pcbY={4.85}
         pcbRotation={90}
         connections={{ pin1: sel.net.SDA, pin2: sel.I2C.pin1 }}
       />
@@ -117,12 +114,9 @@ export default () => {
         name="I2C"
         bridgedPins={[["1"], ["2"], ["3"]]}
         footprint="solderjumper3_bridged123_pw0.66_pl1.270_p1"
-        layer="bottom"
         schX={2.45}
         schY={4.0}
         schRotation={180}
-        pcbX={3.35}
-        pcbY={5.55}
         pcbRotation={180}
         connections={{ pin2: sel.net.V3_3 }}
       />
@@ -151,7 +145,6 @@ export default () => {
         name="A0"
         bridgedPins={[["2"], ["3"]]}
         footprint="solderjumper3_bridged23_pw0.66_pl1.270_p1"
-        layer="bottom"
         schX={4.15}
         schY={1.0}
         schRotation={-90}
@@ -162,7 +155,6 @@ export default () => {
         name="A1"
         bridgedPins={[["2"], ["3"]]}
         footprint="solderjumper3_bridged23_pw0.66_pl1.270_p1"
-        layer="bottom"
         schX={5.1}
         schY={-1}
         schRotation={-90}
@@ -222,13 +214,12 @@ export default () => {
         name="PWR"
         bridgedPins={[["1", "2"]]}
         footprint="solderjumper2_bridged12_pw0.66_pl1.270_p1"
-        layer="bottom"
         schX={10.5}
         schY={2.25}
         schRotation={90}
         pcbRotation={-90}
         connections={{ pin2: sel.net.V3_3 }}
-      /> 
+      />
       <resistor
         name="R5"
         resistance="2.2k"
@@ -238,7 +229,7 @@ export default () => {
         schRotation={90}
         pcbRotation={90}
         connections={{ pin1: sel.D1.pin1, pin2: sel.PWR.pin1 }}
-      /> 
+      />
       <led
         name="D1"
         color="red"
@@ -382,7 +373,12 @@ export default () => {
           <schematiccell text="0x77" width={1.8} />
         </schematicrow>
       </schematictable>
-      <schematictext text="Connectors" schX={-3.0} schY={-3.45} fontSize={0.35} />
+      <schematictext
+        text="Connectors"
+        schX={-3.0}
+        schY={-3.45}
+        fontSize={0.35}
+      />
       <schematictext
         text="Qwiic Vert"
         schX={-4.95}
