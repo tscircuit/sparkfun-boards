@@ -134,7 +134,12 @@ export default () => {
         schY={2.35}
         fontSize={0.32}
       />
-      <schematictable schX={6.05} schY={-0.55} borderWidth={0.03} fontSize={0.18}>
+      <schematictable
+        schX={6.05}
+        schY={-0.55}
+        borderWidth={0.03}
+        fontSize={0.18}
+      >
         <schematicrow height={0.36}>
           <schematiccell text="Pin 1" width={0.78} />
           <schematiccell
@@ -209,8 +214,18 @@ export default () => {
         </schematicrow>
       </schematictable>
 
-      <schematictext text="CAN bus Pinout" schX={5.5} schY={-3.1} fontSize={0.18} />
-      <schematictable schX={6.05} schY={-4.95} borderWidth={0.03} fontSize={0.18}>
+      <schematictext
+        text="CAN bus Pinout"
+        schX={5.5}
+        schY={-3.1}
+        fontSize={0.18}
+      />
+      <schematictable
+        schX={6.05}
+        schY={-4.95}
+        borderWidth={0.03}
+        fontSize={0.18}
+      >
         <schematicrow height={0.36}>
           <schematiccell text="Pin 1" width={0.78} />
           <schematiccell text="Shield" width={1.95} horizontalAlign="left" />
