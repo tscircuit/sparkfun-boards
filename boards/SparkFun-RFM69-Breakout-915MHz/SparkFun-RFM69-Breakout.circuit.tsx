@@ -136,8 +136,8 @@ const RFM69BREAKOUT = () => {
         pcbX={-2.54}
         pcbRotation={180}
         connections={{
-          pin1: "net.GND",
-          pin2: "net.V3_3",
+          pin1: sel.net().GND,
+          pin2: sel.net().V3_3,
         }}
       />
       <capacitor
@@ -149,8 +149,8 @@ const RFM69BREAKOUT = () => {
         pcbY={-8.57}
         pcbX={3.81}
         connections={{
-          pin1: "net.GND",
-          pin2: "net.V3_3",
+          pin1: sel.net().GND,
+          pin2: sel.net().V3_3,
         }}
       />
       <net name="GND" />

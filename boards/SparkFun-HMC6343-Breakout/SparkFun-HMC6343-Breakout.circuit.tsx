@@ -17,7 +17,7 @@ const HMC6343Breakout = () => (
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
         CS_CTRL: sel.net.CS,
-        CS: "net.CS_CTRL",
+        CS: sel.net().CS_CTRL,
       }}
       schPinArrangement={{
         leftSide: {

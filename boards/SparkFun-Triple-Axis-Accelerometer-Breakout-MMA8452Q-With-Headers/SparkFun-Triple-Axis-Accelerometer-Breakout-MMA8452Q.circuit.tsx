@@ -24,7 +24,7 @@ export default () => {
         pcbX={1}
         pcbY={6}
         pcbRotation={-90}
-        connections={{ pin1: sel.net().SCL, pin2: "net.V3_3" }}
+        connections={{ pin1: sel.net().SCL, pin2: sel.net().V3_3 }}
       />
       <resistor
         name="R2"
@@ -36,7 +36,7 @@ export default () => {
         pcbY={6}
         pcbX={-1}
         pcbRotation={-90}
-        connections={{ pin1: "U1.pin6", pin2: "net.V3_3" }}
+        connections={{ pin1: sel.U1.pin6, pin2: sel.net().V3_3 }}
       />
       <hole name="MH1" diameter="3.302mm" pcbX="5.715mm" pcbY="5.715mm" />
       <hole name="MH1-2" diameter="3.302mm" pcbX="5.715mm" pcbY="-5.715mm" />
@@ -50,11 +50,11 @@ export default () => {
         pcbX={1.5}
         pcbY={-4}
         pcbRotation={-90}
-        connections={{ pin1: "U1.pin7", pin2: "net.V3_3" }}
+        connections={{ pin1: sel.U1.pin7, pin2: sel.net().V3_3 }}
       />
       <capacitor
         name="C1"
-        connections={{ pin1: "U1.pin1", pin2: "net.GND" }}
+        connections={{ pin1: sel.U1.pin1, pin2: sel.net().GND }}
         capacitance="0.1uF"
         schRotation={-90}
         schX={-5}
@@ -66,7 +66,7 @@ export default () => {
       />
       <capacitor
         name="C3"
-        connections={{ pin1: "U1.pin1", pin2: "net.GND" }}
+        connections={{ pin1: sel.U1.pin1, pin2: sel.net().GND }}
         capacitance="0.1uF"
         schRotation={-90}
         schX={-4}
@@ -78,7 +78,7 @@ export default () => {
       />
       <capacitor
         name="C2"
-        connections={{ pin1: "U1.pin2", pin2: "net.GND" }}
+        connections={{ pin1: sel.U1.pin2, pin2: sel.net().GND }}
         capacitance="0.1uF"
         schRotation={-90}
         schX={-3}
@@ -89,7 +89,7 @@ export default () => {
         pcbRotation={180}
       />
       <solderjumper
-        connections={{ pin1: "R3.pin1", pin2: "net.GND" }}
+        connections={{ pin1: sel.R3.pin1, pin2: sel.net().GND }}
         name="JP1"
         schX={5}
         schY={-1.5}
@@ -106,12 +106,12 @@ export default () => {
         pinCount={6}
         pcbRotation={-90}
         connections={{
-          pin1: "net.V3_3",
-          pin2: "net.SDA",
-          pin3: "net.SCL",
-          pin4: "net.INT2",
-          pin5: "net.INT1",
-          pin6: "net.GND",
+          pin1: sel.net().V3_3,
+          pin2: sel.net().SDA,
+          pin3: sel.net().SCL,
+          pin4: sel.net().INT2,
+          pin5: sel.net().INT1,
+          pin6: sel.net().GND,
         }}
         schX={8}
         footprint="pinrow6_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"

@@ -44,11 +44,11 @@ export default () => {
         footprint="cap0603"
         pcbY={-3}
         pcbRotation={180}
-        connections={{ pin1: "U1.pin7", pin2: "net.V3_3" }}
+        connections={{ pin1: sel.U1.pin7, pin2: sel.net().V3_3 }}
       />
       <capacitor
         name="C1"
-        connections={{ pin1: "U1.pin2", pin2: "net.GND" }}
+        connections={{ pin1: sel.U1.pin2, pin2: sel.net().GND }}
         capacitance="0.1uF"
         schRotation={-90}
         schX={-3}
@@ -79,7 +79,7 @@ export default () => {
         pcbRotation={90}
         pcbX={-3.3}
         pcbY={3.81}
-        connections={{ pin1: "net.SDA" }}
+        connections={{ pin1: sel.net().SDA }}
       />
       <solderjumper
         name="JP1"
@@ -97,7 +97,7 @@ export default () => {
         }}
       />
       <solderjumper
-        connections={{ pin1: "R2.pin1", pin2: "net.GND" }}
+        connections={{ pin1: sel.R2.pin1, pin2: sel.net().GND }}
         name="JP9"
         schX={5}
         schY={-1.5}

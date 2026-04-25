@@ -17,10 +17,10 @@ export default () => {
         connections={{
           pin2: sel.R5.pin1,
           pin3: sel.R4.pin1,
-          pin6: "net.GND",
+          pin6: sel.net().GND,
           // pin5: sel.U1.pin2,
-          pin13: "U1.pin9",
-          pin12: "C2.pin1",
+          pin13: sel.U1.pin9,
+          pin12: sel.C2.pin1,
         }}
       />
       <capacitor
@@ -127,7 +127,7 @@ export default () => {
         }}
       />
       <solderjumper
-        connections={{ pin1: [sel.R2.pin1, sel.U1.pin5], pin2: "net.GND" }}
+        connections={{ pin1: [sel.R2.pin1, sel.U1.pin5], pin2: sel.net().GND }}
         name="JP9"
         schX={8}
         schY={-1}
