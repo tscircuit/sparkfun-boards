@@ -1,3 +1,3 @@
-import SparkFunGridEyeInfraredArrayBreakoutAMG8833Qwiic from "./SparkFun-Grid-EYE-Infrared-Array-Breakout-AMG8833-Qwiic.circuit"
+import SparkFunGridEyeInfraredArrayBreakoutAMG8833Qwiic from "./sparkfun-grid-eye-infrared-array-breakout-amg8833-qwiic.circuit"
 
 export default SparkFunGridEyeInfraredArrayBreakoutAMG8833Qwiic

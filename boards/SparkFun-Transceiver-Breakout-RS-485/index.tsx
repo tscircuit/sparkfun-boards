@@ -1,3 +1,3 @@
-import RS485BREAKOUT from "./SparkFun-Transceiver-Breakout -RS-485.circuit"
+import RS485BREAKOUT from "./sparkfun-transceiver-breakout-rs-485.circuit"
 
 export default RS485BREAKOUT

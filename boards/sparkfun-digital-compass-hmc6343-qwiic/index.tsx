@@ -1,3 +1,3 @@
-import HMC6343 from "./SparkFun-Digital-Compass-HMC6343-Qwiic.circuit"
+import HMC6343 from "./sparkfun-digital-compass-hmc6343-qwiic.circuit"
 
 export default HMC6343

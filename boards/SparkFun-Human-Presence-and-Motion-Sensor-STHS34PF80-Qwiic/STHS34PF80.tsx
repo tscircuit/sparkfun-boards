@@ -32,8 +32,8 @@ export const STHS34PF80 = (props: ChipProps<typeof pinLabels>) => (
       },
     }}
     schPinStyle={{
-      GND: { marginTop: sel.0.15 },
-      INT: { marginTop: sel.0.15 },
+      GND: { marginTop: 0.15 },
+      INT: { marginTop: 0.15 },
     }}
     footprint={
       <footprint>

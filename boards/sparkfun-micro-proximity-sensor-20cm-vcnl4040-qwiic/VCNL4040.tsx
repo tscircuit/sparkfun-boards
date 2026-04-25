@@ -15,11 +15,11 @@ export const VCNL4040 = (props: ChipProps<typeof pinLabels>) => (
   <chip
     pinLabels={pinLabels}
     schPinStyle={{
-      pin2: { marginTop: sel.0.15 },
-      pin3: { marginBottom: sel.1.6 },
-      pin4: { marginBottom: sel.0.3 },
-      pin8: { marginBottom: sel.0.2 },
-      pin6: { marginBottom: sel.0.2 },
+      pin2: { marginTop: 0.15 },
+      pin3: { marginBottom: 1.6 },
+      pin4: { marginBottom: 0.3 },
+      pin8: { marginBottom: 0.2 },
+      pin6: { marginBottom: 0.2 },
     }}
     schWidth={2.5}
     schPinArrangement={{
