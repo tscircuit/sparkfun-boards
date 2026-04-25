@@ -1,3 +1,3 @@
-import SparkFunHumidityTemperatureSensorBreakoutHIH6130 from "./SparkFun-Humidity-Temperature-Sensor-Breakout-HIH6130.circuit"
+import SparkFunHumidityTemperatureSensorBreakoutHIH6130 from "./sparkfun-humidity-temperature-sensor-breakout-hih6130.circuit"
 
 export default SparkFunHumidityTemperatureSensorBreakoutHIH6130

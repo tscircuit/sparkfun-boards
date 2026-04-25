@@ -1,3 +1,3 @@
-import RFIDBREAKOUT from "./SparkFun-RFID-Reader-Breakout.circuit"
+import RFIDBREAKOUT from "./sparkfun-rfid-reader-breakout.circuit"
 
 export default RFIDBREAKOUT

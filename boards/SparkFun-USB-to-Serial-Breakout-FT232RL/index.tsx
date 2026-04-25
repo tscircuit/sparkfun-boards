@@ -1,3 +1,3 @@
-import USBToSerialBreakout from "./SparkFun-USB-to-Serial-Breakout-FT232RL.circuit"
+import USBToSerialBreakout from "./sparkfun-usb-to-serial-breakout-ft232rl.circuit"
 
 export default USBToSerialBreakout

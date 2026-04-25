@@ -1,3 +1,3 @@
-import EslovToQwiicBridge from "./SparkFun-ESLOV-to-Qwiic-Bridge.circuit"
+import EslovToQwiicBridge from "./sparkfun-eslov-to-qwiic-bridge.circuit"
 
 export default EslovToQwiicBridge

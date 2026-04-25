@@ -1,3 +1,3 @@
-import MPL3115A2R1 from "./SparkFun-Altitude-Pressure-Sensor-Breakout-MPL3115A2.circuit"
+import MPL3115A2R1 from "./sparkfun-altitude-pressure-sensor-breakout-mpl3115a2.circuit"
 
 export default MPL3115A2R1

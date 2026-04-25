@@ -1,3 +1,3 @@
-import ANALOGQRE1113GRBREAKOUT from "./SparkFun-Line-Sensor-Breakout-QRE1113-Analog.circuit"
+import ANALOGQRE1113GRBREAKOUT from "./sparkfun-line-sensor-breakout-qre1113-analog.circuit"
 
 export default ANALOGQRE1113GRBREAKOUT
