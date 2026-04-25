@@ -14,7 +14,7 @@ export default () => (
     />
     <resistor
       name="R1"
-      connections={{ pin1: sel.U1.pin4, pin2: sel.net.V3_3 }}
+      connections={{}}
       resistance="10k"
       schX={1.3}
       schY={1.3}

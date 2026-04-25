@@ -23,7 +23,6 @@ const RFM69BREAKOUT = () => {
         showSilkscreenPinLabels={true}
         pinLabels={["V3_3", "GND"]}
         connections={{
-          pin1: sel.U1.pin13,
         }}
       />
       <netlabel

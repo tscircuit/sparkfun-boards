@@ -18,7 +18,6 @@ export default () => {
           pin8: sel.R5.pin1,
           pin7: sel.R4.pin1,
           pin6: sel.R1.pin1,
-          pin5: sel.U1.pin2,
         }}
       />
       <capacitor
@@ -96,7 +95,6 @@ export default () => {
         bridgedPins={[["1", "2", "3"]]}
         connections={{
           pin2: sel.net().VDD,
-          pin3: sel.R4.pin2,
           pin1: sel.R5.pin2,
         }}
       />

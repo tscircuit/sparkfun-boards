@@ -58,7 +58,6 @@ export default () => (
         pin1: sel.net().GND,
         pin3: sel.net().V3_3,
         pin4: sel.net().V3_3,
-        pin5: sel.U4.pin2,
         pin6: sel.net().INT,
         pin7: sel.net().SDA,
         pin8: sel.net().SCL,

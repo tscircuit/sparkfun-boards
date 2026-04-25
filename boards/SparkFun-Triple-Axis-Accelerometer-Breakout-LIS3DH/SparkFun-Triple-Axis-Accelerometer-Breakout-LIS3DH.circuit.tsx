@@ -24,9 +24,7 @@ export default () => (
       schY={-0.5}
       pcbRotation={180}
       connections={{
-        pin14: sel.U1.pin1,
         pin1: sel.C2.pin1,
-        pin12: sel.U1.pin5,
         pin5: sel.C2.pin2,
         pin8: sel.R4.pin1,
         pin11: sel.net().INT1,
@@ -35,7 +33,6 @@ export default () => (
         pin15: sel.net().ADC2,
         pin13: sel.net().ADC3,
         pin7: sel.R3.pin1,
-        pin10: sel.U1.pin5,
       }}
     />
     <silkscreentext

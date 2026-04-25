@@ -33,7 +33,7 @@ export default () => (
       schY={1.5}
       capacitance="0.1uF"
       footprint="cap0402"
-      connections={{ pin1: sel.U1.pin6, pin2: sel.net().GND }}
+      connections={{}}
     />
     <resistor
       name="R5"

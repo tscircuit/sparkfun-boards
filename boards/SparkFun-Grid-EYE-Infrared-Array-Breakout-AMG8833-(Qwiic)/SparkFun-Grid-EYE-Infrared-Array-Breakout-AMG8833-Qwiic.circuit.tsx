@@ -18,8 +18,6 @@ export default () => {
           pin2: sel.R5.pin1,
           pin3: sel.R4.pin1,
           pin6: sel.net().GND,
-          // pin5: sel.U1.pin2,
-          pin13: sel.U1.pin9,
           pin12: sel.C2.pin1,
         }}
       />
@@ -122,7 +120,6 @@ export default () => {
         bridgedPins={[["1", "2", "3"]]}
         connections={{
           pin2: sel.net().V3_3,
-          pin3: sel.R4.pin2,
           pin1: sel.R5.pin2,
         }}
       />

@@ -166,7 +166,6 @@ const MotionSensor = () => (
       pcbY="3.81"
       layer="bottom"
       connections={{
-        pin2: sel.D1.pin2,
       }}
     />
     <netlabel

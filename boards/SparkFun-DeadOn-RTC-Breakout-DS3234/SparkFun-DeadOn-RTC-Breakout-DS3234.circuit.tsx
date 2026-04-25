@@ -21,7 +21,6 @@ export default () => {
           connections={{
             pin4: sel.net().VCC,
             pin18: sel.net().SCLK,
-            pin20: sel.U1.pin18,
             pin19: sel.net().MISO,
             pin17: sel.net().MOSI,
             pin1: sel.net().SS,

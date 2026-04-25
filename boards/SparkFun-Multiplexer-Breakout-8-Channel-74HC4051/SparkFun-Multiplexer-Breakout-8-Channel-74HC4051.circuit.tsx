@@ -25,7 +25,6 @@ export default () => (
         pin14: sel.net().Y1,
         pin15: sel.net().Y2,
         pin16: sel.net.VCC,
-        pin17: sel.U1.pin16,
       }}
     />
     <netlabel
