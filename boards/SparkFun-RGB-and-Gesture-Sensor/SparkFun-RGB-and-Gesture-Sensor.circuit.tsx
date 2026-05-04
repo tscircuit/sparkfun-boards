@@ -1,3 +1,5 @@
+import { CA45_D_10V_100uF_K } from "./imports/CA45_D_10V_100uF_K"
+
 const apds9960PinLabels = {
   pin1: ["pin1", "SDA"],
   pin2: ["pin2", "INT"],
@@ -11,7 +13,12 @@ const apds9960PinLabels = {
 
 export default function SparkFunApds9960RgbGestureSensor() {
   return (
-    <board width="15.24mm" height="20.32mm" layers={2} thickness="1.6mm">
+    <board
+      width="15.24mm"
+      height="20.32mm"
+      layers={2}
+      thickness="1.6mm"
+    >
       <pinheader
         name="JP1"
         pinCount={6}
@@ -19,10 +26,10 @@ export default function SparkFunApds9960RgbGestureSensor() {
         footprint="pinrow6_p2.54_id1.016_od1.8796_nosquareplating_doublesidedpinlabel"
         pcbX="-0.05mm"
         pcbY="-8.89mm"
-        schX={-8.5}
-        schY={-1.4}
+        schX={-8.7}
+        schY={0}
         schWidth="1.1"
-        schHeight="1"
+        schHeight="1.8"
         schPinArrangement={{
           rightSide: {
             pins: ["INT", "SCL", "SDA", "VCC", "GND", "VL"],
@@ -39,11 +46,11 @@ export default function SparkFunApds9960RgbGestureSensor() {
         cadModel={null}
         pcbX="0mm"
         pcbY="5.08mm"
-        schX={6.5}
-        schY={0.5}
+        schX={6.0}
+        schY={0.45}
         pcbRotation={-90}
-        schWidth="1.96"
-        schHeight="0.8"
+        schWidth="2.35"
+        schHeight="1.45"
         schPinArrangement={{
           leftSide: {
             pins: ["VDD", "GND", "LEDA"],
@@ -57,47 +64,47 @@ export default function SparkFunApds9960RgbGestureSensor() {
       />
       <resistor
         name="R1"
-        footprint="0603"
+        footprint="0402"
         resistance="10k"
         pcbX="3.81mm"
         pcbY="3.175mm"
-        schX={9.7}
-        schY={1.45}
+        schX={8.75}
+        schY={0.85}
         schOrientation="vertical"
       />
       <resistor
         name="R2"
-        footprint="0603"
+        footprint="0402"
         resistance="4.7k"
         pcbX="1.27mm"
         pcbY="0.635mm"
         pcbRotation={270}
-        schX={-5.2}
-        schY={1.5}
+        schX={-5.25}
+        schY={1.65}
         schOrientation="vertical"
       />
       <resistor
         name="R3"
-        footprint="0603"
+        footprint="0402"
         resistance="4.7k"
         pcbX="3.81mm"
         pcbY="0.635mm"
         pcbRotation={90}
-        schX={-3.6}
-        schY={1.5}
+        schX={-4.2}
+        schY={1.65}
         schOrientation="vertical"
       />
       <resistor
         name="R4"
         displayName="DNP"
         doNotPlace
-        footprint="0603"
+        footprint="0402"
         resistance="10k"
         pcbX="-3.81mm"
         pcbY="0.635mm"
         pcbRotation={90}
-        schX={2.5}
-        schY={1.3}
+        schX={2.05}
+        schY={1.35}
         schOrientation="vertical"
       />
       <capacitor
@@ -107,8 +114,8 @@ export default function SparkFunApds9960RgbGestureSensor() {
         pcbX="-1.27mm"
         pcbY="0.635mm"
         pcbRotation={270}
-        schX={4.5}
-        schY={-2.0}
+        schX={4.2}
+        schY={-1.9}
         schOrientation="vertical"
       />
       <capacitor
@@ -117,88 +124,38 @@ export default function SparkFunApds9960RgbGestureSensor() {
         capacitance="1.0uF"
         pcbX="-3.81mm"
         pcbY="3.175mm"
-        schX={4.3}
-        schY={1.9}
+        schX={3.55}
+        schY={1.65}
         schOrientation="vertical"
       />
-      <capacitor
+      <CA45_D_10V_100uF_K
         name="C1"
-        footprint="kicad:Capacitor_Tantalum_SMD/CP_EIA-7343-31_Kemet-D"
-        capacitance="100uF"
-        polarized
         pcbX="0mm"
         pcbY="-3.81mm"
         pcbRotation={180}
-        schX={3.0}
-        schY={-2.0}
-        schOrientation="vertical"
+        schX={2.8}
+        schY={-1.9}
       />
       <solderjumper
         name="SJ1"
         pinCount={3}
-        footprint={
-          <footprint>
-            <smtpad
-              portHints={["pin1"]}
-              pcbX="-0.8128mm"
-              pcbY="0mm"
-              width="0.635mm"
-              height="1.27mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin2"]}
-              pcbX="0mm"
-              pcbY="0mm"
-              width="0.635mm"
-              height="1.27mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin3"]}
-              pcbX="0.8128mm"
-              pcbY="0mm"
-              width="0.635mm"
-              height="1.27mm"
-              shape="rect"
-            />
-          </footprint>
-        }
+        footprint="solderjumper3_unbridged123_p0.8_pw0.635_ph1.270"
         pcbX="6.17mm"
         pcbY="0.635mm"
         pcbRotation={270}
-        schX={-4.4}
-        schY={3.4}
+        schX={-4.75}
+        schY={3.0}
         schHeight="0.4"
       />
       <solderjumper
         name="SJ2"
         pinCount={2}
-        footprint={
-          <footprint>
-            <smtpad
-              portHints={["pin1"]}
-              pcbX="-0.4119mm"
-              pcbY="0mm"
-              width="0.635mm"
-              height="1.27mm"
-              shape="rect"
-            />
-            <smtpad
-              portHints={["pin2"]}
-              pcbX="0.4119mm"
-              pcbY="0mm"
-              width="0.635mm"
-              height="1.27mm"
-              shape="rect"
-            />
-          </footprint>
-        }
+        footprint="solderjumper2_unbridged123_p0.8_pw0.635_ph1.270"
         pcbX="-6.35mm"
         pcbY="0.635mm"
         pcbRotation={90}
-        schX={2.5}
-        schY={3.0}
+        schX={1.3}
+        schY={2.35}
       />
 
       <fiducial
@@ -219,55 +176,166 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <hole name="STANDOFF2" diameter="3.302mm" pcbX="5.08mm" pcbY="7.62mm" />
 
       <schematictext
-        text="I2C Pullup\nEnable"
-        schX={-3.1}
-        schY={3.25}
+        text="I2C Pullup"
+        schX={-3.45}
+        schY={2.45}
         fontSize={0.24}
         color="red"
         anchor="center"
       />
       <schematictext
-        text="Connect\nPower Supplies"
-        schX={1.25}
-        schY={2.25}
+        text="Connect"
+        schX={-0.35}
+        schY={1.65}
         fontSize={0.24}
         color="red"
         anchor="center"
       />
       <schematictext
         text="I2C Addr: 0x39"
-        schX={6.9}
-        schY={3.25}
+        schX={6.75}
+        schY={2.75}
         fontSize={0.25}
         color="red"
         anchor="center"
       />
 
-      <trace from="JP1.VL" to="U1.LEDA" schDisplayLabel="VL" />
-      <trace from="JP1.VL" to="C2.pin1" schDisplayLabel="VL" />
-      <trace from="JP1.VL" to="C1.pin1" schDisplayLabel="VL" />
-      <trace from="JP1.VL" to="SJ2.pin1" schDisplayLabel="VL" />
-      <trace from="JP1.VL" to="R4.pin1" schDisplayLabel="VL" />
+      <trace from="JP1.VL" to="U1.LEDA" />
+      <trace from="JP1.VL" to="C2.pin1" />
+      <trace from="JP1.VL" to="C1.pin1" />
+      <trace from="JP1.VL" to="SJ2.pin1" />
+      <trace from="JP1.VL" to="R4.pin1" />
 
-      <trace from="JP1.GND" to="U1.GND" schDisplayLabel="GND" />
-      <trace from="JP1.GND" to="C1.pin2" schDisplayLabel="GND" />
-      <trace from="JP1.GND" to="C2.pin2" schDisplayLabel="GND" />
-      <trace from="JP1.GND" to="C3.pin2" schDisplayLabel="GND" />
+      <trace from="JP1.GND" to="U1.GND" />
+      <trace from="JP1.GND" to="C1.pin2" />
+      <trace from="JP1.GND" to="C2.pin2" />
+      <trace from="JP1.GND" to="C3.pin2" />
 
-      <trace from="JP1.VCC" to="U1.VDD" schDisplayLabel="VCC" />
-      <trace from="JP1.VCC" to="C3.pin1" schDisplayLabel="VCC" />
-      <trace from="JP1.VCC" to="R1.pin2" schDisplayLabel="VCC" />
-      <trace from="JP1.VCC" to="R4.pin2" schDisplayLabel="VCC" />
-      <trace from="JP1.VCC" to="SJ1.pin2" schDisplayLabel="VCC" />
-      <trace from="JP1.VCC" to="SJ2.pin2" schDisplayLabel="VCC" />
+      <trace from="JP1.VCC" to="U1.VDD" />
+      <trace from="JP1.VCC" to="C3.pin1" />
+      <trace from="JP1.VCC" to="R1.pin1" />
+      <trace from="JP1.VCC" to="R4.pin2" />
+      <trace from="JP1.VCC" to="SJ1.pin2" />
+      <trace from="JP1.VCC" to="SJ2.pin2" />
 
-      <trace from="JP1.SDA" to="U1.SDA" schDisplayLabel="SDA" />
-      <trace from="JP1.SDA" to="R2.pin1" schDisplayLabel="SDA" />
-      <trace from="JP1.SCL" to="U1.SCL" schDisplayLabel="SCL" />
-      <trace from="JP1.SCL" to="R3.pin1" schDisplayLabel="SCL" />
-      <trace from="JP1.INT" to="U1.INT" schDisplayLabel="INT" />
-      <trace from="JP1.INT" to="R1.pin1" schDisplayLabel="INT" />
-
+      <trace from="JP1.SDA" to="U1.SDA" />
+      <trace from="JP1.SDA" to="R2.pin1" />
+      <trace from="JP1.SCL" to="U1.SCL" />
+      <trace from="JP1.SCL" to="R3.pin1" />
+      <trace from="JP1.INT" to="U1.INT" />
+      <trace from="JP1.INT" to="R1.pin2" />
+      <netlabel
+        net="VL"
+        connection="JP1.VL"
+        schX={-7.45}
+        schY={-0.75}
+        anchorSide="left"
+      />
+      <netlabel
+        net="GND"
+        connection="JP1.GND"
+        schX={-7.1}
+        schY={-0.35}
+        anchorSide="top"
+      />
+      <netlabel
+        net="VCC"
+        connection="JP1.VCC"
+        schX={-3.35}
+        schY={0.05}
+        anchorSide="bottom"
+      />
+      <netlabel
+        net="SDA"
+        connection="JP1.SDA"
+        schX={-3.8}
+        schY={0.45}
+        anchorSide="left"
+      />
+      <netlabel
+        net="SCL"
+        connection="JP1.SCL"
+        schX={-3.4}
+        schY={0.85}
+        anchorSide="left"
+      />
+      <netlabel
+        net="INT"
+        connection="JP1.INT"
+        schX={-7.45}
+        schY={1.15}
+        anchorSide="left"
+      />
+      <netlabel
+        net="VCC"
+        connection="SJ1.pin2"
+        schX={-4.75}
+        schY={3.65}
+        anchorSide="bottom"
+      />
+      <netlabel
+        net="VCC"
+        connection="C3.pin1"
+        schX={3.2}
+        schY={2.75}
+        anchorSide="bottom"
+      />
+      <netlabel
+        net="VL"
+        connection="C1.pin1"
+        schX={1.2}
+        schY={-0.9}
+        anchorSide="left"
+      />
+      <netlabel
+        net="GND"
+        connection="C1.pin2"
+        schX={3.3}
+        schY={-2.65}
+        anchorSide="top"
+      />
+      <netlabel
+        net="GND"
+        connection="C2.pin2"
+        schX={4.2}
+        schY={-2.65}
+        anchorSide="top"
+      />
+      <netlabel
+        net="GND"
+        connection="U1.GND"
+        schX={4.75}
+        schY={0.45}
+        anchorSide="left"
+      />
+      <netlabel
+        net="SCL"
+        connection="U1.SCL"
+        schX={8}
+        schY={0.25}
+        anchorSide="left"
+      />
+      <netlabel
+        net="SDA"
+        connection="U1.SDA"
+        schX={8}
+        schY={0.05}
+        anchorSide="left"
+      />
+      <netlabel
+        net="INT"
+        connection="U1.INT"
+        schX={8}
+        schY={0.45}
+        anchorSide="left"
+      />
+      <netlabel
+        net="VCC"
+        connection="R1.pin1"
+        schX={8.75}
+        schY={1.9}
+        anchorSide="bottom"
+      />
       <trace from="R2.pin2" to="SJ1.pin3" schDisplayLabel="SDA" />
       <trace from="R3.pin2" to="SJ1.pin1" schDisplayLabel="SCL" />
       <trace from="U1.LEDK" to="U1.LDR" />
