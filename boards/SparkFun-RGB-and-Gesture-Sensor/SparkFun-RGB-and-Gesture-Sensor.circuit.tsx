@@ -74,8 +74,9 @@ export default function SparkFunApds9960RgbGestureSensor() {
         pcbX="1.27mm"
         pcbY="0.635mm"
         pcbRotation={270}
-        schX={-5.25}
-        schY={1.65}
+        schX={-6}
+        schY={1}
+        schRotation={270}
         schOrientation="vertical"
       />
       <resistor
@@ -85,8 +86,9 @@ export default function SparkFunApds9960RgbGestureSensor() {
         pcbX="3.81mm"
         pcbY="0.635mm"
         pcbRotation={90}
-        schX={-4.2}
-        schY={1.65}
+        schX={-4}
+        schY={1}
+        schRotation={180}
         schOrientation="vertical"
       />
       <resistor
@@ -98,8 +100,8 @@ export default function SparkFunApds9960RgbGestureSensor() {
         pcbX="-3.81mm"
         pcbY="0.635mm"
         pcbRotation={90}
-        schX={2.05}
-        schY={1.35}
+        schX={2}
+        schY={0.5}
         schOrientation="vertical"
       />
       <capacitor
@@ -119,8 +121,8 @@ export default function SparkFunApds9960RgbGestureSensor() {
         capacitance="1.0uF"
         pcbX="-3.81mm"
         pcbY="3.175mm"
-        schX={3.55}
-        schY={1.65}
+        schX={3}
+        schY={0.5}
         schOrientation="vertical"
       />
       <CA45_D_10V_100uF_K
@@ -138,6 +140,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
         pcbX="6.17mm"
         pcbY="0.635mm"
         pcbRotation={270}
+        schRotation={90}
         schX={-4.75}
         schY={3.0}
         schHeight="0.4"
@@ -149,8 +152,9 @@ export default function SparkFunApds9960RgbGestureSensor() {
         pcbX="-6.35mm"
         pcbY="0.635mm"
         pcbRotation={90}
-        schX={1.3}
-        schY={2.35}
+        schRotation={90}
+        schX={1}
+        schY={0.5}
       />
 
       <fiducial
@@ -222,15 +226,15 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <netlabel
         net="VL"
         connection="JP1.VL"
-        schX={-7.45}
-        schY={-0.75}
+        schX={-7.15}
+        schY={-1.0}
         anchorSide="left"
       />
       <netlabel
         net="GND"
         connection="JP1.GND"
-        schX={-7.1}
-        schY={-0.35}
+        schX={-7.35}
+        schY={-0.58}
         anchorSide="top"
       />
       <netlabel
@@ -243,22 +247,22 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <netlabel
         net="SDA"
         connection="JP1.SDA"
-        schX={-3.8}
-        schY={0.45}
+        schX={-7.5}
+        schY={0}
         anchorSide="left"
       />
       <netlabel
         net="SCL"
         connection="JP1.SCL"
-        schX={-3.4}
-        schY={0.85}
+        schX={-7.5}
+        schY={0.3}
         anchorSide="left"
       />
       <netlabel
         net="INT"
         connection="JP1.INT"
-        schX={-7.45}
-        schY={1.15}
+        schX={-7.55}
+        schY={1.08}
         anchorSide="left"
       />
       <netlabel
@@ -271,9 +275,16 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <netlabel
         net="VCC"
         connection="C3.pin1"
-        schX={3.2}
-        schY={2.75}
+        schX={3.0}
+        schY={2.6}
         anchorSide="bottom"
+      />
+      <netlabel
+        net="GND"
+        connection="C3.pin2"
+        schX={3.0}
+        schY={-0.3}
+        anchorSide="top"
       />
       <netlabel
         net="VL"
@@ -297,31 +308,24 @@ export default function SparkFunApds9960RgbGestureSensor() {
         anchorSide="top"
       />
       <netlabel
-        net="GND"
-        connection="U1.GND"
-        schX={4.75}
-        schY={0.45}
-        anchorSide="left"
-      />
-      <netlabel
         net="SCL"
         connection="U1.SCL"
-        schX={8}
-        schY={0.25}
+        schX={7.35}
+        schY={-0.05}
         anchorSide="left"
       />
       <netlabel
         net="SDA"
         connection="U1.SDA"
-        schX={8}
-        schY={0.05}
+        schX={7.35}
+        schY={-0.35}
         anchorSide="left"
       />
       <netlabel
         net="INT"
         connection="U1.INT"
-        schX={8}
-        schY={0.45}
+        schX={7.35}
+        schY={0.25}
         anchorSide="left"
       />
       <netlabel
