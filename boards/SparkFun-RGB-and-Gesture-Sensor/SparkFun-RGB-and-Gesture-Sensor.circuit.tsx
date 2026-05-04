@@ -9,77 +9,6 @@ const apds9960PinLabels = {
   pin8: ["pin8", "VDD"],
 } as const
 
-const sparkFun0603Footprint = () => (
-  <footprint>
-    <smtpad
-      portHints={["pin1", "left", "pos", "anode"]}
-      pcbX="-0.85mm"
-      pcbY="0mm"
-      width="1.1mm"
-      height="1mm"
-      shape="rect"
-    />
-    <smtpad
-      portHints={["pin2", "right", "neg", "cathode"]}
-      pcbX="0.85mm"
-      pcbY="0mm"
-      width="1.1mm"
-      height="1mm"
-      shape="rect"
-    />
-  </footprint>
-)
-
-const sparkFunSolderJumper3Footprint = () => (
-  <footprint>
-    <smtpad
-      portHints={["pin1"]}
-      pcbX="-0.8128mm"
-      pcbY="0mm"
-      width="0.635mm"
-      height="1.27mm"
-      shape="rect"
-    />
-    <smtpad
-      portHints={["pin2"]}
-      pcbX="0mm"
-      pcbY="0mm"
-      width="0.635mm"
-      height="1.27mm"
-      shape="rect"
-    />
-    <smtpad
-      portHints={["pin3"]}
-      pcbX="0.8128mm"
-      pcbY="0mm"
-      width="0.635mm"
-      height="1.27mm"
-      shape="rect"
-    />
-  </footprint>
-)
-
-const sparkFunSolderJumper2Footprint = () => (
-  <footprint>
-    <smtpad
-      portHints={["pin1"]}
-      pcbX="-0.4119mm"
-      pcbY="0mm"
-      width="0.635mm"
-      height="1.27mm"
-      shape="rect"
-    />
-    <smtpad
-      portHints={["pin2"]}
-      pcbX="0.4119mm"
-      pcbY="0mm"
-      width="0.635mm"
-      height="1.27mm"
-      shape="rect"
-    />
-  </footprint>
-)
-
 export default function SparkFunApds9960RgbGestureSensor() {
   return (
     <board width="15.24mm" height="20.32mm" layers={2} thickness="1.6mm">
@@ -128,7 +57,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
       />
       <resistor
         name="R1"
-        footprint={sparkFun0603Footprint()}
+        footprint="0603"
         resistance="10k"
         pcbX="3.81mm"
         pcbY="3.175mm"
@@ -138,7 +67,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
       />
       <resistor
         name="R2"
-        footprint={sparkFun0603Footprint()}
+        footprint="0603"
         resistance="4.7k"
         pcbX="1.27mm"
         pcbY="0.635mm"
@@ -149,7 +78,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
       />
       <resistor
         name="R3"
-        footprint={sparkFun0603Footprint()}
+        footprint="0603"
         resistance="4.7k"
         pcbX="3.81mm"
         pcbY="0.635mm"
@@ -162,7 +91,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
         name="R4"
         displayName="DNP"
         doNotPlace
-        footprint={sparkFun0603Footprint()}
+        footprint="0603"
         resistance="10k"
         pcbX="-3.81mm"
         pcbY="0.635mm"
@@ -173,7 +102,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
       />
       <capacitor
         name="C2"
-        footprint={sparkFun0603Footprint()}
+        footprint="0603"
         capacitance="1.0uF"
         pcbX="-1.27mm"
         pcbY="0.635mm"
@@ -184,7 +113,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
       />
       <capacitor
         name="C3"
-        footprint={sparkFun0603Footprint()}
+        footprint="0603"
         capacitance="1.0uF"
         pcbX="-3.81mm"
         pcbY="3.175mm"
@@ -207,7 +136,34 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <solderjumper
         name="SJ1"
         pinCount={3}
-        footprint={sparkFunSolderJumper3Footprint()}
+        footprint={
+          <footprint>
+            <smtpad
+              portHints={["pin1"]}
+              pcbX="-0.8128mm"
+              pcbY="0mm"
+              width="0.635mm"
+              height="1.27mm"
+              shape="rect"
+            />
+            <smtpad
+              portHints={["pin2"]}
+              pcbX="0mm"
+              pcbY="0mm"
+              width="0.635mm"
+              height="1.27mm"
+              shape="rect"
+            />
+            <smtpad
+              portHints={["pin3"]}
+              pcbX="0.8128mm"
+              pcbY="0mm"
+              width="0.635mm"
+              height="1.27mm"
+              shape="rect"
+            />
+          </footprint>
+        }
         pcbX="6.17mm"
         pcbY="0.635mm"
         pcbRotation={270}
@@ -218,7 +174,26 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <solderjumper
         name="SJ2"
         pinCount={2}
-        footprint={sparkFunSolderJumper2Footprint()}
+        footprint={
+          <footprint>
+            <smtpad
+              portHints={["pin1"]}
+              pcbX="-0.4119mm"
+              pcbY="0mm"
+              width="0.635mm"
+              height="1.27mm"
+              shape="rect"
+            />
+            <smtpad
+              portHints={["pin2"]}
+              pcbX="0.4119mm"
+              pcbY="0mm"
+              width="0.635mm"
+              height="1.27mm"
+              shape="rect"
+            />
+          </footprint>
+        }
         pcbX="-6.35mm"
         pcbY="0.635mm"
         pcbRotation={90}
