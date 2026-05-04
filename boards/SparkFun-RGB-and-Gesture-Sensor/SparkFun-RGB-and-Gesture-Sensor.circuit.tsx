@@ -82,13 +82,7 @@ const sparkFunSolderJumper2Footprint = () => (
 
 export default function SparkFunApds9960RgbGestureSensor() {
   return (
-    <board
-      width="15.24mm"
-      height="20.32mm"
-      layers={2}
-      thickness="1.6mm"
-      routingDisabled
-    >
+    <board width="15.24mm" height="20.32mm" layers={2} thickness="1.6mm">
       <pinheader
         name="JP1"
         pinCount={6}
