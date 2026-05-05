@@ -36,9 +36,9 @@ export default () => (
       footprint={"pinrow6_rows1_p2.54mm_id1mm_od1.5mm_male"}
       schPinArrangement={{
         leftSide: {
-            direction: "top-to-bottom",
-            pins: ["pin1", "pin2", "pin3", "pin4", "pin5", "pin6"]
-        }
+          direction: "top-to-bottom",
+          pins: ["pin1", "pin2", "pin3", "pin4", "pin5", "pin6"],
+        },
       }}
       pcbRotation={-90}
       pcbX={-14}
@@ -46,7 +46,7 @@ export default () => (
       cadModel={null}
       connections={{
         pin1: sel.net.GND,
-        pin2: sel.net.VCC
+        pin2: sel.net.VCC,
       }}
     />
     <MAX31855KASA_T
@@ -59,7 +59,7 @@ export default () => (
         pin3: sel.C2.pin1,
         pin4: sel.net.VCC,
         pin5: sel.JP1.pin3,
-        pin6: sel.R1.pin1,  
+        pin6: sel.R1.pin1,
         pin7: sel.JP1.pin4,
       }}
       schPinArrangement={{
@@ -91,7 +91,7 @@ export default () => (
       padDiameter="1mm"
       pcbY={-7}
       pcbX={2.5}
-            schX={-6}
+      schX={-6}
       schY={-3}
       schRotation={180}
     />
