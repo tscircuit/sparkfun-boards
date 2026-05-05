@@ -207,8 +207,34 @@ export default () => (
       schX={-4}
       schY={-5}
     />
+
+    <fiducial
+      name="Fiducial1"
+      padDiameter="1mm"
+      soldermaskPullback="1mm"
+      pcbX={-10.5}
+      pcbY={-9}
+    />
+    <fiducial
+      name="Fiducial2"
+      padDiameter="1mm"
+      soldermaskPullback="1mm"
+      pcbX={11.5}
+      pcbY={8}
+    />
+
     <copperpour name="GND Pour" connectsTo="GND" layer={"top"} />
-    <pcbnotetext text="3.0V-3.6V" fontSize={0.8} pcbX={-9.5} pcbY={5.5} />
-    <pcbnotetext text="MAX31855K" fontSize={0.8} pcbX={-8} pcbY={-7} />
+
+    <silkscreentext text="3.0V-3.6V" fontSize={0.8} pcbX={-9.5} pcbY={5.5} />
+    <silkscreentext text="MAX31855K" fontSize={0.8} pcbX={-8} pcbY={-7} />
+
+    <silkscreentext text="+" pcbY={9} pcbX={-1} fontSize={1.5} />
+    <silkscreentext
+      text="-"
+      pcbY={-8.8}
+      pcbX={-1}
+      pcbRotation={90}
+      fontSize={1.5}
+    />
   </board>
 )
