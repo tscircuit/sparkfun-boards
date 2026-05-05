@@ -1,4 +1,4 @@
-import { sel } from "tscircuit"
+import { PcbNoteText, sel } from "tscircuit"
 import { MAX31855KASA_T } from "./imports/MAX31855KASA_T"
 
 export default () => (
@@ -33,7 +33,17 @@ export default () => (
     />
     <jumper
       name="JP1"
-      footprint={"pinrow6_rows1_p2.54mm_id1mm_od1.5mm_male"}
+      footprint={
+        "pinrow6_rows1_p2.54mm_id1mm_od1.5mm_male_nosquareplating_doublesidedpinlabel"
+      }
+      pinLabels={{
+        pin1: "GND",
+        pin2: "VCC",
+        pin3: "SCK",
+        pin4: "SO",
+        pin5: "NC",
+        pin6: "N_CS",
+      }}
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
@@ -198,5 +208,7 @@ export default () => (
       schY={-5}
     />
     <copperpour name="GND Pour" connectsTo="GND" layer={"top"} />
+    <pcbnotetext text="3.0V-3.6V" fontSize={0.8} pcbX={-9.5} pcbY={5.5} />
+    <pcbnotetext text="MAX31855K" fontSize={0.8} pcbX={-8} pcbY={-7} />
   </board>
 )
