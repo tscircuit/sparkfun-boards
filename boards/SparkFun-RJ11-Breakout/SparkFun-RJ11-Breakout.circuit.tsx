@@ -3,7 +3,7 @@ import { RJ11 } from "./RJ11"
 
 export default () => {
   return (
-    <board width="22.24mm" height="22.32mm">
+    <board width="22.24mm" height="42.32mm">
       <RJ11
         schWidth={0.65}
         schX={2.6}
@@ -12,7 +12,7 @@ export default () => {
         name="JP1"
         cadModel={null}
         pcbX={-2}
-        pcbY={22.908}
+        pcbY={12.908}
         pcbRotation={0}
         pinLabels={{
           pin1: "1",
@@ -43,7 +43,7 @@ export default () => {
         }
         cadModel={null}
         pcbX={-2}
-        pcbY={12.938}
+        pcbY={2.938}
         pcbRotation={0}
         pinLabels={{
           pin6: "6",
@@ -134,7 +134,7 @@ export default () => {
         name="JP3"
         cadModel={null}
         pcbX={-2}
-        pcbY={-2.08}
+        pcbY={-12.08}
         pcbRotation={0}
         pinLabels={{
           pin1: "1",
@@ -164,7 +164,7 @@ export default () => {
         }
         cadModel={null}
         pcbX={-2}
-        pcbY={-8.89}
+        pcbY={-18.89}
         pcbRotation={0}
         pinLabels={{
           pin6: "6",
@@ -246,24 +246,24 @@ export default () => {
         fontSize={0.25}
         color="#808080"
       />
-      <hole diameter={3.302} pcbX={8.049} pcbY={13.462} />
-      <hole diameter={3.302} pcbX={8.049} pcbY={7.239} />
-      <hole diameter={3.302} pcbX={8.049} pcbY={28.067} />
-      <hole diameter={3.302} pcbX={8.049} pcbY={-7.366} />
+      <hole diameter={3.302} pcbX={8.049} pcbY={3.462} />
+      <hole diameter={3.302} pcbX={8.049} pcbY={-3.239} />
+      <hole diameter={3.302} pcbX={8.049} pcbY={18.067} />
+      <hole diameter={3.302} pcbX={8.049} pcbY={-17.366} />
 
-      <silkscreentext text="RJ11" pcbY={3} pcbX={-1.5} fontSize={1} />
+      <silkscreentext text="RJ11" pcbY={-1} pcbX={-1.5} fontSize={1} />
       <silkscreentext
         text="RJ11"
-        pcbY={2}
+        pcbY={-9}
         pcbX={-1.5}
         fontSize={1}
         layer={"bottom"}
         pcbRotation={180}
       />
-      <silkscreentext text="Breakout" pcbY={2} pcbX={-1.5} fontSize={1} />
+      <silkscreentext text="Breakout" pcbY={-3} pcbX={-1.5} fontSize={1} />
       <silkscreentext
         text="Breakout"
-        pcbY={3}
+        pcbY={-7}
         pcbX={-1.5}
         fontSize={1}
         layer={"bottom"}
@@ -271,7 +271,7 @@ export default () => {
       />
       <silkscreentext
         text="Y  G  R  B"
-        pcbY={-6}
+        pcbY={-16}
         pcbX={-2}
         fontSize={1.2}
         layer={"bottom"}
