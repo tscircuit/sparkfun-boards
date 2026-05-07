@@ -8,20 +8,11 @@ export default () => {
         schWidth={0.65}
         schX={2.6}
         schY={0}
-        schDirection="right"
         name="JP1"
         cadModel={null}
         pcbX={-2}
         pcbY={12.908}
         pcbRotation={0}
-        pinLabels={{
-          pin1: "1",
-          pin2: "2",
-          pin3: "3",
-          pin4: "4",
-          pin5: "5",
-          pin6: "6",
-        }}
         connections={{
           pin1: sel.JP2.pin1,
           pin2: sel.JP2.pin2,
@@ -114,14 +105,14 @@ export default () => {
       <schematictext
         text="RJ11"
         schX={2.6}
-        schY={-0.9}
+        schY={-1.1}
         fontSize={0.25}
         color="#808080"
       />
       <schematictext
         text="Pins"
         schX={5.6}
-        schY={-0.9}
+        schY={-1.1}
         fontSize={0.25}
         color="#808080"
       />
@@ -130,20 +121,11 @@ export default () => {
         schWidth={0.65}
         schX={2.6}
         schY={2.6}
-        schDirection="right"
         name="JP3"
         cadModel={null}
         pcbX={-2}
         pcbY={-12.08}
         pcbRotation={0}
-        pinLabels={{
-          pin1: "1",
-          pin2: "2",
-          pin3: "3",
-          pin4: "4",
-          pin5: "5",
-          pin6: "6",
-        }}
         connections={{
           pin1: sel.JP4.pin1,
           pin2: sel.JP4.pin2,
@@ -235,14 +217,14 @@ export default () => {
       <schematictext
         text="RJ11"
         schX={2.6}
-        schY={1.7}
+        schY={1.5}
         fontSize={0.25}
         color="#808080"
       />
       <schematictext
         text="Pins"
         schX={5.6}
-        schY={1.71}
+        schY={1.5}
         fontSize={0.25}
         color="#808080"
       />
