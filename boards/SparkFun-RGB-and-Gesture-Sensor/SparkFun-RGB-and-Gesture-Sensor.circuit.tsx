@@ -77,7 +77,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
         schX={-6}
         schY={1}
         schRotation={270}
-        schOrientation="vertical"
+        // schOrientation="vertical"
       />
       <resistor
         name="R3"
@@ -202,7 +202,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <trace from="JP1.VL" to="U1.LEDA" />
       <trace from="JP1.VL" to="C2.pin1" />
       <trace from="JP1.VL" to="C1.pin1" />
-      <trace from="JP1.VL" to="SJ2.pin1" />
+      <trace from="JP1.VL" to="SJ2.pin2" />
       <trace from="JP1.VL" to="R4.pin1" />
 
       <trace from="JP1.GND" to="U1.GND" />
@@ -215,7 +215,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
       <trace from="JP1.VCC" to="R1.pin1" />
       <trace from="JP1.VCC" to="R4.pin2" />
       <trace from="JP1.VCC" to="SJ1.pin2" />
-      <trace from="JP1.VCC" to="SJ2.pin2" />
+      <trace from="JP1.VCC" to="SJ2.pin1" />
 
       <trace from="JP1.SDA" to="U1.SDA" />
       <trace from="JP1.SDA" to="R2.pin1" />
