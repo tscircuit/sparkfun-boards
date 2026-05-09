@@ -140,7 +140,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
         pcbX="6.17mm"
         pcbY="0.635mm"
         pcbRotation={270}
-        schRotation={90}
+        schRotation={180}
         schX={-4.75}
         schY={3.0}
         schHeight="0.4"
