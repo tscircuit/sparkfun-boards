@@ -233,7 +233,28 @@ export default () => {
       <hole diameter={3.302} pcbX={8.049} pcbY={18.067} />
       <hole diameter={3.302} pcbX={8.049} pcbY={-17.366} />
 
-      <silkscreentext text="RJ11" pcbY={-1} pcbX={-1.5} fontSize={1} />
+      <silkscreentext
+        text="RJ11"
+        pcbY={-8}
+        pcbX={-1.5}
+        fontSize={1}
+        pcbRotation={180}
+      />
+      <silkscreentext
+        text="RJ11"
+        pcbY={16.5}
+        pcbX={-1.5}
+        fontSize={1}
+        pcbRotation={180}
+      />
+      <silkscreentext
+        text="Breakout"
+        pcbY={18}
+        pcbX={-1.5}
+        fontSize={1}
+        pcbRotation={180}
+      />
+
       <silkscreentext
         text="RJ11"
         pcbY={-9}
@@ -242,7 +263,13 @@ export default () => {
         layer={"bottom"}
         pcbRotation={180}
       />
-      <silkscreentext text="Breakout" pcbY={-3} pcbX={-1.5} fontSize={1} />
+      <silkscreentext
+        text="Breakout"
+        pcbY={-6}
+        pcbX={-1.5}
+        fontSize={1}
+        pcbRotation={180}
+      />
       <silkscreentext
         text="Breakout"
         pcbY={-7}
@@ -251,6 +278,25 @@ export default () => {
         layer={"bottom"}
         pcbRotation={180}
       />
+
+      <silkscreentext
+        text="RJ11"
+        pcbY={16.5}
+        pcbX={-1.5}
+        fontSize={1}
+        layer={"bottom"}
+        pcbRotation={180}
+      />
+
+      <silkscreentext
+        text="Breakout"
+        pcbY={18}
+        pcbX={-1.5}
+        fontSize={1}
+        layer={"bottom"}
+        pcbRotation={180}
+      />
+
       <silkscreentext
         text="Y  G  R  B"
         pcbY={-16}
