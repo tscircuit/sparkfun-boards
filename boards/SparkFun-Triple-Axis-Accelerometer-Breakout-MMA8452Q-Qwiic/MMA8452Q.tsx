@@ -24,10 +24,10 @@ export const MMA8452QR1 = (props: ChipProps<typeof pinLabels>) => {
     <chip
       pinLabels={pinLabels}
       connections={{
-        pin5: "U1.pin10",
-        pin10: "U1.pin12",
-        pin9: "net.INT2",
-        pin11: "net.INT1",
+        pin5: sel.U1.pin10,
+        pin10: sel.U1.pin12,
+        pin9: sel.net().INT2,
+        pin11: sel.net().INT1,
       }}
       schPinArrangement={{
         leftSide: {

@@ -70,10 +70,6 @@ export default () => {
         schDirection="left"
         footprint="pinrow4_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
         connections={{
-          pin1: sel.U1.pin1,
-          pin2: sel.U1.pin2,
-          pin3: sel.U1.pin3,
-          pin4: sel.U1.pin4,
         }}
         schX={2}
         pcbY={-7.5}

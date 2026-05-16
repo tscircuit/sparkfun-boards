@@ -125,7 +125,6 @@ export default () => (
       }}
       connections={{
         pin1: sel.R1.pin1,
-        pin3: sel.R2.pin1,
       }}
       schX={2.6}
       schY={-0.74}

@@ -24,7 +24,7 @@ export default () => (
       />
       <capacitor
         name="C2"
-        connections={{ pin2: sel.C1.pin2 }}
+        connections={{}}
         pcbX={5.08}
         pcbY={1.27}
         pcbRotation={-90}

@@ -7,12 +7,12 @@ export default () => (
       name="U1"
       pcbY={-2.54}
       connections={{
-        pin1: "JP1.pin6",
-        pin2: "JP1.pin5",
-        pin3: "JP1.pin4",
-        pin4: "JP1.pin3",
-        pin5: "JP1.pin2",
-        pin6: "JP1.pin1",
+        pin1: sel.JP1.pin6,
+        pin2: sel.JP1.pin5,
+        pin3: sel.JP1.pin4,
+        pin4: sel.JP1.pin3,
+        pin5: sel.JP1.pin2,
+        pin6: sel.JP1.pin1,
       }}
     />
     <jumper

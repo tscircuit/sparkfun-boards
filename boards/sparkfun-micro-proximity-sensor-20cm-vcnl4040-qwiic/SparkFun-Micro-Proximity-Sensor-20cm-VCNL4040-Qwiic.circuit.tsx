@@ -55,13 +55,12 @@ export default () => (
       pcbY={0}
       pcbRotation={0}
       connections={{
-        pin1: "net.GND",
-        pin3: "net.V3_3",
-        pin4: "net.V3_3",
-        pin5: sel.U4.pin2,
-        pin6: "net.INT",
-        pin7: "net.SDA",
-        pin8: "net.SCL",
+        pin1: sel.net().GND,
+        pin3: sel.net().V3_3,
+        pin4: sel.net().V3_3,
+        pin6: sel.net().INT,
+        pin7: sel.net().SDA,
+        pin8: sel.net().SCL,
       }}
     />
 
@@ -155,7 +154,7 @@ export default () => (
       pinCount={2}
       connections={{
         pin1: sel.R1.pin2,
-        pin2: "net.V3_3",
+        pin2: sel.net().V3_3,
       }}
       footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
       bridgedPins={[["1", "2"]]}
@@ -177,14 +176,14 @@ export default () => (
       pcbX={1.295}
       pcbY={-2.213}
       schRotation={90}
-      connections={{ pin1: "net.INT" }}
+      connections={{ pin1: sel.net().INT }}
     />
     <netlabel
       net="V3_3"
       schX={0.7}
       schY={5.4}
       anchorSide="bottom"
-      connectsTo="SJ1.pin2"
+      connectsTo={sel.SJ1.pin2}
     />
 
     <solderjumper
@@ -192,7 +191,7 @@ export default () => (
       pinCount={2}
       connections={{
         pin1: sel.R2.pin1,
-        pin2: "net.V3_3",
+        pin2: sel.net().V3_3,
       }}
       footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
       bridgedPins={[["1", "2"]]}
@@ -209,7 +208,7 @@ export default () => (
       schX={12.3}
       schY={5.4}
       anchorSide="bottom"
-      connectsTo="SJ2.pin2"
+      connectsTo={sel.SJ2.pin2}
     />
 
     <resistor
@@ -221,7 +220,7 @@ export default () => (
       pcbX={-1.245}
       pcbY={-2.213}
       schRotation={-90}
-      connections={{ pin2: "D1.pin1" }}
+      connections={{ pin2: sel.D1.pin1 }}
     />
     <led
       name="D1"
@@ -232,7 +231,7 @@ export default () => (
       schRotation={-90}
       pcbX={-8.23}
       pcbY={-3.165}
-      connections={{ pin2: "net.GND" }}
+      connections={{ pin2: sel.net().GND }}
     />
 
     <netlabel
@@ -251,10 +250,10 @@ export default () => (
       pcbY={0}
       pcbRotation={90}
       connections={{
-        pin1: "net.GND",
-        pin2: "net.V3_3",
-        pin3: "net.SDA",
-        pin4: "net.SCL",
+        pin1: sel.net().GND,
+        pin2: sel.net().V3_3,
+        pin3: sel.net().SDA,
+        pin4: sel.net().SCL,
       }}
     />
 
@@ -266,7 +265,7 @@ export default () => (
       schY={-4.9}
       pcbX={8.28}
       pcbY={0.963}
-      connections={{ pin1: "net.SCL" }}
+      connections={{ pin1: sel.net().SCL }}
     />
     <testpoint
       name="TP2"
@@ -276,7 +275,7 @@ export default () => (
       schY={-4.6}
       pcbX={8.28}
       pcbY={-0.943}
-      connections={{ pin1: "net.SDA" }}
+      connections={{ pin1: sel.net().SDA }}
     />
 
     <jumper
@@ -292,7 +291,7 @@ export default () => (
       schPinArrangement={{
         leftSide: { direction: "top-to-bottom", pins: ["pin1"] },
       }}
-      connections={{ pin1: "net.INT" }}
+      connections={{ pin1: sel.net().INT }}
     />
     <schematictext
       text="J1"

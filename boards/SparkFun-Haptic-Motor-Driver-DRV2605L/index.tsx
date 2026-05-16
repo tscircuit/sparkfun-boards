@@ -1,3 +1,3 @@
-import DRV2605LDGST from "./SparkFun-Haptic-Motor-Driver-DRV2605L.circuit"
+import DRV2605LDGST from "./sparkfun-haptic-motor-driver-drv2605l.circuit"
 
 export default DRV2605LDGST

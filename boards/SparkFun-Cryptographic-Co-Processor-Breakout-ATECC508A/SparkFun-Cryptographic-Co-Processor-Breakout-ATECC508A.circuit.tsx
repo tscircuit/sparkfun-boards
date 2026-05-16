@@ -152,8 +152,8 @@ const MotionSensor = () => (
       pcbY={-5}
       layer="bottom"
       connections={{
-        pin2: "R3.pin2",
-        pin1: "net.V3_3",
+        pin2: sel.R3.pin2,
+        pin1: sel.net().V3_3,
       }}
     />
 

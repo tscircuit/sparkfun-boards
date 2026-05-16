@@ -1,3 +1,3 @@
-import SOIC28TODIP from "./SparkFun-SOIC-to-DIP-Adapter-28-Pin.circuit"
+import SOIC28TODIP from "./sparkfun-soic-to-dip-adapter-28-pin.circuit"
 
 export default SOIC28TODIP

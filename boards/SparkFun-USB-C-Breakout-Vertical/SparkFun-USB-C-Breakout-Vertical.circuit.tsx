@@ -125,7 +125,7 @@ export default () => (
       schY={-0.2}
       connectsTo={[sel.J1.pin1]}
     />
-    <copperpour connectsTo="net.GND" layer="top" />
-    <copperpour connectsTo="net.GND" layer="bottom" />
+    <copperpour connectsTo={sel.net().GND} layer="top" />
+    <copperpour connectsTo={sel.net().GND} layer="bottom" />
   </board>
 )

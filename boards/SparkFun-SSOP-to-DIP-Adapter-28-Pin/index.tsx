@@ -1,3 +1,3 @@
-import SSOP28TODIP from "./SparkFun-SSOP-to-DIP-Adapter-28-Pin.circuit"
+import SSOP28TODIP from "./sparkfun-ssop-to-dip-adapter-28-pin.circuit"
 
 export default SSOP28TODIP

@@ -1,2 +1,2 @@
-import SDCardBreakout from "./SparkFun-SD-Card-Breakout.circuit"
+import SDCardBreakout from "./sparkfun-sd-card-breakout.circuit"
 export default SDCardBreakout

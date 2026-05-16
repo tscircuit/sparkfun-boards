@@ -85,21 +85,6 @@ export default () => (
         },
       }}
       connections={{
-        pin1: sel.U1.pin14,
-        pin2: sel.U1.pin12,
-        pin3: sel.U1.pin10,
-        pin4: sel.U1.pin15,
-        pin5: sel.U1.pin13,
-        pin6: sel.U1.pin11,
-        pin7: sel.U1.pin9,
-        pin8: sel.U1.pin7,
-        pin9: sel.U1.pin5,
-        pin10: sel.U1.pin3,
-        pin11: sel.U1.pin1,
-        pin12: sel.U1.pin8,
-        pin13: sel.U1.pin6,
-        pin14: sel.U1.pin4,
-        pin15: sel.U1.pin2,
       }}
       manufacturerPartNumber="M15"
     />

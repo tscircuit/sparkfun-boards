@@ -125,7 +125,7 @@ export default () => (
       verticalPitch: 17.77,
       rowDirection: "down",
       namePrefix: "JP",
-      footprint: "pinrow5_p2.54_id1.016_od1.88_nosquareplating_nopinlabels",
+      footprint: sel.pinrow5_p2.54_id1.016_od1.88_nosquareplating_nopinlabels,
       cadModel: null,
       schPinArrangement: {
         rightSide: {

@@ -1,5 +1,5 @@
 import { sel } from "tscircuit"
-import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Air-Velocity-Sensor-Breakout-FS3000-1005/SM04B_SRSS_TB_LF__SN"
+import { SM04B_SRSS_TB_LF__SN } from "../sparkfun-air-velocity-sensor-breakout-fs3000-1005/SM04B_SRSS_TB_LF__SN"
 import { OPT4048DTSR } from "./OPT4048DTSR"
 import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 

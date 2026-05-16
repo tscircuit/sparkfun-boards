@@ -1,6 +1,6 @@
 import { sel } from "tscircuit"
 import { TMF8820_1AM } from "./TMF8820_1AM"
-import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Qwiic-Adapter/SM04B_SRSS_TB_LF__SN"
+import { SM04B_SRSS_TB_LF__SN } from "../sparkfun-qwiic-adapter/SM04B_SRSS_TB_LF__SN"
 
 export default () => (
   <board width="25.4mm" height="25.4mm">
@@ -14,7 +14,7 @@ export default () => (
     />
     <resistor
       name="R1"
-      connections={{ pin1: sel.U1.pin4, pin2: sel.net.V3_3 }}
+      connections={{}}
       resistance="10k"
       schX={1.3}
       schY={1.3}

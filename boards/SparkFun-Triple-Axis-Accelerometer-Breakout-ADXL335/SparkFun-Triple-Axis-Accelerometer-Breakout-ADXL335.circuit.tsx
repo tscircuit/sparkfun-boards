@@ -8,17 +8,17 @@ export default () => (
       pcbRotation={180}
       pcbX={0.762}
       connections={{
-        pin2: "net.ST",
-        pin3: "net.GND",
-        pin5: "net.GND",
-        pin6: "net.GND",
-        pin7: "net.GND",
+        pin2: sel.net().ST,
+        pin3: sel.net().GND,
+        pin5: sel.net().GND,
+        pin6: sel.net().GND,
+        pin7: sel.net().GND,
       }}
     />
     <capacitor
       capacitance={"0.1uF"}
       name="C1"
-      connections={{ pin1: "U1.pin8", pin2: "net.GND" }}
+      connections={{ pin1: sel.U1.pin8, pin2: sel.net().GND }}
       schX={2}
       schY={-1.5}
       schRotation={-90}
@@ -29,7 +29,7 @@ export default () => (
     />
     <capacitor
       capacitance={"0.1uF"}
-      connections={{ pin1: "net.VCC", pin2: "net.GND" }}
+      connections={{ pin1: sel.net().VCC, pin2: sel.net().GND }}
       schRotation={-90}
       name="C2"
       schX={-4}
@@ -41,7 +41,7 @@ export default () => (
     <capacitor
       capacitance={"0.1uF"}
       name="C3"
-      connections={{ pin1: "U1.pin10", pin2: "net.GND" }}
+      connections={{ pin1: sel.U1.pin10, pin2: sel.net().GND }}
       schX={3}
       schY={0.45}
       pcbX={-3.683}
@@ -52,7 +52,7 @@ export default () => (
     <capacitor
       capacitance={"0.1uF"}
       name="C4"
-      connections={{ pin1: "U1.pin12", pin2: "net.GND" }}
+      connections={{ pin1: sel.U1.pin12, pin2: sel.net().GND }}
       schRotation={90}
       schX={1.5}
       schY={1.4}
@@ -96,12 +96,12 @@ export default () => (
       schY={-3}
       footprint={"pinrow6_id1.016mm_od1.88mm_p2.54mm_nosquareplating"}
       connections={{
-        pin1: "net.ST",
-        pin2: "net.ZOUT",
-        pin3: "net.YOUT",
-        pin4: "net.XOUT",
-        pin5: "net.GND",
-        pin6: "net.VCC",
+        pin1: sel.net().ST,
+        pin2: sel.net().ZOUT,
+        pin3: sel.net().YOUT,
+        pin4: sel.net().XOUT,
+        pin5: sel.net().GND,
+        pin6: sel.net().VCC,
       }}
       pcbRotation={-90}
       pcbY={0}

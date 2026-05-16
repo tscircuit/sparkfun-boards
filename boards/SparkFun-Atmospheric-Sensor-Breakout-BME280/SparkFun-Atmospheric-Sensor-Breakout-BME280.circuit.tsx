@@ -66,7 +66,6 @@ export default () => (
       schX={2.3}
       schY={1.6}
       connections={{
-        pin1: sel.U1.pin6,
       }}
       pcbX={-3.81}
       pcbY={-3.175}

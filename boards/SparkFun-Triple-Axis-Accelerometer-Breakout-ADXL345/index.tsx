@@ -1,2 +1,2 @@
-import ADXL345Breakout from "./SparkFun-Triple-Axis-Accelerometer-Breakout-ADXL345.circuit"
+import ADXL345Breakout from "./sparkfun-triple-axis-accelerometer-breakout-adxl345.circuit"
 export default ADXL345Breakout
