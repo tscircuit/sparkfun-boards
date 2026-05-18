@@ -7,7 +7,7 @@ export default () => {
       <DS1037_09MNAKT74_0CC
         pcbX={-2}
         pcbY={0}
-        name="P1"
+        name="J1"
         pcbRotation={-90}
         connections={{
           pin1: sel.J2.pin1,
@@ -55,7 +55,7 @@ export default () => {
         }}
         schX={-2}
         schY={-0.4}
-        pcbX={10}
+        pcbX={9.8}
         pcbY={0}
         pcbRotation={90}
       />
@@ -70,7 +70,7 @@ export default () => {
         }}
         schX={-2}
         schY={-3}
-        pcbX={10}
+        pcbX={9.8}
         pcbY={12.75}
         pcbRotation={90}
         connections={{ pin1: sel.net().GND }}
@@ -86,7 +86,7 @@ export default () => {
         }}
         schX={-2}
         schY={-3.5}
-        pcbX={10}
+        pcbX={9.8}
         pcbY={-12.75}
         pcbRotation={90}
         connections={{ pin1: sel.net().GND }}
@@ -112,6 +112,153 @@ export default () => {
 
       <copperpour connectsTo="net.GND" layer="top" />
       <copperpour connectsTo="net.GND" layer="bottom" />
+
+      <schematictext
+        text="Common Pinouts"
+        schX={6.2}
+        schY={2.35}
+        fontSize={0.32}
+      />
+      <schematictext
+        text="RS232 + RS485 Pinout Female"
+        schX={5.5}
+        schY={1.4}
+        fontSize={0.18}
+      />
+
+      <schematictable
+        schX={6.05}
+        schY={-0.55}
+        borderWidth={0.03}
+        fontSize={0.18}
+      >
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 1" width={0.78} />
+          <schematiccell
+            text="Ground (GND)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 2" width={0.78} />
+          <schematiccell
+            text="Data Terminal Ready (DTR)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 3" width={0.78} />
+          <schematiccell
+            text="Received Data (RXD)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 4" width={0.78} />
+          <schematiccell
+            text="Transmit (TXD)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 5" width={0.78} />
+          <schematiccell
+            text="Data Carrier Detect (DCD)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 6" width={0.78} />
+          <schematiccell
+            text="Ring Indicator (RI)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 7" width={0.78} />
+          <schematiccell
+            text="Ready to Send (RTS)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 8" width={0.78} />
+          <schematiccell
+            text="Clear to Send (CTS)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 9" width={0.78} />
+          <schematiccell
+            text="Data Set Ready (DSR)"
+            width={2.7}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+      </schematictable>
+
+      <schematictext
+        text="CAN bus Pinout"
+        schX={5.5}
+        schY={-3.1}
+        fontSize={0.18}
+      />
+      <schematictable
+        schX={6.05}
+        schY={-4.95}
+        borderWidth={0.03}
+        fontSize={0.18}
+      >
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 1" width={0.78} />
+          <schematiccell text="NC" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 2" width={0.78} />
+          <schematiccell text="CAN-L" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 3" width={0.78} />
+          <schematiccell
+            text="Ground (GND)"
+            width={1.95}
+            horizontalAlign="left"
+          />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 4" width={0.78} />
+          <schematiccell text="NC" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 5" width={0.78} />
+          <schematiccell text="Shield" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 6" width={0.78} />
+          <schematiccell text="NC" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 7" width={0.78} />
+          <schematiccell text="CAN-H" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 8" width={0.78} />
+          <schematiccell text="NC" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+        <schematicrow height={0.36}>
+          <schematiccell text="Pin 9" width={0.78} />
+          <schematiccell text="Power" width={1.95} horizontalAlign="left" />
+        </schematicrow>
+      </schematictable>
     </board>
   )
 }
