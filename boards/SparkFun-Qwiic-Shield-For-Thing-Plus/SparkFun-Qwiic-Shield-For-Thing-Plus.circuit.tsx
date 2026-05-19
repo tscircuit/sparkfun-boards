@@ -6,7 +6,7 @@ import { SM04B_SRSS_TB_LF__SN_J3 } from "./SM04B_SRSS_TB_LF__SN_J3"
 import { SM04B_SRSS_TB_LF__SN_J4 } from "./SM04B_SRSS_TB_LF__SN_J4"
 
 export default () => (
-  <board width="22.76mm" height="50.66mm" routingDisabled>
+  <board width="22.76mm" height="50.66mm">
     <ThingPlus name="J5" schX={-5} schY={0} pcbX={0.05} pcbY={3.5} />
 
     <resistor
