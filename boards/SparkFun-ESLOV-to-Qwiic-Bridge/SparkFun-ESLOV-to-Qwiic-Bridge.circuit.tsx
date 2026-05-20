@@ -26,7 +26,6 @@ export default () => (
         GND: sel.net.GND,
         VIN: sel.C1.pin1,
         VOUT: sel.C2.pin1,
-        EN: sel.U1.VIN,
       }}
     />
     <netlabel net="GND" connectsTo={sel.U1.GND} schX={-1.2} schY={-0.4} />

@@ -19,25 +19,24 @@ export default () => {
           name="U1"
           pcbRotation={180}
           connections={{
-            pin4: "net.VCC",
-            pin18: "net.SCLK",
-            pin20: "U1.pin18",
-            pin19: "net.MISO",
-            pin17: "net.MOSI",
-            pin1: "net.SS",
-            pin5: "net.INT",
+            pin4: sel.net().VCC,
+            pin18: sel.net().SCLK,
+            pin19: sel.net().MISO,
+            pin17: sel.net().MOSI,
+            pin1: sel.net().SS,
+            pin5: sel.net().INT,
           }}
         />
         <jumper
           cadModel={null}
           connections={{
-            pin7: "net.GND",
-            pin6: "net.VCC",
-            pin5: "net.INT",
-            pin4: "net.SCLK",
-            pin3: "net.MISO",
-            pin2: "net.MOSI",
-            pin1: "net.SS",
+            pin7: sel.net().GND,
+            pin6: sel.net().VCC,
+            pin5: sel.net().INT,
+            pin4: sel.net().SCLK,
+            pin3: sel.net().MISO,
+            pin2: sel.net().MOSI,
+            pin1: sel.net().SS,
           }}
           name="JP1"
           schX={-7}
@@ -51,14 +50,14 @@ export default () => {
           layer={"bottom"}
           schX={3}
           schY={0.5}
-          connections={{ pin1: "U1.VBAT", pin2: "U1.pin10" }}
+          connections={{ pin1: sel.U1.VBAT, pin2: sel.U1.pin10 }}
         />
         <capacitor
           name="C1"
           schRotation={-90}
           schX={-3.2}
           schY={-2}
-          connections={{ pin1: ["JP1.pin6", "R1.pin2"], pin2: "net.GND" }}
+          connections={{ pin1: ["JP1.pin6", "R1.pin2"], pin2: sel.net().GND }}
           capacitance={"22pF"}
           footprint={"cap0402"}
           pcbRotation={90}
@@ -68,7 +67,7 @@ export default () => {
         <resistor
           name="R1"
           schRotation={-90}
-          connections={{ pin1: "JP1.pin5" }}
+          connections={{ pin1: sel.JP1.pin5 }}
           schX={-4}
           schY={-0.5}
           resistance={"10k"}

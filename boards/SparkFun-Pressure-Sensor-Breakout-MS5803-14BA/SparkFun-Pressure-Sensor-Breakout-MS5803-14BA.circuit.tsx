@@ -10,11 +10,11 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
           pcbY={2.54}
           schX={0}
           schY={0}
-          connections={{ pin5: "net.V3_3", pin2: "net.GND" }}
+          connections={{ pin5: sel.net().V3_3, pin2: sel.net().GND }}
         />
         <capacitor
           name="C1"
-          connections={{ pin1: ["U1.pin5", "JP1.pin2"], pin2: "net.GND" }}
+          connections={{ pin1: ["U1.pin5", "JP1.pin2"], pin2: sel.net().GND }}
           capacitance={"0.1uF"}
           footprint={"cap0603"}
           schX={-10}
@@ -26,7 +26,7 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
         />
         <resistor
           name="R1"
-          connections={{ pin1: "U1.pin1" }}
+          connections={{ pin1: sel.U1.pin1 }}
           resistance={"2.2k"}
           footprint={"0603"}
           schX={-3.4}
@@ -38,7 +38,7 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
         />
         <resistor
           name="R2"
-          connections={{ pin1: "U1.pin7" }}
+          connections={{ pin1: sel.U1.pin7 }}
           resistance={"2.2k"}
           footprint={"0603"}
           schX={-1.6}
@@ -51,7 +51,7 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
         <resistor
           name="R3"
           resistance={"10k"}
-          connections={{ pin1: "net.PS", pin2: "net.V3_3" }}
+          connections={{ pin1: sel.net().PS, pin2: sel.net().V3_3 }}
           footprint={"0603"}
           schX={1.2}
           schRotation={90}
@@ -63,7 +63,7 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
         <resistor
           name="R4"
           resistance={"10k"}
-          connections={{ pin1: "net.AD", pin2: "net.V3_3" }}
+          connections={{ pin1: sel.net().AD, pin2: sel.net().V3_3 }}
           footprint={"0603"}
           schX={4}
           schRotation={90}
@@ -88,9 +88,9 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
           schX={-2.5}
           schY={2.6}
           connections={{
-            pin1: "R2.pin2",
-            pin2: "U1.pin5",
-            pin3: "R1.pin2",
+            pin1: sel.R2.pin2,
+            pin2: sel.U1.pin5,
+            pin3: sel.R1.pin2,
           }}
           pcbX={-8.128}
           pcbY={2.489}
@@ -104,8 +104,8 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
           schX={4}
           schY={-1.2}
           connections={{
-            pin2: "U1.pin3",
-            pin1: "net.GND",
+            pin2: sel.U1.pin3,
+            pin1: sel.net().GND,
           }}
           pcbY={0.762}
           pcbX={9}
@@ -119,8 +119,8 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
           schX={1.2}
           schY={-1.2}
           connections={{
-            pin2: "net.PS",
-            pin1: "net.GND",
+            pin2: sel.net().PS,
+            pin1: sel.net().GND,
           }}
           pcbY={-3.302}
           pcbX={9}
@@ -134,11 +134,11 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
           footprint={"pinrow7_id1.016mm_od1.88mm_p2.54mm_nosquareplating"}
           pcbY={-7.62}
           connections={{
-            pin3: "U1.pin7",
-            pin4: "U1.pin1",
-            pin5: "net.SDO",
-            pin6: "net.AD",
-            pin7: "net.PS",
+            pin3: sel.U1.pin7,
+            pin4: sel.U1.pin1,
+            pin5: sel.net().SDO,
+            pin6: sel.net().AD,
+            pin7: sel.net().PS,
           }}
           schPinArrangement={{
             rightSide: {

@@ -257,7 +257,6 @@ export default () => (
         pin1: sel.net().N1,
         pin2: sel.net().N2,
         pin3: sel.net().N3,
-        pin4: sel.JP4.pin5,
         pin5: sel.net.GND,
         pin6: sel.net().N5,
         pin7: sel.net().B,

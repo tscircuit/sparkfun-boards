@@ -1,2 +1,2 @@
-import USBTypeAFemaleBreakout from "./SparkFun-USB-Type-A-Female-Breakout.circuit"
+import USBTypeAFemaleBreakout from "./sparkfun-usb-type-a-female-breakout.circuit"
 export default USBTypeAFemaleBreakout

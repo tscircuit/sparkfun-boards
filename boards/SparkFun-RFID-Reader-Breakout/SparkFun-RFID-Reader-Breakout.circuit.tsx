@@ -157,12 +157,6 @@ export default () => (
         },
       }}
       connections={{
-        pin1: sel.U1.pin6,
-        pin2: sel.U1.pin7,
-        pin3: sel.U1.pin8,
-        pin4: sel.U1.pin9,
-        pin5: sel.U1.pin10,
-        pin6: sel.U1.pin11,
       }}
     />
     <pinheader

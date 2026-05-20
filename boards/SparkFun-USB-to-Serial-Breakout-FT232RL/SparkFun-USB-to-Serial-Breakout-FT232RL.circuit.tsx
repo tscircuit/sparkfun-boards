@@ -50,23 +50,23 @@ const USBToSerialBreakout = () => (
       pcbRotation={90}
       pcbY={-5}
       connections={{
-        TXD: "net.TXD",
-        DTR: "net.DTR",
-        RTS: "net.RTS",
-        RI: "net.RI",
-        DCD: "net.DCD",
-        DSR: "net.DSR",
-        CTS: "net.CTS",
-        VCCIO: "net.VCCIO",
-        RXD: "net.RXD",
-        GND1: "net.GND",
-        GND2: "net.GND",
-        GND3: "net.GND",
-        AGND: "net.GND",
-        TEST: "net.GND",
-        CBUS4: "net.SLEEP",
-        CBUS2: "net.TXDEN",
-        CBUS3: "net.PWREN",
+        TXD: sel.net().TXD,
+        DTR: sel.net().DTR,
+        RTS: sel.net().RTS,
+        RI: sel.net().RI,
+        DCD: sel.net().DCD,
+        DSR: sel.net().DSR,
+        CTS: sel.net().CTS,
+        VCCIO: sel.net().VCCIO,
+        RXD: sel.net().RXD,
+        GND1: sel.net().GND,
+        GND2: sel.net().GND,
+        GND3: sel.net().GND,
+        AGND: sel.net().GND,
+        TEST: sel.net().GND,
+        CBUS4: sel.net().SLEEP,
+        CBUS2: sel.net().TXDEN,
+        CBUS3: sel.net().PWREN,
         CBUS0: sel.LED1.pin2,
         CBUS1: sel.LED2.pin2,
         VCC: sel.F1.pin2,
@@ -82,7 +82,7 @@ const USBToSerialBreakout = () => (
       pcbRotation={180}
       schX={-12.5}
       schY={0.1}
-      connections={{ GND: "net.GND" }}
+      connections={{ GND: sel.net().GND }}
     />
 
     <fuse
@@ -108,7 +108,7 @@ const USBToSerialBreakout = () => (
       schRotation={90}
       pcbX={6.3}
       pcbY={-16.2}
-      connections={{ pin1: sel.LED1.pin1, pin2: "net.VCCIO" }}
+      connections={{ pin1: sel.LED1.pin1, pin2: sel.net().VCCIO }}
     />
 
     <resistor
@@ -120,7 +120,7 @@ const USBToSerialBreakout = () => (
       pcbX={-6}
       pcbY={-5}
       pcbRotation={90}
-      connections={{ pin1: sel.LED2.pin1, pin2: "net.VCCIO" }}
+      connections={{ pin1: sel.LED2.pin1, pin2: sel.net().VCCIO }}
     />
 
     <led
@@ -157,7 +157,7 @@ const USBToSerialBreakout = () => (
       pcbY={-10.5}
       schRotation={90}
       pcbRotation={90}
-      connections={{ pin1: "net.GND", pin2: "net.VCC" }}
+      connections={{ pin1: sel.net().GND, pin2: sel.net().VCC }}
     />
 
     <capacitor
@@ -169,7 +169,7 @@ const USBToSerialBreakout = () => (
       pcbX={-6.3}
       pcbY={-16.2}
       schRotation={90}
-      connections={{ pin1: "net.GND", pin2: sel.F1.pin2 }}
+      connections={{ pin1: sel.net().GND, pin2: sel.F1.pin2 }}
     />
 
     <capacitor

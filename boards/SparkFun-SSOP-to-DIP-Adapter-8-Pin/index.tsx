@@ -1,3 +1,3 @@
-import SSOP8TODIP from "./SparkFun-SSOP-to-DIPAdapter-8-Pin.circuit"
+import SSOP8TODIP from "./sparkfun-ssop-to-dipadapter-8-pin.circuit"
 
 export default SSOP8TODIP

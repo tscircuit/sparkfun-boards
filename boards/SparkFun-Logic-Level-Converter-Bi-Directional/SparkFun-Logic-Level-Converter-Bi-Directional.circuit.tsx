@@ -165,8 +165,8 @@ export default () => {
         schY={-4.5}
       />
 
-      <copperpour connectsTo="net.GND" layer="top" />
-      <copperpour connectsTo="net.GND" layer="bottom" />
+      <copperpour connectsTo={sel.net().GND} layer="top" />
+      <copperpour connectsTo={sel.net().GND} layer="bottom" />
     </board>
   )
 }

@@ -29,14 +29,14 @@ export default () => (
         },
       }}
       connections={{
-        pin1: "C1.pin1",
-        pin2: "net.GND",
-        pin3: "net.SCL",
-        pin4: "net.SDA",
-        pin5: "net.AL_L",
-        pin6: "net.AL_H",
-        pin7: "net.NC",
-        pin8: "net.VCC",
+        pin1: sel.C1.pin1,
+        pin2: sel.net().GND,
+        pin3: sel.net().SCL,
+        pin4: sel.net().SDA,
+        pin5: sel.net().AL_L,
+        pin6: sel.net().AL_H,
+        pin7: sel.net().NC,
+        pin8: sel.net().VCC,
       }}
     />
     <capacitor
@@ -47,7 +47,7 @@ export default () => (
       pcbX={-1.5}
       pcbY={3.2}
       capacitance={"0.1uF"}
-      connections={{ pin2: "net.GND" }}
+      connections={{ pin2: sel.net().GND }}
     />
     <capacitor
       name="C2"
@@ -57,7 +57,7 @@ export default () => (
       pcbX={1.5}
       pcbY={3.2}
       capacitance={"0.22uF"}
-      connections={{ pin1: "net.VCC", pin2: "net.GND" }}
+      connections={{ pin1: sel.net().VCC, pin2: sel.net().GND }}
     />
     <resistor
       name="R1"
@@ -67,7 +67,7 @@ export default () => (
       schRotation={-90}
       footprint="0402"
       resistance={"2.2k"}
-      connections={{ pin2: "net.SCL", pin1: "net.VCC" }}
+      connections={{ pin2: sel.net().SCL, pin1: sel.net().VCC }}
     />
     <resistor
       name="R2"
@@ -78,7 +78,7 @@ export default () => (
       schRotation={-90}
       footprint="0402"
       resistance={"2.2k"}
-      connections={{ pin2: "net.SDA", pin1: "net.VCC" }}
+      connections={{ pin2: sel.net().SDA, pin1: sel.net().VCC }}
     />
 
     <jumper
@@ -90,12 +90,12 @@ export default () => (
       schDirection="left"
       footprint={"pinrow6_id1.016_od1.88_nosquareplating"}
       connections={{
-        pin1: "net.SDA",
-        pin2: "net.SCL",
-        pin3: "net.AL_L",
-        pin4: "net.AL_H",
-        pin5: "net.VCC",
-        pin6: "net.GND",
+        pin1: sel.net().SDA,
+        pin2: sel.net().SCL,
+        pin3: sel.net().AL_L,
+        pin4: sel.net().AL_H,
+        pin5: sel.net().VCC,
+        pin6: sel.net().GND,
       }}
     />
 

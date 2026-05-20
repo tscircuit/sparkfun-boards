@@ -1,2 +1,2 @@
-import USBMICRO from "./SparkFun-microB-USB-Breakout.circuit"
+import USBMICRO from "./sparkfun-microb-usb-breakout.circuit"
 export default USBMICRO

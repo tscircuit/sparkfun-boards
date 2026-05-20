@@ -45,9 +45,9 @@ export const RFM69HCW = (props: ChipProps<typeof pinLabels>) => (
       },
     }}
     schPinStyle={{
-      RESET: { marginTop: "0.4" },
-      MISO: { marginTop: "0.4" },
-      pin8: { marginTop: "0.3" },
+      RESET: { marginTop: 0.4 },
+      MISO: { marginTop: 0.4 },
+      pin8: { marginTop: 0.3 },
     }}
   />
 )

@@ -9,14 +9,14 @@ export default () => (
       schX={-8}
       schY={0}
       connections={{
-        pin4: "net.VCC",
-        pin3: "net.RST",
-        pin2: "net.CLK",
-        pin1: "net.SW1",
-        pin8: "net.SW2",
-        pin7: "net.I_O",
-        pin6: "net.VPP",
-        pin5: "net.GND",
+        pin4: sel.net().VCC,
+        pin3: sel.net().RST,
+        pin2: sel.net().CLK,
+        pin1: sel.net().SW1,
+        pin8: sel.net().SW2,
+        pin7: sel.net().I_O,
+        pin6: sel.net().VPP,
+        pin5: sel.net().GND,
       }}
     />
     <jumper
@@ -33,14 +33,14 @@ export default () => (
       }}
       footprint={"pinrow8_id1.016_od1.88_p2.54"}
       connections={{
-        pin1: "net.VCC",
-        pin2: "net.RST",
-        pin3: "net.CLK",
-        pin4: "net.SW1",
-        pin5: "net.SW2",
-        pin6: "net.I_O",
-        pin7: "net.VPP",
-        pin8: "net.GND",
+        pin1: sel.net().VCC,
+        pin2: sel.net().RST,
+        pin3: sel.net().CLK,
+        pin4: sel.net().SW1,
+        pin5: sel.net().SW2,
+        pin6: sel.net().I_O,
+        pin7: sel.net().VPP,
+        pin8: sel.net().GND,
       }}
       schDirection="right"
       schX={-5}

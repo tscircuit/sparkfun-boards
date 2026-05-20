@@ -1,3 +1,3 @@
-import MotionSensor from "./SparkFun-Human-Presence-and-Motion-Sensor-STHS34PF80-(Qwiic).circuit"
+import MotionSensor from "./sparkfun-human-presence-and-motion-sensor-sths34pf80-qwiic.circuit"
 
 export default MotionSensor

@@ -13,7 +13,7 @@ const HMC6343Qwiic = () => (
       connections={{
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
-        DRDY: "net.DRDY",
+        DRDY: sel.net().DRDY,
       }}
       schPinArrangement={{
         leftSide: {
@@ -161,7 +161,7 @@ const HMC6343Qwiic = () => (
       schY={11.8}
       connections={{
         pin1: ".JP1 > .pin3",
-        pin2: "net.SCL",
+        pin2: sel.net().SCL,
       }}
     />
 
@@ -192,12 +192,12 @@ const HMC6343Qwiic = () => (
       schX={27.032}
       schY={13.92}
       anchorSide="bottom"
-      connectsTo="LED.pin2"
+      connectsTo={sel.LED.pin2}
     />
 
     <solderjumper
       name="LED"
-      connections={{ pin1: "R3.pin1" }}
+      connections={{ pin1: sel.R3.pin1 }}
       bridgedPins={[["1"], ["2"]]}
       schRotation={90}
       pcbX={-6.668}
@@ -218,7 +218,7 @@ const HMC6343Qwiic = () => (
       pcbX={-9.843}
       pcbY={-6.348}
       schRotation={-90}
-      connections={{ pin1: "LED.pin1", pin2: "D1.pin1" }}
+      connections={{ pin1: sel.LED.pin1, pin2: sel.D1.pin1 }}
     />
     <led
       name="D1"
@@ -229,7 +229,7 @@ const HMC6343Qwiic = () => (
       schRotation={-90}
       pcbX={-9.843}
       pcbY={-4.761}
-      connections={{ pin2: "net.GND" }}
+      connections={{ pin2: sel.net().GND }}
     />
 
     <netlabel
@@ -248,8 +248,8 @@ const HMC6343Qwiic = () => (
       pcbY={0}
       pcbRotation={90}
       connections={{
-        GND: "net.GND",
-        V3_3: "net.V3_3",
+        GND: sel.net().GND,
+        V3_3: sel.net().V3_3,
       }}
     />
     <netlabel
@@ -289,8 +289,8 @@ const HMC6343Qwiic = () => (
       pcbY={0}
       pcbRotation={270}
       connections={{
-        GND: "net.GND",
-        V3_3: "net.V3_3",
+        GND: sel.net().GND,
+        V3_3: sel.net().V3_3,
       }}
     />
     <netlabel
@@ -344,8 +344,8 @@ const HMC6343Qwiic = () => (
       pcbX={-1.08}
       pcbY={-11.43}
       connections={{
-        GND: "net.GND",
-        V3_3: "net.V3_3",
+        GND: sel.net().GND,
+        V3_3: sel.net().V3_3,
       }}
     />
 
@@ -389,7 +389,7 @@ const HMC6343Qwiic = () => (
       schX={22.1}
       schY={3.4}
       connections={{
-        pin1: "net.DRDY",
+        pin1: sel.net().DRDY,
       }}
     />
     <netlabel
@@ -397,7 +397,7 @@ const HMC6343Qwiic = () => (
       schX={21}
       schY={3.4}
       anchorSide="right"
-      connectsTo="J4.pin1"
+      connectsTo={sel.J4.pin1}
     />
     <hole diameter={3.1} pcbX={-10.16} pcbY={10.162} />
     <hole diameter={3.1} pcbX={10.16} pcbY={10.162} />

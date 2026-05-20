@@ -40,8 +40,8 @@ const MotionSensor = () => (
       pcbX="-5.08"
       pcbY="3.81"
       connections={{
-        pin1: "net.GND",
-        pin2: "net.V3_3",
+        pin1: sel.net().GND,
+        pin2: sel.net().V3_3,
       }}
     />
     <capacitor
@@ -54,8 +54,8 @@ const MotionSensor = () => (
       pcbX="5.08"
       pcbRotation="90"
       connections={{
-        pin1: "net.GND",
-        pin2: "net.V3_3",
+        pin1: sel.net().GND,
+        pin2: sel.net().V3_3,
       }}
     />
     <net name="GND" />
@@ -85,7 +85,7 @@ const MotionSensor = () => (
       pcbY="-5.08"
       pcbRotation="180"
       connections={{
-        pin2: "JP1.pin3",
+        pin2: sel.JP1.pin3,
       }}
     />
     <resistor
@@ -98,7 +98,7 @@ const MotionSensor = () => (
       pcbX="-2.54"
       pcbY="-5.08"
       connections={{
-        pin2: "JP1.pin1",
+        pin2: sel.JP1.pin1,
       }}
     />
     <netlabel
@@ -132,7 +132,7 @@ const MotionSensor = () => (
       pcbX="-5.08"
       pcbRotation="270"
       connections={{
-        pin1: "D1.pin1",
+        pin1: sel.D1.pin1,
       }}
     />
     <led
@@ -166,7 +166,6 @@ const MotionSensor = () => (
       pcbY="3.81"
       layer="bottom"
       connections={{
-        pin2: "D1.pin2",
       }}
     />
     <netlabel
@@ -193,7 +192,7 @@ const MotionSensor = () => (
       schY={1.8}
       schRotation={90}
       connections={{
-        pin1: "R4.pin2",
+        pin1: sel.R4.pin2,
       }}
       pcbX="10.16"
       pcbY="3.81"
@@ -233,7 +232,7 @@ const MotionSensor = () => (
       schY={-4.8}
       schRotation={90}
       connections={{
-        pin1: "R5.pin2",
+        pin1: sel.R5.pin2,
       }}
       pcbX={-10.16}
       pcbY={0}
@@ -263,7 +262,7 @@ const MotionSensor = () => (
       footprint={JST04_1MM_RA}
       schX={3.5}
       schY={-5}
-      pinLabels={{ 1: "GND", 2: "VCC", 3: "SDA", 4: "SCL" }}
+      pinLabels={{ pin1: "GND", pin2: "VCC", pin3: "SDA", pin4: "SCL" }}
       pcbX="-7.62"
       pcbRotation="270"
     />
@@ -301,7 +300,7 @@ const MotionSensor = () => (
       footprint={JST04_1MM_RA}
       schX={0}
       schY={-5}
-      pinLabels={{ 1: "GND", 2: "VCC", 3: "SDA", 4: "SCL" }}
+      pinLabels={{ pin1: "GND", pin2: "VCC", pin3: "SDA", pin4: "SCL" }}
       pcbX="7.62"
       pcbRotation="90"
     />
