@@ -100,7 +100,6 @@ export default () => (
         // STAT LED
         pin15: "net.STAT", // PA1
         // VDDA
-        pin13: sel.net.VDD,
       }}
     />
 
