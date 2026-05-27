@@ -26,7 +26,7 @@ const selectors = {
 }
 
 export default () => (
-  <board width="27.95mm" height="12.7mm">
+  <board width="27.95mm" height="12.7mm" routingDisabled>
     <TXS0108EQWRKSRQ1
       name="U1"
       schPinArrangement={{
@@ -48,6 +48,7 @@ export default () => (
       schY={0}
       pcbX="1.265mm"
       pcbY="0mm"
+      pcbRotation={90}
       connections={{
         A1: selectors.net.A1,
         A2: selectors.net.A2,
