@@ -1,204 +1,103 @@
-import { sel } from "tscircuit"
-
+/**
+ * SparkFun SSOP to DIP Adapter - 16-Pin (BOB-13994)
+ * Passive adapter board: maps 16-pin SSOP pads to DIP-16 through-hole footprint
+ * Board size: ~22mm x 16mm
+ *
+ * https://www.sparkfun.com/products/13994
+ * Schematic: https://cdn.sparkfun.com/datasheets/BreakoutBoards/SSOP_to_DIP_16.pdf
+ */
 export default () => (
-  <board width="20.32mm" height="20.82mm">
+  <board width="22mm" height="16mm" routingDisabled>
+    {/* SSOP-16 SMD pads */}
     <chip
       name="U1"
-      footprint={"ssop16_pw0.35_pl2.2_w8.6_p0.635"}
-      pcbX={0.508}
-      pcbY={-5.33}
-      schY={4}
+      footprint="ssop16_w5.3mm_p0.65mm"
+      pcbX={0}
+      pcbY={0}
+      schX={0}
+      schY={0}
+      pinLabels={{
+        pin1: ["A1"],
+        pin2: ["A2"],
+        pin3: ["A3"],
+        pin4: ["A4"],
+        pin5: ["A5"],
+        pin6: ["A6"],
+        pin7: ["A7"],
+        pin8: ["A8"],
+        pin9: ["B8"],
+        pin10: ["B7"],
+        pin11: ["B6"],
+        pin12: ["B5"],
+        pin13: ["B4"],
+        pin14: ["B3"],
+        pin15: ["B2"],
+        pin16: ["B1"],
+      }}
       connections={{
-        pin1: sel.JP1.pin1,
-        pin2: sel.JP1.pin2,
-        pin3: sel.JP1.pin3,
-        pin4: sel.JP1.pin4,
-        pin5: sel.JP1.pin5,
-        pin6: sel.JP1.pin6,
-        pin7: sel.JP1.pin7,
-        pin8: sel.JP1.pin8,
-        pin16: sel.JP2.pin1,
-        pin15: sel.JP2.pin2,
-        pin14: sel.JP2.pin3,
-        pin13: sel.JP2.pin4,
-        pin12: sel.JP2.pin5,
-        pin11: sel.JP2.pin6,
-        pin10: sel.JP2.pin7,
-        pin9: sel.JP2.pin8,
-      }}
-    />
-    <jumper
-      name="JP1"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54"}
-      schY={4}
-      schX={-1.5}
-      pcbY={-9.14}
-      schPinArrangement={{
-        rightSide: {
-          direction: "top-to-bottom",
-          pins: [
-            "pin1",
-            "pin2",
-            "pin3",
-            "pin4",
-            "pin5",
-            "pin6",
-            "pin7",
-            "pin8",
-          ],
-        },
-      }}
-    />
-    <jumper
-      name="JP2"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating"}
-      schY={4}
-      schX={1.5}
-      pcbY={-1.52}
-      schPinArrangement={{
-        leftSide: {
-          direction: "top-to-bottom",
-          pins: [
-            "pin1",
-            "pin2",
-            "pin3",
-            "pin4",
-            "pin5",
-            "pin6",
-            "pin7",
-            "pin8",
-          ],
-        },
+        pin1: "net.P1",
+        pin2: "net.P2",
+        pin3: "net.P3",
+        pin4: "net.P4",
+        pin5: "net.P5",
+        pin6: "net.P6",
+        pin7: "net.P7",
+        pin8: "net.P8",
+        pin9: "net.P9",
+        pin10: "net.P10",
+        pin11: "net.P11",
+        pin12: "net.P12",
+        pin13: "net.P13",
+        pin14: "net.P14",
+        pin15: "net.P15",
+        pin16: "net.P16",
       }}
     />
 
+    {/* DIP-16 through-hole header pins */}
     <chip
-      name="U2"
-      footprint={"ssop16_pw0.35_pl2.2_w8.6_p0.635"}
-      pcbX={0.508}
-      pcbY={5.33}
+      name="J1"
+      footprint="dip16_w7.62mm_p2.54mm"
+      pcbX={0}
+      pcbY={0}
+      schX={6}
       schY={0}
+      pinLabels={{
+        pin1: ["P1"],
+        pin2: ["P2"],
+        pin3: ["P3"],
+        pin4: ["P4"],
+        pin5: ["P5"],
+        pin6: ["P6"],
+        pin7: ["P7"],
+        pin8: ["P8"],
+        pin9: ["P9"],
+        pin10: ["P10"],
+        pin11: ["P11"],
+        pin12: ["P12"],
+        pin13: ["P13"],
+        pin14: ["P14"],
+        pin15: ["P15"],
+        pin16: ["P16"],
+      }}
       connections={{
-        pin1: sel.JP3.pin1,
-        pin2: sel.JP3.pin2,
-        pin3: sel.JP3.pin3,
-        pin4: sel.JP3.pin4,
-        pin5: sel.JP3.pin5,
-        pin6: sel.JP3.pin6,
-        pin7: sel.JP3.pin7,
-        pin8: sel.JP3.pin8,
-        pin16: sel.JP4.pin1,
-        pin15: sel.JP4.pin2,
-        pin14: sel.JP4.pin3,
-        pin13: sel.JP4.pin4,
-        pin12: sel.JP4.pin5,
-        pin11: sel.JP4.pin6,
-        pin10: sel.JP4.pin7,
-        pin9: sel.JP4.pin8,
+        pin1: "net.P1",
+        pin2: "net.P2",
+        pin3: "net.P3",
+        pin4: "net.P4",
+        pin5: "net.P5",
+        pin6: "net.P6",
+        pin7: "net.P7",
+        pin8: "net.P8",
+        pin9: "net.P9",
+        pin10: "net.P10",
+        pin11: "net.P11",
+        pin12: "net.P12",
+        pin13: "net.P13",
+        pin14: "net.P14",
+        pin15: "net.P15",
+        pin16: "net.P16",
       }}
     />
-    <jumper
-      name="JP3"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54"}
-      schY={0}
-      schX={-1.5}
-      pcbY={1.52}
-      schPinArrangement={{
-        rightSide: {
-          direction: "top-to-bottom",
-          pins: [
-            "pin1",
-            "pin2",
-            "pin3",
-            "pin4",
-            "pin5",
-            "pin6",
-            "pin7",
-            "pin8",
-          ],
-        },
-      }}
-    />
-    <jumper
-      name="JP4"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating"}
-      schY={0}
-      schX={1.5}
-      pcbY={9.14}
-      schPinArrangement={{
-        leftSide: {
-          direction: "top-to-bottom",
-          pins: [
-            "pin1",
-            "pin2",
-            "pin3",
-            "pin4",
-            "pin5",
-            "pin6",
-            "pin7",
-            "pin8",
-          ],
-        },
-      }}
-    />
-    <silkscreentext
-      text="SSOP16"
-      pcbX={6}
-      pcbY={5.5}
-      pcbRotation={270}
-      layer={"bottom"}
-    />
-    <silkscreentext
-      text="to"
-      pcbX={7}
-      pcbY={5.5}
-      pcbRotation={270}
-      layer={"bottom"}
-    />
-    <silkscreentext
-      text="DIP16"
-      pcbX={8}
-      pcbY={5.5}
-      pcbRotation={270}
-      layer={"bottom"}
-    />
-    <silkscreentext
-      text="SSOP16"
-      pcbX={6}
-      pcbY={-5.5}
-      pcbRotation={270}
-      layer={"bottom"}
-    />
-    <silkscreentext
-      text="to"
-      pcbX={7}
-      pcbY={-5.5}
-      pcbRotation={270}
-      layer={"bottom"}
-    />
-    <silkscreentext
-      text="DIP16"
-      pcbX={8}
-      pcbY={-5.5}
-      pcbRotation={270}
-      layer={"bottom"}
-    />
-    <silkscreentext text="SSOP16" pcbX={6} pcbY={5.5} pcbRotation={270} />
-    <silkscreentext text="to" pcbX={7} pcbY={5.5} pcbRotation={270} />
-    <silkscreentext text="DIP16" pcbX={8} pcbY={5.5} pcbRotation={270} />
-    <silkscreentext text="SSOP16" pcbX={6} pcbY={-5.5} pcbRotation={270} />
-    <silkscreentext text="to" pcbX={7} pcbY={-5.5} pcbRotation={270} />
-    <silkscreentext text="DIP16" pcbX={8} pcbY={-5.5} pcbRotation={270} />
-
-    <silkscreentext text="1" pcbX="-9" pcbY={-7.5} />
-    <silkscreentext text="1" pcbX="-9" pcbY={-7.5} layer={"bottom"} />
-    <silkscreentext text="1" pcbX="-9" pcbY={3} />
-    <silkscreentext text="1" pcbX="-9" pcbY={3} layer={"bottom"} />
-
-    <silkscreentext text="9" pcbX="9" pcbY={-3} />
-    <silkscreentext text="9" pcbX="9" pcbY={-3} layer={"bottom"} />
-
-    <silkscreentext text="9" pcbX="9" pcbY={7.5} />
-    <silkscreentext text="9" pcbX="9" pcbY={7.5} layer={"bottom"} />
   </board>
 )
