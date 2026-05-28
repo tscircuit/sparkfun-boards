@@ -107,8 +107,8 @@ export default () => (
       name="J1"
       pcbX={0}
       pcbY={-8}
-      schX={0}
-      schY={30}
+      schX={55}
+      schY={0}
       connections={{
         pin1: sel.net.GND,
         pin2: sel.net.VDD,
