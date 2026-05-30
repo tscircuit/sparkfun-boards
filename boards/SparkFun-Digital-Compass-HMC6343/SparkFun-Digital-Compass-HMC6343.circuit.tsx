@@ -1,7 +1,7 @@
 import { HMC6343 } from "./HMC6343"
 import { sel } from "@tscircuit/core"
 
-const HMC6343Qwiic = () => (
+export default () => (
   <board width="20.32mm" height="20.32mm">
     <HMC6343
       name="U1"
@@ -60,9 +60,6 @@ const HMC6343Qwiic = () => (
       footprint="0603"
       schX={10}
       schY={12.4}
-      pcbX={-5.715}
-      pcbY={0.952}
-      pcbRotation={270}
       schRotation={-90}
     />
     <netlabel
@@ -87,9 +84,6 @@ const HMC6343Qwiic = () => (
       footprint="0603"
       schX={12}
       schY={12.4}
-      pcbX={-4.715}
-      pcbY={0.952}
-      pcbRotation={270}
       schRotation={-90}
     />
     <netlabel
@@ -156,10 +150,6 @@ const HMC6343Qwiic = () => (
         ["1", "2"],
         ["2", "3"],
       ]}
-      layer={"bottom"}
-      pcbX={9.132}
-      pcbY={-5.398}
-      pcbRotation="0"
       schRotation={180}
       schX={20.5}
       schY={13.5}
@@ -170,9 +160,6 @@ const HMC6343Qwiic = () => (
       name="R2"
       resistance="10K"
       footprint="0603"
-      pcbX={8.255}
-      pcbY={-5.398}
-      pcbRotation="270deg"
       schX={21.5}
       schY={12.2}
       schRotation={-90}
@@ -186,9 +173,6 @@ const HMC6343Qwiic = () => (
       name="R1"
       resistance="10K"
       footprint="0603"
-      pcbX={10.16}
-      pcbY={-5.398}
-      pcbRotation="270deg"
       schX={19.5}
       schY={12.2}
       schRotation={-90}
@@ -239,8 +223,8 @@ const HMC6343Qwiic = () => (
       }}
       schX={5}
       schY={12.7}
-      pcbX={-1.08}
-      pcbY={-11.43}
+      pcbX={1.5}
+      pcbY={-8.43}
       connections={{
         GND: "net.GND",
         V3_3: "net.V3_3",
@@ -276,13 +260,11 @@ const HMC6343Qwiic = () => (
       connectsTo={"J3.GND"}
     />
 
-    <hole diameter={3.1} pcbX={-10.16} pcbY={10.162} />
-    <hole diameter={3.1} pcbX={10.16} pcbY={10.162} />
-    <hole diameter={3.1} pcbX={-10.16} pcbY={-10.158} />
-    <hole diameter={3.1} pcbX={10.16} pcbY={-10.158} />
+    <hole diameter={3.1} pcbX={8.16} pcbY={8.162} />
+    <hole diameter={3.1} pcbX={-8.16} pcbY={-8.158} />
 
     <schematictext
-      text="Digital Compass - HMC6343"
+      text="Digital Compass HMC6343"
       fontSize={0.4}
       color="blue"
       schY={15.5}
@@ -314,79 +296,40 @@ const HMC6343Qwiic = () => (
     />
 
     <silkscreentext
-      text="Digital Compass"
-      pcbX={0}
-      pcbY={9.5}
-      fontSize={1.4}
-      layer="top"
-    />
-    <silkscreentext
       text="HMC6343"
-      pcbX={0}
-      pcbY={7.8}
-      fontSize={1.4}
-      layer="top"
-    />
-
-    <silkscreentext text="Y" pcbX={7.5} pcbY={8} fontSize={1} layer="top" />
-    <silkscreentext text="X" pcbX={9.9} pcbY={5.5} fontSize={1} layer="top" />
-    <silkscreentext text="Z" pcbX={7.5} pcbY={5.5} fontSize={1} layer="top" />
-
-    <silkscreentext
-      text="qwiic"
-      pcbX={-8.7}
-      pcbY={3.9}
-      fontSize={1.2}
-      layer="top"
-    />
-
-    <silkscreentext text="PWR" pcbX={-7.3} pcbY={-5} fontSize={1} layer="top" />
-
-    <silkscreentext
-      text="GND"
-      pcbX={-5.1}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="top"
-    />
-    <silkscreentext
-      text="3V3"
-      pcbX={-2.3}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="top"
-    />
-    <silkscreentext
-      text="SDA"
-      pcbX={0.1}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="top"
-    />
-    <silkscreentext
-      text="SCL"
-      pcbX={2.9}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="top"
-    />
-    <silkscreentext
-      text="DRDY"
-      pcbX={5.0}
-      pcbY={-9.2}
-      fontSize={1}
-      pcbRotation={90}
-      layer="top"
-    />
-
-    <silkscreentext
-      text="Digital Compass"
-      pcbX={0}
+      pcbX={7.8}
       pcbY={0}
+      pcbRotation={90}
+      fontSize={1.6}
+      layer="top"
+    />
+
+    <silkscreentext
+      text="Z"
+      pcbX={-6.16}
+      pcbY={-2.338}
+      fontSize={1}
+      layer="top"
+    />
+    <silkscreentext
+      text="Y"
+      pcbX={-8.66}
+      pcbY={-2.338}
+      fontSize={1}
+      layer="top"
+    />
+    <silkscreentext
+      text="X"
+      pcbX={-8.66}
+      pcbY={-4.838}
+      fontSize={1}
+      layer="top"
+    />
+
+    <silkscreentext
+      text="Magnetometer Breakout"
+      pcbX={0}
+      pcbY={-4}
       fontSize={1.2}
       layer="bottom"
     />
@@ -398,37 +341,28 @@ const HMC6343Qwiic = () => (
       layer="bottom"
     />
 
-    <silkscreentext text="Y" pcbX={7.4} pcbY={8} fontSize={1} layer="bottom" />
-    <silkscreentext
-      text="X"
-      pcbX={9.8}
-      pcbY={5.5}
-      fontSize={1}
-      layer="bottom"
-    />
     <silkscreentext
       text="Z"
-      pcbX={7.4}
-      pcbY={5.5}
+      pcbX={-6.26}
+      pcbY={-2.338}
+      fontSize={1}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="Y"
+      pcbX={-8.66}
+      pcbY={-2.338}
+      fontSize={1}
+      layer="bottom"
+    />
+    <silkscreentext
+      text="X"
+      pcbX={-8.66}
+      pcbY={-4.838}
       fontSize={1}
       layer="bottom"
     />
 
-    <silkscreentext
-      text="qwiic"
-      pcbX={8.7}
-      pcbY={-3.9}
-      fontSize={1.2}
-      layer="bottom"
-    />
-
-    <silkscreentext
-      text="LED"
-      pcbX={-4}
-      pcbY={-5.4}
-      fontSize={1}
-      layer="bottom"
-    />
     <silkscreentext
       text="I2C"
       pcbX={6.5}
@@ -436,48 +370,5 @@ const HMC6343Qwiic = () => (
       fontSize={1}
       layer="bottom"
     />
-
-    <silkscreentext
-      text="GND"
-      pcbX={-5.1}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="bottom"
-    />
-    <silkscreentext
-      text="3V3"
-      pcbX={-2.3}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="bottom"
-    />
-    <silkscreentext
-      text="SDA"
-      pcbX={0.1}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="bottom"
-    />
-    <silkscreentext
-      text="SCL"
-      pcbX={2.9}
-      pcbY={-9.5}
-      fontSize={1}
-      pcbRotation={90}
-      layer="bottom"
-    />
-    <silkscreentext
-      text="DRDY"
-      pcbX={5.0}
-      pcbY={-9.2}
-      fontSize={1}
-      pcbRotation={90}
-      layer="bottom"
-    />
   </board>
 )
-
-export default HMC6343Qwiic
