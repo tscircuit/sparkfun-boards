@@ -1,4 +1,3 @@
-
 import { HMC6343 } from "./HMC6343"
 import { sel } from "@tscircuit/core"
 
@@ -7,25 +6,30 @@ const HMC6343Qwiic = () => (
     <HMC6343
       name="U1"
       schWidth="1.4mm"
-      schX={12.7}
+      schX={15}
       schY={12.7}
       connections={{
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
-        DRDY: "net.DRDY",
+        CS: sel.U1.pin34,
+        pin3: sel.net.V3_3,
+        pin11: sel.net.V3_3,
+        pin21: sel.net.V3_3,
+        pin25: sel.net.GND,
+        pin29: sel.net.GND,
       }}
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
-          pins: ["VDD", "GND"],
+          pins: ["pin3", "pin11", "pin21", "pin29", "pin25"],
         },
         rightSide: {
-          direction: "bottom-to-top",
-          pins: ["DRDY", "SDA", "SCL"],
+          direction: "top-to-bottom",
+          pins: ["SCL", "SDA", "CS", "CS_CTRL"],
         },
       }}
       schPinStyle={{
-        VDD: {
+        pin21: {
           marginBottom: 0.6,
         },
         SDA: {
@@ -36,25 +40,25 @@ const HMC6343Qwiic = () => (
 
     <netlabel
       net="V3_3"
-      schX={11.3}
-      schY={13.3}
+      schX={13.5}
+      schY={14.3}
       anchorSide="bottom"
       connectsTo={sel.U1.VDD}
     />
 
     <netlabel
       net="GND"
-      schX={11.3}
-      schY={12.1}
+      schX={13.5}
+      schY={11.1}
       anchorSide="top"
       connectsTo={sel.U1.GND}
     />
 
     <capacitor
       name="C1"
-      capacitance="1.0uF"
+      capacitance="0.1uF"
       footprint="0603"
-      schX={9.985}
+      schX={10}
       schY={12.4}
       pcbX={-5.715}
       pcbY={0.952}
@@ -63,7 +67,7 @@ const HMC6343Qwiic = () => (
     />
     <netlabel
       net="V3_3"
-      schX={9.985}
+      schX={10}
       schY={13.1}
       anchorSide="bottom"
       connectsTo={sel.C1.pin1}
@@ -71,10 +75,37 @@ const HMC6343Qwiic = () => (
 
     <netlabel
       net="GND"
-      schX={9.985}
+      schX={10}
       schY={11.7}
       anchorSide="top"
       connectsTo={sel.C1.pin2}
+    />
+
+    <capacitor
+      name="C2"
+      capacitance="1.0uF"
+      footprint="0603"
+      schX={12}
+      schY={12.4}
+      pcbX={-4.715}
+      pcbY={0.952}
+      pcbRotation={270}
+      schRotation={-90}
+    />
+    <netlabel
+      net="V3_3"
+      schX={12}
+      schY={13.1}
+      anchorSide="bottom"
+      connectsTo={sel.C2.pin1}
+    />
+
+    <netlabel
+      net="GND"
+      schX={12}
+      schY={11.7}
+      anchorSide="top"
+      connectsTo={sel.C2.pin2}
     />
 
     <solderjumper
@@ -129,35 +160,38 @@ const HMC6343Qwiic = () => (
       pcbX={9.132}
       pcbY={-5.398}
       pcbRotation="0"
-      schX={19.832}
-      schY={12.502}
+      schRotation={180}
+      schX={20.5}
+      schY={13.5}
       pinCount={3}
-      schRotation="-90deg"
     />
 
     <resistor
       name="R2"
-      resistance="2.2k"
+      resistance="10K"
       footprint="0603"
       pcbX={8.255}
       pcbY={-5.398}
       pcbRotation="270deg"
-      schX={20.73}
-      schY={13.2}
+      schX={21.5}
+      schY={12.2}
+      schRotation={-90}
       connections={{
         pin1: ".JP1 > .pin1",
+        pin2: "net.SDA",
       }}
     />
 
     <resistor
       name="R1"
-      resistance="2.2k"
+      resistance="10K"
       footprint="0603"
       pcbX={10.16}
       pcbY={-5.398}
       pcbRotation="270deg"
-      schX={20.73}
-      schY={11.8}
+      schX={19.5}
+      schY={12.2}
+      schRotation={-90}
       connections={{
         pin1: ".JP1 > .pin3",
         pin2: "net.SCL",
@@ -165,78 +199,25 @@ const HMC6343Qwiic = () => (
     />
 
     <netlabel
+      net="V3_3"
+      schX={20.5}
+      schY={14}
+      anchorSide="bottom"
+      connectsTo={"JP1.pin2"}
+    />
+    <netlabel
       net="SCL"
-      schX={21.8}
-      schY={11.8}
-      anchorSide="left"
+      schX={19.5}
+      schY={11.5}
+      anchorSide="top"
       connectsTo={sel.R1.pin2}
     />
     <netlabel
       net="SDA"
-      schX={21.9}
-      schY={13.2}
-      anchorSide="left"
-      connectsTo={sel.R2.pin2}
-    />
-    <netlabel
-      net="V3_3"
-      schX={18.985}
-      schY={12.7}
-      anchorSide="bottom"
-      connectsTo={"JP1.pin2"}
-    />
-
-    <netlabel
-      net="V3_3"
-      schX={27.032}
-      schY={13.92}
-      anchorSide="bottom"
-      connectsTo="LED.pin2"
-    />
-
-    <solderjumper
-      name="LED"
-      connections={{ pin1: "R3.pin1" }}
-      bridgedPins={[["1"], ["2"]]}
-      schRotation={90}
-      pcbX={-6.668}
-      pcbY={-5.398}
-      schX={27.032}
-      schY={13.32}
-      footprint="solderjumper2_bridged12_pw0.66_pl1.270_p1"
-      pcbRotation={180}
-      layer="bottom"
-    />
-
-    <resistor
-      name="R3"
-      resistance="4.7k"
-      footprint="0603"
-      schX={27.032}
-      schY={12.22}
-      pcbX={-9.843}
-      pcbY={-6.348}
-      schRotation={-90}
-      connections={{ pin1: "LED.pin1", pin2: "D1.pin1" }}
-    />
-    <led
-      name="D1"
-      color="red"
-      footprint="0603"
-      schX={27.032}
-      schY={11.02}
-      schRotation={-90}
-      pcbX={-9.843}
-      pcbY={-4.761}
-      connections={{ pin2: "net.GND" }}
-    />
-
-    <netlabel
-      net="GND"
-      schX={27.032}
-      schY={10.32}
+      schX={21.5}
+      schY={11.5}
       anchorSide="top"
-      connectsTo={"D1.pin2"}
+      connectsTo={sel.R2.pin2}
     />
     <jumper
       name="J3"
@@ -245,7 +226,7 @@ const HMC6343Qwiic = () => (
       cadModel={null}
       schDirection="left"
       schPinArrangement={{
-        leftSide: {
+        rightSide: {
           direction: "bottom-to-top",
           pins: ["pin1", "pin2", "pin3", "pin4"],
         },
@@ -256,8 +237,8 @@ const HMC6343Qwiic = () => (
         pin3: ["SDA"],
         pin4: ["SCL"],
       }}
-      schX={22.2}
-      schY={4.7}
+      schX={5}
+      schY={12.7}
       pcbX={-1.08}
       pcbY={-11.43}
       connections={{
@@ -268,54 +249,33 @@ const HMC6343Qwiic = () => (
 
     <netlabel
       net="V3_3"
-      schX={21.1}
-      schY={5.2}
+      schX={5.9}
+      schY={13.2}
       anchorSide="bottom"
       connectsTo={"J3.pin2"}
     />
     <netlabel
       net="SDA"
-      schX={20.9}
-      schY={4.8}
-      anchorSide="right"
+      schX={6.2}
+      schY={12.8}
+      anchorSide="left"
       connectsTo={"J3.SDA"}
     />
     <netlabel
       net="SCL"
-      schX={20.9}
-      schY={5}
-      anchorSide="right"
+      schX={6.2}
+      schY={13}
+      anchorSide="left"
       connectsTo={"J3.SCL"}
     />
     <netlabel
       net="GND"
-      schX={21.1}
-      schY={4.1}
+      schX={5.9}
+      schY={12.1}
       anchorSide="top"
       connectsTo={"J3.GND"}
     />
 
-    <jumper
-      name="J4"
-      footprint="pinrow1_id1.016_od1.88_nosquareplating"
-      cadModel={null}
-      pcbX={5.08}
-      pcbY={-11.43}
-      schWidth={0.6}
-      schDirection="left"
-      schX={22.1}
-      schY={3.4}
-      connections={{
-        pin1: "net.DRDY",
-      }}
-    />
-    <netlabel
-      net="DRDY"
-      schX={21}
-      schY={3.4}
-      anchorSide="right"
-      connectsTo="J4.pin1"
-    />
     <hole diameter={3.1} pcbX={-10.16} pcbY={10.162} />
     <hole diameter={3.1} pcbX={10.16} pcbY={10.162} />
     <hole diameter={3.1} pcbX={-10.16} pcbY={-10.158} />
@@ -326,7 +286,7 @@ const HMC6343Qwiic = () => (
       fontSize={0.4}
       color="blue"
       schY={15.5}
-      schX={12}
+      schX={15}
     />
 
     <schematictext
@@ -334,7 +294,7 @@ const HMC6343Qwiic = () => (
       fontSize={0.4}
       color="blue"
       schY={15.5}
-      schX={21}
+      schX={20.5}
     />
 
     <schematictext
@@ -342,39 +302,15 @@ const HMC6343Qwiic = () => (
       fontSize={0.2}
       color="gray"
       schY={15}
-      schX={21}
+      schX={20.5}
     />
 
     <schematictext
-      text="Power LED"
+      text="Connectors"
       fontSize={0.4}
       color="blue"
       schY={15.5}
-      schX={27}
-    />
-
-    <schematictext
-      text="Cut jumper to turn off power LED"
-      fontSize={0.2}
-      color="gray"
-      schY={15}
-      schX={27}
-    />
-
-    <schematictext
-      text="Connectors"
-      fontSize={0.4}
-      color="blue"
-      schY={8}
-      schX={18}
-    />
-
-    <schematictext
-      text="Connectors"
-      fontSize={0.4}
-      color="blue"
-      schY={8}
-      schX={18}
+      schX={5}
     />
 
     <silkscreentext
