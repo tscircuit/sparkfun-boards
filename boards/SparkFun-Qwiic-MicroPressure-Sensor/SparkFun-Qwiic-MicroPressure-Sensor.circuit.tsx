@@ -330,6 +330,17 @@ export default () => {
         pcbY={-11.43}
       />
 
+      <silkscreentext text="SparkFun" fontSize={2} pcbX={0} pcbY={9} />
+
+      <silkscreentext
+        text="Qwiic Micro Pressure"
+        fontSize={1.5}
+        pcbX={0}
+        pcbY={7}
+      />
+
+      <silkscreentext text="Sensor" fontSize={1.5} pcbX={0} pcbY={5} />
+
       <hole diameter={3.302} pcbX={10.16} pcbY={-10.16} />
       <hole diameter={3.302} pcbX={-10.16} pcbY={-10.16} />
       <hole diameter={3.302} pcbX={-10.16} pcbY={10.16} />
