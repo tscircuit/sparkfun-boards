@@ -92,6 +92,13 @@ export const SM04B_SRSS_TB_LF__SN = (props: ChipProps<typeof pinLabels>) => {
               { x: 2.9600143999999773, y: -0.7443089000000782 },
             ]}
           />
+          <silkscreentext
+            text="{NAME}"
+            pcbX="0mm"
+            pcbY="-1.5mm"
+            fontSize="0.9mm"
+            anchorAlignment="center"
+          />
         </footprint>
       }
       cadModel={{
