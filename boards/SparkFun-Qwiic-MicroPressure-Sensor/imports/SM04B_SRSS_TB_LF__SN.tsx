@@ -95,7 +95,7 @@ export const SM04B_SRSS_TB_LF__SN = (props: ChipProps<typeof pinLabels>) => {
           <silkscreentext
             text="{NAME}"
             pcbX="0mm"
-            pcbY="-1.5mm"
+            pcbY="-1mm"
             fontSize="0.9mm"
             anchorAlignment="center"
           />
