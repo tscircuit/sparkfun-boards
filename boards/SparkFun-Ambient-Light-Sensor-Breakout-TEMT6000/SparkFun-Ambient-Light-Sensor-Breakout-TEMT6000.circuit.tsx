@@ -62,14 +62,14 @@ export default () => (
     <fiducial
       name="FD1"
       padDiameter="1mm"
-      soldermaskPullback="1mm"
+      soldermaskPullback="0.1mm"
       pcbX={-2}
       pcbY={-4}
     />
     <fiducial
       name="FD2"
       padDiameter="1mm"
-      soldermaskPullback="1mm"
+      soldermaskPullback="0.1mm"
       pcbX={4}
       pcbY={4}
     />
