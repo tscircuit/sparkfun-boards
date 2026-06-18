@@ -3,34 +3,27 @@ import { OutlineBuilder } from "../../util/OutlineBuilder"
 import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
 import { PiShimHeader } from "./imports/PiShimHeader"
 
-const boardCenter = { x: 5.08, y: 6.985 }
-
-const p = (x: number, y: number) => ({
-  x: x - boardCenter.x,
-  y: y - boardCenter.y,
-})
-
-const outline = new OutlineBuilder(p(8.89, 0).x, p(8.89, 0).y)
-  .lineTo(p(1.27, 0).x, p(1.27, 0).y)
-  .arcTo(p(0, 1.27).x, p(0, 1.27).y, { radius: 1.27, sweep: false })
-  .lineTo(p(0, 12.7).x, p(0, 12.7).y)
-  .arcTo(p(1.27, 13.97).x, p(1.27, 13.97).y, {
+const outline = new OutlineBuilder(3.81, -6.985)
+  .lineTo(-3.81, -6.985)
+  .arcTo(-5.08, -5.715, { radius: 1.27, sweep: false })
+  .lineTo(-5.08, 5.715)
+  .arcTo(-3.81, 6.985, {
     radius: 1.27,
     sweep: false,
   })
-  .lineTo(p(6.35, 13.97).x, p(6.35, 13.97).y)
-  .arcTo(p(7.62, 12.7).x, p(7.62, 12.7).y, {
+  .lineTo(1.27, 6.985)
+  .arcTo(2.54, 5.715, {
     radius: 1.27,
     sweep: false,
   })
-  .lineTo(p(7.62, 9.1948).x, p(7.62, 9.1948).y)
-  .lineTo(p(9.525, 9.1948).x, p(9.525, 9.1948).y)
-  .arcTo(p(10.16, 8.5852).x, p(10.16, 8.5852).y, {
+  .lineTo(2.54, 2.2098)
+  .lineTo(4.445, 2.2098)
+  .arcTo(5.08, 1.6002, {
     radius: 0.635,
     sweep: true,
   })
-  .lineTo(p(10.16, 1.27).x, p(10.16, 1.27).y)
-  .arcTo(p(8.89, 0).x, p(8.89, 0).y, { radius: 1.27, sweep: false })
+  .lineTo(5.08, -5.715)
+  .arcTo(3.81, -6.985, { radius: 1.27, sweep: false })
   .toArray()
 
 const ap2112PinLabels = {
@@ -42,15 +35,15 @@ const ap2112PinLabels = {
 } as const
 
 export default () => (
-  <board outline={outline} routingDisabled>
+  <board outline={outline}>
     <schematicsection name="raspberry_pi" displayName="Raspberry Pi" />
     <schematicsection name="power" displayName="Power" />
     <schematicsection name="i2c" displayName="I2C Connections" />
 
     <PiShimHeader
       name="J9"
-      pcbX={p(3.81, 11.43).x}
-      pcbY={p(3.81, 11.43).y}
+      pcbX={-1.27}
+      pcbY={4.445}
       schSectionName="raspberry_pi"
       schX={-8}
       schY={0}
@@ -64,8 +57,8 @@ export default () => (
     />
     <SM04B_SRSS_TB_LF__SN_
       name="J1"
-      pcbX={p(4.9784, 5.588).x - 2.01}
-      pcbY={p(4.9784, 5.588).y}
+      pcbX={-2.1116}
+      pcbY={-1.397}
       pcbRotation={270}
       schSectionName="i2c"
       schX={8}
@@ -88,8 +81,8 @@ export default () => (
       pinLabels={ap2112PinLabels}
       manufacturerPartNumber="AP2112K-3.3TRG1"
       footprint="SOT23-5"
-      pcbX={p(7.9756, 5.0546).x}
-      pcbY={p(7.9756, 5.0546).y}
+      pcbX={2.8956}
+      pcbY={-1.9304}
       pcbRotation={90}
       schSectionName="power"
       schX={0}
@@ -117,8 +110,8 @@ export default () => (
       name="C1"
       capacitance="1.0uF"
       footprint="0603"
-      pcbX={p(7.493, 2.3114).x}
-      pcbY={p(7.493, 2.3114).y - 0.04}
+      pcbX={2.413}
+      pcbY={-4.7136}
       schSectionName="power"
       schX={-2.3}
       schY={0}
@@ -132,8 +125,8 @@ export default () => (
       name="C3"
       capacitance="1.0uF"
       footprint="0603"
-      pcbX={p(7.9502, 7.874).x}
-      pcbY={p(7.9502, 7.874).y}
+      pcbX={2.8702}
+      pcbY={0.889}
       schSectionName="power"
       schX={2.6}
       schY={0}
@@ -144,18 +137,8 @@ export default () => (
       }}
     />
 
-    <fiducial
-      name="FD1"
-      pcbX={p(5.08, 13.3604).x}
-      pcbY={p(5.08, 13.3604).y}
-      padDiameter="0.635mm"
-    />
-    <fiducial
-      name="FD2"
-      pcbX={p(0.6096, 1.6764).x}
-      pcbY={p(0.6096, 1.6764).y}
-      padDiameter="0.635mm"
-    />
+    <fiducial name="FD1" pcbX={0} pcbY={6.3754} padDiameter="0.635mm" />
+    <fiducial name="FD2" pcbX={-4.4704} pcbY={-5.3086} padDiameter="0.635mm" />
 
     <schematictext text="3.3V/600mA" schX={0} schY={-1.2} fontSize={0.24} />
 
