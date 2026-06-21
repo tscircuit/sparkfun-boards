@@ -53,6 +53,7 @@ export default () => (
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
         GND: sel.net.GND,
+        NC: sel.net().NC,
       }}
     />
     <SM04B_SRSS_TB_LF__SN_
