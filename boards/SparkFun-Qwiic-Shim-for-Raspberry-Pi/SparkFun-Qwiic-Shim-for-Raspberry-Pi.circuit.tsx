@@ -77,6 +77,13 @@ export default () => (
         SCL: sel.net.SCL,
       }}
     />
+    <netlabel
+      net="V3_3"
+      schX={10}
+      schY={0.5}
+      connectsTo={sel.J1.pin2}
+      anchorSide="bottom"
+    />
     <chip
       name="U2"
       pinLabels={ap2112PinLabels}
