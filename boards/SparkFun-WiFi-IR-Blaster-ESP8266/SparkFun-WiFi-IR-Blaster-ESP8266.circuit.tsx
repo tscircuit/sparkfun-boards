@@ -19,7 +19,7 @@ const gpioHeaderLabels = [
 
 export default () => {
   return (
-    <board width={25.4} height={33.02} routingDisabled>
+    <board width={25.4} height={33.02}>
       {/* Sections mirror the SparkFun reference schematic */}
       <schematicsection
         name="vreg"
