@@ -116,8 +116,8 @@ export default () => (
       pcbX={0}
       pcbY={2.222}
       pcbRotation={90}
-      schX={-4}
-      schY={4}
+      schX={-2.8}
+      schY={0.6}
       schRotation={-90}
       supplierPartNumbers={{ jlcpcb: ["C14663"] }}
     />
@@ -129,8 +129,8 @@ export default () => (
       pcbX={0}
       pcbY={-0.953}
       pcbRotation={90}
-      schX={3.5}
-      schY={3.4}
+      schX={2.8}
+      schY={0.6}
       schRotation={-90}
       supplierPartNumbers={{ jlcpcb: ["C14663"] }}
     />
@@ -142,8 +142,8 @@ export default () => (
       pcbX={5.398}
       pcbY={5.7}
       pcbRotation={90}
-      schX={4}
-      schY={1.8}
+      schX={4.2}
+      schY={0.3}
       schRotation={-90}
       connections={{ pin1: sel.net().GND }}
       supplierPartNumbers={{ jlcpcb: ["C14663"] }}
@@ -156,8 +156,8 @@ export default () => (
       pcbX={5.398}
       pcbY={-5.7}
       pcbRotation={90}
-      schX={4}
-      schY={-1}
+      schX={5.6}
+      schY={-0.3}
       schRotation={-90}
       connections={{ pin2: sel.net().GND }}
       supplierPartNumbers={{ jlcpcb: ["C14663"] }}
@@ -172,8 +172,8 @@ export default () => (
       pcbX={8.5}
       pcbY={5.7}
       pcbRotation={270}
-      schX={-5}
-      schY={5}
+      schX={-2}
+      schY={2.3}
       schRotation={90}
       connections={{ pin1: sel.net().SHDN, pin2: sel.net().VCC }}
       supplierPartNumbers={{ jlcpcb: ["C25804"] }}
@@ -189,8 +189,9 @@ export default () => (
       pcbX={2.286}
       pcbY={4.699}
       pcbRotation={90}
-      schX={-5}
-      schY={-5}
+      schX={-2.8}
+      schY={-1.4}
+      schRotation={180}
       pinLabels={{ pin1: ["GND"], pin2: ["EN"] }}
       connections={{ pin1: sel.net().GND, pin2: sel.net().EN }}
     />
@@ -230,8 +231,8 @@ export default () => (
 
     <silkscreentext
       text="SparkFun RS232 Breakout"
-      pcbX={0}
-      pcbY={-14.6}
+      pcbX={6}
+      pcbY={-9}
       fontSize={0.8}
     />
   </board>
