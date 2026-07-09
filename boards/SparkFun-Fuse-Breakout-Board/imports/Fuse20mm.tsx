@@ -10,8 +10,8 @@ const pinLabels = {
 export const Fuse20mm = (props: ChipProps<typeof pinLabels>) => (
   <chip
     pinLabels={pinLabels}
-    supplierPartNumbers={{ jlcpcb: ["C70076"] }}
-    manufacturerPartNumber="FUSEX20MM"
+    supplierPartNumbers={{ jlcpcb: ["C3131"] }}
+    manufacturerPartNumber="5x20-BLX-A"
     footprint={
       <footprint>
         <platedhole

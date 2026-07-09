@@ -5,8 +5,8 @@ const pinLabels = { pin1: ["pin1"], pin2: ["pin2"] } as const
 export const PptcFusePth = (props: ChipProps<typeof pinLabels>) => (
   <chip
     pinLabels={pinLabels}
-    supplierPartNumbers={{ jlcpcb: ["C70076"] }}
-    manufacturerPartNumber="72V/0.25A_PTH"
+    supplierPartNumbers={{ jlcpcb: ["C192570"] }}
+    manufacturerPartNumber="FRX025-60F"
     footprint={
       <footprint>
         <platedhole

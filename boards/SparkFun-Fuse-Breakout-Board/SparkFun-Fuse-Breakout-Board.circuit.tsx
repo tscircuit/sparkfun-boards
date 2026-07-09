@@ -1,32 +1,35 @@
+import { OutlineBuilder } from "../../util/OutlineBuilder"
 import { sel } from "tscircuit"
 import { Fuse20mm } from "./imports/Fuse20mm"
 import { PowerJackPthLock } from "./imports/PowerJackPthLock"
 import { PptcFusePth } from "./imports/PptcFusePth"
 import { ScrewTerminal5mm2 } from "./imports/ScrewTerminal5mm2"
 
-const outline = [
-  { x: -31.1785, y: -6.35 },
-  { x: -32.4485, y: -5.08 },
-  { x: -32.4485, y: 5.08 },
-  { x: -31.1785, y: 6.35 },
-  { x: -11.8745, y: 6.35 },
-  { x: -10.0965, y: 4.572 },
-  { x: -8.3185, y: 6.35 },
-  { x: 19.7485, y: 6.35 },
-  { x: 21.5265, y: 4.572 },
-  { x: 23.3045, y: 6.35 },
-  { x: 31.1785, y: 6.35 },
-  { x: 32.4485, y: 5.08 },
-  { x: 32.4485, y: -5.08 },
-  { x: 31.1785, y: -6.35 },
-  { x: 23.3045, y: -6.35 },
-  { x: 21.5265, y: -4.572 },
-  { x: 19.7485, y: -6.35 },
-  { x: -8.3185, y: -6.35 },
-  { x: -10.0965, y: -4.572 },
-  { x: -11.8745, y: -6.35 },
-  { x: -31.1785, y: -6.35 },
-]
+// Board: 65mm x 12.7mm with four semi-circle mounting cutouts
+// Cutout centers at roughly x=±21.526mm from center, on both ±Y edges
+const R = 1.778 // semi-circle notch radius (≈1/14 inch)
+const outline = new OutlineBuilder(-32.4485, -5.08)
+  .lineTo(-32.4485, 5.08)
+  .lineTo(-31.1785, 6.35)
+  .lineTo(-11.8745, 6.35)
+  .arcTo(-10.0965, 6.35, { radius: R, sweep: false })
+  .arcTo(-8.3185, 6.35, { radius: R, sweep: false })
+  .lineTo(19.7485, 6.35)
+  .arcTo(21.5265, 6.35, { radius: R, sweep: false })
+  .arcTo(23.3045, 6.35, { radius: R, sweep: false })
+  .lineTo(31.1785, 6.35)
+  .lineTo(32.4485, 5.08)
+  .lineTo(32.4485, -5.08)
+  .lineTo(31.1785, -6.35)
+  .lineTo(23.3045, -6.35)
+  .arcTo(21.5265, -6.35, { radius: R, sweep: false })
+  .arcTo(19.7485, -6.35, { radius: R, sweep: false })
+  .lineTo(-8.3185, -6.35)
+  .arcTo(-10.0965, -6.35, { radius: R, sweep: false })
+  .arcTo(-11.8745, -6.35, { radius: R, sweep: false })
+  .lineTo(-31.1785, -6.35)
+  .lineTo(-32.4485, -5.08)
+  .toArray()
 
 export default () => (
   <board outline={outline}>
@@ -167,6 +170,71 @@ export default () => (
       layer="bottom"
       fontSize={1}
       anchorAlignment="center"
+    />
+    {/* ── Schematic section labels ── */}
+    <schematictext
+      text="Power Input"
+      fontSize={0.2}
+      schX={-6.5}
+      schY={-3.5}
+      anchor="left"
+      color="gray"
+    />
+    <schematictext
+      text="J1: Screw Terminal (VIN/GND)"
+      fontSize={0.18}
+      schX={-6.5}
+      schY={-3.8}
+      anchor="left"
+      color="gray"
+    />
+    <schematictext
+      text="J2: Barrel Jack (VIN/GND)"
+      fontSize={0.18}
+      schX={-6.5}
+      schY={-4.05}
+      anchor="left"
+      color="gray"
+    />
+    <schematictext
+      text="Fuse Section"
+      fontSize={0.2}
+      schX={-1}
+      schY={-3.5}
+      anchor="left"
+      color="gray"
+    />
+    <schematictext
+      text="F1: 5x20mm Glass Fuse (5x20-BLX-A)"
+      fontSize={0.18}
+      schX={-1}
+      schY={-3.8}
+      anchor="left"
+      color="gray"
+    />
+    <schematictext
+      text="F2: PPTC Resettable Fuse (FRX025-60F, 60V/0.25A)"
+      fontSize={0.18}
+      schX={-1}
+      schY={-4.05}
+      anchor="left"
+      color="gray"
+    />
+    <schematictext
+      text="Power Output"
+      fontSize={0.2}
+      schX={5}
+      schY={-3.5}
+      anchor="left"
+      color="gray"
+    />
+    <schematictext
+      text="J3: Screw Terminal (VOUT/GND)"
+      fontSize={0.18}
+      schX={5}
+      schY={-3.8}
+      anchor="left"
+      color="gray"
     />
     <netlabel
       net="VIN"
