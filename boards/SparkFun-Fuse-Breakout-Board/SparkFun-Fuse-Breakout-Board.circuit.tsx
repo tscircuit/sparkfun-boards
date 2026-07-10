@@ -33,13 +33,14 @@ const outline = new OutlineBuilder(-32.4485, -5.08)
 
 export default () => (
   <board outline={outline}>
+    {/* Input Section Components */}
     <PowerJackPthLock
       name="J2"
       pcbX={-28.5115}
       pcbY={-0.127}
       pcbRotation={270}
-      schX={-6.5}
-      schY={-1.3}
+      schX={-5.5}
+      schY={-1.5}
       connections={{ PWR: "net.VIN", GND: "net.GND", GNDBREAK: "net.GND" }}
     />
     <ScrewTerminal5mm2
@@ -47,21 +48,25 @@ export default () => (
       pcbX={-28.6385}
       pcbY={2.54}
       pcbRotation={270}
-      schX={-6.6}
-      schY={1.8}
+      schX={-5.5}
+      schY={1.5}
       schRotation={90}
       connections={{ pin1: "net.VIN", pin2: "net.GND" }}
     />
+
+    {/* Output Section Components */}
     <ScrewTerminal5mm2
       name="J3"
       pcbX={28.5115}
       pcbY={-2.54}
       pcbRotation={90}
-      schX={6.5}
-      schY={1.8}
+      schX={5.5}
+      schY={1.5}
       schRotation={270}
       connections={{ pin1: "net.VOUT", pin2: "net.GND" }}
     />
+
+    {/* Fuse Section Components */}
     <Fuse20mm
       name="F1"
       displayName="FUSEX20MM"
@@ -69,7 +74,7 @@ export default () => (
       pcbY={0}
       pcbRotation={270}
       schX={0}
-      schY={2.6}
+      schY={2.5}
       connections={{
         pin1: "net.VIN",
         pin2: "net.VIN",
@@ -86,6 +91,8 @@ export default () => (
       schY={0}
       connections={{ pin1: "net.VIN", pin2: "net.VOUT" }}
     />
+
+    {/* PCB Layout details */}
     <pcbtrace
       layer="top"
       thickness="0.508mm"
@@ -105,6 +112,8 @@ export default () => (
         { x: 16.8275, y: 2.54 },
       ]}
     />
+
+    {/* PCB Silkscreen texts */}
     <silkscreentext
       text="VIN"
       pcbX={-9.97}
@@ -171,104 +180,116 @@ export default () => (
       fontSize={1}
       anchorAlignment="center"
     />
-    {/* ── Schematic section labels ── */}
-    <schematictext
-      text="Power Input"
-      fontSize={0.2}
-      schX={-6.5}
-      schY={-3.5}
-      anchor="left"
+
+    {/* Schematic Dividers */}
+    <schematicline
+      x1={-3.5}
+      y1={5.5}
+      x2={-3.5}
+      y2={-5.5}
+      isDashed
       color="gray"
     />
+    <schematicline x1={3.5} y1={5.5} x2={3.5} y2={-5.5} isDashed color="gray" />
+
+    {/* Column Headers */}
     <schematictext
-      text="J1: Screw Terminal (VIN/GND)"
-      fontSize={0.18}
-      schX={-6.5}
-      schY={-3.8}
-      anchor="left"
-      color="gray"
+      text="Input"
+      fontSize={0.25}
+      schX={-5.5}
+      schY={5}
+      anchor="center"
+      color="brown"
     />
     <schematictext
-      text="J2: Barrel Jack (VIN/GND)"
-      fontSize={0.18}
-      schX={-6.5}
-      schY={-4.05}
-      anchor="left"
-      color="gray"
+      text="Fuse"
+      fontSize={0.25}
+      schX={0}
+      schY={5}
+      anchor="center"
+      color="brown"
     />
     <schematictext
-      text="Fuse Section"
-      fontSize={0.2}
-      schX={-1}
-      schY={-3.5}
-      anchor="left"
-      color="gray"
+      text="Output"
+      fontSize={0.25}
+      schX={5.5}
+      schY={5}
+      anchor="center"
+      color="brown"
     />
-    <schematictext
-      text="F1: 5x20mm Glass Fuse (5x20-BLX-A)"
-      fontSize={0.18}
-      schX={-1}
-      schY={-3.8}
-      anchor="left"
-      color="gray"
-    />
-    <schematictext
-      text="F2: PPTC Resettable Fuse (FRX025-60F, 60V/0.25A)"
-      fontSize={0.18}
-      schX={-1}
-      schY={-4.05}
-      anchor="left"
-      color="gray"
-    />
-    <schematictext
-      text="Power Output"
-      fontSize={0.2}
-      schX={5}
-      schY={-3.5}
-      anchor="left"
-      color="gray"
-    />
-    <schematictext
-      text="J3: Screw Terminal (VOUT/GND)"
-      fontSize={0.18}
-      schX={5}
-      schY={-3.8}
-      anchor="left"
-      color="gray"
-    />
+
+    {/* Net Labels - Input Section */}
     <netlabel
       net="VIN"
-      connectsTo={[
-        sel.J2.PWR,
-        sel.J1.pin1,
-        sel.F1.pin1,
-        sel.F1.pin2,
-        sel.F2.pin1,
-      ]}
-      schX={-2.5}
-      schY={1.2}
-    />
-    <netlabel
-      net="VOUT"
-      connectsTo={[
-        sel.J3.pin1,
-        (sel.F1 as any).pin3,
-        (sel.F1 as any).pin4,
-        sel.F2.pin2,
-      ]}
-      schX={2.5}
-      schY={1.2}
+      connectsTo={[sel.J1.pin1, sel.J2.PWR]}
+      schX={-4.5}
+      schY={3.2}
+      anchorSide="bottom"
     />
     <netlabel
       net="GND"
-      connectsTo={[
-        sel.J2.GND,
-        (sel.J2 as any).GNDBREAK,
-        sel.J1.pin2,
-        sel.J3.pin2,
-      ]}
-      schX={-5.5}
+      connectsTo={[sel.J1.pin2, sel.J2.GND, (sel.J2 as any).GNDBREAK]}
+      schX={-4.5}
+      schY={-3.2}
+      anchorSide="top"
+    />
+
+    {/* Net Labels - Fuse Section */}
+    <netlabel
+      net="VIN"
+      connectsTo={[sel.F1.pin1, sel.F1.pin2, sel.F2.pin1]}
+      schX={-2.2}
+      schY={1.25}
+      anchorSide="right"
+    />
+    <netlabel
+      net="VOUT"
+      connectsTo={[(sel.F1 as any).pin3, (sel.F1 as any).pin4, sel.F2.pin2]}
+      schX={2.2}
+      schY={1.25}
+      anchorSide="left"
+    />
+
+    {/* Net Labels - Output Section */}
+    <netlabel
+      net="VOUT"
+      connectsTo={[sel.J3.pin1]}
+      schX={4.5}
+      schY={3.2}
+      anchorSide="bottom"
+    />
+    <netlabel
+      net="GND"
+      connectsTo={[sel.J3.pin2]}
+      schX={4.5}
+      schY={-3.2}
+      anchorSide="top"
+    />
+
+    {/* Footnotes in Fuse Column */}
+    <schematictext
+      text="Note: Depending on your personal preference,"
+      fontSize={0.14}
+      schX={0}
+      schY={-2.2}
+      anchor="center"
+      color="gray"
+    />
+    <schematictext
+      text="chose between a glass ferrule type fuse or a"
+      fontSize={0.14}
+      schX={0}
+      schY={-2.5}
+      anchor="center"
+      color="gray"
+    />
+    <schematictext
+      text="resettable fuse here"
+      fontSize={0.14}
+      schX={0}
       schY={-2.8}
+      anchor="center"
+      color="gray"
     />
   </board>
 )
