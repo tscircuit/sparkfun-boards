@@ -219,52 +219,16 @@ export default () => (
     />
 
     {/* Net Labels - Input Section */}
-    <netlabel
-      net="VIN"
-      connectsTo={[sel.J1.pin1, sel.J2.PWR]}
-      schX={-4.5}
-      schY={3.2}
-      anchorSide="bottom"
-    />
-    <netlabel
-      net="GND"
-      connectsTo={[sel.J1.pin2, sel.J2.GND, (sel.J2 as any).GNDBREAK]}
-      schX={-4.5}
-      schY={-3.2}
-      anchorSide="top"
-    />
+    <netlabel net="VIN" connectsTo={sel.J1.pin1} anchorSide="bottom" />
+    <netlabel net="GND" connectsTo={sel.J1.pin2} anchorSide="top" />
 
     {/* Net Labels - Fuse Section */}
-    <netlabel
-      net="VIN"
-      connectsTo={[sel.F1.pin1, sel.F1.pin2, sel.F2.pin1]}
-      schX={-2.2}
-      schY={1.25}
-      anchorSide="right"
-    />
-    <netlabel
-      net="VOUT"
-      connectsTo={[(sel.F1 as any).pin3, (sel.F1 as any).pin4, sel.F2.pin2]}
-      schX={2.2}
-      schY={1.25}
-      anchorSide="left"
-    />
+    <netlabel net="VIN" connectsTo={sel.F2.pin1} anchorSide="right" />
+    <netlabel net="VOUT" connectsTo={sel.F2.pin2} anchorSide="left" />
 
     {/* Net Labels - Output Section */}
-    <netlabel
-      net="VOUT"
-      connectsTo={[sel.J3.pin1]}
-      schX={4.5}
-      schY={3.2}
-      anchorSide="bottom"
-    />
-    <netlabel
-      net="GND"
-      connectsTo={[sel.J3.pin2]}
-      schX={4.5}
-      schY={-3.2}
-      anchorSide="top"
-    />
+    <netlabel net="VOUT" connectsTo={sel.J3.pin1} anchorSide="bottom" />
+    <netlabel net="GND" connectsTo={sel.J3.pin2} anchorSide="top" />
 
     {/* Footnotes in Fuse Column */}
     <schematictext
