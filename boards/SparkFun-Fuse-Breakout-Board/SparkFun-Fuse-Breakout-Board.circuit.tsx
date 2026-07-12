@@ -5,7 +5,7 @@ import { PptcFusePth } from "./imports/PptcFusePth"
 import { ScrewTerminal5mm2 } from "./imports/ScrewTerminal5mm2"
 
 // Board: 65mm x 12.7mm with four semi-circle mounting cutouts
-// Static pre-computed rounded coordinates to prevent floating point differences across OS platforms
+// Static pre-computed rounded coordinates to prevent floating point differences across OS platforms (macOS vs Linux)
 const outline = [
   { x: -32.4485, y: -5.08 },
   { x: -32.4485, y: 5.08 },
