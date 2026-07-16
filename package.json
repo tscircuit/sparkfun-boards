@@ -13,9 +13,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tscircuit/props": "^0.0.538",
+    "@tscircuit/props": "^0.0.578",
     "@types/bun": "latest",
-    "tscircuit": "^0.0.1787"
+    "tscircuit": "^0.0.2103"
   },
   "peerDependencies": {
     "typescript": "^5"
