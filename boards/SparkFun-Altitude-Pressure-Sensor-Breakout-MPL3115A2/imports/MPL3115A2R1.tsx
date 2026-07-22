@@ -14,7 +14,6 @@ const pinLabels = {
 export const MPL3115A2R1 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
-      schWidth={1.5}
       pinLabels={pinLabels}
       supplierPartNumbers={{
         jlcpcb: ["C54429"],
@@ -24,65 +23,65 @@ export const MPL3115A2R1 = (props: ChipProps<typeof pinLabels>) => {
         <footprint>
           <smtpad
             portHints={["pin1"]}
-            pcbX="-1.8750279999999862mm"
-            pcbY="-1.2999719999999968mm"
-            width="0.5999987999999999mm"
+            pcbX="-1.875028mm"
+            pcbY="-1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin2"]}
-            pcbX="-0.62509399999999mm"
-            pcbY="-1.2999719999999968mm"
-            width="0.5999987999999999mm"
+            pcbX="-0.625094mm"
+            pcbY="-1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin3"]}
-            pcbX="0.6250940000000185mm"
-            pcbY="-1.2999719999999968mm"
-            width="0.5999987999999999mm"
+            pcbX="0.625094mm"
+            pcbY="-1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin4"]}
-            pcbX="1.8750280000000146mm"
-            pcbY="-1.2999719999999968mm"
-            width="0.5999987999999999mm"
+            pcbX="1.875028mm"
+            pcbY="-1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin5"]}
-            pcbX="1.8750280000000146mm"
-            pcbY="1.299972000000004mm"
-            width="0.5999987999999999mm"
+            pcbX="1.875028mm"
+            pcbY="1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin6"]}
-            pcbX="0.6250940000000185mm"
-            pcbY="1.299972000000004mm"
-            width="0.5999987999999999mm"
+            pcbX="0.625094mm"
+            pcbY="1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin7"]}
-            pcbX="-0.62509399999999mm"
-            pcbY="1.299972000000004mm"
-            width="0.5999987999999999mm"
+            pcbX="-0.625094mm"
+            pcbY="1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin8"]}
-            pcbX="-1.8750279999999862mm"
-            pcbY="1.299972000000004mm"
-            width="0.5999987999999999mm"
+            pcbX="-1.875028mm"
+            pcbY="1.299972mm"
+            width="0.5999988mm"
             height="1.499997mm"
             shape="rect"
           />
@@ -109,13 +108,31 @@ export const MPL3115A2R1 = (props: ChipProps<typeof pinLabels>) => {
               { x: -2.598546999999968, y: -2.0192491999999973 },
             ]}
           />
+          <silkscreentext
+            text="{NAME}"
+            pcbX="0.011176mm"
+            pcbY="3.050796mm"
+            anchorAlignment="center"
+            fontSize="1mm"
+          />
+          <courtyardoutline
+            outline={[
+              { x: -2.943923999999953, y: 2.3007960000000125 },
+              { x: 2.9662759999999935, y: 2.3007960000000125 },
+              { x: 2.9662759999999935, y: -2.4410039999999853 },
+              { x: -2.943923999999953, y: -2.4410039999999853 },
+              { x: -2.943923999999953, y: 2.3007960000000125 },
+            ]}
+          />
         </footprint>
       }
       cadModel={{
         objUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=672fc546baaf493a9f668044721589aa&pn=C54429",
-        rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: 0, y: 0, z: 0 },
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C54429.obj?uuid=672fc546baaf493a9f668044721589aa",
+        stepUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C54429.step?uuid=672fc546baaf493a9f668044721589aa",
+        pcbRotationOffset: 0,
+        modelOriginPosition: { x: 0, y: 0.00007619999999519678, z: 0 },
       }}
       {...props}
     />
