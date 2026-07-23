@@ -17,17 +17,6 @@ const outline = new OutlineBuilder(-17.145, 14.2875)
 
 export default () => (
   <board outline={outline}>
-    <schematicsection
-      name="atx"
-      displayName="4-Pin Right Angle or Vertical Power Connector"
-    />
-    <schematicsection name="screw" displayName="5mm Screw Terminals" />
-    <schematicsection
-      name="smd"
-      displayName="0.1\u0022 SMD Right Angle Header Pins"
-    />
-    <schematicsection name="pth" displayName="0.1\u0022 PTH Header Pins" />
-
     {/* Standoff / Mounting Holes */}
     <hole name="H1" diameter="3.302mm" pcbX={-14.605} pcbY={14.2875} />
     <hole name="H2" diameter="3.302mm" pcbX={-12.7} pcbY={-14.1605} />
@@ -35,6 +24,13 @@ export default () => (
     <hole name="H4" diameter="3.302mm" pcbX={14.605} pcbY={14.2875} />
 
     {/* Section 1: ATX Power Connector */}
+    <schematictext
+      text="4-Pin Right Angle or Vertical Power Connector"
+      schX={-5.5}
+      schY={4.5}
+      fontSize={0.24}
+      color="brown"
+    />
     <COMPUTER_PERIPHERAL_POWER
       name="ATX_POWER_CONNECTOR"
       pcbX={0.0}
@@ -46,55 +42,61 @@ export default () => (
         pin3: "net.GND",
         pin4: "net.V5V",
       }}
-      schSectionName="atx"
+      schX={-5.5}
+      schY={1.5}
       schPinArrangement={{
-        rightSide: {
+        leftSide: {
           direction: "top-to-bottom",
           pins: ["pin1", "pin2", "pin3", "pin4"],
         },
       }}
     />
 
-    {/* Note text for ATX Power Connector */}
-    <group schSectionName="atx">
-      <schematictext
-        text="Note: The power connector's package"
-        schX={0}
-        schY={-3}
-        fontSize={0.16}
-        color="gray"
-      />
-      <schematictext
-        text="has been adjusted for the vertical"
-        schX={0}
-        schY={-3.3}
-        fontSize={0.16}
-        color="gray"
-      />
-      <schematictext
-        text="mount as well! Just follow the dashed"
-        schX={0}
-        schY={-3.6}
-        fontSize={0.16}
-        color="gray"
-      />
-      <schematictext
-        text="silkscreen that outlines the vertical"
-        schX={0}
-        schY={-3.9}
-        fontSize={0.16}
-        color="gray"
-      />
-      <schematictext
-        text="mount connector."
-        schX={0}
-        schY={-4.2}
-        fontSize={0.16}
-        color="gray"
-      />
-    </group>
+    {/* Note text for ATX Power Connector (shifted down to schY=-3.5 to clear the V5V trace wire at schY=-1.8) */}
+    <schematictext
+      text="Note: The power connector's package"
+      schX={-5.5}
+      schY={-3.5}
+      fontSize={0.16}
+      color="gray"
+    />
+    <schematictext
+      text="has been adjusted for the vertical"
+      schX={-5.5}
+      schY={-3.8}
+      fontSize={0.16}
+      color="gray"
+    />
+    <schematictext
+      text="mount as well! Just follow the dashed"
+      schX={-5.5}
+      schY={-4.1}
+      fontSize={0.16}
+      color="gray"
+    />
+    <schematictext
+      text="silkscreen that outlines the vertical"
+      schX={-5.5}
+      schY={-4.4}
+      fontSize={0.16}
+      color="gray"
+    />
+    <schematictext
+      text="mount connector."
+      schX={-5.5}
+      schY={-4.7}
+      fontSize={0.16}
+      color="gray"
+    />
 
     {/* Section 2: 5mm Screw Terminals */}
+    <schematictext
+      text="5mm Screw Terminals"
+      schX={0.5}
+      schY={4.5}
+      fontSize={0.24}
+      color="brown"
+    />
     <ScrewTerminal5mm2
       name="J1"
       pcbX={2.54}
@@ -104,13 +106,8 @@ export default () => (
         pin1: "net.GND",
         pin2: "net.V12V",
       }}
-      schSectionName="screw"
-      schPinArrangement={{
-        rightSide: {
-          direction: "top-to-bottom",
-          pins: ["pin2", "pin1"],
-        },
-      }}
+      schX={0.5}
+      schY={2.2}
     />
     <ScrewTerminal5mm2
       name="J2"
@@ -121,16 +118,26 @@ export default () => (
         pin1: "net.V5V",
         pin2: "net.GND",
       }}
-      schSectionName="screw"
-      schPinArrangement={{
-        rightSide: {
-          direction: "top-to-bottom",
-          pins: ["pin1", "pin2"],
-        },
-      }}
+      schX={0.5}
+      schY={-1.8}
+    />
+    {/* Explicit netlabel for J2 pin 2 GND to shift GND symbol right and avoid overlap with SCREWTERMINAL-5MM-2 text */}
+    <netlabel
+      net="GND"
+      connection="J2.pin2"
+      schX={2.2}
+      schY={-1.8}
+      anchorSide="left"
     />
 
     {/* Section 3: 0.1" SMD Right Angle Header Pins */}
+    <schematictext
+      text='0.1" SMD Right Angle Header Pins'
+      schX={6.5}
+      schY={5.0}
+      fontSize={0.24}
+      color="brown"
+    />
     <CONN_04_SMD_RA_MALE
       name="J4"
       pcbX={0.0}
@@ -142,16 +149,18 @@ export default () => (
         pin3: "net.GND",
         pin4: "net.V12V",
       }}
-      schSectionName="smd"
-      schPinArrangement={{
-        rightSide: {
-          direction: "top-to-bottom",
-          pins: ["pin4", "pin3", "pin2", "pin1"],
-        },
-      }}
+      schX={6.5}
+      schY={3.0}
     />
 
     {/* Section 4: 0.1" PTH Header Pins */}
+    <schematictext
+      text='0.1" PTH Header Pins'
+      schX={6.5}
+      schY={-1.0}
+      fontSize={0.24}
+      color="brown"
+    />
     <jumper
       name="J3"
       pcbX={-3.81}
@@ -165,23 +174,33 @@ export default () => (
         pin3: "net.GND",
         pin4: "net.V12V",
       }}
-      schSectionName="pth"
-      schPinArrangement={{
-        rightSide: {
-          direction: "top-to-bottom",
-          pins: ["pin4", "pin3", "pin2", "pin1"],
-        },
-      }}
+      schX={6.5}
+      schY={-3.0}
+    />
+    {/* Explicit netlabels for J3 pin 1 (V5V) and pin 2 (GND) to prevent bottom text overlap */}
+    <netlabel
+      net="V5V"
+      connection="J3.pin1"
+      schX={8.0}
+      schY={-3.6}
+      anchorSide="left"
+    />
+    <netlabel
+      net="GND"
+      connection="J3.pin2"
+      schX={8.0}
+      schY={-2.6}
+      anchorSide="left"
     />
 
-    {/* Explicit PCB Traces (replacing schematic traces) */}
-    <pcbtrace from="ATX_POWER_CONNECTOR.pin4" to="J2.pin1" width="1.27mm" />
-    <pcbtrace from="J2.pin1" to="J3.pin1" width="1.27mm" />
-    <pcbtrace from="J3.pin1" to="J4.pin1" width="1.27mm" />
+    {/* Explicit Routed Traces for 5V and 12V with 1.27mm width */}
+    <trace from="ATX_POWER_CONNECTOR.pin4" to="J2.pin1" width="1.27mm" />
+    <trace from="J2.pin1" to="J3.pin1" width="1.27mm" />
+    <trace from="J3.pin1" to="J4.pin1" width="1.27mm" />
 
-    <pcbtrace from="ATX_POWER_CONNECTOR.pin1" to="J1.pin2" width="1.27mm" />
-    <pcbtrace from="J1.pin2" to="J3.pin4" width="1.27mm" />
-    <pcbtrace from="J3.pin4" to="J4.pin4" width="1.27mm" />
+    <trace from="ATX_POWER_CONNECTOR.pin1" to="J1.pin2" width="1.27mm" />
+    <trace from="J1.pin2" to="J3.pin4" width="1.27mm" />
+    <trace from="J3.pin4" to="J4.pin4" width="1.27mm" />
 
     {/* Ground copper pours on both layers */}
     <copperpour connectsTo="net.GND" layer="top" />
