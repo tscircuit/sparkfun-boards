@@ -17,31 +17,22 @@ const outline = new OutlineBuilder(-17.145, 14.2875)
 
 export default () => (
   <board outline={outline}>
-    {/* Schematic Sections */}
-    <schematicsection
-      name="atx_power"
-      displayName="4-Pin Right Angle or Vertical Power Connector"
-    />
-    <schematicsection
-      name="screw_terminals"
-      displayName="5mm Screw Terminals"
-    />
-    <schematicsection
-      name="smd_header"
-      displayName='0.1" SMD Right Angle Header Pins'
-    />
-    <schematicsection name="pth_header" displayName='0.1" PTH Header Pins' />
-
     {/* Standoff / Mounting Holes */}
     <hole name="H1" diameter="3.302mm" pcbX={-14.605} pcbY={14.2875} />
     <hole name="H2" diameter="3.302mm" pcbX={-12.7} pcbY={-14.1605} />
     <hole name="H3" diameter="3.302mm" pcbX={12.7} pcbY={-14.1605} />
     <hole name="H4" diameter="3.302mm" pcbX={14.605} pcbY={14.2875} />
 
-    {/* ATX Power Connector */}
+    {/* Section 1: ATX Power Connector */}
+    <schematictext
+      text="4-Pin Right Angle or Vertical Power Connector"
+      schX={-5.5}
+      schY={4.5}
+      fontSize={0.24}
+      color="brown"
+    />
     <COMPUTER_PERIPHERAL_POWER
       name="ATX_POWER_CONNECTOR"
-      schSectionName="atx_power"
       pcbX={0.0}
       pcbY={6.2865}
       pcbRotation={0}
@@ -51,8 +42,8 @@ export default () => (
         pin3: "net.GND",
         pin4: "net.V5V",
       }}
-      schX={-4}
-      schY={0}
+      schX={-5.5}
+      schY={1.5}
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
@@ -65,43 +56,49 @@ export default () => (
     <schematictext
       text="Note: The power connector's package"
       schX={-5.5}
-      schY={-2.5}
+      schY={-1.5}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="has been adjusted for the vertical"
       schX={-5.5}
-      schY={-2.8}
+      schY={-1.8}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="mount as well! Just follow the dashed"
       schX={-5.5}
-      schY={-3.1}
+      schY={-2.1}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="silkscreen that outlines the vertical"
       schX={-5.5}
-      schY={-3.4}
+      schY={-2.4}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="mount connector."
       schX={-5.5}
-      schY={-3.7}
+      schY={-2.7}
       fontSize={0.16}
       color="gray"
     />
 
-    {/* J1: 12V Screw Terminal */}
+    {/* Section 2: 5mm Screw Terminals */}
+    <schematictext
+      text="5mm Screw Terminals"
+      schX={0.5}
+      schY={4.5}
+      fontSize={0.24}
+      color="brown"
+    />
     <ScrewTerminal5mm2
       name="J1"
-      schSectionName="screw_terminals"
       pcbX={2.54}
       pcbY={-5.1435}
       pcbRotation={0}
@@ -109,14 +106,11 @@ export default () => (
         pin1: "net.GND",
         pin2: "net.V12V",
       }}
-      schX={2}
-      schY={2}
+      schX={0.5}
+      schY={2.2}
     />
-
-    {/* J2: 5V Screw Terminal */}
     <ScrewTerminal5mm2
       name="J2"
-      schSectionName="screw_terminals"
       pcbX={-7.62}
       pcbY={-5.1435}
       pcbRotation={0}
@@ -124,14 +118,43 @@ export default () => (
         pin1: "net.V5V",
         pin2: "net.GND",
       }}
-      schX={2}
-      schY={-2}
+      schX={0.5}
+      schY={-1.8}
     />
 
-    {/* J3: 1X04 PTH Jumper / Header Pin (placed on bottom) */}
+    {/* Section 3: 0.1" SMD Right Angle Header Pins */}
+    <schematictext
+      text='0.1" SMD Right Angle Header Pins'
+      schX={6.5}
+      schY={5}
+      fontSize={0.24}
+      color="brown"
+    />
+    <CONN_04_SMD_RA_MALE
+      name="J4"
+      pcbX={0.0}
+      pcbY={-15.3035}
+      pcbRotation={0}
+      connections={{
+        pin1: "net.V5V",
+        pin2: "net.GND",
+        pin3: "net.GND",
+        pin4: "net.V12V",
+      }}
+      schX={6.5}
+      schY={3}
+    />
+
+    {/* Section 4: 0.1" PTH Header Pins */}
+    <schematictext
+      text='0.1" PTH Header Pins'
+      schX={6.5}
+      schY={-1}
+      fontSize={0.24}
+      color="brown"
+    />
     <jumper
       name="J3"
-      schSectionName="pth_header"
       pcbX={0.0}
       pcbY={-13.1445}
       pcbRotation={180}
@@ -143,25 +166,8 @@ export default () => (
         pin3: "net.GND",
         pin4: "net.V12V",
       }}
-      schX={6}
+      schX={6.5}
       schY={-3}
-    />
-
-    {/* J4: 1X04 SMD RA Male Header Pin */}
-    <CONN_04_SMD_RA_MALE
-      name="J4"
-      schSectionName="smd_header"
-      pcbX={0.0}
-      pcbY={-15.3035}
-      pcbRotation={0}
-      connections={{
-        pin1: "net.V5V",
-        pin2: "net.GND",
-        pin3: "net.GND",
-        pin4: "net.V12V",
-      }}
-      schX={6}
-      schY={3}
     />
 
     {/* Explicit Routed Traces for 5V and 12V with 1.27mm width */}
