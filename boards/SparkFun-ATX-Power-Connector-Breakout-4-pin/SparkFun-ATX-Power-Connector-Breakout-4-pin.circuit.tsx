@@ -177,13 +177,54 @@ export default () => (
       fontSize={0.24}
       color="brown"
     />
-    <jumper
+    <chip
       name="J3"
       pcbX={-3.81}
       pcbY={-13.1445}
       pcbRotation={180}
       layer="bottom"
-      footprint="pinrow4_id1.016mm_od1.88mm_nosquareplating"
+      pinLabels={{
+        pin1: ["pin1"],
+        pin2: ["pin2"],
+        pin3: ["pin3"],
+        pin4: ["pin4"],
+      }}
+      footprint={
+        <footprint>
+          <platedhole
+            portHints={["pin1"]}
+            pcbX="-5.715mm"
+            pcbY="0mm"
+            holeDiameter="1.016mm"
+            outerDiameter="1.88mm"
+            shape="circle"
+          />
+          <platedhole
+            portHints={["pin2"]}
+            pcbX="-1.905mm"
+            pcbY="0mm"
+            holeDiameter="1.016mm"
+            outerDiameter="1.88mm"
+            shape="circle"
+          />
+          <platedhole
+            portHints={["pin3"]}
+            pcbX="1.905mm"
+            pcbY="0mm"
+            holeDiameter="1.016mm"
+            outerDiameter="1.88mm"
+            shape="circle"
+          />
+          <platedhole
+            portHints={["pin4"]}
+            pcbX="5.715mm"
+            pcbY="0mm"
+            holeDiameter="1.016mm"
+            outerDiameter="1.88mm"
+            shape="circle"
+          />
+        </footprint>
+      }
       connections={{
         pin1: "net.V5V",
         pin2: "net.GND",
