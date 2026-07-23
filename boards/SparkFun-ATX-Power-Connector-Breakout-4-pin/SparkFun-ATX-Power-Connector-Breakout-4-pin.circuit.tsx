@@ -222,15 +222,24 @@ export default () => (
     <copperpour connectsTo="net.GND" layer="top" />
     <copperpour connectsTo="net.GND" layer="bottom" />
 
-    {/* Component and Hole Silkscreen Designators */}
-    <silkscreentext text="J1" pcbX={2.54} pcbY={-1.5} fontSize={1} />
-    <silkscreentext text="J2" pcbX={-7.62} pcbY={-1.5} fontSize={1} />
-    <silkscreentext text="J3" pcbX={-9.5} pcbY={-13.1445} fontSize={1} />
-    <silkscreentext text="J4" pcbX={4.5} pcbY={-13.1445} fontSize={1} />
-    <silkscreentext text="H1" pcbX={-14.605} pcbY={11.2} fontSize={1} />
-    <silkscreentext text="H2" pcbX={-12.7} pcbY={-11.2} fontSize={1} />
-    <silkscreentext text="H3" pcbX={12.7} pcbY={-11.2} fontSize={1} />
-    <silkscreentext text="H4" pcbX={14.605} pcbY={11.2} fontSize={1} />
+    {/* Component Silkscreen Designators - positioned near component centers */}
+    {/* J1 at pcb=(5.04, -5.14) - label above */}
+    <silkscreentext text="J1" pcbX={5.04} pcbY={-3.0} fontSize={1} />
+    {/* J2 at pcb=(-5.12, -5.14) - label above */}
+    <silkscreentext text="J2" pcbX={-5.12} pcbY={-3.0} fontSize={1} />
+    {/* J3 at pcb=(-3.81, -13.14) - label to the left, clear of footprint */}
+    <silkscreentext text="J3" pcbX={-7.5} pcbY={-13.1445} fontSize={1} />
+    {/* J4 at pcb=(0.0, -12.40) - label to the right */}
+    <silkscreentext text="J4" pcbX={3.5} pcbY={-12.4} fontSize={1} />
+    {/* Hole Silkscreen Designators - offset inside from hole center to avoid overlap */}
+    {/* H1 at (-14.605, 14.287) - top-left corner */}
+    <silkscreentext text="H1" pcbX={-12.0} pcbY={14.287} fontSize={1} />
+    {/* H2 at (-12.7, -14.161) - bottom-left */}
+    <silkscreentext text="H2" pcbX={-10.2} pcbY={-14.161} fontSize={1} />
+    {/* H3 at (12.7, -14.161) - bottom-right */}
+    <silkscreentext text="H3" pcbX={10.2} pcbY={-14.161} fontSize={1} />
+    {/* H4 at (14.605, 14.287) - top-right corner */}
+    <silkscreentext text="H4" pcbX={12.0} pcbY={14.287} fontSize={1} />
 
     {/* Silkscreen text - Top side */}
     <silkscreentext
@@ -261,9 +270,10 @@ export default () => (
       pcbRotation={270}
       fontSize={1}
     />
+    {/* ATX connector label - moved inward to avoid overlap with H4 corner hole at (14.605, 14.287) */}
     <silkscreentext
       text="ATX Power Connector"
-      pcbX={14.351}
+      pcbX={11.5}
       pcbY={12.5095}
       pcbRotation={270}
       fontSize={1}
