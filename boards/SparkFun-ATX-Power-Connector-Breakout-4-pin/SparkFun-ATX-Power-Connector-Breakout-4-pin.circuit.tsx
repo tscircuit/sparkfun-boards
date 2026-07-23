@@ -60,39 +60,39 @@ export default () => (
       anchorSide="left"
     />
 
-    {/* Note text for ATX Power Connector */}
+    {/* Note text for ATX Power Connector - placed far left to avoid vertical traces */}
     <schematictext
       text="Note: The power connector's package"
-      schX={-5.5}
-      schY={-3.5}
+      schX={-9.0}
+      schY={-3.0}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="has been adjusted for the vertical"
-      schX={-5.5}
-      schY={-3.8}
+      schX={-9.0}
+      schY={-3.3}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="mount as well! Just follow the dashed"
-      schX={-5.5}
-      schY={-4.1}
+      schX={-9.0}
+      schY={-3.6}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="silkscreen that outlines the vertical"
-      schX={-5.5}
-      schY={-4.4}
+      schX={-9.0}
+      schY={-3.9}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="mount connector."
-      schX={-5.5}
-      schY={-4.7}
+      schX={-9.0}
+      schY={-4.2}
       fontSize={0.16}
       color="gray"
     />
@@ -137,11 +137,12 @@ export default () => (
       schX={0.5}
       schY={-1.8}
     />
+    {/* GND label moved below SCREWTERMINAL-5MM-2 text (which renders at y=-2.13) */}
     <netlabel
       net="GND"
       connection="J2.pin2"
       schX={2.2}
-      schY={-1.8}
+      schY={-2.5}
       anchorSide="left"
     />
 
@@ -192,18 +193,19 @@ export default () => (
       schX={6.5}
       schY={-3.0}
     />
+    {/* Spread V5V and GND labels further apart vertically to avoid overlap */}
     <netlabel
       net="V5V"
       connection="J3.pin1"
       schX={8.0}
-      schY={-3.6}
+      schY={-4.0}
       anchorSide="left"
     />
     <netlabel
       net="GND"
       connection="J3.pin2"
       schX={8.0}
-      schY={-2.6}
+      schY={-2.2}
       anchorSide="left"
     />
 
