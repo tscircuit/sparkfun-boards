@@ -155,7 +155,7 @@ export default () => (
     />
     <jumper
       name="J3"
-      pcbX={0.0}
+      pcbX={-3.81}
       pcbY={-13.1445}
       pcbRotation={180}
       layer="bottom"
@@ -182,6 +182,16 @@ export default () => (
     {/* Ground copper pours on both layers */}
     <copperpour connectsTo="net.GND" layer="top" />
     <copperpour connectsTo="net.GND" layer="bottom" />
+
+    {/* Component and Hole Silkscreen Designators */}
+    <silkscreentext text="J1" pcbX={2.54} pcbY={-1.5} fontSize={1} />
+    <silkscreentext text="J2" pcbX={-7.62} pcbY={-1.5} fontSize={1} />
+    <silkscreentext text="J3" pcbX={-9.5} pcbY={-13.1445} fontSize={1} />
+    <silkscreentext text="J4" pcbX={4.5} pcbY={-13.1445} fontSize={1} />
+    <silkscreentext text="H1" pcbX={-14.605} pcbY={11.2} fontSize={1} />
+    <silkscreentext text="H2" pcbX={-12.7} pcbY={-11.2} fontSize={1} />
+    <silkscreentext text="H3" pcbX={12.7} pcbY={-11.2} fontSize={1} />
+    <silkscreentext text="H4" pcbX={14.605} pcbY={11.2} fontSize={1} />
 
     {/* Silkscreen text - Top side */}
     <silkscreentext
