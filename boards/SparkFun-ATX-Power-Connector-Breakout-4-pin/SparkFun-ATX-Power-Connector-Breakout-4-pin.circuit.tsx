@@ -56,35 +56,35 @@ export default () => (
     <schematictext
       text="Note: The power connector's package"
       schX={-5.5}
-      schY={-1.5}
+      schY={-3.0}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="has been adjusted for the vertical"
       schX={-5.5}
-      schY={-1.8}
+      schY={-3.3}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="mount as well! Just follow the dashed"
       schX={-5.5}
-      schY={-2.1}
+      schY={-3.6}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="silkscreen that outlines the vertical"
       schX={-5.5}
-      schY={-2.4}
+      schY={-3.9}
       fontSize={0.16}
       color="gray"
     />
     <schematictext
       text="mount connector."
       schX={-5.5}
-      schY={-2.7}
+      schY={-4.2}
       fontSize={0.16}
       color="gray"
     />
@@ -108,6 +108,21 @@ export default () => (
       }}
       schX={0.5}
       schY={2.2}
+      schPinArrangement={{
+        leftSide: {
+          pins: ["pin2"],
+        },
+        rightSide: {
+          pins: ["pin1"],
+        },
+      }}
+    />
+    <netlabel
+      net="GND"
+      connection="J1.pin1"
+      schX={2.5}
+      schY={2.2}
+      anchorSide="left"
     />
     <ScrewTerminal5mm2
       name="J2"
@@ -120,6 +135,21 @@ export default () => (
       }}
       schX={0.5}
       schY={-1.8}
+      schPinArrangement={{
+        leftSide: {
+          pins: ["pin1"],
+        },
+        rightSide: {
+          pins: ["pin2"],
+        },
+      }}
+    />
+    <netlabel
+      net="GND"
+      connection="J2.pin2"
+      schX={2.5}
+      schY={-1.8}
+      anchorSide="left"
     />
 
     {/* Section 3: 0.1" SMD Right Angle Header Pins */}
