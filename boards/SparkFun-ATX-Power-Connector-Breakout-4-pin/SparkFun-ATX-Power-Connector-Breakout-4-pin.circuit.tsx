@@ -51,8 +51,16 @@ export default () => (
         },
       }}
     />
+    {/* Explicit netlabel for ATX GND to prevent vertical GND line intersecting COMPUTER_PERIPHERAL_POWER text */}
+    <netlabel
+      net="GND"
+      connection="ATX_POWER_CONNECTOR.pin2"
+      schX={-3.5}
+      schY={0.5}
+      anchorSide="left"
+    />
 
-    {/* Note text for ATX Power Connector (shifted down to schY=-3.5 to clear the V5V trace wire at schY=-1.8) */}
+    {/* Note text for ATX Power Connector */}
     <schematictext
       text="Note: The power connector's package"
       schX={-5.5}
@@ -109,6 +117,14 @@ export default () => (
       schX={0.5}
       schY={2.2}
     />
+    <netlabel
+      net="GND"
+      connection="J1.pin1"
+      schX={2.2}
+      schY={2.2}
+      anchorSide="left"
+    />
+
     <ScrewTerminal5mm2
       name="J2"
       pcbX={-7.62}
@@ -121,7 +137,6 @@ export default () => (
       schX={0.5}
       schY={-1.8}
     />
-    {/* Explicit netlabel for J2 pin 2 GND to shift GND symbol right and avoid overlap with SCREWTERMINAL-5MM-2 text */}
     <netlabel
       net="GND"
       connection="J2.pin2"
@@ -177,7 +192,6 @@ export default () => (
       schX={6.5}
       schY={-3.0}
     />
-    {/* Explicit netlabels for J3 pin 1 (V5V) and pin 2 (GND) to prevent bottom text overlap */}
     <netlabel
       net="V5V"
       connection="J3.pin1"
