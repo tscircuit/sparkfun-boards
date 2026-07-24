@@ -17,6 +17,11 @@ const outline = new OutlineBuilder(-17.145, 14.2875)
 
 export default () => (
   <board outline={outline}>
+    <schematicsection name="atx_connector" />
+    <schematicsection name="screw_terminals" />
+    <schematicsection name="smd_header" />
+    <schematicsection name="pth_header" />
+
     {/* Standoff / Mounting Holes */}
     <hole name="H1" diameter="3.302mm" pcbX={-14.605} pcbY={14.2875} />
     <hole name="H2" diameter="3.302mm" pcbX={-12.7} pcbY={-14.1605} />
@@ -27,9 +32,10 @@ export default () => (
     <schematictext
       text="4-Pin Right Angle or Vertical Power Connector"
       schX={-5.5}
-      schY={4.5}
-      fontSize={0.24}
+      schY={5.0}
+      fontSize={0.22}
       color="brown"
+      schSectionName="atx_connector"
     />
     <COMPUTER_PERIPHERAL_POWER
       name="ATX_POWER_CONNECTOR"
@@ -44,10 +50,15 @@ export default () => (
       }}
       schX={-5.5}
       schY={1.5}
+      schSectionName="atx_connector"
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
-          pins: ["pin1", "pin2", "pin3", "pin4"],
+          pins: ["pin2", "pin3"],
+        },
+        rightSide: {
+          direction: "top-to-bottom",
+          pins: ["pin1", "pin4"],
         },
       }}
     />
@@ -58,43 +69,64 @@ export default () => (
       schX={-3.5}
       schY={0.5}
       anchorSide="left"
+      schSectionName="atx_connector"
+    />
+    <netlabel
+      net="V12V"
+      connection="ATX_POWER_CONNECTOR.pin1"
+      schX={-3.5}
+      schY={2.7}
+      anchorSide="left"
+      schSectionName="atx_connector"
+    />
+    <netlabel
+      net="V5V"
+      connection="ATX_POWER_CONNECTOR.pin4"
+      schX={-3.5}
+      schY={-0.7}
+      anchorSide="left"
+      schSectionName="atx_connector"
     />
 
-    {/* Note text for ATX Power Connector - placed far left to avoid vertical traces */}
     <schematictext
       text="Note: The power connector's package"
-      schX={-9.0}
-      schY={-3.0}
+      schX={-7.9}
+      schY={-1.7}
       fontSize={0.16}
       color="gray"
+      schSectionName="atx_connector"
     />
     <schematictext
       text="has been adjusted for the vertical"
-      schX={-9.0}
-      schY={-3.3}
+      schX={-7.9}
+      schY={-2.0}
       fontSize={0.16}
       color="gray"
+      schSectionName="atx_connector"
     />
     <schematictext
       text="mount as well! Just follow the dashed"
-      schX={-9.0}
-      schY={-3.6}
+      schX={-7.9}
+      schY={-2.3}
       fontSize={0.16}
       color="gray"
+      schSectionName="atx_connector"
     />
     <schematictext
       text="silkscreen that outlines the vertical"
-      schX={-9.0}
-      schY={-3.9}
+      schX={-7.9}
+      schY={-2.6}
       fontSize={0.16}
       color="gray"
+      schSectionName="atx_connector"
     />
     <schematictext
       text="mount connector."
-      schX={-9.0}
-      schY={-4.2}
+      schX={-7.9}
+      schY={-2.9}
       fontSize={0.16}
       color="gray"
+      schSectionName="atx_connector"
     />
 
     {/* Section 2: 5mm Screw Terminals */}
@@ -104,6 +136,7 @@ export default () => (
       schY={4.5}
       fontSize={0.24}
       color="brown"
+      schSectionName="screw_terminals"
     />
     <ScrewTerminal5mm2
       name="J1"
@@ -116,6 +149,7 @@ export default () => (
       }}
       schX={0.5}
       schY={2.2}
+      schSectionName="screw_terminals"
     />
     <netlabel
       net="GND"
@@ -123,6 +157,15 @@ export default () => (
       schX={2.2}
       schY={2.2}
       anchorSide="left"
+      schSectionName="screw_terminals"
+    />
+    <netlabel
+      net="V12V"
+      connection="J1.pin2"
+      schX={2.2}
+      schY={2.8}
+      anchorSide="left"
+      schSectionName="screw_terminals"
     />
 
     <ScrewTerminal5mm2
@@ -136,6 +179,7 @@ export default () => (
       }}
       schX={0.5}
       schY={-1.8}
+      schSectionName="screw_terminals"
     />
     {/* GND label moved below SCREWTERMINAL-5MM-2 text (which renders at y=-2.13) */}
     <netlabel
@@ -144,6 +188,15 @@ export default () => (
       schX={2.2}
       schY={-2.5}
       anchorSide="left"
+      schSectionName="screw_terminals"
+    />
+    <netlabel
+      net="V5V"
+      connection="J2.pin1"
+      schX={2.2}
+      schY={-1.1}
+      anchorSide="left"
+      schSectionName="screw_terminals"
     />
 
     {/* Section 3: 0.1" SMD Right Angle Header Pins */}
@@ -153,6 +206,7 @@ export default () => (
       schY={5.0}
       fontSize={0.24}
       color="brown"
+      schSectionName="smd_header"
     />
     <CONN_04_SMD_RA_MALE
       name="J4"
@@ -167,6 +221,39 @@ export default () => (
       }}
       schX={6.5}
       schY={3.0}
+      schSectionName="smd_header"
+    />
+    <netlabel
+      net="V5V"
+      connection="J4.pin1"
+      schX={8.2}
+      schY={4.2}
+      anchorSide="left"
+      schSectionName="smd_header"
+    />
+    <netlabel
+      net="GND"
+      connection="J4.pin2"
+      schX={8.2}
+      schY={3.4}
+      anchorSide="left"
+      schSectionName="smd_header"
+    />
+    <netlabel
+      net="GND"
+      connection="J4.pin3"
+      schX={8.2}
+      schY={2.6}
+      anchorSide="left"
+      schSectionName="smd_header"
+    />
+    <netlabel
+      net="V12V"
+      connection="J4.pin4"
+      schX={8.2}
+      schY={1.8}
+      anchorSide="left"
+      schSectionName="smd_header"
     />
 
     {/* Section 4: 0.1" PTH Header Pins */}
@@ -176,10 +263,11 @@ export default () => (
       schY={-1.0}
       fontSize={0.24}
       color="brown"
+      schSectionName="pth_header"
     />
     <chip
       name="J3"
-      pcbX={-3.81}
+      pcbX={0.0}
       pcbY={-13.1445}
       pcbRotation={180}
       layer="bottom"
@@ -233,6 +321,7 @@ export default () => (
       }}
       schX={6.5}
       schY={-3.0}
+      schSectionName="pth_header"
     />
     {/* Spread V5V and GND labels further apart vertically to avoid overlap */}
     <netlabel
@@ -241,6 +330,7 @@ export default () => (
       schX={8.0}
       schY={-4.0}
       anchorSide="left"
+      schSectionName="pth_header"
     />
     <netlabel
       net="GND"
@@ -248,6 +338,23 @@ export default () => (
       schX={8.0}
       schY={-2.2}
       anchorSide="left"
+      schSectionName="pth_header"
+    />
+    <netlabel
+      net="GND"
+      connection="J3.pin3"
+      schX={8.0}
+      schY={-2.8}
+      anchorSide="left"
+      schSectionName="pth_header"
+    />
+    <netlabel
+      net="V12V"
+      connection="J3.pin4"
+      schX={8.0}
+      schY={-3.4}
+      anchorSide="left"
+      schSectionName="pth_header"
     />
 
     {/* Explicit Routed Traces for 5V and 12V with 1.27mm width */}
@@ -263,38 +370,32 @@ export default () => (
     <copperpour connectsTo="net.GND" layer="top" />
     <copperpour connectsTo="net.GND" layer="bottom" />
 
-    {/* Component Silkscreen Designators - matching reference image */}
-    {/* J2 at pcb=(-5.12, -5.14) - label to its left */}
-    <silkscreentext text="J2" pcbX={-8.5} pcbY={-6.5} fontSize={1} />
-    {/* J1 at pcb=(5.04, -5.14) - label centered between J1 and ATX area */}
-    <silkscreentext text="J1" pcbX={1.5} pcbY={-6.5} fontSize={1} />
-    {/* J4 at pcb=(0.0, -12.40) - label above J4 */}
-    <silkscreentext text="J4" pcbX={1.5} pcbY={-10.5} fontSize={1} />
-    {/* J3 at pcb=(-3.81, -13.14) - rotated 180 to match reference */}
+    {/* Component Silkscreen Designators */}
+    <silkscreentext text="J2" pcbX={-8.89} pcbY={-2.6} fontSize={0.7} />
+    <silkscreentext text="J1" pcbX={1.27} pcbY={-2.6} fontSize={0.7} />
+    <silkscreentext text="J4" pcbX={-4.32} pcbY={-8.57} fontSize={0.7} />
     <silkscreentext
       text="J3"
-      pcbX={-3.81}
-      pcbY={-11.8}
+      pcbX={-1.27}
+      pcbY={-14.54}
       pcbRotation={180}
-      fontSize={1}
+      layer="bottom"
+      fontSize={0.7}
     />
 
-    {/* Hole Silkscreen Designators - at corners matching reference */}
-    {/* H1 corner hole at (-14.605, 14.287) - top-left, text just inside */}
-    <silkscreentext text="H1" pcbX={-12.5} pcbY={15.8} fontSize={1} />
-    {/* H4 corner hole at (14.605, 14.287) - top-right, text just inside */}
-    <silkscreentext text="H4" pcbX={12.0} pcbY={15.8} fontSize={1} />
-    {/* H2 corner hole at (-12.700, -14.161) - bottom-left */}
-    <silkscreentext text="H2" pcbX={-14.5} pcbY={-16.0} fontSize={1} />
-    {/* H3 corner hole at (12.700, -14.161) - bottom-right */}
-    <silkscreentext text="H3" pcbX={11.0} pcbY={-16.0} fontSize={1} />
+    {/* Hole Silkscreen Designators */}
+    <silkscreentext text="H1" pcbX={-14.605} pcbY={16.32} fontSize={0.7} />
+    <silkscreentext text="H4" pcbX={14.605} pcbY={16.32} fontSize={0.7} />
+    <silkscreentext text="H2" pcbX={-12.7} pcbY={-12.13} fontSize={0.7} />
+    <silkscreentext text="H3" pcbX={12.7} pcbY={-12.13} fontSize={0.7} />
 
-    {/* ATX_POWER_CONNECTOR label - centered top, between internal mounting holes */}
+    {/* ATX_POWER_CONNECTOR label - vertical label matching the reference board */}
     <silkscreentext
       text="ATX_POWER_CONNECTOR"
-      pcbX={2.0}
-      pcbY={11.5}
-      fontSize={1}
+      pcbX={14.35}
+      pcbY={12.51}
+      pcbRotation={270}
+      fontSize={0.7}
     />
 
     {/* Silkscreen text - Top side (net labels on screw terminal rows) */}
