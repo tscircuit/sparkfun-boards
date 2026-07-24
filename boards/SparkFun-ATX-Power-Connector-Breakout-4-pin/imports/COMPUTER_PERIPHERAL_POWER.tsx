@@ -13,7 +13,7 @@ export const COMPUTER_PERIPHERAL_POWER = (
   return (
     <chip
       pinLabels={pinLabels}
-      manufacturerPartNumber="Molex 8981"
+      manufacturerPartNumber="COMPUTER_PERIPHERAL_POWERRA"
       footprint={
         <footprint>
           {/* Plated Holes for Pins */}

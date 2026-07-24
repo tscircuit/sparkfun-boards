@@ -389,12 +389,11 @@ export default () => (
     <silkscreentext text="H2" pcbX={-12.7} pcbY={-12.13} fontSize={0.7} />
     <silkscreentext text="H3" pcbX={12.7} pcbY={-12.13} fontSize={0.7} />
 
-    {/* ATX_POWER_CONNECTOR label - vertical label matching the reference board */}
+    {/* ATX_POWER_CONNECTOR label - centered near the top like the reference board */}
     <silkscreentext
       text="ATX_POWER_CONNECTOR"
-      pcbX={14.35}
-      pcbY={12.51}
-      pcbRotation={270}
+      pcbX={2.0}
+      pcbY={11.5}
       fontSize={0.7}
     />
 
