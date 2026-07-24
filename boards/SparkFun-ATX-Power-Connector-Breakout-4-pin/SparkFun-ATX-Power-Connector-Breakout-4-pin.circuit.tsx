@@ -35,7 +35,6 @@ export default () => (
       schY={5.0}
       fontSize={0.22}
       color="brown"
-      schSectionName="atx_connector"
     />
     <COMPUTER_PERIPHERAL_POWER
       name="ATX_POWER_CONNECTOR"
@@ -69,7 +68,6 @@ export default () => (
       schX={-3.5}
       schY={0.5}
       anchorSide="left"
-      schSectionName="atx_connector"
     />
     <netlabel
       net="V12V"
@@ -77,7 +75,6 @@ export default () => (
       schX={-3.5}
       schY={2.7}
       anchorSide="left"
-      schSectionName="atx_connector"
     />
     <netlabel
       net="V5V"
@@ -85,7 +82,6 @@ export default () => (
       schX={-3.5}
       schY={-0.7}
       anchorSide="left"
-      schSectionName="atx_connector"
     />
 
     <schematictext
@@ -94,7 +90,6 @@ export default () => (
       schY={-1.7}
       fontSize={0.16}
       color="gray"
-      schSectionName="atx_connector"
     />
     <schematictext
       text="has been adjusted for the vertical"
@@ -102,7 +97,6 @@ export default () => (
       schY={-2.0}
       fontSize={0.16}
       color="gray"
-      schSectionName="atx_connector"
     />
     <schematictext
       text="mount as well! Just follow the dashed"
@@ -110,7 +104,6 @@ export default () => (
       schY={-2.3}
       fontSize={0.16}
       color="gray"
-      schSectionName="atx_connector"
     />
     <schematictext
       text="silkscreen that outlines the vertical"
@@ -118,7 +111,6 @@ export default () => (
       schY={-2.6}
       fontSize={0.16}
       color="gray"
-      schSectionName="atx_connector"
     />
     <schematictext
       text="mount connector."
@@ -126,7 +118,6 @@ export default () => (
       schY={-2.9}
       fontSize={0.16}
       color="gray"
-      schSectionName="atx_connector"
     />
 
     {/* Section 2: 5mm Screw Terminals */}
@@ -136,7 +127,6 @@ export default () => (
       schY={4.5}
       fontSize={0.24}
       color="brown"
-      schSectionName="screw_terminals"
     />
     <ScrewTerminal5mm2
       name="J1"
@@ -157,7 +147,6 @@ export default () => (
       schX={2.2}
       schY={2.2}
       anchorSide="left"
-      schSectionName="screw_terminals"
     />
     <netlabel
       net="V12V"
@@ -165,7 +154,6 @@ export default () => (
       schX={2.2}
       schY={2.8}
       anchorSide="left"
-      schSectionName="screw_terminals"
     />
 
     <ScrewTerminal5mm2
@@ -188,7 +176,6 @@ export default () => (
       schX={2.2}
       schY={-2.5}
       anchorSide="left"
-      schSectionName="screw_terminals"
     />
     <netlabel
       net="V5V"
@@ -196,7 +183,6 @@ export default () => (
       schX={2.2}
       schY={-1.1}
       anchorSide="left"
-      schSectionName="screw_terminals"
     />
 
     {/* Section 3: 0.1" SMD Right Angle Header Pins */}
@@ -206,7 +192,6 @@ export default () => (
       schY={5.0}
       fontSize={0.24}
       color="brown"
-      schSectionName="smd_header"
     />
     <CONN_04_SMD_RA_MALE
       name="J4"
@@ -229,7 +214,6 @@ export default () => (
       schX={8.2}
       schY={4.2}
       anchorSide="left"
-      schSectionName="smd_header"
     />
     <netlabel
       net="GND"
@@ -237,7 +221,6 @@ export default () => (
       schX={8.2}
       schY={3.4}
       anchorSide="left"
-      schSectionName="smd_header"
     />
     <netlabel
       net="GND"
@@ -245,7 +228,6 @@ export default () => (
       schX={8.2}
       schY={2.6}
       anchorSide="left"
-      schSectionName="smd_header"
     />
     <netlabel
       net="V12V"
@@ -253,7 +235,6 @@ export default () => (
       schX={8.2}
       schY={1.8}
       anchorSide="left"
-      schSectionName="smd_header"
     />
 
     {/* Section 4: 0.1" PTH Header Pins */}
@@ -263,7 +244,6 @@ export default () => (
       schY={-1.0}
       fontSize={0.24}
       color="brown"
-      schSectionName="pth_header"
     />
     <chip
       name="J3"
@@ -330,7 +310,6 @@ export default () => (
       schX={8.0}
       schY={-4.0}
       anchorSide="left"
-      schSectionName="pth_header"
     />
     <netlabel
       net="GND"
@@ -338,7 +317,6 @@ export default () => (
       schX={8.0}
       schY={-2.2}
       anchorSide="left"
-      schSectionName="pth_header"
     />
     <netlabel
       net="GND"
@@ -346,7 +324,6 @@ export default () => (
       schX={8.0}
       schY={-2.8}
       anchorSide="left"
-      schSectionName="pth_header"
     />
     <netlabel
       net="V12V"
@@ -354,7 +331,6 @@ export default () => (
       schX={8.0}
       schY={-3.4}
       anchorSide="left"
-      schSectionName="pth_header"
     />
 
     {/* Explicit Routed Traces for 5V and 12V with 1.27mm width */}
