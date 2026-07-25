@@ -1,7 +1,6 @@
-import { FS3000_1015 } from "./ FS3000_1015"
-import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { FS3000_1015 } from "./imports/FS3000_1015"
+import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
 import { sel } from "tscircuit"
-import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 
 export default () => {
   return (
@@ -390,7 +389,7 @@ export default () => {
 
       <silkscreentext text="qwiic" pcbX={-10} pcbY={4.2} layer="bottom" />
 
-      <SM04B_SRSS_TB_LF__SN
+      <SM04B_SRSS_TB_LF__SN_
         schX={-1}
         schY={-8}
         name="JP6"
@@ -456,7 +455,7 @@ export default () => {
         connectsTo={sel.JP6.pin1}
         anchorSide="top"
       />
-      <SM04B_SRSS_TB_LF__SN2
+      <SM04B_SRSS_TB_LF__SN_
         name="JP7"
         schX={-4}
         schY={-8}

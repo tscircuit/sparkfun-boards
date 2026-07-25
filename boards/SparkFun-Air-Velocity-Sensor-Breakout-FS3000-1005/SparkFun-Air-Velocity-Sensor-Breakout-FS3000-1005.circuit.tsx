@@ -1,5 +1,5 @@
-import { FS3000_1005 } from "./FS3000_1005"
-import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { FS3000_1005 } from "./imports/FS3000_1005"
+import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
 import { sel } from "tscircuit"
 
 export default () => {
@@ -389,7 +389,7 @@ export default () => {
 
       <silkscreentext text="qwiic" pcbX={-10} pcbY={4.2} layer="bottom" />
 
-      <SM04B_SRSS_TB_LF__SN
+      <SM04B_SRSS_TB_LF__SN_
         schX={-1}
         schY={-8}
         name="JP6"
@@ -455,18 +455,12 @@ export default () => {
         connectsTo={sel.JP6.pin1}
         anchorSide="top"
       />
-      <SM04B_SRSS_TB_LF__SN
+      <SM04B_SRSS_TB_LF__SN_
         name="JP7"
         schX={-4}
         schY={-8}
         pcbX={-9.5}
         pcbRotation={-90}
-        cadModel={{
-          objUrl:
-            "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=96ff162c26934a308e7bbf01d083d593&pn=C160404",
-          rotationOffset: { x: 0, y: 0, z: 0 },
-          positionOffset: { x: 0, y: 1.5, z: 0 },
-        }}
       />
 
       <hole diameter={3.302} pcbX={10.16} pcbY={-10.16} />
