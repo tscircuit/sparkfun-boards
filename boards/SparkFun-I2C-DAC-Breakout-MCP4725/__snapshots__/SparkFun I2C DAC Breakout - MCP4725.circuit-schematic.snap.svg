@@ -31,6 +31,7 @@
     L 1037.6860465119669,303.48837209299995
     Z
   " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="1.39534883721px"/><text class="net-label-text sch-net-label-text" data-circuit-json-type="schematic_net_label" data-schematic-net-label-id="schematic_net_label_7" x="1040.1976744189449" y="296.51162790694997" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="12.55813953489px" transform="">SDA</text><path class="net-label sch-net-label" data-circuit-json-type="schematic_net_label" data-schematic-net-label-id="schematic_net_label_8" d="
+<<<<<<< Updated upstream
     M 545.546511628,265.116279069725
     L 541.779069767533,272.093023255775
     L 510.58837209309877,272.093023255775
@@ -38,6 +39,15 @@
     L 541.779069767533,258.139534883675
     Z
   " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="1.39534883721px"/><text class="net-label-text sch-net-label-text" data-circuit-json-type="schematic_net_label" data-schematic-net-label-id="schematic_net_label_8" x="539.267441860555" y="265.116279069725" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="12.55813953489px" transform="">SCL</text><path class="net-label sch-net-label" data-circuit-json-type="schematic_net_label" data-schematic-net-label-id="schematic_net_label_9" d="
+=======
+    M 545.546511628,254.65116279065
+    L 541.779069767533,261.6279069767
+    L 510.58837209309877,261.6279069767
+    L 510.58837209309877,247.6744186046
+    L 541.779069767533,247.6744186046
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="1.39534883721px"/><text class="net-label-text sch-net-label-text" data-circuit-json-type="schematic_net_label" data-schematic-net-label-id="schematic_net_label_8" x="539.267441860555" y="254.65116279065" fill="rgb(132, 0, 0)" text-anchor="end" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="12.55813953489px" transform="">SCL</text><path class="net-label sch-net-label" data-circuit-json-type="schematic_net_label" data-schematic-net-label-id="schematic_net_label_9" d="
+>>>>>>> Stashed changes
     M 1033.9186046515,310.46511627905
     L 1037.6860465119669,303.488372093
     L 1068.876744186401,303.488372093
