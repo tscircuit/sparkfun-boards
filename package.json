@@ -4,6 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "convert:jlcpcb-footprints": "bun scripts/convert-jlcpcb-footprints.ts",
+    "convert:jlcpcb-footprints:write": "bun scripts/convert-jlcpcb-footprints.ts --write",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "tsci-build": "tsci build",
@@ -13,9 +15,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tscircuit/props": "^0.0.592",
     "@types/bun": "latest",
-    "tscircuit": "^0.0.2145"
+    "circuit-json-to-footprinter": "^0.0.25",
+    "tscircuit": "^0.0.2156"
   },
   "peerDependencies": {
     "typescript": "^5"

@@ -15,71 +15,7 @@ export const QRE1113GR = (props: ChipProps<typeof pinLabels>) => {
         jlcpcb: ["C232862"],
       }}
       manufacturerPartNumber="QRE1113GR"
-      footprint={
-        <footprint>
-          <smtpad
-            portHints={["pin4"]}
-            pcbX="-1.99999600000001mm"
-            pcbY="0.9000490000000809mm"
-            width="1.6599916mm"
-            height="0.7999983999999999mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="1.9999959999998964mm"
-            pcbY="0.9000490000000809mm"
-            width="1.6599916mm"
-            height="0.7999983999999999mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="1.9999959999998964mm"
-            pcbY="-0.9000490000000809mm"
-            width="1.6599916mm"
-            height="0.7999983999999999mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-1.99999600000001mm"
-            pcbY="-0.9000490000000809mm"
-            width="1.6599916mm"
-            height="0.7999983999999999mm"
-            shape="rect"
-          />
-          <silkscreenpath
-            route={[
-              { x: -1.3463016000000607, y: -0.3046984000000066 },
-              { x: -1.3463016000000607, y: 0.30487619999996696 },
-            ]}
-          />
-          <silkscreenpath
-            route={[
-              { x: 1.346123799999873, y: 0.27950159999988955 },
-              { x: 1.346123799999873, y: -0.2941065999999637 },
-            ]}
-          />
-          <silkscreenpath
-            route={[
-              { x: -1.346225400000094, y: 1.447926999999936 },
-              { x: -1.346225400000094, y: 1.7019269999999551 },
-              { x: 1.346123799999873, y: 1.7019269999999551 },
-              { x: 1.346123799999873, y: 1.4987270000000308 },
-            ]}
-          />
-          <silkscreenpath
-            route={[
-              { x: 1.346123799999873, y: -1.5311120000000074 },
-              { x: 1.346123799999873, y: -1.7016984000000548 },
-              { x: -0.8636508000000731, y: -1.7016984000000548 },
-              { x: -1.1176508000000922, y: -1.7016984000000548 },
-              { x: -1.346225400000094, y: -1.4730729999999994 },
-            ]}
-          />
-        </footprint>
-      }
+      footprint="dfn4_p1.8001mm_w5.66mm_pw0.8mm_pl1.66mm"
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=561b061c10674cd4b17193f503c8073a&pn=C232862",
