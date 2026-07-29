@@ -7,41 +7,7 @@ export const ScrewTerminal5mm2 = (props: ChipProps<typeof pinLabels>) => (
     pinLabels={pinLabels}
     supplierPartNumbers={{ jlcpcb: ["C8465"] }}
     manufacturerPartNumber="SCREWTERMINAL-5MM-2"
-    footprint={
-      <footprint>
-        <platedhole
-          portHints={["pin1"]}
-          pcbX="0mm"
-          pcbY="0mm"
-          shape="circle"
-          holeDiameter="1.3mm"
-          outerDiameter="2.032mm"
-        />
-        <platedhole
-          portHints={["pin2"]}
-          pcbX="5mm"
-          pcbY="0mm"
-          shape="circle"
-          holeDiameter="1.3mm"
-          outerDiameter="2.032mm"
-        />
-        <silkscreenpath
-          route={[
-            { x: -3.1, y: 4.2 },
-            { x: 8.1, y: 4.2 },
-            { x: 8.1, y: -3.3 },
-            { x: -3.1, y: -3.3 },
-            { x: -3.1, y: 4.2 },
-          ]}
-        />
-        <silkscreenpath
-          route={[
-            { x: -3.1, y: -2.3 },
-            { x: 8.1, y: -2.3 },
-          ]}
-        />
-      </footprint>
-    }
+    footprint="radial_od2.032mm_id1.3mm"
     cadModel={null}
     {...props}
   />
