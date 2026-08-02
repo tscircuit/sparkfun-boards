@@ -65,9 +65,9 @@ export default () => (
     <netlabel
       net="GND"
       connection="ATX_POWER_CONNECTOR.pin2"
-      schX={-3.5}
-      schY={0.5}
-      anchorSide="left"
+      schX={-8.5}
+      schY={1.5}
+      anchorSide="right"
     />
     <netlabel
       net="V12V"
@@ -80,7 +80,7 @@ export default () => (
       net="V5V"
       connection="ATX_POWER_CONNECTOR.pin4"
       schX={-3.5}
-      schY={-0.7}
+      schY={1.5}
       anchorSide="left"
     />
 
