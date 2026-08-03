@@ -30,70 +30,7 @@ export const ISL29125IROZ_T7 = (props: ChipProps<typeof pinLabels>) => {
         jlcpcb: ["C2654928"],
       }}
       manufacturerPartNumber="ISL29125IROZ_T7"
-      footprint={
-        <footprint>
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-0.4999990000001162mm"
-            pcbY="-0.7175499999999602mm"
-            width="0.2800096mm"
-            height="0.5849874mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="-0.00012700000002041634mm"
-            pcbY="-0.7175499999999602mm"
-            width="0.2800096mm"
-            height="0.5849874mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="0.4999990000000025mm"
-            pcbY="-0.7175499999999602mm"
-            width="0.2800096mm"
-            height="0.5849874mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin4"]}
-            pcbX="0.4999990000000025mm"
-            pcbY="0.7175500000000739mm"
-            width="0.2800096mm"
-            height="0.5849874mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin5"]}
-            pcbX="-0.00012700000002041634mm"
-            pcbY="0.7175500000000739mm"
-            width="0.2800096mm"
-            height="0.5849874mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin6"]}
-            pcbX="-0.4999990000001162mm"
-            pcbY="0.7175500000000739mm"
-            width="0.2800096mm"
-            height="0.5849874mm"
-            shape="rect"
-          />
-          <silkscreenpath
-            route={[
-              { x: -0.8763254000000416, y: -0.8761983999999075 },
-              { x: -0.8763254000000416, y: 0.8761984000000211 },
-            ]}
-          />
-          <silkscreenpath
-            route={[
-              { x: 0.8760714000000007, y: -0.8761983999999075 },
-              { x: 0.8760714000000007, y: 0.8761984000000211 },
-            ]}
-          />
-        </footprint>
-      }
+      footprint="dfn6_p0.4999mm_w2.0201mm_pw0.28mm_pl0.585mm_pin1location(leftside,bottom)"
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=c3573a408ad54846819a6670160fd2d9&pn=C2654928",

@@ -33,49 +33,53 @@ export const USB_SMT_04F_S1_B1_R11 = (props: ChipProps<typeof pinLabels>) => {
         <footprint>
           <platedhole
             portHints={["pin5"]}
-            pcbX="-6.425057000000038mm"
-            pcbY="-2.775032499999952mm"
-            holeDiameter={2.311}
-            outerDiameter={3.467}
-            shape="circle"
+            pcbX="-6.425057mm"
+            pcbY="-2.7750325mm"
+            holeWidth="0.8499856mm"
+            holeHeight="2.4499824mm"
+            outerWidth="1.3999972mm"
+            outerHeight="2.999994mm"
+            shape="pill"
           />
           <platedhole
             portHints={["pin6"]}
-            pcbX="6.425057000000038mm"
-            pcbY="-2.775032499999952mm"
-            holeDiameter={2.311}
-            outerDiameter={3.467}
-            shape="circle"
+            pcbX="6.425057mm"
+            pcbY="-2.7750325mm"
+            holeWidth="0.8499856mm"
+            holeHeight="2.4499824mm"
+            outerWidth="1.3999972mm"
+            outerHeight="2.999994mm"
+            shape="pill"
           />
           <smtpad
             portHints={["pin1"]}
-            pcbX="-3.4999930000000177mm"
-            pcbY="1.325035499999899mm"
-            width="0.9999979999999999mm"
+            pcbX="-3.499993mm"
+            pcbY="1.3250355mm"
+            width="0.999998mm"
             height="2.999994mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin2"]}
-            pcbX="-1.0001250000000255mm"
-            pcbY="1.325035499999899mm"
-            width="0.9999979999999999mm"
+            pcbX="-1.000125mm"
+            pcbY="1.3250355mm"
+            width="0.999998mm"
             height="2.999994mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin3"]}
-            pcbX="1.0001249999999118mm"
-            pcbY="1.325035499999899mm"
-            width="0.9999979999999999mm"
+            pcbX="1.000125mm"
+            pcbY="1.3250355mm"
+            width="0.999998mm"
             height="2.999994mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin4"]}
-            pcbX="3.4999930000001314mm"
-            pcbY="1.325035499999899mm"
-            width="0.9999979999999999mm"
+            pcbX="3.499993mm"
+            pcbY="1.3250355mm"
+            width="0.999998mm"
             height="2.999994mm"
             shape="rect"
           />
@@ -189,13 +193,24 @@ export const USB_SMT_04F_S1_B1_R11 = (props: ChipProps<typeof pinLabels>) => {
               { x: 6.4499998000000005, y: -13.175037099999827 },
             ]}
           />
+          <courtyardoutline
+            outline={[
+              { x: -7.437310999999909, y: 3.0721115000000054 },
+              { x: 7.464488999999958, y: 3.0721115000000054 },
+              { x: 7.464488999999958, y: -13.429888499999947 },
+              { x: -7.437310999999909, y: -13.429888499999947 },
+              { x: -7.437310999999909, y: 3.0721115000000054 },
+            ]}
+          />
         </footprint>
       }
       cadModel={{
         objUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=3e50fbf3f37c465bbdbb28024e6007b6&pn=C718023",
-        rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: { x: -12, y: 0, z: 4.25 },
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C718023.obj?uuid=3e50fbf3f37c465bbdbb28024e6007b6",
+        stepUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C718023.step?uuid=3e50fbf3f37c465bbdbb28024e6007b6",
+        pcbRotationOffset: 0,
+        modelOriginPosition: { x: 0, y: 12.187981099999956, z: -4.290004 },
       }}
       {...props}
     />

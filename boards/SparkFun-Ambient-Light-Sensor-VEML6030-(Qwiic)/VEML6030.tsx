@@ -27,70 +27,7 @@ export const VEML6030 = (props: ChipProps<typeof pinLabels>) => {
         },
       }}
       manufacturerPartNumber="VEML6030"
-      footprint={
-        <footprint>
-          <smtpad
-            portHints={["pin4"]}
-            pcbX="0.8750299999999243mm"
-            pcbY="-0.6498589999999922mm"
-            width="0.6500114mm"
-            height="0.45001179999999996mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin3"]}
-            pcbX="-0.8750299999999243mm"
-            pcbY="-0.6498589999999922mm"
-            width="0.6500114mm"
-            height="0.45001179999999996mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin5"]}
-            pcbX="0.8750299999999243mm"
-            pcbY="0.000381000000061249mm"
-            width="0.6500114mm"
-            height="0.45001179999999996mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin2"]}
-            pcbX="-0.8750299999999243mm"
-            pcbY="0.000381000000061249mm"
-            width="0.6500114mm"
-            height="0.45001179999999996mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin6"]}
-            pcbX="0.8750299999999243mm"
-            pcbY="0.6498590000001059mm"
-            width="0.6500114mm"
-            height="0.45001179999999996mm"
-            shape="rect"
-          />
-          <smtpad
-            portHints={["pin1"]}
-            pcbX="-0.8750299999999243mm"
-            pcbY="0.6490969999999834mm"
-            width="0.6500114mm"
-            height="0.45001179999999996mm"
-            shape="rect"
-          />
-          <silkscreenpath
-            route={[
-              { x: -1.0460735999999997, y: 1.0207752000001165 },
-              { x: 0.9859263999999257, y: 1.0207752000001165 },
-            ]}
-          />
-          <silkscreenpath
-            route={[
-              { x: 0.9859263999999257, y: -1.0112247999999227 },
-              { x: -1.0460735999999997, y: -1.0112247999999227 },
-            ]}
-          />
-        </footprint>
-      }
+      footprint="dfn6_p0.6495mm_w2.4001mm_pw0.45mm_pl0.65mm"
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=4524f635bbc740058d5f3b214807d25b&pn=C132182",

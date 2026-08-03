@@ -1,7 +1,6 @@
 import { sel } from "tscircuit"
-import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Air-Velocity-Sensor-Breakout-FS3000-1005/SM04B_SRSS_TB_LF__SN"
-import { OPT4048DTSR } from "./OPT4048DTSR"
-import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
+import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
+import { OPT4048DTSR } from "./imports/OPT4048DTSR"
 
 const jumperPinLabels = {
   pin1: ["GND"],
@@ -412,7 +411,7 @@ export default () => {
         pcbY={-11.43}
       />
 
-      <SM04B_SRSS_TB_LF__SN2
+      <SM04B_SRSS_TB_LF__SN_
         name="JP2"
         schX={-1}
         schY={-5}
@@ -426,7 +425,7 @@ export default () => {
         }}
       />
 
-      <SM04B_SRSS_TB_LF__SN
+      <SM04B_SRSS_TB_LF__SN_
         schX={-1}
         schY={-7}
         name="JP1"
