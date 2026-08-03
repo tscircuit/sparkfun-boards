@@ -131,49 +131,6 @@ export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
         color="gray"
       />
 
-      <netlabel
-        net="V3_3"
-        schX={-7.2}
-        schY={5.35}
-        anchorSide="bottom"
-        connectsTo="U2.pin3"
-      />
-      <netlabel
-        net="GND"
-        schX={-7.2}
-        schY={3.45}
-        anchorSide="top"
-        connectsTo="U2.pin5"
-      />
-      <netlabel
-        net="INT"
-        schX={-3.65}
-        schY={4.85}
-        anchorSide="left"
-        connectsTo="U2.pin2"
-      />
-      <netlabel
-        net="ADDR"
-        schX={-3.65}
-        schY={4.55}
-        anchorSide="left"
-        connectsTo="U2.pin4"
-      />
-      <netlabel
-        net="SDA"
-        schX={-3.65}
-        schY={4.25}
-        anchorSide="left"
-        connectsTo="U2.pin6"
-      />
-      <netlabel
-        net="SCL"
-        schX={-3.65}
-        schY={3.95}
-        anchorSide="left"
-        connectsTo="U2.pin1"
-      />
-
       {/* I2C pull-up disconnect jumper */}
       <solderjumper
         name="I2C_PU"
@@ -234,28 +191,6 @@ export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
         color="gray"
       />
 
-      <netlabel
-        net="V3_3"
-        schX={3.9}
-        schY={5.9}
-        anchorSide="bottom"
-        connectsTo="I2C_PU.pin2"
-      />
-      <netlabel
-        net="SCL"
-        schX={3.0}
-        schY={2.75}
-        anchorSide="top"
-        connectsTo="R1.pin1"
-      />
-      <netlabel
-        net="SDA"
-        schX={4.8}
-        schY={2.75}
-        anchorSide="top"
-        connectsTo="R2.pin1"
-      />
-
       {/* Power LED and its cuttable ground jumper */}
       <resistor
         name="R4"
@@ -306,20 +241,6 @@ export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
         }}
       />
 
-      <netlabel
-        net="V3_3"
-        schX={9.3}
-        schY={5.75}
-        anchorSide="bottom"
-        connectsTo="R4.pin2"
-      />
-      <netlabel
-        net="GND"
-        schX={9.3}
-        schY={1.05}
-        anchorSide="top"
-        connectsTo="LED.pin1"
-      />
       <schematictext
         text="Cut LED trace to disconnect power LED"
         schX={10.7}
@@ -372,35 +293,6 @@ export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
         pcbX={8.5725}
         pcbY={-2.8575}
         connections={{ pin1: "net.GND" }}
-      />
-
-      <netlabel
-        net="V3_3"
-        schX={-0.35}
-        schY={-0.7}
-        anchorSide="right"
-        connectsTo="TP3.pin1"
-      />
-      <netlabel
-        net="SDA"
-        schX={-0.35}
-        schY={-1.05}
-        anchorSide="right"
-        connectsTo="TP2.pin1"
-      />
-      <netlabel
-        net="SCL"
-        schX={-0.35}
-        schY={-1.4}
-        anchorSide="right"
-        connectsTo="TP1.pin1"
-      />
-      <netlabel
-        net="GND"
-        schX={-0.35}
-        schY={-1.75}
-        anchorSide="right"
-        connectsTo="TP4.pin1"
       />
 
       {/* Connectors */}
@@ -464,49 +356,6 @@ export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
         schY={-6.65}
         fontSize={0.2}
         color="gray"
-      />
-
-      <netlabel
-        net="INT"
-        schX={-4.9}
-        schY={-5.0}
-        anchorSide="left"
-        connectsTo="J3.pin1"
-      />
-      <netlabel
-        net="GND"
-        schX={-4.9}
-        schY={-5.75}
-        anchorSide="left"
-        connectsTo="J4.pin1"
-      />
-      <netlabel
-        net="SCL"
-        schX={0.7}
-        schY={-4.85}
-        anchorSide="right"
-        connectsTo="J1.pin4"
-      />
-      <netlabel
-        net="SDA"
-        schX={0.7}
-        schY={-5.1}
-        anchorSide="right"
-        connectsTo="J1.pin3"
-      />
-      <netlabel
-        net="V3_3"
-        schX={0.7}
-        schY={-5.35}
-        anchorSide="right"
-        connectsTo="J1.pin2"
-      />
-      <netlabel
-        net="GND"
-        schX={0.7}
-        schY={-5.6}
-        anchorSide="right"
-        connectsTo="J1.pin1"
       />
 
       {/* Mechanical details and fabrication marks from the official Eagle board */}
