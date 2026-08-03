@@ -392,8 +392,6 @@ export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
         pcbY={-0.7366}
       />
 
-      <silkscreentext text="GND" fontSize={0.55} pcbX={-5.7} pcbY={2.55} />
-      <silkscreentext text="INT" fontSize={0.55} pcbX={-5.7} pcbY={-2.55} />
       <silkscreentext
         text="STTS22H"
         layer="bottom"
