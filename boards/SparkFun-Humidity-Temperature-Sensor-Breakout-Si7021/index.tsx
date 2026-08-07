@@ -1,0 +1,3 @@
+import SparkFunHumidityTemperatureSensorBreakoutSi7021 from "./SparkFun-Humidity-Temperature-Sensor-Breakout-Si7021.circuit"
+
+export default SparkFunHumidityTemperatureSensorBreakoutSi7021
