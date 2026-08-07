@@ -1,0 +1,1 @@
+export { default as SparkfunMicroModRP2040Processor } from "./sparkfun-micromod-rp2040-processor.circuit"
