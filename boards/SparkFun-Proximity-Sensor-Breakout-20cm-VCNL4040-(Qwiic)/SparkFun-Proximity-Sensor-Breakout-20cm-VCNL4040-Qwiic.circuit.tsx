@@ -1,5 +1,5 @@
-import { VCNL4040M3OE } from "./VCNL4040M3OE"
-import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
+import { VCNL4040M3OE } from "./imports/VCNL4040M3OE"
+import { SM04B_SRSS_TB_LF__SN } from "./imports/SM04B_SRSS_TB_LF__SN"
 import { sel } from "tscircuit"
 
 const JPPinlabel = {
