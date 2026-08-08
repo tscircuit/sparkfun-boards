@@ -2,7 +2,7 @@ import { JST04_1MM_RA } from "./JST04_1MM_RA"
 import { STTS22H } from "./STTS22H"
 
 const singlePinHeaderFootprint =
-  "pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+  "pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted"
 
 export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
   return (
@@ -406,7 +406,7 @@ export default function SparkFunMicroTemperatureSensorSTTS22HQwiic() {
         pcbX={-1.1}
         pcbY={-3.25}
       />
-      <silkscreentext text="QWIIC" fontSize={0.55} pcbX={4.45} pcbY={-2.75} />
+      <silkscreentext text="QWIIC" fontSize={0.55} pcbX={2.5} pcbY={-2.75} />
       <silkscreentext
         text="SCL"
         layer="bottom"
