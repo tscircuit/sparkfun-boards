@@ -9,6 +9,30 @@ const at = (x: number, y: number) => ({
 const route = (points: Array<[number, number]>) =>
   points.map(([x, y]) => at(x, y))
 
+const pinHolderYPositions = Array.from(
+  { length: 8 },
+  (_, index) => -8.89 + index * 2.54,
+)
+
+const PinHolderSilkscreen = () => (
+  <>
+    {[-7.62, 7.62].flatMap((pcbX) =>
+      pinHolderYPositions.map((pcbY) => (
+        <silkscreenrect
+          key={`${pcbX}-${pcbY}`}
+          pcbX={pcbX}
+          pcbY={pcbY}
+          width="2.5mm"
+          height="2.1mm"
+          cornerRadius="1.05mm"
+          filled={false}
+          strokeWidth="0.15mm"
+        />
+      )),
+    )}
+  </>
+)
+
 type CapacitorHelperProps = Omit<
   React.ComponentProps<"capacitor">,
   "capacitance"
@@ -241,6 +265,7 @@ export default () => (
         ],
       }}
     />
+    <PinHolderSilkscreen />
     <silkscreentext text="TB6612FNG" pcbX={0} pcbY={-6.9} fontSize={0.85} />
     <silkscreentext text="Motor Driver" pcbX={0} pcbY={-8.05} fontSize={0.75} />
   </board>
