@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { sel } from "tscircuit"
 import { TB6612FNG } from "./imports/TB6612FNG"
 
@@ -9,29 +10,58 @@ const at = (x: number, y: number) => ({
 const route = (points: Array<[number, number]>) =>
   points.map(([x, y]) => at(x, y))
 
-const pinHolderYPositions = Array.from(
+const pinHolderXPositions = Array.from(
   { length: 8 },
   (_, index) => -8.89 + index * 2.54,
 )
 
-const PinHolderSilkscreen = () => (
-  <>
-    {[-7.62, 7.62].flatMap((pcbX) =>
-      pinHolderYPositions.map((pcbY) => (
-        <silkscreenrect
-          key={`${pcbX}-${pcbY}`}
+const createPinHolderFootprint = (pinLabels: string[]) => (
+  <footprint>
+    {pinHolderXPositions.map((pcbX, index) => (
+      <Fragment key={`pin${index + 1}`}>
+        <platedhole
+          portHints={[`pin${index + 1}`]}
           pcbX={pcbX}
-          pcbY={pcbY}
-          width="2.5mm"
-          height="2.1mm"
-          cornerRadius="1.05mm"
-          filled={false}
-          strokeWidth="0.15mm"
+          pcbY="0.4699mm"
+          shape="pill"
+          outerWidth="1.8796mm"
+          outerHeight="2.8194mm"
+          holeWidth="1.1176mm"
+          holeHeight="1.1176mm"
+          holeOffsetY="-0.4699mm"
         />
-      )),
-    )}
-  </>
+        <silkscreentext
+          text={pinLabels[index]!}
+          pcbX={pcbX}
+          pcbY="-1.5398mm"
+          fontSize="0.58mm"
+        />
+      </Fragment>
+    ))}
+  </footprint>
 )
+
+const jp1Footprint = createPinHolderFootprint([
+  "GND",
+  "B01",
+  "B02",
+  "A02",
+  "A01",
+  "GND",
+  "VCC",
+  "VM",
+])
+
+const jp2Footprint = createPinHolderFootprint([
+  "PWMA",
+  "AIN2",
+  "AIN1",
+  "STBY",
+  "BIN1",
+  "BIN2",
+  "PWMB",
+  "GND",
+])
 
 type CapacitorHelperProps = Omit<
   React.ComponentProps<"capacitor">,
@@ -185,7 +215,7 @@ export default () => (
 
     <jumper
       name="JP1"
-      footprint="pinrow8_id1.1176_od1.8796_nosquareplating"
+      footprint={jp1Footprint}
       pcbX={-7.62}
       pcbY={0}
       pcbRotation={90}
@@ -226,7 +256,7 @@ export default () => (
     />
     <jumper
       name="JP2"
-      footprint="pinrow8_id1.1176_od1.8796_nosquareplating"
+      footprint={jp2Footprint}
       pcbX={7.62}
       pcbY={0}
       pcbRotation={-90}
@@ -265,7 +295,6 @@ export default () => (
         ],
       }}
     />
-    <PinHolderSilkscreen />
     <silkscreentext text="TB6612FNG" pcbX={0} pcbY={-6.9} fontSize={0.85} />
     <silkscreentext text="Motor Driver" pcbX={0} pcbY={-8.05} fontSize={0.75} />
   </board>
