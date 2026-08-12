@@ -15,7 +15,7 @@ const pinHolderXPositions = Array.from(
   (_, index) => -8.89 + index * 2.54,
 )
 
-const createPinHolderFootprint = (pinLabels: string[]) => (
+const pinHolderFootprint = (
   <footprint>
     {pinHolderXPositions.map((pcbX, index) => (
       <Fragment key={`pin${index + 1}`}>
@@ -23,25 +23,20 @@ const createPinHolderFootprint = (pinLabels: string[]) => (
           portHints={[`pin${index + 1}`]}
           pcbX={pcbX}
           pcbY="0.4699mm"
+          pcbRotation={90}
           shape="pill"
-          outerWidth="1.8796mm"
-          outerHeight="2.8194mm"
+          outerWidth="2.8194mm"
+          outerHeight="1.8796mm"
           holeWidth="1.1176mm"
           holeHeight="1.1176mm"
-          holeOffsetY="-0.4699mm"
-        />
-        <silkscreentext
-          text={pinLabels[index]!}
-          pcbX={pcbX}
-          pcbY="-1.5398mm"
-          fontSize="0.58mm"
+          holeOffsetX="-0.4699mm"
         />
       </Fragment>
     ))}
   </footprint>
 )
 
-const jp1Footprint = createPinHolderFootprint([
+const jp1PinLabels = [
   "GND",
   "B01",
   "B02",
@@ -50,9 +45,9 @@ const jp1Footprint = createPinHolderFootprint([
   "GND",
   "VCC",
   "VM",
-])
+] as const
 
-const jp2Footprint = createPinHolderFootprint([
+const jp2PinLabels = [
   "PWMA",
   "AIN2",
   "AIN1",
@@ -61,7 +56,34 @@ const jp2Footprint = createPinHolderFootprint([
   "BIN2",
   "PWMB",
   "GND",
-])
+] as const
+
+const PinHolderLabels = () => (
+  <>
+    {jp1PinLabels.map((text, index) => (
+      <Fragment key={`jp1-${text}-${index}`}>
+        <silkscreentext
+          text={text}
+          pcbX="-6.0802mm"
+          pcbY={-8.89 + index * 2.54}
+          pcbRotation={90}
+          fontSize="0.58mm"
+        />
+      </Fragment>
+    ))}
+    {jp2PinLabels.map((text, index) => (
+      <Fragment key={`jp2-${text}-${index}`}>
+        <silkscreentext
+          text={text}
+          pcbX="6.0802mm"
+          pcbY={8.89 - index * 2.54}
+          pcbRotation={-90}
+          fontSize="0.58mm"
+        />
+      </Fragment>
+    ))}
+  </>
+)
 
 type CapacitorHelperProps = Omit<
   React.ComponentProps<"capacitor">,
@@ -215,7 +237,7 @@ export default () => (
 
     <jumper
       name="JP1"
-      footprint={jp1Footprint}
+      footprint={pinHolderFootprint}
       pcbX={-7.62}
       pcbY={0}
       pcbRotation={90}
@@ -256,7 +278,7 @@ export default () => (
     />
     <jumper
       name="JP2"
-      footprint={jp2Footprint}
+      footprint={pinHolderFootprint}
       pcbX={7.62}
       pcbY={0}
       pcbRotation={-90}
@@ -295,6 +317,7 @@ export default () => (
         ],
       }}
     />
+    <PinHolderLabels />
     <silkscreentext text="TB6612FNG" pcbX={0} pcbY={-6.9} fontSize={0.85} />
     <silkscreentext text="Motor Driver" pcbX={0} pcbY={-8.05} fontSize={0.75} />
   </board>
