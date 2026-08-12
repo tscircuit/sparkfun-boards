@@ -223,7 +223,7 @@ export default () => (
       pcbY={8}
     />
 
-    <copperpour name="GND Pour" connectsTo="GND" layer={"top"} />
+    <copperpour name="GND Pour" connectsTo="net.GND" layer={"top"} />
 
     <silkscreentext text="3.0V-3.6V" fontSize={0.8} pcbX={-9.5} pcbY={5.5} />
     <silkscreentext text="MAX31855K" fontSize={0.8} pcbX={-8} pcbY={-7} />
