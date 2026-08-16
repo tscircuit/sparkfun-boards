@@ -29,7 +29,6 @@ const pinHolderFootprint = (
           outerHeight="1.8796mm"
           holeWidth="1.1176mm"
           holeHeight="1.1176mm"
-          holeOffsetX="-0.4699mm"
         />
       </Fragment>
     ))}
