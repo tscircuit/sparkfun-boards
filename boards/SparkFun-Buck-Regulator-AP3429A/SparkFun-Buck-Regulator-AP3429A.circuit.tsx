@@ -12,15 +12,16 @@ const ThroughHoleRow = ({
 }) => (
   <footprint>
     {Array.from({ length: count }, (_, i) => (
-      <platedhole
-        key={i}
-        portHints={[String(i + 1)]}
-        pcbX={(i - (count - 1) / 2) * pitch}
-        pcbY={0}
-        holeDiameter="1.2mm"
-        outerDiameter="2.1mm"
-        shape="circle"
-      />
+      <React.Fragment key={i}>
+        <platedhole
+          portHints={[String(i + 1)]}
+          pcbX={(i - (count - 1) / 2) * pitch}
+          pcbY={0}
+          holeDiameter="1.2mm"
+          outerDiameter="2.1mm"
+          shape="circle"
+        />
+      </React.Fragment>
     ))}
   </footprint>
 )
@@ -82,7 +83,6 @@ export default () => (
     <schematicsection name="Connectors" displayName="Connectors" />
     <schematicsection name="Indicator" displayName="Power LED" />
     <schematictext
-      name="POWER_SPEC_1"
       text="Input Range: 3.9V to 5.5V"
       schX={5}
       schY={5.2}
@@ -90,7 +90,6 @@ export default () => (
       color="gray"
     />
     <schematictext
-      name="POWER_SPEC_2"
       text="Output Voltage: 3.3V"
       schX={5}
       schY={4.8}
@@ -98,7 +97,6 @@ export default () => (
       color="gray"
     />
     <schematictext
-      name="POWER_SPEC_3"
       text="Output Current: 2A MAX"
       schX={5}
       schY={4.4}
@@ -379,7 +377,7 @@ export default () => (
       pcbX={X(7.5)}
       pcbY={Y(14.5)}
       pcbRotation={270}
-      schOrientation="vertical"
+      schRotation={90}
       schX={24}
       schY={3}
       schSectionName="Indicator"
