@@ -489,6 +489,18 @@ export default () => (
       pcbY={Y(2.15)}
       fontSize="0.65mm"
     />
+    <silkscreentext
+      text="Buck Regulator"
+      pcbX={X(7.9)}
+      pcbY={Y(4.25)}
+      fontSize="0.7mm"
+    />
+    <silkscreentext
+      text="AP3429/A"
+      pcbX={X(7.2)}
+      pcbY={Y(3.35)}
+      fontSize="0.7mm"
+    />
     <keepout
       shape="rect"
       pcbX={-1.8}
