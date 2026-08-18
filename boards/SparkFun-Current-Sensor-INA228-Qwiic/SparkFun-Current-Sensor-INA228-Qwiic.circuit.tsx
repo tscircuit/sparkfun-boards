@@ -13,6 +13,36 @@ export default () => {
       <schematicsection name="address" displayName="I²C Address Jumpers" />
       <schematicsection name="connectors" displayName="Connectors" />
 
+      <hole name="H1" diameter={3.1} pcbX={-10.16} pcbY={-10.16} />
+      <hole name="H2" diameter={3.1} pcbX={10.16} pcbY={-10.16} />
+      <hole name="H3" diameter={3.1} pcbX={-10.16} pcbY={10.16} />
+      <hole name="H4" diameter={3.1} pcbX={10.16} pcbY={10.16} />
+
+      <silkscreentext
+        text="Current"
+        layer="top"
+        pcbX={-8.5}
+        pcbY={-6}
+        fontSize={0.9}
+        anchorAlignment="center"
+      />
+      <silkscreentext
+        text="Sensor"
+        layer="top"
+        pcbX={-8.5}
+        pcbY={-7}
+        fontSize={0.9}
+        anchorAlignment="center"
+      />
+      <silkscreentext
+        text="INA2XX"
+        layer="top"
+        pcbX={-8.5}
+        pcbY={-8}
+        fontSize={0.9}
+        anchorAlignment="center"
+      />
+
       <schematictable
         schX={12.5}
         schY={-1.5}
@@ -86,8 +116,8 @@ export default () => {
         schRotation={0}
         pinCount={2}
         footprint="solderjumper2_p0.82_pw0.635_pl1.27"
-        pcbX="-7mm"
-        pcbY="8mm"
+        pcbX="7mm"
+        pcbY="7.5mm"
         connections={{ pin1: sel.net().VBUS, pin2: sel.net().IN_POS }}
       />
 
@@ -183,7 +213,7 @@ export default () => {
         schRotation={90}
         resistance="2.2k"
         footprint="0603"
-        pcbX="4.7mm"
+        pcbX="5.31mm"
         pcbY="-5mm"
         pcbRotation={90}
         connections={{ pin1: sel.net().SCL, pin2: sel.net().I2C_SCL_PU }}
@@ -212,7 +242,7 @@ export default () => {
         schRotation={90}
         resistance="100k"
         footprint="0603"
-        pcbX="-5.5mm"
+        pcbX="-5.52mm"
         pcbY="-6.2mm"
         pcbRotation={90}
         connections={{ pin1: sel.net().A1, pin2: sel.net.VCC }}
@@ -267,7 +297,7 @@ export default () => {
         schRotation={90}
         resistance="15mΩ"
         footprint="2512"
-        pcbX="0mm"
+        pcbX="-0.2mm"
         pcbY="-4mm"
         connections={{ pin1: sel.net().SHUNT, pin2: sel.net().IN_NEG }}
       />
@@ -305,7 +335,7 @@ export default () => {
         schSectionName="power_led"
         resistance="4.7k"
         footprint="0603"
-        pcbX="8mm"
+        pcbX="8.3mm"
         pcbY="-5mm"
         pcbRotation={0}
         schX={-8}
@@ -337,19 +367,18 @@ export default () => {
         schPinArrangement={{
           rightSide: {
             direction: "top-to-bottom",
-            pins: ["pin1", "pin2", "pin3", "pin4", "pin5", "pin6"],
+            pins: ["pin1", "pin2", "pin3", "pin4", "pin5"],
           },
         }}
         pcbX="0mm"
         pcbY="-10.8mm"
-        footprint="pinrow6"
+        footprint="pinrow5_nosquareplating"
         pinLabels={{
           pin1: "GND",
           pin2: "VCC",
           pin3: "SDA",
           pin4: "SCL",
           pin5: "ALERT",
-          pin6: "VBUS",
         }}
         connections={{
           pin1: sel.net.GND,
@@ -357,7 +386,6 @@ export default () => {
           pin3: sel.net().SDA,
           pin4: sel.net().SCL,
           pin5: sel.net().ALERT,
-          pin6: sel.net().VBUS,
         }}
       />
       <A_1751251
@@ -374,6 +402,7 @@ export default () => {
         }}
         pcbX="0mm"
         pcbY="8.5mm"
+        pcbRotation={180}
         connections={{
           pin1: sel.net().IN_POS,
           pin2: sel.net().VBUS,

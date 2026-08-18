@@ -40,6 +40,30 @@ export const A_1751251 = (props: ChipProps<typeof pinLabels>) => {
             holeDiameter="1.400048mm"
             shape="circle"
           />
+          <silkscreentext
+            text="IN+"
+            pcbX="-3.50012mm"
+            pcbY="-2.9mm"
+            pcbRotation={180}
+            anchorAlignment="center"
+            fontSize="0.7mm"
+          />
+          <silkscreentext
+            text="VBUS"
+            pcbX="0mm"
+            pcbY="-2.9mm"
+            pcbRotation={180}
+            anchorAlignment="center"
+            fontSize="0.7mm"
+          />
+          <silkscreentext
+            text="IN-"
+            pcbX="3.50012mm"
+            pcbY="-2.9mm"
+            pcbRotation={180}
+            anchorAlignment="center"
+            fontSize="0.7mm"
+          />
           <silkscreenpath
             route={[
               { x: -5.499862000000007, y: -3.5001199999999244 },
