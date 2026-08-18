@@ -313,7 +313,7 @@ export default () => (
       }}
       schWidth={1.8}
       pcbX={X(13.335)}
-      pcbY={Y(24.003)}
+      pcbY={Y(23.39)}
       pcbRotation={90}
       schX={0}
       schY={-10}

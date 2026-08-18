@@ -1,5 +1,5 @@
-# SparkFun Buck Regulator AP3429A 3.3V
+# SparkFun Buck Regulator Breakout - 3.3V (AP3429A)
 
-An adjustable DC-DC buck regulator board based on the AP3429A, configured for a 3.3V output.
+This is a 3.3V, 2A step-down DC-DC regulator breakout based on the AP3429A.
 
-The tscircuit recreation includes the power-conversion stage, input/output connectors, output indicator, mounting holes, and PCB layout.
+Product Link: [https://www.sparkfun.com/catalog/product/view/id/7517/s/sparkfun-buck-regulator-breakout-3-3v-ap3429a/](https://www.sparkfun.com/catalog/product/view/id/7517/s/sparkfun-buck-regulator-breakout-3-3v-ap3429a/)
