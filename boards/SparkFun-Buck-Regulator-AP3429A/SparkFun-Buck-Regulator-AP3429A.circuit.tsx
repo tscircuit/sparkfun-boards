@@ -1,81 +1,10 @@
-import React from "react"
+import { BarrelJackFootprint } from "./footprints"
 
 const X = (x: number) => x - 12.7
 const Y = (y: number) => y - 12.7
-const ThroughHoleRow = ({
-  count,
-  pitch = 2.54,
-}: { count: number; pitch?: number }) => (
-  <footprint>
-    {Array.from({ length: count }, (_, i) => (
-      <React.Fragment key={i}>
-        <platedhole
-          portHints={[String(i + 1)]}
-          pcbX={(i - (count - 1) / 2) * pitch}
-          pcbY={0}
-          holeDiameter="1.2mm"
-          outerDiameter="2.1mm"
-          shape="circle"
-        />
-      </React.Fragment>
-    ))}
-  </footprint>
-)
-const BarrelJackFootprint = () => (
-  <footprint>
-    <platedhole
-      name="GND"
-      portHints={["2", "GND"]}
-      shape="pill"
-      pcbX={0}
-      pcbY={0}
-      outerWidth="2mm"
-      outerHeight="4mm"
-      holeWidth="1mm"
-      holeHeight="2mm"
-    />
-    <platedhole
-      name="GNDBREAK"
-      portHints={["3", "GNDBREAK"]}
-      shape="pill"
-      pcbX={-3.048}
-      pcbY={4.699}
-      outerWidth="4mm"
-      outerHeight="2mm"
-      holeWidth="2mm"
-      holeHeight="1mm"
-    />
-    <platedhole
-      name="PWR"
-      portHints={["1", "PWR"]}
-      shape="pill"
-      pcbX={-5.969}
-      pcbY={0}
-      outerWidth="2.3mm"
-      outerHeight="4.6mm"
-      holeWidth="1mm"
-      holeHeight="2.6mm"
-    />
-    <platedhole
-      name="GNDBREAK1"
-      shape="pill"
-      pcbX={-3.048}
-      pcbY={-4.699}
-      outerWidth="4mm"
-      outerHeight="2mm"
-      holeWidth="2mm"
-      holeHeight="1mm"
-    />
-  </footprint>
-)
 
 export default () => (
-  <board
-    width="25.4mm"
-    height="25.4mm"
-    layers={2}
-    schTraceAutoLabelEnabled={false}
-  >
+  <board width="25.4mm" height="25.4mm" layers={2}>
     <schematicsection
       name="Power Conversion"
       displayName="Adjustable DC-DC Buck Regulator - AP3429A"
@@ -323,7 +252,7 @@ export default () => (
     <chip
       name="J3"
       manufacturerPartNumber="Breakout Header"
-      footprint={<ThroughHoleRow count={5} />}
+      footprint="pinrow5_p2.54_id1.2_od2.1_nosquareplating"
       pinLabels={{
         pin1: "EN",
         pin2: "VIN",
@@ -374,90 +303,6 @@ export default () => (
       soldermaskPullback="0.4mm"
       pcbX={X(0.762)}
       pcbY={Y(24.638)}
-    />
-    <netlabel
-      net="VIN"
-      connection="C1.pin1"
-      schX={-6}
-      schY={3}
-      anchorSide="bottom"
-    />
-    <netlabel
-      net="VOUT"
-      connection="C6.pin1"
-      schX={16}
-      schY={3}
-      anchorSide="bottom"
-    />
-    <netlabel
-      net="EN"
-      connection="R4.pin1"
-      schX={-3.8}
-      schY={-1}
-      anchorSide="right"
-    />
-    <netlabel
-      net="GND"
-      connection="C1.pin2"
-      schX={-5}
-      schY={-2.5}
-      anchorSide="top"
-    />
-    <netlabel
-      net="GND"
-      connection="U1.GND"
-      schX={-0.5}
-      schY={-2.5}
-      anchorSide="top"
-    />
-    <netlabel
-      net="GND"
-      connection="R2.pin2"
-      schX={6}
-      schY={-2.5}
-      anchorSide="top"
-    />
-    <netlabel
-      net="GND"
-      connection="C3.pin2"
-      schX={9}
-      schY={-2.5}
-      anchorSide="top"
-    />
-    <netlabel
-      net="GND"
-      connection="C4.pin2"
-      schX={11}
-      schY={-2.5}
-      anchorSide="top"
-    />
-    <netlabel
-      net="GND"
-      connection="C5.pin2"
-      schX={13}
-      schY={-2.5}
-      anchorSide="top"
-    />
-    <netlabel
-      net="GND"
-      connection="C6.pin2"
-      schX={15}
-      schY={-2.5}
-      anchorSide="top"
-    />
-    <netlabel
-      net="VOUT"
-      connection="PWR.pin2"
-      schX={24}
-      schY={4.5}
-      anchorSide="bottom"
-    />
-    <netlabel
-      net="GND"
-      connection="D1.cathode"
-      schX={24}
-      schY={-2.8}
-      anchorSide="top"
     />
     <smtpad
       name="3V3_SELECT"
@@ -510,7 +355,11 @@ export default () => (
       layer="top"
     />
     <trace from="C1.pin1" to="R4.pin2" />
+    <trace from="C1.pin1" to="net.VIN" />
+    <trace from="C1.pin2" to="net.GND" />
     <trace from="R4.pin2" to="U1.VIN" />
+    <trace from="R4.pin1" to="net.EN" />
+    <trace from="U1.GND" to="net.GND" />
     <trace from="U1.SW" to="L1.pin1" />
     <trace from="L1.pin2" to="net.VOUT" />
     <trace from="C2.pin1" to="net.VOUT" />
@@ -518,12 +367,20 @@ export default () => (
     <trace from="C3.pin1" to="net.VOUT" />
     <trace from="C4.pin1" to="net.VOUT" />
     <trace from="C5.pin1" to="net.VOUT" />
+    <trace from="C6.pin1" to="net.VOUT" />
+    <trace from="C3.pin2" to="net.GND" />
+    <trace from="C4.pin2" to="net.GND" />
+    <trace from="C5.pin2" to="net.GND" />
+    <trace from="C6.pin2" to="net.GND" />
     <trace from="U1.FB" to="C2.pin2" schDisplayLabel="FB" />
     <trace from="C2.pin2" to="R1.pin2" schDisplayLabel="FB" />
     <trace from="R1.pin2" to="R2.pin1" schDisplayLabel="FB" />
+    <trace from="R2.pin2" to="net.GND" />
     <trace from="R4.pin1" to="U1.EN" />
     <trace from="PWR.pin1" to="R3.pin1" />
+    <trace from="PWR.pin2" to="net.VOUT" />
     <trace from="R3.pin2" to="D1.anode" />
+    <trace from="D1.cathode" to="net.GND" />
     <trace from="J1.VOUT" to="net.VOUT" />
     <trace from="J1.VIN" to="net.VIN" />
     <trace from="J1.GND1" to="net.GND" />
