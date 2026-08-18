@@ -283,8 +283,9 @@ export default () => (
     />
     <chip
       name="J1"
-      manufacturerPartNumber="Screw Terminal 4-way"
-      footprint={<ThroughHoleRow count={4} pitch={3.5} />}
+      manufacturerPartNumber="DB125-3.5-4P-GN-S"
+      supplierPartNumbers={{ jlcpcb: ["C2757925"] }}
+      footprint="jlcpcb:C2757925"
       pinLabels={{ pin1: "VIN", pin2: "GND1", pin3: "GND2", pin4: "VOUT" }}
       schPinArrangement={{
         rightSide: {
@@ -294,7 +295,7 @@ export default () => (
       }}
       schWidth={1.48}
       pcbX={X(3.5)}
-      pcbY={Y(14.2)}
+      pcbY={Y(13.95)}
       pcbRotation={270}
       schX={-6}
       schY={-10}
@@ -458,19 +459,23 @@ export default () => (
       schY={-2.8}
       anchorSide="top"
     />
-    <silkscreenrect
+    <smtpad
+      name="3V3_SELECT"
+      shape="rect"
+      layer="top"
       pcbX={X(6.35)}
       pcbY={Y(1.016)}
-      width="2mm"
-      height="1.4mm"
-      strokeWidth="0.2mm"
+      width="1.6764mm"
+      height="1.27mm"
     />
-    <silkscreenrect
+    <smtpad
+      name="1V8_SELECT"
+      shape="rect"
+      layer="top"
       pcbX={X(11.938)}
       pcbY={Y(1.016)}
-      width="2mm"
-      height="1.4mm"
-      strokeWidth="0.2mm"
+      width="1.6764mm"
+      height="1.27mm"
     />
     <silkscreentext
       text="3.3V"
