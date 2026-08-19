@@ -346,6 +346,34 @@ export default () => (
       pcbY={Y(3.35)}
       fontSize="0.7mm"
     />
+    <silkscreentext
+      text="VIN"
+      pcbX={X(5.2)}
+      pcbY={Y(19.2)}
+      pcbRotation={270}
+      fontSize="0.6mm"
+    />
+    <silkscreentext
+      text="GND"
+      pcbX={X(5.2)}
+      pcbY={Y(15.7)}
+      pcbRotation={270}
+      fontSize="0.6mm"
+    />
+    <silkscreentext
+      text="GND"
+      pcbX={X(5.2)}
+      pcbY={Y(12.2)}
+      pcbRotation={270}
+      fontSize="0.6mm"
+    />
+    <silkscreentext
+      text="VOUT"
+      pcbX={X(5.2)}
+      pcbY={Y(8.7)}
+      pcbRotation={270}
+      fontSize="0.6mm"
+    />
     <keepout
       shape="rect"
       pcbX={-1.8}
