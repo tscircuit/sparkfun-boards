@@ -48,8 +48,9 @@ export default () => (
     />
     <chip
       name="U1"
-      manufacturerPartNumber="AP3429A"
-      footprint="sot23_5"
+      manufacturerPartNumber="AP3429KTTR-G1"
+      supplierPartNumbers={{ jlcpcb: ["C507879"] }}
+      footprint="jlcpcb:C507879"
       pinLabels={{
         pin1: "EN",
         pin2: "GND",
@@ -72,8 +73,10 @@ export default () => (
     <inductor
       name="L1"
       inductance="2.2uH"
-      footprint="1206"
-      pcbX={X(16.256)}
+      manufacturerPartNumber="IFSC1515AHER2R2M01"
+      supplierPartNumbers={{ jlcpcb: ["C844952"] }}
+      footprint="jlcpcb:C844952"
+      pcbX={X(17.256)}
       pcbY={Y(8.509)}
       schX={3}
       schY={1}
