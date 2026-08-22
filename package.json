@@ -17,7 +17,7 @@
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "latest",
     "circuit-json-to-footprinter": "^0.0.52",
-    "tscircuit": "^0.0.2384"
+    "tscircuit": "^0.0.2387"
   },
   "peerDependencies": {
     "typescript": "^5"
