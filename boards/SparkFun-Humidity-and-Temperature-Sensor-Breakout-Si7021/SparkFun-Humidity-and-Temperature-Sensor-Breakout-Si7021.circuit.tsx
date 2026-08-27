@@ -37,7 +37,7 @@ export default () => (
       footprint="pinrow4_id1mm_od1.88,,_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
       schDirection="left"
       pcbRotation={-90}
-      pcbX={-6.5}
+      pcbX={-6.47}
       cadModel={null}
     />
     <resistor

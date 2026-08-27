@@ -135,8 +135,9 @@ export default () => (
       }}
       pinLabels={JP1PinLabels}
       pcbX={-6.431}
-      pcbRotation={-90}
+      pcbRotation={90}
       pcbY={-0.35}
+      layer="bottom"
       cadModel={null}
       footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabelverticallyinverted_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
     />
@@ -148,7 +149,8 @@ export default () => (
       pinLabels={JP2PinLabels}
       pcbX={6.431}
       pcbY={-0.35}
-      pcbRotation={-90}
+      pcbRotation={90}
+      layer="bottom"
       cadModel={null}
       footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabelverticallyinverted_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
     />
