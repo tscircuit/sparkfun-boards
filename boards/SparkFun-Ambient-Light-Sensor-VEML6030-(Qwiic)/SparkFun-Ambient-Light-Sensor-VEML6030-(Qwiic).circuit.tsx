@@ -1,7 +1,6 @@
 import { sel } from "tscircuit"
-import { VEML6030 } from "./VEML6030"
-import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
-import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
+import { VEML6030 } from "./imports/VEML6030"
+import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
 const jumperPinLabels = {
   pin1: ["GND"],
   pin2: ["3V3"],
@@ -12,14 +11,14 @@ const jumperPinLabels = {
 export default () => (
   <board width="25.4mm" height="25.4mm">
     <VEML6030 name="U1" schY={1.5} pcbRotation={-90} />
-    <SM04B_SRSS_TB_LF__SN
+    <SM04B_SRSS_TB_LF__SN_
       name="J1"
       pcbX="9.7"
       pcbRotation={90}
       schX={8}
       schY={4}
     />
-    <SM04B_SRSS_TB_LF__SN2
+    <SM04B_SRSS_TB_LF__SN_
       name="J2"
       pcbX="-9.7"
       pcbRotation={-90}
