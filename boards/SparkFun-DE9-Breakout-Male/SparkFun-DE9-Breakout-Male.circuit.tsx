@@ -71,7 +71,7 @@ export default () => {
         schX={-2}
         schY={-3}
         pcbX={9.8}
-        pcbY={12.75}
+        pcbY={13.71}
         pcbRotation={90}
         connections={{ pin1: sel.net().GND }}
       />
@@ -87,7 +87,7 @@ export default () => {
         schX={-2}
         schY={-3.5}
         pcbX={9.8}
-        pcbY={-12.75}
+        pcbY={-13.71}
         pcbRotation={90}
         connections={{ pin1: sel.net().GND }}
       />

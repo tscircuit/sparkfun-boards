@@ -49,7 +49,7 @@ const HMC6343Breakout = () => (
       resistance="10k"
       footprint="0603"
       pcbX={-2.54}
-      pcbY={8.89}
+      pcbY={9.27}
       pcbRotation="180deg"
       schX={2}
       schY={1.5}

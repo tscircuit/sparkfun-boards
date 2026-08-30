@@ -50,7 +50,7 @@ export default () => (
       footprint="0603"
       name="R1"
       pcbX={1.524}
-      pcbY={-2.9}
+      pcbY={-3.2}
       schRotation={90}
       pcbRotation={180}
       connections={{ pin2: sel.net().VCC, pin1: sel.U1.pin1 }}
@@ -60,7 +60,7 @@ export default () => (
       footprint="0603"
       name="R2"
       pcbX={-1.524}
-      pcbY={-2.9}
+      pcbY={-3.2}
       schRotation={90}
       connections={{ pin2: sel.net().VCC, pin1: sel.U1.pin3 }}
     />
