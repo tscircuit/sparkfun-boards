@@ -139,7 +139,7 @@ export default () => (
       pcbY={-0.35}
       layer="bottom"
       cadModel={null}
-      footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabelverticallyinverted_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
+      footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
     />
     <jumper
       schWidth={0.65}
@@ -152,7 +152,7 @@ export default () => (
       pcbRotation={90}
       layer="bottom"
       cadModel={null}
-      footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabelverticallyinverted_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
+      footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
     />
   </board>
 )
