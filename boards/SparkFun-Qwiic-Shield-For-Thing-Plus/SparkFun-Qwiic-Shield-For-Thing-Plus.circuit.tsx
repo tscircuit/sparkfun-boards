@@ -77,7 +77,7 @@ export default () => (
       schX={6}
       schY={3}
       pcbX={0.05}
-      pcbY={22.39}
+      pcbY={22.29}
       pcbRotation={180}
       schPinArrangement={{
         rightSide: {

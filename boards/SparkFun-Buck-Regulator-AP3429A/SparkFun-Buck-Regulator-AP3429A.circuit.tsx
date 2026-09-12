@@ -193,8 +193,8 @@ export default () => (
       name="R4"
       resistance="100k"
       footprint="0603"
-      pcbX={X(19.558)}
-      pcbY={Y(16.891)}
+      pcbX={7.958}
+      pcbY={4.09}
       pcbRotation={270}
       schOrientation="vertical"
       schX={-3}
@@ -270,8 +270,8 @@ export default () => (
         },
       }}
       schWidth={1.48}
-      pcbX={X(23.5)}
-      pcbY={Y(14.5)}
+      pcbX={10.8}
+      pcbY={1.6}
       pcbRotation={270}
       schX={6}
       schY={-10}

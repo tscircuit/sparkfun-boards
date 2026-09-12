@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { MPRLS0025PA00001A } from "./imports/MPRLS0025PA00001A"
 import { SM04B_SRSS_TB_LF__SN } from "./imports/SM04B_SRSS_TB_LF__SN"
@@ -56,10 +57,8 @@ export default () => {
         schX={-7}
         schY={8}
         connections={{
-          pin1: sel.net().SS,
           pin2: sel.net().SDA,
           pin3: sel.net().SCL,
-          pin7: sel.net().MISO,
           pin8: sel.net().EOC,
           pin9: sel.net().RESET,
           pin10: sel.net().GND,
@@ -259,7 +258,7 @@ export default () => {
         schSectionName="connectors"
         schX={-1.5}
         schY={-1.15}
-        pcbX={-9.8}
+        pcbX={-9.7}
         pcbRotation={-90}
         connections={{
           pin4: sel.net().SCL,
@@ -273,7 +272,7 @@ export default () => {
         schSectionName="connectors"
         schX={2}
         schY={-1.15}
-        pcbX={9.8}
+        pcbX={9.7}
         pcbRotation={90}
         connections={{
           pin4: sel.net().SCL,
@@ -302,7 +301,10 @@ export default () => {
           pin1: sel.net().GND,
         }}
         pinLabels={qwiicHeaderLabels}
-        footprint="pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
+        footprint={barePinRow(
+          "pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted",
+        )}
+        cadModel={null}
         pcbX={-2}
         pcbY={-11.43}
       />
@@ -325,7 +327,10 @@ export default () => {
           pin1: sel.net().RESET,
         }}
         pinLabels={eocResetHeaderLabels}
-        footprint="pinrow2_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
+        footprint={barePinRow(
+          "pinrow2_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted",
+        )}
+        cadModel={null}
         pcbX={5.5}
         pcbY={-11.43}
       />

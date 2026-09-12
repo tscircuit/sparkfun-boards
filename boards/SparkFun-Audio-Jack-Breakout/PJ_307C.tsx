@@ -45,7 +45,7 @@ export const PJ_307C = (props: ChipProps<typeof pinLabels>) => {
           />
           <platedhole
             portHints={["pin1"]}
-            pcbX="2.842170943040401e-14mm"
+            pcbX={0}
             pcbY="1.2499339999999393mm"
             holeWidth="1.5999968mm"
             holeHeight="0.7999983999999999mm"

@@ -2,7 +2,8 @@ import { sel } from "@tscircuit/core"
 import { TXB0104D } from "./TXB0104D"
 
 export default () => (
-  <board width="12.7mm" height="17.78mm">
+  <board width="14.224mm" height="17.78mm">
+    <trace from="U1.pin8" to="net.OE" />
     <silkscreentext
       text="TXB0104"
       fontSize={1.5}
@@ -92,7 +93,7 @@ export default () => (
         pin7: ".SJ1 > .pin1",
       }}
       schY={-0.3}
-      pcbX={-5.08}
+      pcbX={-5.9}
       pcbRotation={90}
       pcbPinLabels={{
         pin1: "GND",
@@ -196,10 +197,10 @@ export default () => (
         pin4: sel.U1.pin11,
         pin5: sel.U1.pin12,
         pin6: sel.U1.pin13,
-        pin7: sel.net().DE,
+        pin7: sel.net().OE,
       }}
       schY={-0.3}
-      pcbX={5.08}
+      pcbX={5.9}
       pcbRotation={90}
       pcbPinLabels={{
         pin1: "GND",
@@ -212,7 +213,7 @@ export default () => (
       }}
     />
     <netlabel
-      net="DE"
+      net="OE"
       anchorSide="left"
       connection="JP2.pin7"
       schX={3.4}

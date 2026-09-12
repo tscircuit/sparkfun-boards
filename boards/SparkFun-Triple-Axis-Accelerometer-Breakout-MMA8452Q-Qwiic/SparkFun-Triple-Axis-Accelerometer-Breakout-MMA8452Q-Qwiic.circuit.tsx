@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { MMA8452QR1 } from "./MMA8452Q"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
@@ -21,7 +22,7 @@ export default () => {
         schRotation={-90}
         schX={-4}
         footprint="cap0603"
-        pcbX={3.3}
+        pcbX={3}
         pcbRotation={-90}
         connections={{ pin2: sel.net().GND, pin1: sel.net().V3_3 }}
       />
@@ -120,7 +121,9 @@ export default () => {
         }}
         schY={-6}
         schDirection="left"
-        footprint="pinrow4_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+        footprint={barePinRow(
+          "pinrow4_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal",
+        )}
         pcbY={-11.43}
         pcbX={-1.25}
       />
@@ -139,7 +142,9 @@ export default () => {
         connections={{ pin1: sel.net().INT1, pin2: sel.net().INT2 }}
         schY={-7.7}
         pcbRotation={180}
-        footprint="pinrow2_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+        footprint={barePinRow(
+          "pinrow2_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal",
+        )}
         pcbY={-11.43}
         pcbX={6.37}
       />

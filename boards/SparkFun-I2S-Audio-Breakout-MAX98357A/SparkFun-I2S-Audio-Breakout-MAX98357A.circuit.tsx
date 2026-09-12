@@ -52,13 +52,19 @@ const JP4PinLabels = {
 
 export default () => (
   <board outline={outline} manualEdits={manualEdits}>
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.15mm"
+      minViaEdgeToPadEdgeClearance="0.15mm"
+      minBoardEdgeClearance="0.3mm"
+    />
     <MAX98357AETE_T name="U1" pcbX={-1.016} pcbRotation={-90} />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength="5mm"
       capacitance="10uF"
       footprint="0805"
       pcbRotation={-90}
-      pcbX={1.041}
+      pcbX={1.241}
       pcbY={-5.105}
       schRotation={-90}
       connections={{ pin1: sel.U1.pin7 }}

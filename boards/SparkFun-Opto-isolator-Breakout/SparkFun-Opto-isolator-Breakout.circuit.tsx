@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { ILD213T } from "./ILD213T"
 
@@ -37,7 +38,7 @@ export default () => (
       footprint={"0603"}
       schX={-3}
       schY={-0.5}
-      pcbX={-4.5}
+      pcbX={-4.4}
       pcbY={-2.5}
       pcbRotation={-90}
       connections={{ pin1: sel.J2.pin3, pin2: sel.U1.pin3 }}
@@ -62,7 +63,7 @@ export default () => (
       schX={4}
       schY={4}
       schRotation={90}
-      pcbX={4.5}
+      pcbX={4.4}
       pcbY={-2.5}
       pcbRotation={-90}
       connections={{ pin2: sel.net().HV }}
@@ -96,8 +97,8 @@ export default () => (
       footprint={"sot23"}
       schX={4}
       schY={-1}
-      pcbX={-4}
-      pcbY={4}
+      pcbX={-3.7}
+      pcbY={4.1}
       pcbRotation={90}
       type="npn"
       connections={{
@@ -127,9 +128,11 @@ export default () => (
 
     <jumper
       name="J2"
-      footprint={
-        "pinrow4_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal"
-      }
+      footprint={barePinRow(
+        "pinrow4_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal",
+      )}
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
+      cadModel={null}
       pcbX={-6.35}
       schX={-6}
       pcbRotation={-90}
@@ -147,9 +150,11 @@ export default () => (
 
     <jumper
       name="JP1"
-      footprint={
-        "pinrow4_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal"
-      }
+      footprint={barePinRow(
+        "pinrow4_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal",
+      )}
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
+      cadModel={null}
       pcbX={6.35}
       schX={10}
       pcbRotation={90}

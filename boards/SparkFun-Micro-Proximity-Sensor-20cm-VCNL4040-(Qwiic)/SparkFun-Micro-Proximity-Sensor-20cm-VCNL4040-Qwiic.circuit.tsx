@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { VCNL4040 } from "./VCNL4040"
 import { JST04_1MM_RA } from "./JST04_1MM_RA"
@@ -22,6 +23,11 @@ const SectionTitle = ({
 
 export default () => (
   <board width="19.05mm" height="7.62mm">
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.2mm"
+      minViaEdgeToPadEdgeClearance="0.2mm"
+      minBoardEdgeClearance="0.4mm"
+    />
     <SectionTitle text="Proximity Sensor" schX={-1.5} schY={6.5} />
     <SectionTitle text="LED" schX={11.5} schY={6.5} />
     <SectionTitle text="Connectors" schX={-4.5} schY={-4.2} />
@@ -72,7 +78,7 @@ export default () => (
       schX={-5.5}
       schY={2.9}
       pcbX={-1.245}
-      pcbY={2.232}
+      pcbY={2.432}
       schRotation={-90}
     />
     <capacitor
@@ -82,8 +88,9 @@ export default () => (
       schX={-7.2}
       schY={2.9}
       pcbX={1.295}
-      pcbY={2.232}
+      pcbY={2.432}
       schRotation={-90}
+      pcbRotation={180}
     />
     <netlabel
       net="V3_3"
@@ -175,7 +182,7 @@ export default () => (
       schX={0.7}
       schY={3.6}
       pcbX={1.295}
-      pcbY={-2.213}
+      pcbY={-2.413}
       schRotation={90}
       connections={{ pin1: "net.INT" }}
     />
@@ -219,7 +226,7 @@ export default () => (
       schX={12.3}
       schY={3.7}
       pcbX={-1.245}
-      pcbY={-2.213}
+      pcbY={-2.413}
       schRotation={-90}
       connections={{ pin2: "D1.pin1" }}
     />
@@ -284,9 +291,11 @@ export default () => (
       schWidth={0.45}
       schX={2.2}
       schY={-6}
-      pcbX={-5.7}
-      pcbY={-2.53}
-      footprint="pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+      pcbX={-5.5}
+      pcbY={-2.55}
+      footprint={barePinRow(
+        "pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal",
+      )}
       cadModel={null}
       pinLabels={{ pin1: "INT" }}
       schPinArrangement={{

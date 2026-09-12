@@ -75,7 +75,7 @@ export default () => (
       schRotation={90}
       schY={-1.4}
       pcbX={-2.032}
-      pcbY={3.302}
+      pcbY={3.202}
       connections={{ pin2: sel.JP5.pin1 }}
     />
     <led

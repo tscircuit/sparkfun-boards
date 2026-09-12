@@ -1,9 +1,10 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 export default () => (
   <board width="15.24mm" height="10.16mm">
     <chip
       name="U1"
-      footprint="ssop8_w8.89_p0.635_pw0.35_pl2.2"
+      footprint="ssop8_w6.49_p0.635_pw0.35_pl2.2"
       schPinArrangement={{
         rightSide: {
           direction: "top-to-bottom",
@@ -27,7 +28,8 @@ export default () => (
     />
     <jumper
       name="JP2"
-      footprint="pinrow4_nopinlabels"
+      footprint={barePinRow("pinrow4_nopinlabels")}
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schX={-1.9}
       pcbX={-6.08}
       pcbRotation={90}
@@ -36,7 +38,8 @@ export default () => (
     />
     <jumper
       name="JP1"
-      footprint="pinrow4_nopinlabels"
+      footprint={barePinRow("pinrow4_nopinlabels")}
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schX={1.9}
       pcbX={6.08}
       schDirection="left"

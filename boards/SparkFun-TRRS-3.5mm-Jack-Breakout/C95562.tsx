@@ -24,12 +24,12 @@ export const PJ_320D_4A = (props: ChipProps<typeof pinLabels>) => {
       footprint={
         <footprint>
           <hole
-            pcbX="1.1368683772161603e-13mm"
+            pcbX={0}
             pcbY="-1.8750216999999338mm"
             diameter="1.1999975999999999mm"
           />
           <hole
-            pcbX="1.1368683772161603e-13mm"
+            pcbX={0}
             pcbY="5.124964299999988mm"
             diameter="1.1999975999999999mm"
           />

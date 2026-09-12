@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { GMI9745P_30db } from "./MIC"
 import { OPA344NA_250 } from "./OPA344"
@@ -63,6 +64,9 @@ export default () => {
           pin1: sel.C1.pin1,
           pin2: sel.net().VCC,
         }}
+        pcbY={-3.5}
+        pcbX={7.32}
+        pcbRotation={90}
       />
 
       <capacitor
@@ -75,6 +79,8 @@ export default () => {
         connections={{
           pin2: sel.R4.pin2,
         }}
+        pcbY={2.880001}
+        pcbX={-8.48}
       />
 
       <resistor
@@ -88,6 +94,9 @@ export default () => {
           pin1: sel.U1.pin4,
         }}
         schRotation={-180}
+        pcbRotation={180}
+        pcbY={3.43}
+        pcbX={-4.136}
       />
 
       <capacitor
@@ -95,7 +104,7 @@ export default () => {
         capacitance="4.7uF"
         footprint={"0603"}
         layer={"bottom"}
-        pcbX={6.032}
+        pcbX={5.85}
         pcbY={-2.222}
         pcbRotation={-90}
         schX={-5}
@@ -118,11 +127,16 @@ export default () => {
           pin1: sel.net().GND,
           pin2: sel.net().VCC,
         }}
+        pcbY={4.2}
+        pcbX={7.5}
+        pcbRotation={0}
       />
 
       <jumper
         name="J1"
-        footprint={"pinrow3"}
+        footprint={barePinRow("pinrow3")}
+        pinLabels={{ pin1: "1", pin2: "2", pin3: "3" }}
+        cadModel={null}
         pcbX={8.89}
         pcbRotation={90}
         schX={4}

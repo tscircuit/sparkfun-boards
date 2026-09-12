@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 export default () => (
   <board width="10.16mm" height="7.62mm">
@@ -21,7 +22,10 @@ export default () => (
       cadModel={null}
       schX={2}
       schDirection="left"
-      footprint="pinrow3_id1.016mm_od1.626mm_nosquareplating_nopinlabels"
+      footprint={barePinRow(
+        "pinrow3_id1.016mm_od1.626mm_nosquareplating_nopinlabels",
+      )}
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3" }}
       pcbX={3.81}
       pcbRotation={-90}
     />
@@ -29,7 +33,10 @@ export default () => (
       name="JP2"
       schX={-2}
       cadModel={null}
-      footprint="pinrow3_id1.016mm_od1.626mm_nosquareplating_nopinlabels"
+      footprint={barePinRow(
+        "pinrow3_id1.016mm_od1.626mm_nosquareplating_nopinlabels",
+      )}
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3" }}
       pcbX={-3.81}
       pcbRotation={90}
     />

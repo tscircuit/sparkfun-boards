@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { VCNL4040M3OE } from "./imports/VCNL4040M3OE"
 import { SM04B_SRSS_TB_LF__SN } from "./imports/SM04B_SRSS_TB_LF__SN"
 import { sel } from "tscircuit"
@@ -37,7 +38,7 @@ export default () => {
         schX={-5}
         capacitance="0.1uF"
         footprint="cap0603"
-        pcbY={-3}
+        pcbY={-3.1}
         pcbRotation={180}
         connections={{ pin1: sel.net().GND, pin2: sel.net().VDD }}
       />
@@ -133,7 +134,10 @@ export default () => {
         }}
         schY={-6}
         schDirection="left"
-        footprint="pinrow4_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+        footprint={barePinRow(
+          "pinrow4_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal",
+        )}
+        cadModel={null}
         pcbY={-11.43}
         pcbX={-1.25}
       />
@@ -146,10 +150,13 @@ export default () => {
         schPinArrangement={{
           leftSide: { direction: "top-to-bottom", pins: ["pin1"] },
         }}
-        connections={{ pin1: sel.net().N_INT }}
+        connections={{ pin1: sel.net().INT }}
         schY={-5.7}
         schX={2}
-        footprint="pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+        footprint={barePinRow(
+          "pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal",
+        )}
+        cadModel={null}
         pcbY={-11.43}
         pcbX={5.08}
       />

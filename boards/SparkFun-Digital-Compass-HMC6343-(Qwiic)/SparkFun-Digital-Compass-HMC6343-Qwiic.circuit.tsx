@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { JST05_1MM_RA } from "./JST05_1MM_RA"
 import { HMC6343 } from "./HMC6343"
 import { JST04_1MM_RA } from "./JST04_1MM_RA"
@@ -57,7 +58,7 @@ const HMC6343Qwiic = () => (
       footprint="0603"
       schX={9.985}
       schY={12.4}
-      pcbX={-5.715}
+      pcbX={-6.015}
       pcbY={0.952}
       pcbRotation={270}
       schRotation={-90}
@@ -107,6 +108,7 @@ const HMC6343Qwiic = () => (
             shape="rect"
           />
           <smtpad
+            portHints={["1"]}
             pcbX="-0.508mm"
             pcbY="0mm"
             width="0.381mm"
@@ -114,6 +116,7 @@ const HMC6343Qwiic = () => (
             shape="rect"
           />
           <smtpad
+            portHints={["3"]}
             pcbX="0.508mm"
             pcbY="0mm"
             width="0.381mm"
@@ -323,7 +326,9 @@ const HMC6343Qwiic = () => (
     />
     <jumper
       name="J3"
-      footprint={"pinrow4_id1.016_od1.88_nosquareplating_doublesidedpinlabel"}
+      footprint={barePinRow(
+        "pinrow4_id1.016_od1.88_nosquareplating_doublesidedpinlabel",
+      )}
       schWidth={0.65}
       cadModel={null}
       schDirection="left"
@@ -341,7 +346,7 @@ const HMC6343Qwiic = () => (
       }}
       schX={22.2}
       schY={4.7}
-      pcbX={-1.08}
+      pcbX={-1.18}
       pcbY={-11.43}
       connections={{
         GND: "net.GND",
@@ -380,7 +385,8 @@ const HMC6343Qwiic = () => (
 
     <jumper
       name="J4"
-      footprint="pinrow1_id1.016_od1.88_nosquareplating"
+      footprint={barePinRow("pinrow1_id1.016_od1.88_nosquareplating")}
+      pinLabels={{ pin1: "1" }}
       cadModel={null}
       pcbX={5.08}
       pcbY={-11.43}

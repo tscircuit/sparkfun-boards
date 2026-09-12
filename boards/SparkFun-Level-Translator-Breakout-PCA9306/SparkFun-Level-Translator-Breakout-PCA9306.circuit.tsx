@@ -47,9 +47,10 @@ export default () => (
     <capacitor
       capacitance="100pF"
       pcbX="3.124mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       name="C1"
+      maxDecouplingTraceLength="8mm"
       footprint="0603"
       schX="1.5"
       schY="-1.5"
@@ -111,7 +112,7 @@ export default () => (
       schRotation={270}
       footprint="0603"
       pcbX="1.651mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       connections={{
         pin2: sel<"VREF2">("U1").VREF2,
@@ -126,7 +127,7 @@ export default () => (
       schRotation={270}
       footprint="0603"
       pcbX="0.152mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       connections={{
         pin1: sel.JP1.pin1,
@@ -141,7 +142,7 @@ export default () => (
       schRotation={270}
       footprint="0603"
       pcbX="-1.626mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       connections={{
         pin2: sel<"SDA2">("U1").SDA2,
@@ -418,5 +419,6 @@ export default () => (
         <schematiccell>5V</schematiccell>
       </schematicrow>
     </schematictable>
+    <trace from="U1.SCL1" to="net.SCL1" />
   </board>
 )

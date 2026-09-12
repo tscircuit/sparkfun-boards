@@ -11,6 +11,11 @@ const jumperPinLabels = {
 }
 export default () => (
   <board width="25.4mm" height="25.4mm">
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.15mm"
+      minViaEdgeToPadEdgeClearance="0.15mm"
+      minBoardEdgeClearance="0.3mm"
+    />
     <VEML6030 name="U1" schY={1.5} pcbRotation={-90} />
     <SM04B_SRSS_TB_LF__SN
       name="J1"
@@ -28,6 +33,7 @@ export default () => (
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength="5mm"
       schRotation={-90}
       schX={-2.5}
       schY={1.5}
@@ -78,8 +84,8 @@ export default () => (
       name="R4"
       resistance="1k"
       footprint="0603"
-      pcbX={-10.109}
-      pcbY={4.318}
+      pcbX={-9.109}
+      pcbY={4.118}
       schY={-7.1}
       schX={-1.8}
       schRotation={90}

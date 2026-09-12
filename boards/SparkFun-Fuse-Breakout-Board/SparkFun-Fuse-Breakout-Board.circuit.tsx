@@ -212,25 +212,8 @@ export default () => (
     />
 
     {/* PCB Layout details */}
-    <pcbtrace
-      layer="top"
-      thickness="0.508mm"
-      route={[
-        { x: -2.2225, y: -2.54 },
-        { x: 1.5875, y: 0 },
-        { x: 5.6515, y: 0 },
-      ]}
-    />
-    <pcbtrace
-      layer="top"
-      thickness="0.508mm"
-      route={[
-        { x: 18.8595, y: 0 },
-        { x: 14.6685, y: 0 },
-        { x: 16.8275, y: -2.54 },
-        { x: 16.8275, y: 2.54 },
-      ]}
-    />
+    <trace from="F1.pin2" to="F2.pin1" pcbStraightLine thickness="0.508mm" />
+    <trace from="F1.pin3" to="F1.pin4" pcbStraightLine thickness="0.508mm" />
 
     {/* PCB Silkscreen texts */}
     <silkscreentext
