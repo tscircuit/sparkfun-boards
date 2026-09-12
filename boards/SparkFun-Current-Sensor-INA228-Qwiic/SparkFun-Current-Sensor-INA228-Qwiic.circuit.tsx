@@ -150,7 +150,7 @@ export default () => {
         schSectionName="connectors"
         schX={-7}
         schY={-6}
-        pcbX="-10mm"
+        pcbX="-9.7mm"
         pcbRotation={-90}
         connections={{
           GND: sel.net.GND,
@@ -165,7 +165,7 @@ export default () => {
         schSectionName="connectors"
         schX={-3}
         schY={-6}
-        pcbX="10mm"
+        pcbX="9.7mm"
         pcbRotation={90}
         connections={{
           GND: sel.net.GND,

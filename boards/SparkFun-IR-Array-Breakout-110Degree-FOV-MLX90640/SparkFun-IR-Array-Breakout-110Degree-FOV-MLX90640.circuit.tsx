@@ -32,7 +32,7 @@ export default () => (
     <capacitor
       name="C1"
       pcbX={-7.049}
-      pcbY={5.905}
+      pcbY={6.005}
       pcbRotation={180}
       capacitance="0.1uF"
       footprint="cap0603"
@@ -83,7 +83,7 @@ export default () => (
       schX={-6.2}
       schY={0.5}
       pcbX={-10.16}
-      pcbY={-4.445}
+      pcbY={-4.245}
       connections={{ pin2: sel.net().V3_3, pin1: sel.D1.pin1 }}
     />
 

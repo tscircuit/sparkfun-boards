@@ -3,7 +3,7 @@ import { DS1037_09FNAKT74_0CC } from "./imports/DS1037_09FNAKT74_0CC"
 import { SP3223EEY_L_TR } from "./imports/SP3223EEY_L_TR"
 
 export default () => (
-  <board width="27.94mm" height="31.75mm" autorouter="auto-cloud">
+  <board width="27.94mm" height="31.75mm" autorouter="auto-local">
     <schematicsection name="rs232" displayName="RS-232 / DE9 Connector" />
     <schematicsection name="transceiver" displayName="RS-232 Transceiver" />
     <schematicsection name="ttl" displayName="TTL Logic Header" />
@@ -130,6 +130,7 @@ export default () => (
     />
     <capacitor
       name="C4"
+      maxDecouplingTraceLength="15mm"
       capacitance="0.1uF"
       footprint="cap0603"
       schSectionName="transceiver"
@@ -141,6 +142,7 @@ export default () => (
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength="15mm"
       capacitance="0.1uF"
       footprint="cap0603"
       schSectionName="transceiver"

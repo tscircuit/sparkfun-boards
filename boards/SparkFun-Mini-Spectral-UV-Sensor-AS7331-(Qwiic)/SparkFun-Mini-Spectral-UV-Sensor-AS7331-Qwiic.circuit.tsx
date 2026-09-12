@@ -37,8 +37,8 @@ export default () => {
         name="J1"
         schX={-4.95}
         schY={-4.9}
-        pcbX={10.55}
-        pcbY={2.9}
+        pcbX={10.35}
+        pcbY={2.7}
         layer="bottom"
         pcbRotation={90}
         connections={{
@@ -53,8 +53,8 @@ export default () => {
         name="J2"
         schX={-3.0}
         schY={-4.9}
-        pcbX={-10.55}
-        pcbY={2.9}
+        pcbX={-10.35}
+        pcbY={2.7}
         layer="bottom"
         pcbRotation={-90}
         connections={{
@@ -104,6 +104,8 @@ export default () => {
         layer="bottom"
         pcbRotation={90}
         connections={{ pin1: sel.net.SCL, pin2: "I2C.pin3" }}
+        pcbY={0}
+        pcbX={3.6}
       />
       <resistor
         name="R2"
@@ -115,6 +117,8 @@ export default () => {
         layer="bottom"
         pcbRotation={90}
         connections={{ pin1: sel.net.SDA, pin2: "I2C.pin1" }}
+        pcbY={-1.3}
+        pcbX={-3.8}
       />
       <solderjumper
         name="I2C"
@@ -124,8 +128,10 @@ export default () => {
         schX={2.45}
         schY={4.0}
         schRotation={180}
-        pcbRotation={180}
+        pcbRotation={270}
         connections={{ pin2: sel.net.V3_3 }}
+        pcbY={-1.4}
+        pcbX={-6.7}
       />
 
       <resistor
@@ -138,6 +144,8 @@ export default () => {
         layer="bottom"
         pcbRotation={90}
         connections={{ pin1: sel.net().VDDA, pin2: "A0.pin1" }}
+        pcbY={5.25}
+        pcbX={4.6}
       />
       <resistor
         name="R4"
@@ -149,6 +157,8 @@ export default () => {
         layer="bottom"
         pcbRotation={90}
         connections={{ pin1: sel.net().VDDA, pin2: "A1.pin1" }}
+        pcbY={0}
+        pcbX={6.4}
       />
       <solderjumper
         name="A0"
@@ -160,6 +170,8 @@ export default () => {
         schRotation={-90}
         pcbRotation={-90}
         connections={{ pin3: "net.AGND" }}
+        pcbY={2.7}
+        pcbX={2.3}
       />
       <solderjumper
         name="A1"
@@ -171,6 +183,8 @@ export default () => {
         schRotation={-90}
         pcbRotation={-90}
         connections={{ pin3: "net.AGND" }}
+        pcbY={3.6}
+        pcbX={-1.75}
       />
 
       <resistor
@@ -221,6 +235,8 @@ export default () => {
         layer="bottom"
         pcbRotation={90}
         connections={{ pin2: "net.AGND" }}
+        pcbY={0}
+        pcbX={-2.3}
       />
 
       <solderjumper
@@ -233,6 +249,8 @@ export default () => {
         schRotation={90}
         pcbRotation={-90}
         connections={{ pin2: sel.net.V3_3 }}
+        pcbY={-1.8}
+        pcbX={0}
       />
       <resistor
         name="R5"
@@ -244,6 +262,8 @@ export default () => {
         layer="bottom"
         pcbRotation={90}
         connections={{ pin1: "D1.pin1", pin2: "PWR.pin1" }}
+        pcbY={1}
+        pcbX={-1.3}
       />
       <led
         name="D1"

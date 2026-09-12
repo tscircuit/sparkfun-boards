@@ -3,6 +3,11 @@ import { sel } from "@tscircuit/core"
 
 export default () => (
   <board width="20.32mm" height="20.32mm">
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.15mm"
+      minViaEdgeToPadEdgeClearance="0.15mm"
+      minBoardEdgeClearance="0.3mm"
+    />
     <HMC6343
       name="U1"
       schWidth="1.4mm"
@@ -61,6 +66,9 @@ export default () => (
       schX={10}
       schY={12.4}
       schRotation={-90}
+      pcbRotation={90}
+      pcbY={1.8}
+      pcbX={7}
     />
     <netlabel
       net="V3_3"
@@ -131,6 +139,7 @@ export default () => (
             shape="rect"
           />
           <smtpad
+            portHints={["1"]}
             pcbX="-0.508mm"
             pcbY="0mm"
             width="0.381mm"
@@ -138,6 +147,7 @@ export default () => (
             shape="rect"
           />
           <smtpad
+            portHints={["3"]}
             pcbX="0.508mm"
             pcbY="0mm"
             width="0.381mm"

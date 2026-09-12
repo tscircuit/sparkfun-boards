@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 
 export default () => (
@@ -40,7 +41,25 @@ export default () => (
     />
     <jumper
       name="JP1"
-      footprint={"pinrow14_nosquareplating_nopinlabels_id1.016_od1.626_p2.54"}
+      footprint={barePinRow(
+        "pinrow14_nosquareplating_nopinlabels_id1.016_od1.626_p2.54",
+      )}
+      pinLabels={{
+        pin1: "1",
+        pin2: "2",
+        pin3: "3",
+        pin4: "4",
+        pin5: "5",
+        pin6: "6",
+        pin7: "7",
+        pin8: "8",
+        pin9: "9",
+        pin10: "10",
+        pin11: "11",
+        pin12: "12",
+        pin13: "13",
+        pin14: "14",
+      }}
       pcbRotation={-90}
       cadModel={null}
       schY={4}
@@ -70,7 +89,25 @@ export default () => (
     />
     <jumper
       name="JP2"
-      footprint={"pinrow14_nopinlabels_id1.016_od1.626_p2.54_nosquareplating"}
+      footprint={barePinRow(
+        "pinrow14_nopinlabels_id1.016_od1.626_p2.54_nosquareplating",
+      )}
+      pinLabels={{
+        pin1: "1",
+        pin2: "2",
+        pin3: "3",
+        pin4: "4",
+        pin5: "5",
+        pin6: "6",
+        pin7: "7",
+        pin8: "8",
+        pin9: "9",
+        pin10: "10",
+        pin11: "11",
+        pin12: "12",
+        pin13: "13",
+        pin14: "14",
+      }}
       schY={4}
       schX={2}
       pcbX={7.5}

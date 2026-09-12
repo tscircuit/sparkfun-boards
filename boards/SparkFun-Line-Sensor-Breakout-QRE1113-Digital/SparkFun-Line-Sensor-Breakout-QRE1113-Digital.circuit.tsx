@@ -52,6 +52,11 @@ const manualEdits = {
 }
 export default () => (
   <board width="7.62mm" height="13.97mm" manualEdits={manualEdits}>
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.2mm"
+      minViaEdgeToPadEdgeClearance="0.2mm"
+      minBoardEdgeClearance="0.4mm"
+    />
     {/* X: 3.81 Y:6.35 */}
     <resistor
       resistance="100"
@@ -75,7 +80,7 @@ export default () => (
       resistance="10k"
       footprint="0402"
       name="R2"
-      pcbX={-2.54}
+      pcbX={-2.14}
       connections={{ pin2: sel.JP1.OUT, pin1: sel.C1.pin1 }}
       pcbY={-3.14}
     />

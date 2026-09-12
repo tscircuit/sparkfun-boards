@@ -1,9 +1,8 @@
 import type { ChipProps } from "@tscircuit/props"
-import { sel } from "tscircuit"
 
 const pinLabels = {
-  pin1: ["VBUS"],
-  pin2: ["GND"],
+  pin1: ["GND", "A1B12"],
+  pin2: ["VBUS", "A4B9"],
   pin3: ["B1A12"],
   pin4: ["B4A9"],
   pin5: ["CC2"],
@@ -24,12 +23,6 @@ export const USBC_16PIN = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       pinLabels={pinLabels}
-      connections={{
-        pin1: sel.USBC.pin3,
-        pin2: sel.USBC.pin4,
-        pin9: sel.USBC.pin7,
-        pin10: sel.USBC.pin8,
-      }}
       schPinArrangement={{
         rightSide: {
           direction: "top-to-bottom",

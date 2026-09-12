@@ -14,6 +14,7 @@ export const SparkFunPressureSensorBreakoutMS580314BA01_00 = () => {
         />
         <capacitor
           name="C1"
+          maxDecouplingTraceLength="10mm"
           connections={{ pin1: ["U1.pin5", "JP1.pin2"], pin2: "net.GND" }}
           capacitance={"0.1uF"}
           footprint={"cap0603"}

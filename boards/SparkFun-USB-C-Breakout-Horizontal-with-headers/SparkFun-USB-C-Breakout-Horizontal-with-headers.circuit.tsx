@@ -11,10 +11,18 @@ export default () => (
       schX={-12.5}
       schY={0.1}
       connections={{
-        pin1: sel.net().VBUS,
+        pin1: sel.net().GND,
+        pin2: sel.net().VBUS,
+        pin3: sel.net().GND,
+        pin4: sel.net().VBUS,
+        pin9: sel.net().D_P,
+        pin8: sel.net().D_N,
         pin7: sel.net().D_P,
         pin10: sel.net().D_N,
-        pin13: sel.net().SHILD,
+        pin13: sel.net().GND,
+        pin14: sel.net().GND,
+        pin15: sel.net().GND,
+        pin16: sel.net().GND,
       }}
     />
     <pinheader
@@ -87,7 +95,7 @@ export default () => (
       anchorSide="top"
       schX={-11.2}
       schY={-1.37}
-      connectsTo={[sel.USBC.pin2]}
+      connectsTo={[sel.USBC.pin1]}
     />
     <netlabel
       net="GND"

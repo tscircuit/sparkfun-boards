@@ -13,6 +13,13 @@ const jumperPinLabels = {
 export default () => {
   return (
     <board width={25.4} height={25.4}>
+      <autoroutingphase
+        minViaPadDiameter="0.5mm"
+        minViaHoleDiameter="0.3mm"
+        minTraceToPadEdgeClearance="0.2mm"
+        minViaEdgeToPadEdgeClearance="0.2mm"
+        minBoardEdgeClearance="0.4mm"
+      />
       {/* Color Sensor */}
       <schematictext
         text="Color Sensor - OPT4048DTSR"
@@ -188,7 +195,7 @@ export default () => {
         schX={10}
         schY={7.8}
         schRotation={90}
-        pcbX={10.109}
+        pcbX={8.609}
         pcbY={5.232}
         pcbRotation={90}
         connections={{ pin1: sel.D1.pin1, pin2: sel.net().V3_3 }}
@@ -198,7 +205,7 @@ export default () => {
         name="D1"
         color="red"
         footprint="0603"
-        pcbX={11.709}
+        pcbX={10.209}
         pcbY={5.232}
         pcbRotation={90}
         schX={10}
@@ -214,7 +221,7 @@ export default () => {
         schX={10}
         schY={5}
         schRotation={90}
-        pcbX={10.498}
+        pcbX={8.998}
         pcbY={5.842}
         pcbRotation={180}
         layer="bottom"
@@ -357,7 +364,7 @@ export default () => {
         schX={4}
         schY={-3}
         pcbX={-3.81}
-        pcbY={0.965}
+        pcbY={1.065}
         pcbRotation={0}
         layer="bottom"
       />
@@ -415,7 +422,7 @@ export default () => {
         name="JP2"
         schX={-1}
         schY={-5}
-        pcbX={-9.8}
+        pcbX={-9.7}
         pcbRotation={-90}
         connections={{
           pin4: sel.net().SCL,
@@ -429,7 +436,7 @@ export default () => {
         schX={-1}
         schY={-7}
         name="JP1"
-        pcbX={9.8}
+        pcbX={9.7}
         pcbRotation={90}
         connections={{
           pin4: sel.net().SCL,

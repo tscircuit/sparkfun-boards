@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { FS3000_1015 } from "./imports/FS3000_1015"
 import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
 import { sel } from "tscircuit"
@@ -12,6 +13,7 @@ export default () => {
           pin1: [sel.JP3.pin2, sel.C2.pin1],
           pin7: sel.net.SCL,
           pin6: sel.net.SDA,
+          pin10: sel.net().VCM,
         }}
       />
       <capacitor
@@ -22,7 +24,7 @@ export default () => {
         capacitance="0.1uF"
         footprint="cap0402"
         pcbRotation={-90}
-        pcbX={-5.232}
+        pcbX={-5.332}
         pcbY={8.89}
         connections={{ pin1: sel.JP3.pin1, pin2: sel.net().GND }}
       />
@@ -35,13 +37,14 @@ export default () => {
       />
       <capacitor
         name="C2"
+        maxDecouplingTraceLength="5mm"
         capacitance="0.1uF"
         footprint="cap0402"
         pcbRotation={90}
         schRotation={-90}
         schX={-3}
         schY={-0.5}
-        pcbX={-5.232}
+        pcbX={-5.332}
         pcbY={11.176}
         connections={{ pin2: sel.net().GND }}
       />
@@ -62,18 +65,19 @@ export default () => {
         capacitance="0.1uF"
         footprint="cap0402"
         pcbRotation={-90}
-        pcbX={5.232}
+        pcbX={5.332}
         pcbY={8.89}
       />
       <capacitor
         name="C4"
+        maxDecouplingTraceLength="15mm"
         schX={3}
         connections={{ pin1: sel.U1.pin10, pin2: sel.net().GND }}
         schRotation={-90}
         capacitance="1uF"
         footprint="cap0402"
         pcbRotation={90}
-        pcbX={5.232}
+        pcbX={5.332}
         pcbY={11.176}
       />
       <resistor
@@ -480,7 +484,9 @@ export default () => {
           pin2: ["ADCR"],
         }}
         cadModel={null}
-        footprint="pinrow2_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54"
+        footprint={barePinRow(
+          "pinrow2_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54",
+        )}
         pcbX={5.08}
         pcbY={-11.43}
       />
@@ -503,7 +509,9 @@ export default () => {
           },
         }}
         cadModel={null}
-        footprint="pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54"
+        footprint={barePinRow(
+          "pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54",
+        )}
         pcbX={-2.54}
         pcbY={-11.43}
       />

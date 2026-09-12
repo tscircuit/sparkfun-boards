@@ -32,6 +32,7 @@ export default () => (
     <netlabel net="GND" connectsTo={sel.U1.GND} schX={-1.2} schY={-0.4} />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength="8mm"
       capacitance="1uF"
       pcbX="-2.54mm"
       pcbY="2.354mm"
@@ -46,6 +47,7 @@ export default () => (
     />
     <capacitor
       name="C2"
+      maxDecouplingTraceLength="8mm"
       capacitance="1uF"
       pcbX="2.54mm"
       pcbY="2.354mm"

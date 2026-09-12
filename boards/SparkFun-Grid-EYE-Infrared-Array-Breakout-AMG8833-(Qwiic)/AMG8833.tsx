@@ -63,7 +63,7 @@ export const AMG8833 = (props: ChipProps<typeof pinLabels>) => {
           />
           <smtpad
             portHints={["pin4"]}
-            pcbX="1.1368683772161603e-13mm"
+            pcbX={0}
             pcbY="-3.049968499999977mm"
             width="0.6999986mm"
             height="2.5999947999999997mm"
@@ -119,7 +119,7 @@ export const AMG8833 = (props: ChipProps<typeof pinLabels>) => {
           />
           <smtpad
             portHints={["pin11"]}
-            pcbX="1.1368683772161603e-13mm"
+            pcbX={0}
             pcbY="3.0500954999999976mm"
             width="0.6999986mm"
             height="2.5999947999999997mm"

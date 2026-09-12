@@ -7,7 +7,34 @@ export const PptcFusePth = (props: ChipProps<typeof pinLabels>) => (
     pinLabels={pinLabels}
     supplierPartNumbers={{ jlcpcb: ["C192570"] }}
     manufacturerPartNumber="FRX025-60F"
-    footprint="hc49_p5.08mm_od1.8796mm"
+    footprint={
+      <footprint>
+        <platedhole
+          portHints={["pin1"]}
+          pcbX={-2.54}
+          pcbY={0}
+          shape="circle"
+          holeDiameter={0.8}
+          outerDiameter={1.8796}
+        />
+        <platedhole
+          portHints={["pin2"]}
+          pcbX={2.54}
+          pcbY={0}
+          shape="circle"
+          holeDiameter={0.8}
+          outerDiameter={1.8796}
+        />
+        <courtyardoutline
+          outline={[
+            { x: -3.95, y: -1.8 },
+            { x: 3.95, y: -1.8 },
+            { x: 3.95, y: 1.8 },
+            { x: -3.95, y: 1.8 },
+          ]}
+        />
+      </footprint>
+    }
     cadModel={null}
     {...props}
   />

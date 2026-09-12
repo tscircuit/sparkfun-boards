@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 
 export default () => (
@@ -29,7 +30,18 @@ export default () => (
     />
     <jumper
       name="JP1"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54"}
+      footprint={barePinRow("pinrow8_nopinlabels_id1.016_od1.88_p2.54")}
+      pinLabels={{
+        pin1: "1",
+        pin2: "2",
+        pin3: "3",
+        pin4: "4",
+        pin5: "5",
+        pin6: "6",
+        pin7: "7",
+        pin8: "8",
+      }}
+      cadModel={null}
       schY={4}
       schX={-1.5}
       pcbY={-9.14}
@@ -51,7 +63,20 @@ export default () => (
     />
     <jumper
       name="JP2"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating"}
+      footprint={barePinRow(
+        "pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating",
+      )}
+      pinLabels={{
+        pin1: "1",
+        pin2: "2",
+        pin3: "3",
+        pin4: "4",
+        pin5: "5",
+        pin6: "6",
+        pin7: "7",
+        pin8: "8",
+      }}
+      cadModel={null}
       schY={4}
       schX={1.5}
       pcbY={-1.52}
@@ -99,7 +124,18 @@ export default () => (
     />
     <jumper
       name="JP3"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54"}
+      footprint={barePinRow("pinrow8_nopinlabels_id1.016_od1.88_p2.54")}
+      pinLabels={{
+        pin1: "1",
+        pin2: "2",
+        pin3: "3",
+        pin4: "4",
+        pin5: "5",
+        pin6: "6",
+        pin7: "7",
+        pin8: "8",
+      }}
+      cadModel={null}
       schY={0}
       schX={-1.5}
       pcbY={1.52}
@@ -121,7 +157,20 @@ export default () => (
     />
     <jumper
       name="JP4"
-      footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating"}
+      footprint={barePinRow(
+        "pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating",
+      )}
+      pinLabels={{
+        pin1: "1",
+        pin2: "2",
+        pin3: "3",
+        pin4: "4",
+        pin5: "5",
+        pin6: "6",
+        pin7: "7",
+        pin8: "8",
+      }}
+      cadModel={null}
       schY={0}
       schX={1.5}
       pcbY={9.14}

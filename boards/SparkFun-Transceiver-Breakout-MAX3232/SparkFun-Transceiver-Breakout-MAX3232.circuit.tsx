@@ -12,7 +12,7 @@ export default () => (
   <board
     width="25.5mm"
     height="15mm"
-    autorouter="auto-cloud"
+    autorouter="auto-local"
     manualEdits={manualEdits}
   >
     <capacitor

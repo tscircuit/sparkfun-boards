@@ -1,9 +1,9 @@
 import type { ChipProps } from "@tscircuit/props"
 
 const pinLabels = {
-  PWR: ["PWR"],
-  GND: ["GND"],
-  GNDBREAK: ["GNDBREAK"],
+  pin1: ["PWR"],
+  pin2: ["GND"],
+  pin3: ["GNDBREAK"],
 } as const
 
 export const PowerJackPthLock = (props: ChipProps<typeof pinLabels>) => (

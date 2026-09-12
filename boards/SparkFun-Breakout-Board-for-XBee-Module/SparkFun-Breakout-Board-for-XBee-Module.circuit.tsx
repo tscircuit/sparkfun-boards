@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 
 const JP1PinLabels = {
@@ -51,7 +52,37 @@ export default () => (
     <chip
       name="U1"
       pinLabels={chipPinLabels}
-      footprint="dip20_id0.8_od1.4_w22_p1.9"
+      footprint={
+        <footprint>
+          {/* Two 2 mm sockets support the module above the breakout headers. */}
+          {Array.from({ length: 20 }, (_, index) => (
+            <platedhole
+              portHints={[`pin${index + 1}`]}
+              pcbX={index < 10 ? -11 : 11}
+              pcbY={index < 10 ? 9 - index * 2 : -9 + (index - 10) * 2}
+              shape="circle"
+              holeDiameter={0.8}
+              outerDiameter={1.4}
+            />
+          ))}
+          <courtyardoutline
+            outline={[
+              { x: -12.5, y: -10 },
+              { x: -9.5, y: -10 },
+              { x: -9.5, y: 10 },
+              { x: -12.5, y: 10 },
+            ]}
+          />
+          <courtyardoutline
+            outline={[
+              { x: 9.5, y: -10 },
+              { x: 12.5, y: -10 },
+              { x: 12.5, y: 10 },
+              { x: 9.5, y: 10 },
+            ]}
+          />
+        </footprint>
+      }
       schWidth={2}
       pcbY={-2.5}
       connections={{
@@ -139,7 +170,9 @@ export default () => (
       pcbY={-0.35}
       layer="bottom"
       cadModel={null}
-      footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
+      footprint={barePinRow(
+        "pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel",
+      )}
     />
     <jumper
       schWidth={0.65}
@@ -152,7 +185,9 @@ export default () => (
       pcbRotation={90}
       layer="bottom"
       cadModel={null}
-      footprint="pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
+      footprint={barePinRow(
+        "pinrow10_id1.016mm_od1.626mm_p2.53mm_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel",
+      )}
     />
   </board>
 )

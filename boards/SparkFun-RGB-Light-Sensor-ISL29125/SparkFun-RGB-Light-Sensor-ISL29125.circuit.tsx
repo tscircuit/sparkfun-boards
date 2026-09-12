@@ -25,6 +25,7 @@ export default () => (
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength="8mm"
       pcbX={-5.08}
       capacitance="0.1uF"
       footprint="cap0603"
@@ -32,6 +33,7 @@ export default () => (
     />
     <capacitor
       name="C2"
+      maxDecouplingTraceLength="8mm"
       pcbX={-5.08}
       pcbY={1.935}
       capacitance="1uF"

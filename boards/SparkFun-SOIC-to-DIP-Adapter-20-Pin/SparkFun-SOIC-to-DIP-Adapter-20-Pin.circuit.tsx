@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "@tscircuit/core"
 
 export default () => (
@@ -9,7 +10,9 @@ export default () => (
     <jumper
       name="JP1"
       cadModel={null}
-      footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
+      footprint={barePinRow(
+        "pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels",
+      )}
       schX={-2}
       schPinArrangement={{
         rightSide: {
@@ -76,7 +79,9 @@ export default () => (
     <jumper
       name="JP2"
       cadModel={null}
-      footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
+      footprint={barePinRow(
+        "pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels",
+      )}
       schX={2}
       schPinArrangement={{
         leftSide: {

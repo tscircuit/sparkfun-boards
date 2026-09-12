@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { TMF8821_1AM } from "./TMF8821_1AM"
 import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Qwiic-Adapter/SM04B_SRSS_TB_LF__SN"
@@ -172,7 +173,9 @@ export default () => (
         pin1: ["EN"],
       }}
       cadModel={null}
-      footprint="pinrow4_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating_id1.016_od1.88_p2.54"
+      footprint={barePinRow(
+        "pinrow4_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating_id1.016_od1.88_p2.54",
+      )}
       pcbX={7.62}
       pcbY={-11.08}
     />
@@ -301,7 +304,9 @@ export default () => (
         pin4: ["SCL"],
       }}
       cadModel={null}
-      footprint="pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54"
+      footprint={barePinRow(
+        "pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54",
+      )}
       pcbX={-2.54}
       pcbY={-11.08}
     />

@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { AMG8833 } from "./AMG8833"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { sel } from "tscircuit"
@@ -150,7 +151,10 @@ export default () => {
         schY={-9}
         schX={-6}
         schDirection="left"
-        footprint="pinrow4_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+        footprint={barePinRow(
+          "pinrow4_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal",
+        )}
+        cadModel={null}
         pcbY={-11.43}
         pcbX={-1.25}
       />
@@ -167,7 +171,10 @@ export default () => {
         schWidth={0.6}
         schY={-9}
         schX={-3}
-        footprint="pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
+        footprint={barePinRow(
+          "pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal",
+        )}
+        cadModel={null}
         pcbY={-11.43}
         pcbX={5.08}
       />

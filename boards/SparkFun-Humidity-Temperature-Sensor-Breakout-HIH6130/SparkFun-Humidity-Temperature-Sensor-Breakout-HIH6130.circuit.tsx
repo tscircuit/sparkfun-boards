@@ -35,17 +35,17 @@ export default () => (
         pin4: "net.SDA",
         pin5: "net.AL_L",
         pin6: "net.AL_H",
-        pin7: "net.NC",
         pin8: "net.VCC",
       }}
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength="5mm"
       schX={-3}
       schRotation={-90}
       footprint="cap0402"
       pcbX={-1.5}
-      pcbY={3.2}
+      pcbY={3.3}
       capacitance={"0.1uF"}
       connections={{ pin2: "net.GND" }}
     />
@@ -55,7 +55,7 @@ export default () => (
       schRotation={-90}
       footprint="cap0402"
       pcbX={1.5}
-      pcbY={3.2}
+      pcbY={3.3}
       capacitance={"0.22uF"}
       connections={{ pin1: "net.VCC", pin2: "net.GND" }}
     />

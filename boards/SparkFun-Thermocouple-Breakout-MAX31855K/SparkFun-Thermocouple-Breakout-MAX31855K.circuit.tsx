@@ -90,7 +90,7 @@ export default () => (
       padShape="circle"
       padDiameter="1mm"
       pcbY={7}
-      pcbX={2.5}
+      pcbX={-1}
       schX={-2}
       schY={-3}
     />
@@ -100,7 +100,7 @@ export default () => (
       padShape="circle"
       padDiameter="1mm"
       pcbY={-7}
-      pcbX={2.5}
+      pcbX={-1}
       schX={-6}
       schY={-3}
       schRotation={180}

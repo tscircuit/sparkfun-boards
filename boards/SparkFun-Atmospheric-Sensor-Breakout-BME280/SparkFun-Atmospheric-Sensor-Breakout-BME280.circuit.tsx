@@ -125,7 +125,7 @@ export default () => (
         pin1: sel.U1.pin5,
       }}
       pcbX={-3.81}
-      pcbY={-4.445}
+      pcbY={-4.75}
       pcbRotation={180}
     />
 
@@ -238,7 +238,7 @@ export default () => (
       schY={1.2}
     />
     <netlabel
-      net="SDD_ADR"
+      net="SDO_ADR"
       anchorSide="right"
       connectsTo={["U1.pin4", "SJ3.pin2"]}
       schX={-5.4}

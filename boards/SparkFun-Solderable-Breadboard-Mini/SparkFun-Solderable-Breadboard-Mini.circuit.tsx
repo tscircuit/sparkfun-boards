@@ -1,4 +1,7 @@
 import { sel } from "@tscircuit/core"
+import type { ChipProps } from "@tscircuit/props"
+
+import { barePinRow } from "../../util/bare-pin-row"
 
 type JumpersGridConnections =
   | Record<string, any>
@@ -18,7 +21,7 @@ type JumpersGridOptions = {
   verticalPitch: number
   rowDirection?: "up" | "down"
   namePrefix?: string
-  footprint?: string
+  footprint?: ChipProps["footprint"]
   cadModel?: any
   schPinArrangement?: any
   pcbRotation?: number
@@ -41,7 +44,9 @@ function createJumpersGrid(options: JumpersGridOptions) {
     verticalPitch,
     rowDirection = "up",
     namePrefix = "JP",
-    footprint = "pinrow5_p2.54_id1.016_od1.626_nosquareplating_nopinlabels",
+    footprint = barePinRow(
+      "pinrow5_p2.54_id1.016_od1.626_nosquareplating_nopinlabels",
+    ),
     cadModel = null,
     schPinArrangement = {
       rightSide: {
@@ -91,6 +96,7 @@ function createJumpersGrid(options: JumpersGridOptions) {
           : connections
       jumpers.push(
         <jumper
+          key={name}
           name={name}
           cadModel={cadModel}
           footprint={footprint}
@@ -125,7 +131,9 @@ export default () => (
       verticalPitch: 17.77,
       rowDirection: "down",
       namePrefix: "JP",
-      footprint: "pinrow5_p2.54_id1.016_od1.88_nosquareplating_nopinlabels",
+      footprint: barePinRow(
+        "pinrow5_p2.54_id1.016_od1.88_nosquareplating_nopinlabels",
+      ),
       cadModel: null,
       schPinArrangement: {
         rightSide: {

@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { FT232RL } from "./FT232RL"
 import { TYPE_C_31_M_12 } from "./TYPE_C_31_M_12"
 import { MST22D18G2_125 } from "./MST22D18G2_125"
@@ -44,7 +45,10 @@ const selectors = {
 }
 
 const USBToSerialBreakout = () => (
-  <board width="18mm" height="35mm" autorouter="auto-cloud">
+  <board width="18mm" height="35mm" autorouter="auto-local">
+    <trace from="LED1.pin2" to="net.TXLED" />
+    <trace from="LED2.pin2" to="net.RXLED" />
+    <autoroutingphase minBoardEdgeClearance="0.3mm" />
     <FT232RL
       name="U1"
       pcbRotation={90}
@@ -82,7 +86,51 @@ const USBToSerialBreakout = () => (
       pcbRotation={180}
       schX={-12.5}
       schY={0.1}
-      connections={{ GND: "net.GND" }}
+      connections={{
+        pin1: "net.GND",
+        pin2: "net.GND",
+        pin3: "net.GND",
+        pin20: "net.GND",
+        pin12: "net.GND",
+        pin13: "net.GND",
+        pin18: "net.GND",
+        pin19: "net.GND",
+        pin14: "net.VBUS",
+        pin15: "net.VBUS",
+        pin16: "net.VBUS",
+        pin17: "net.VBUS",
+        pin6: "net.USB_DM",
+        pin8: "net.USB_DM",
+        pin7: "net.USB_DP",
+        pin9: "net.USB_DP",
+        CC1: "R3.pin1",
+        CC2: "R4.pin1",
+      }}
+    />
+
+    <resistor
+      name="R3"
+      resistance="5.1k"
+      footprint="0402"
+      layer="bottom"
+      pcbX={-1.5}
+      pcbY={12.2}
+      schX={-14}
+      schY={-2.5}
+      schRotation={90}
+      connections={{ pin2: "net.GND" }}
+    />
+    <resistor
+      name="R4"
+      resistance="5.1k"
+      footprint="0402"
+      layer="bottom"
+      pcbX={1.5}
+      pcbY={12.2}
+      schX={-12.5}
+      schY={-2.5}
+      schRotation={90}
+      connections={{ pin2: "net.GND" }}
     />
 
     <fuse
@@ -106,8 +154,8 @@ const USBToSerialBreakout = () => (
       footprint="0603"
       schX={3}
       schRotation={90}
-      pcbX={6.3}
-      pcbY={-16.2}
+      pcbX={7.1}
+      pcbY={-16}
       connections={{ pin1: sel.LED1.pin1, pin2: "net.VCCIO" }}
     />
 
@@ -117,8 +165,8 @@ const USBToSerialBreakout = () => (
       footprint="0603"
       schX={4}
       schRotation={90}
-      pcbX={-6}
-      pcbY={-5}
+      pcbX={-5.5}
+      pcbY={-5.06}
       pcbRotation={90}
       connections={{ pin1: sel.LED2.pin1, pin2: "net.VCCIO" }}
     />
@@ -130,7 +178,7 @@ const USBToSerialBreakout = () => (
       schY={-2}
       schX={3}
       pcbX={-6.3}
-      pcbY={-14}
+      pcbY={-13.6}
       color="red"
       schDisplayValue="Red"
     />
@@ -142,7 +190,7 @@ const USBToSerialBreakout = () => (
       schY={-2}
       schX={4}
       pcbX={6.3}
-      pcbY={-14}
+      pcbY={-13.6}
       color="red"
       schDisplayValue="Green"
     />
@@ -153,11 +201,12 @@ const USBToSerialBreakout = () => (
       footprint="cap0603"
       schY={-2}
       schX={-5}
-      pcbX={6.1}
-      pcbY={-10.5}
+      pcbX={-5.5}
+      pcbY={-2.075}
       schRotation={90}
       pcbRotation={90}
-      connections={{ pin1: "net.GND", pin2: "net.VCC" }}
+      connections={{ pin1: "net.GND", pin2: "net.V3_3" }}
+      maxDecouplingTraceLength="5mm"
     />
 
     <capacitor
@@ -166,10 +215,12 @@ const USBToSerialBreakout = () => (
       footprint="cap0603"
       schY={-2}
       schX={-8}
-      pcbX={-6.3}
-      pcbY={-16.2}
+      pcbX={-5.5}
+      pcbY={-8.12}
       schRotation={90}
-      connections={{ pin1: "net.GND", pin2: sel.F1.pin2 }}
+      connections={{ pin1: "net.GND", pin2: "net.VCC" }}
+      maxDecouplingTraceLength="20mm"
+      pcbRotation={90}
     />
 
     <capacitor
@@ -178,12 +229,13 @@ const USBToSerialBreakout = () => (
       footprint="cap0603"
       schY={-2}
       schX={-6.5}
-      pcbX={-6}
+      pcbX={-5.5}
       pcbY={8}
       schRotation={270}
       pcbRotation={90}
       polarized
       connections={{ pin1: sel.F1.pin2, pin2: sel.net.GND }}
+      maxDecouplingTraceLength="20mm"
     />
 
     <jumper
@@ -199,9 +251,10 @@ const USBToSerialBreakout = () => (
         pin8: "TXDEN",
         pin9: "PWREN",
       }}
-      footprint="pinrow9_nosquareplating"
+      footprint={barePinRow("pinrow9_nosquareplating")}
+      cadModel={null}
       pcbY={0}
-      pcbX={8}
+      pcbX={7.6}
       pcbRotation={90}
       schDirection="left"
       schX={7}
@@ -221,8 +274,11 @@ const USBToSerialBreakout = () => (
 
     <jumper
       name="JP2"
-      footprint="pinrow9_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal"
-      pcbX={-8}
+      footprint={barePinRow(
+        "pinrow9_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal",
+      )}
+      cadModel={null}
+      pcbX={-7.6}
       pcbRotation={90}
       pcbY={0}
       schDirection="left"
@@ -257,7 +313,7 @@ const USBToSerialBreakout = () => (
       pcbX={0}
       pcbRotation="180"
       schDirection="left"
-      pcbY={-16.2}
+      pcbY={-16}
       schX={0}
       schY={-5}
       pinLabels={{
