@@ -1,4 +1,10 @@
-import { sel } from "tscircuit"
+import { sel as typedSel } from "tscircuit"
+
+const sel = typedSel as any
+
+const SmtPad = (props: any) => <smtpad {...props} />
+const PlatedHole = (props: any) => <platedhole {...props} />
+const Capacitor = (props: any) => <capacitor {...props} />
 
 const UsbC16PinFootprint = () => {
   const signalPads = [
@@ -19,7 +25,7 @@ const UsbC16PinFootprint = () => {
   return (
     <footprint>
       {signalPads.map(([x, pin, width]) => (
-        <smtpad
+        <SmtPad
           key={pin}
           shape="rect"
           width={`${width}mm`}
@@ -87,7 +93,7 @@ const Jst2SmdFootprint = () => (
 const Sot23_5Footprint = () => (
   <footprint>
     {[-0.95, 0, 0.95].map((x, index) => (
-      <smtpad
+      <SmtPad
         key={`pin${index + 1}`}
         shape="rect"
         width="0.55mm"
@@ -138,7 +144,7 @@ const Sod323Footprint = () => (
 const QwiicJst4Footprint = () => (
   <footprint>
     {[-1.5, -0.5, 0.5, 1.5].map((x, index) => (
-      <smtpad
+      <SmtPad
         key={`pin${index + 1}`}
         shape="rect"
         width="0.6mm"
@@ -188,7 +194,7 @@ const TactileSwitchFootprint = () => (
 const Wson8_6x5Footprint = () => (
   <footprint>
     {[-1.905, -0.635, 0.635, 1.905].map((y, index) => (
-      <smtpad
+      <SmtPad
         key={`pin${index + 1}`}
         shape="rect"
         width="0.8mm"
@@ -199,7 +205,7 @@ const Wson8_6x5Footprint = () => (
       />
     ))}
     {[-1.905, -0.635, 0.635, 1.905].map((y, index) => (
-      <smtpad
+      <SmtPad
         key={`pin${8 - index}`}
         shape="rect"
         width="0.8mm"
@@ -274,7 +280,7 @@ const CortexDebug10Footprint = () => (
       [1, -2.54, -0.635],
       [9, 2.54, -0.635],
     ].map(([pin, x, y]) => (
-      <platedhole
+      <PlatedHole
         key={`pin${pin}`}
         shape="circle"
         holeDiameter="0.508mm"
@@ -303,7 +309,7 @@ const MicroSdFootprint = () => (
       [11, -2.05, 0.4, 1.8, 1.4],
       [12, -7.75, 0.4, 1.8, 1.4],
     ].map(([pin, x, y, width, height]) => (
-      <smtpad
+      <SmtPad
         key={`pin${pin}`}
         shape="rect"
         width={`${width}mm`}
@@ -321,7 +327,7 @@ const TQFP64Footprint = () => {
 
   for (let i = 0; i < 16; i++) {
     pads.push(
-      <smtpad
+      <SmtPad
         key={`pin${i + 1}`}
         shape="rect"
         width="1.5mm"
@@ -335,7 +341,7 @@ const TQFP64Footprint = () => {
 
   for (let i = 0; i < 16; i++) {
     pads.push(
-      <smtpad
+      <SmtPad
         key={`pin${17 + i}`}
         shape="rect"
         width="0.3mm"
@@ -349,7 +355,7 @@ const TQFP64Footprint = () => {
 
   for (let i = 0; i < 16; i++) {
     pads.push(
-      <smtpad
+      <SmtPad
         key={`pin${33 + i}`}
         shape="rect"
         width="1.5mm"
@@ -363,7 +369,7 @@ const TQFP64Footprint = () => {
 
   for (let i = 0; i < 16; i++) {
     pads.push(
-      <smtpad
+      <SmtPad
         key={`pin${49 + i}`}
         shape="rect"
         width="0.3mm"
@@ -381,7 +387,7 @@ const TQFP64Footprint = () => {
 const Header12SmdFootprint = () => (
   <footprint>
     {Array.from({ length: 12 }, (_, i) => (
-      <smtpad
+      <SmtPad
         key={`pin${i + 1}`}
         shape="rect"
         width="1.27mm"
@@ -397,7 +403,7 @@ const Header12SmdFootprint = () => (
 const Header16SmdFootprint = () => (
   <footprint>
     {Array.from({ length: 16 }, (_, i) => (
-      <smtpad
+      <SmtPad
         key={`pin${i + 1}`}
         shape="rect"
         width="1.27mm"
@@ -962,7 +968,7 @@ export default function SparkFunThingPlusSTM32() {
         ["C13", 21.1074, 3.556, 270, "0.1uF"],
         ["C14", 8.89, 7.493, 90, "0.1uF"],
       ].map(([name, pcbX, pcbY, pcbRotation, capacitance]) => (
-        <capacitor
+        <Capacitor
           key={name}
           name={name as string}
           capacitance={capacitance as string}
