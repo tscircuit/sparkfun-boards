@@ -15,14 +15,22 @@ const pinLabels = {
   pin12: ["pin12"],
 } as const
 
+const pinAttributes = {
+  pin2: { requiresPower: true },
+  pin3: { requiresGround: true },
+  pin4: { doNotConnect: true },
+  pin5: { doNotConnect: true },
+} as const
+
 export const FS3000_1015 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       pinLabels={pinLabels}
+      pinAttributes={pinAttributes}
       supplierPartNumbers={{
         jlcpcb: ["C3662658"],
       }}
-      manufacturerPartNumber="FS3000_1015"
+      manufacturerPartNumber="FS3000-1015"
       footprint={
         <footprint>
           <smtpad
@@ -149,13 +157,23 @@ export const FS3000_1015 = (props: ChipProps<typeof pinLabels>) => {
             anchorAlignment="center"
             fontSize="1mm"
           />
+          <fabricationnotepath
+            route={[
+              { x: -4.250054999999861, y: 3.6500561999999945 },
+              { x: -3.1500572000001057, y: 3.6500561999999945 },
+              { x: -3.1500572000001057, y: 3.6500561999999945 },
+              { x: -3.6500561999999945, y: 3.150057199999992 },
+              { x: -4.250054999999861, y: 3.6500561999999945 },
+            ]}
+            strokeWidth="0.254mm"
+          />
           <courtyardoutline
             outline={[
-              { x: -4.770056999999952, y: 4.288599999999974 },
-              { x: 4.772343000000092, y: 4.288599999999974 },
-              { x: 4.772343000000092, y: -4.237799999999993 },
-              { x: -4.770056999999952, y: -4.237799999999993 },
-              { x: -4.770056999999952, y: 4.288599999999974 },
+              { x: -4.750041800000076, y: 4.250042800000074 },
+              { x: 4.749940200000083, y: 4.250042800000074 },
+              { x: 4.749940200000083, y: -4.250042800000074 },
+              { x: -4.750041800000076, y: -4.250042800000074 },
+              { x: -4.750041800000076, y: 4.250042800000074 },
             ]}
           />
         </footprint>
