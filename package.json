@@ -16,13 +16,13 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/bun": "latest",
-    "circuit-json-to-footprinter": "^0.0.56",
+    "circuit-json-to-footprinter": "^0.0.57",
     "tscircuit": "^0.0.2562"
   },
   "overrides": {
-    "circuit-json": "^0.0.489"
+    "circuit-json": "^0.0.491"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   }
 }
