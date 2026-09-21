@@ -11,7 +11,7 @@ const pinLabels = {
 
 export const A1001WV_S_04P = (props: ChipProps<typeof pinLabels>) => {
   return (
-    <chip
+    <connector
       pinLabels={pinLabels}
       supplierPartNumbers={{
         jlcpcb: ["C371588"],
@@ -19,6 +19,7 @@ export const A1001WV_S_04P = (props: ChipProps<typeof pinLabels>) => {
       manufacturerPartNumber="A1001WV_S_04P"
       footprint={
         <footprint>
+          <courtyardrect pcbX="0mm" pcbY="0mm" width="6.8mm" height="4.2mm" />
           <smtpad
             portHints={["pin1"]}
             pcbX="1.4999970000001213mm"

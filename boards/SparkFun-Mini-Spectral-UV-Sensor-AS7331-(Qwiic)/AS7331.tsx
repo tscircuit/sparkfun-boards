@@ -28,7 +28,6 @@ export const AS7331_AQFM_OLGA16_LF_T_R = (
       displayName="AS7331"
       schWidth={1.55}
       schHeight={2.6}
-      schPinSpacing={0.32}
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
@@ -38,6 +37,17 @@ export const AS7331_AQFM_OLGA16_LF_T_R = (
           direction: "top-to-bottom",
           pins: ["pin13", "pin12", "pin9", "pin14", "pin8", "pin7"],
         },
+      }}
+      pinAttributes={{
+        pin3: { requiresPower: true },
+        pin10: { requiresPower: true },
+        pin1: { requiresGround: true },
+        pin2: { requiresGround: true },
+        pin5: { requiresGround: true },
+        pin6: { requiresGround: true },
+        pin11: { requiresGround: true },
+        pin15: { requiresGround: true },
+        pin16: { requiresGround: true },
       }}
       supplierPartNumbers={{
         jlcpcb: ["C20482877"],

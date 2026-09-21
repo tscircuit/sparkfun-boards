@@ -45,3 +45,108 @@ export const BarrelJackFootprint = () => (
     />
   </footprint>
 )
+
+// Local copies of the JLCPCB footprints (C507879, C844952, C2757925) so the
+// board renders identically on every run instead of depending on a fetch.
+export const Ap3429Footprint = () => (
+  <footprint>
+    <smtpad
+      portHints={["pin1"]}
+      shape="rect"
+      pcbX={-0.95}
+      pcbY={-1.135}
+      width="0.532003mm"
+      height="1.0700004mm"
+    />
+    <smtpad
+      portHints={["pin2"]}
+      shape="rect"
+      pcbX={0}
+      pcbY={-1.135}
+      width="0.532003mm"
+      height="1.0700004mm"
+    />
+    <smtpad
+      portHints={["pin3"]}
+      shape="rect"
+      pcbX={0.95}
+      pcbY={-1.135}
+      width="0.532003mm"
+      height="1.0700004mm"
+    />
+    <smtpad
+      portHints={["pin4"]}
+      shape="rect"
+      pcbX={0.95}
+      pcbY={1.135}
+      width="0.532003mm"
+      height="1.0700004mm"
+    />
+    <smtpad
+      portHints={["pin5"]}
+      shape="rect"
+      pcbX={-0.95}
+      pcbY={1.135}
+      width="0.532003mm"
+      height="1.0700004mm"
+    />
+  </footprint>
+)
+
+export const InductorFootprint = () => (
+  <footprint>
+    <smtpad
+      portHints={["pin1"]}
+      shape="rect"
+      pcbX={-1.5}
+      pcbY={0}
+      width="1.499997mm"
+      height="3.6999926mm"
+    />
+    <smtpad
+      portHints={["pin2"]}
+      shape="rect"
+      pcbX={1.5}
+      pcbY={0}
+      width="1.499997mm"
+      height="3.6999926mm"
+    />
+  </footprint>
+)
+
+export const TerminalBlock4PFootprint = () => (
+  <footprint>
+    <platedhole
+      portHints={["pin1"]}
+      shape="circle"
+      pcbX={-5.25}
+      pcbY={0}
+      outerDiameter="2.0999958mm"
+      holeDiameter="1.3000228mm"
+    />
+    <platedhole
+      portHints={["pin2"]}
+      shape="circle"
+      pcbX={-1.75}
+      pcbY={0}
+      outerDiameter="2.0999958mm"
+      holeDiameter="1.3000228mm"
+    />
+    <platedhole
+      portHints={["pin3"]}
+      shape="circle"
+      pcbX={1.75}
+      pcbY={0}
+      outerDiameter="2.0999958mm"
+      holeDiameter="1.3000228mm"
+    />
+    <platedhole
+      portHints={["pin4"]}
+      shape="circle"
+      pcbX={5.25}
+      pcbY={0}
+      outerDiameter="2.0999958mm"
+      holeDiameter="1.3000228mm"
+    />
+  </footprint>
+)
