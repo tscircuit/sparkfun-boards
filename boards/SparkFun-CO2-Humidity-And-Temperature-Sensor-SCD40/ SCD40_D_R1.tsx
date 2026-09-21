@@ -55,170 +55,170 @@ export const SCD40_D_R1 = (props: ChipProps<typeof pinLabels>) => {
         <footprint>
           <smtpad
             portHints={["pin1"]}
-            pcbX="-4.350004000000126mm"
-            pcbY="2.500122000000033mm"
+            pcbX="-4.350004mm"
+            pcbY="2.500122mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin2"]}
-            pcbX="-4.350004000000126mm"
-            pcbY="1.2499339999999393mm"
+            pcbX="-4.350004mm"
+            pcbY="1.249934mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin3"]}
-            pcbX="-4.350004000000126mm"
-            pcbY="0mm"
+            pcbX="-4.350004mm"
+            pcbY="-0mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin4"]}
-            pcbX="-4.350004000000126mm"
-            pcbY="-1.249934000000053mm"
+            pcbX="-4.350004mm"
+            pcbY="-1.249934mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin5"]}
-            pcbX="-4.350004000000126mm"
-            pcbY="-2.499868000000106mm"
+            pcbX="-4.350004mm"
+            pcbY="-2.499868mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin6"]}
-            pcbX="-2.499867999999992mm"
-            pcbY="-4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="-2.499868mm"
+            pcbY="-4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin7"]}
-            pcbX="-1.249934000000053mm"
-            pcbY="-4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="-1.249934mm"
+            pcbY="-4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin8"]}
             pcbX="0mm"
-            pcbY="-4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbY="-4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin9"]}
-            pcbX="1.25018799999998mm"
-            pcbY="-4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="1.250188mm"
+            pcbY="-4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin10"]}
-            pcbX="2.5001219999999194mm"
-            pcbY="-4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="2.500122mm"
+            pcbY="-4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin11"]}
-            pcbX="4.350004000000013mm"
-            pcbY="-2.499868000000106mm"
+            pcbX="4.350004mm"
+            pcbY="-2.499868mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin12"]}
-            pcbX="4.350004000000013mm"
-            pcbY="-1.249934000000053mm"
+            pcbX="4.350004mm"
+            pcbY="-1.249934mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin13"]}
-            pcbX="4.350004000000013mm"
-            pcbY="0mm"
+            pcbX="4.350004mm"
+            pcbY="-0mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin14"]}
-            pcbX="4.350004000000013mm"
-            pcbY="1.2499339999999393mm"
+            pcbX="4.350004mm"
+            pcbY="1.249934mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin15"]}
-            pcbX="4.350004000000013mm"
-            pcbY="2.500122000000033mm"
+            pcbX="4.350004mm"
+            pcbY="2.500122mm"
             width="2.1999956mm"
-            height="0.7999983999999999mm"
+            height="0.7999984mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin16"]}
-            pcbX="2.5001219999999194mm"
-            pcbY="4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="2.500122mm"
+            pcbY="4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin17"]}
-            pcbX="1.25018799999998mm"
-            pcbY="4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="1.250188mm"
+            pcbY="4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin18"]}
             pcbX="0mm"
-            pcbY="4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbY="4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin19"]}
-            pcbX="-1.249934000000053mm"
-            pcbY="4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="-1.249934mm"
+            pcbY="4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin20"]}
-            pcbX="-2.499867999999992mm"
-            pcbY="4.350004000000013mm"
-            width="0.7999983999999999mm"
+            pcbX="-2.499868mm"
+            pcbY="4.350004mm"
+            width="0.7999984mm"
             height="2.1999956mm"
             shape="rect"
           />
           <smtpad
             portHints={["pin21"]}
             pcbX="0mm"
-            pcbY="0mm"
-            width="4.7999903999999995mm"
-            height="4.7999903999999995mm"
+            pcbY="-0mm"
+            width="4.7999904mm"
+            height="4.7999904mm"
             shape="rect"
           />
           <silkscreenpath
@@ -252,6 +252,27 @@ export const SCD40_D_R1 = (props: ChipProps<typeof pinLabels>) => {
             route={[
               { x: -4.999939199999972, y: 5.000040799999965 },
               { x: -3.131007199999999, y: 5.000040799999965 },
+            ]}
+          />
+          <silkscreencircle
+            pcbX="-5.792724mm"
+            pcbY="3.685032mm"
+            radius="0.199898mm"
+          />
+          <silkscreentext
+            text="{NAME}"
+            pcbX="-0.2667mm"
+            pcbY="6.461254mm"
+            anchorAlignment="center"
+            fontSize="1mm"
+          />
+          <courtyardoutline
+            outline={[
+              { x: -6.2444000000000415, y: 5.71125399999994 },
+              { x: 5.710999999999899, y: 5.71125399999994 },
+              { x: 5.710999999999899, y: -5.685346000000095 },
+              { x: -6.2444000000000415, y: -5.685346000000095 },
+              { x: -6.2444000000000415, y: 5.71125399999994 },
             ]}
           />
         </footprint>
