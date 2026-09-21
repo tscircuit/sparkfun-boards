@@ -1,4 +1,9 @@
-import { BarrelJackFootprint } from "./footprints"
+import {
+  Ap3429Footprint,
+  BarrelJackFootprint,
+  InductorFootprint,
+  TerminalBlock4PFootprint,
+} from "./footprints"
 
 const X = (x: number) => x - 12.7
 const Y = (y: number) => y - 12.7
@@ -50,7 +55,7 @@ export default () => (
       name="U1"
       manufacturerPartNumber="AP3429KTTR-G1"
       supplierPartNumbers={{ jlcpcb: ["C507879"] }}
-      footprint="jlcpcb:C507879"
+      footprint={<Ap3429Footprint />}
       pinLabels={{
         pin1: "EN",
         pin2: "GND",
@@ -75,7 +80,7 @@ export default () => (
       inductance="2.2uH"
       manufacturerPartNumber="IFSC1515AHER2R2M01"
       supplierPartNumbers={{ jlcpcb: ["C844952"] }}
-      footprint="jlcpcb:C844952"
+      footprint={<InductorFootprint />}
       pcbX={X(17.256)}
       pcbY={Y(8.509)}
       schX={3}
@@ -217,7 +222,7 @@ export default () => (
       name="J1"
       manufacturerPartNumber="DB125-3.5-4P-GN-S"
       supplierPartNumbers={{ jlcpcb: ["C2757925"] }}
-      footprint="jlcpcb:C2757925"
+      footprint={<TerminalBlock4PFootprint />}
       pinLabels={{ pin1: "VIN", pin2: "GND1", pin3: "GND2", pin4: "VOUT" }}
       schPinArrangement={{
         rightSide: {
