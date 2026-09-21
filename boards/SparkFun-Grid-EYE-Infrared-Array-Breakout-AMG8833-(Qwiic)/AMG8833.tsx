@@ -63,7 +63,7 @@ export const AMG8833 = (props: ChipProps<typeof pinLabels>) => {
           />
           <smtpad
             portHints={["pin4"]}
-            pcbX="1.1368683772161603e-13mm"
+            pcbX="0mm"
             pcbY="-3.049968499999977mm"
             width="0.6999986mm"
             height="2.5999947999999997mm"
@@ -119,7 +119,7 @@ export const AMG8833 = (props: ChipProps<typeof pinLabels>) => {
           />
           <smtpad
             portHints={["pin11"]}
-            pcbX="1.1368683772161603e-13mm"
+            pcbX="0mm"
             pcbY="3.0500954999999976mm"
             width="0.6999986mm"
             height="2.5999947999999997mm"
@@ -163,7 +163,7 @@ export const AMG8833 = (props: ChipProps<typeof pinLabels>) => {
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=27b2e859e34d4063a6a2658122b7cd2c&pn=C20484505",
         rotationOffset: { x: 180, y: 0, z: 0 },
         positionOffset: {
-          x: 1.1368683772161603e-13,
+          x: 0,
           y: 0.000012699999956566899,
           z: 1.8,
         },

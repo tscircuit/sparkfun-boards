@@ -72,7 +72,7 @@ export const SCD40_D_R1 = (props: ChipProps<typeof pinLabels>) => {
           <smtpad
             portHints={["pin3"]}
             pcbX="-4.350004000000126mm"
-            pcbY="-1.1368683772161603e-13mm"
+            pcbY="0mm"
             width="2.1999956mm"
             height="0.7999983999999999mm"
             shape="rect"
@@ -152,7 +152,7 @@ export const SCD40_D_R1 = (props: ChipProps<typeof pinLabels>) => {
           <smtpad
             portHints={["pin13"]}
             pcbX="4.350004000000013mm"
-            pcbY="-1.1368683772161603e-13mm"
+            pcbY="0mm"
             width="2.1999956mm"
             height="0.7999983999999999mm"
             shape="rect"
@@ -216,7 +216,7 @@ export const SCD40_D_R1 = (props: ChipProps<typeof pinLabels>) => {
           <smtpad
             portHints={["pin21"]}
             pcbX="0mm"
-            pcbY="-1.1368683772161603e-13mm"
+            pcbY="0mm"
             width="4.7999903999999995mm"
             height="4.7999903999999995mm"
             shape="rect"
