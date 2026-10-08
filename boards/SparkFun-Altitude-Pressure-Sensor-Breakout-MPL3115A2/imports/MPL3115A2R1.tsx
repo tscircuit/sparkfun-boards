@@ -19,7 +19,7 @@ export const MPL3115A2R1 = (props: ChipProps<typeof pinLabels>) => {
         jlcpcb: ["C54429"],
       }}
       manufacturerPartNumber="MPL3115A2R1"
-      footprint="dfn_p1.2499mm_w4.0999mm_pl1.5mm_pin1location(leftside,bottom)"
+      footprint="soic_p1.25mm_w4.1mm_pl1.5mm_pin1location(leftside,bottom)"
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/assets/C54429.obj?uuid=672fc546baaf493a9f668044721589aa",

@@ -15,8 +15,8 @@ export const AP2112K_3_3TRG1 = (props: ChipProps<typeof pinLabels>) => {
       supplierPartNumbers={{
         jlcpcb: ["C51118"],
       }}
-      manufacturerPartNumber="AP2112K_3_3TRG1"
-      footprint="dfn6_missing(5)_p0.9502mm_w3.7048mm_pw0.6223mm_pl1.1049mm_pin1location(leftside,bottom)"
+      manufacturerPartNumber="AP2112K-3.3TRG1"
+      footprint="dfn6_missing(5)_p0.95mm_w3.7mm_pw0.62mm_pl1.1mm_pin1location(leftside,bottom)"
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/assets/C51118.obj?uuid=6d166d1d6c064b99aa79465714e989c1",

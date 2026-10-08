@@ -72,6 +72,7 @@ export default () => (
     />
     <pinheader
       name="JP1"
+      doNotPlace
       pinCount={7}
       footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignleft"
       pitch="2.54mm"
@@ -178,6 +179,7 @@ export default () => (
     />
     <pinheader
       name="JP2"
+      doNotPlace
       pinCount={7}
       schFacingDirection="left"
       footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignright"

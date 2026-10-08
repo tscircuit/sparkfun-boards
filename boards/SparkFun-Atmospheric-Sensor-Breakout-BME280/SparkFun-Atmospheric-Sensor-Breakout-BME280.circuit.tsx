@@ -516,6 +516,7 @@ export default () => (
 
     <pinheader
       name="JP1"
+      doNotPlace
       gender="female"
       footprint="pinrow4_p2.54_id1.016_od1.8796_doublesidedpinlabel_pinlabelorthogonal_pinlabeltextalignright_pinlabelverticallyinverted"
       pinCount={4}
@@ -562,6 +563,7 @@ export default () => (
 
     <pinheader
       name="JP2"
+      doNotPlace
       gender="female"
       footprint="pinrow6_p2.54_id1.016_od1.8796_nosquareplating_doublesidedpinlabel"
       pinCount={6}

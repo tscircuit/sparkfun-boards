@@ -18,13 +18,19 @@ export const MAX31855KASA_T = (props: ChipProps<typeof pinLabels>) => {
       supplierPartNumbers={{
         jlcpcb: ["C52028"],
       }}
-      manufacturerPartNumber="MAX31855KASA_T"
-      footprint="dfn_w7.286mm_pw0.574mm_pl1.888mm_pin1location(leftside,bottom)"
+      manufacturerPartNumber="MAX31855KASA+T"
+      footprint="soic8_pillpads_w7.29mm_pw0.57mm_pl1.89mm_pin1location(leftside,bottom)"
       cadModel={{
         objUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=3936dbd423424b148317d27cdee29b93&pn=C52028",
-        rotationOffset: { x: 90, y: 90, z: 270 },
-        positionOffset: { x: -914.3700026, y: 685.8127, z: 4.443007700000112 },
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C52028.obj?uuid=3936dbd423424b148317d27cdee29b93",
+        stepUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C52028.step?uuid=3936dbd423424b148317d27cdee29b93",
+        pcbRotationOffset: 270,
+        modelOriginPosition: {
+          x: -0.000012700000070253736,
+          y: -0.000012700000070253736,
+          z: -0.049425,
+        },
       }}
       {...props}
     />

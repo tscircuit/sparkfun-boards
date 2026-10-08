@@ -35,6 +35,7 @@ export default () => (
         pin1: sel.net().CC2,
       }}
       name="JP3"
+      doNotPlace
       footprint={"pinrow6_od1.88_id1.016_nosquareplating"}
       pcbRotation={90}
       pcbX={5.1}

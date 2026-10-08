@@ -19,7 +19,7 @@ export const OPT4048DTSR = (props: ChipProps<typeof pinLabels>) => {
         jlcpcb: ["C6174012"],
       }}
       manufacturerPartNumber="OPT4048DTSR"
-      footprint="dfn_p0.5001mm_w2.2602mm_pw0.28mm_pl0.68mm_pin1location(leftside,bottom)"
+      footprint="soic_p0.5mm_w2.26mm_pw0.28mm_pl0.68mm_pin1location(leftside,bottom)"
       {...props}
     />
   )

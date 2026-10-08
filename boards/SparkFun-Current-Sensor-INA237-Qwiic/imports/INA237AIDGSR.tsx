@@ -26,13 +26,13 @@ export const INA237AIDGSR = (props: ChipProps<typeof pinLabels>) => {
         jlcpcb: ["C2864837"],
       }}
       manufacturerPartNumber="INA237AIDGSR"
-      footprint="tssop10_w3.15mm_p0.5mm_pl1.4mm_pw0.3mm"
+      footprint="dfn10_p0.5mm_w6mm_pw0.3mm_pl1.3mm_pin1location(leftside,bottom)"
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/assets/C2864837.obj?uuid=854098f5cce54b6caab82164a7d3deef",
         stepUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/assets/C2864837.step?uuid=854098f5cce54b6caab82164a7d3deef",
-        pcbRotationOffset: 0,
+        pcbRotationOffset: 90,
         modelOriginPosition: { x: 0.000012699999999199463, y: 0, z: -0.149083 },
       }}
       {...props}
