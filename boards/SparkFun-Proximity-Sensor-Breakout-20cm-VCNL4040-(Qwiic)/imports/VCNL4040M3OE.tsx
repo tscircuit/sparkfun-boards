@@ -39,8 +39,10 @@ export const VCNL4040M3OE = (props: ChipProps<typeof pinLabels>) => {
       manufacturerPartNumber="VCNL4040M3OE"
       footprint="dfn_pillpads_p1.075mm_w3.21mm_pl1.13mm_pin1location(leftside,bottom)"
       cadModel={{
-        objUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C142526.obj?uuid=263d838dce3c462a9139718e05588e07",
-        stepUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C142526.step?uuid=263d838dce3c462a9139718e05588e07",
+        objUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C142526.obj?uuid=263d838dce3c462a9139718e05588e07",
+        stepUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C142526.step?uuid=263d838dce3c462a9139718e05588e07",
         pcbRotationOffset: 270,
         modelOriginPosition: { x: 0, y: 0, z: -0.03 },
       }}

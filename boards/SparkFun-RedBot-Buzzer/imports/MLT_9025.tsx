@@ -15,10 +15,16 @@ export const MLT_9025 = (props: ChipProps<typeof pinLabels>) => {
       manufacturerPartNumber="MLT-9025"
       footprint="smdpads2_p8.3mm_pw4mm_ph1.75mm_pin1location(rightside,top)"
       cadModel={{
-        objUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C194481.obj?uuid=42b796922be747a686c3765d2ef6723c",
-        stepUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C194481.step?uuid=42b796922be747a686c3765d2ef6723c",
+        objUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C194481.obj?uuid=42b796922be747a686c3765d2ef6723c",
+        stepUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C194481.step?uuid=42b796922be747a686c3765d2ef6723c",
         pcbRotationOffset: 0,
-        modelOriginPosition: { x: 0.000012699999956566899, y: 0.7499984999999469, z: -0.01 },
+        modelOriginPosition: {
+          x: 0.000012699999956566899,
+          y: 0.7499984999999469,
+          z: -0.01,
+        },
       }}
       {...props}
     />

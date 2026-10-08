@@ -21,8 +21,10 @@ export const MPL3115A2R1 = (props: ChipProps<typeof pinLabels>) => {
       manufacturerPartNumber="MPL3115A2R1"
       footprint="soic_p1.25mm_w4.1mm_pl1.5mm_pin1location(leftside,bottom)"
       cadModel={{
-        objUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C54429.obj?uuid=672fc546baaf493a9f668044721589aa",
-        stepUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C54429.step?uuid=672fc546baaf493a9f668044721589aa",
+        objUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C54429.obj?uuid=672fc546baaf493a9f668044721589aa",
+        stepUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C54429.step?uuid=672fc546baaf493a9f668044721589aa",
         pcbRotationOffset: 0,
         modelOriginPosition: { x: 0, y: 0.00007619999999519678, z: 0 },
       }}
