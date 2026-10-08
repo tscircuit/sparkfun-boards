@@ -470,6 +470,7 @@ export default () => {
 
       <jumper
         name="JP4"
+        doNotPlace
         schWidth={0.7}
         connections={{ pin1: sel.net().VCM, pin2: sel.net().ADC_REF }}
         schDirection="left"
@@ -486,6 +487,7 @@ export default () => {
       />
       <jumper
         name="JP5"
+        doNotPlace
         schWidth={0.7}
         schX={-4}
         schY={-11}

@@ -187,6 +187,7 @@ export default () => (
     />
     <jumper
       name="J1"
+      doNotPlace
       footprint="pinrow4_p2.54_id1.016_od1.880_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal"
       pcbX="-8.23mm"
       pcbY="-1.27"
@@ -222,6 +223,7 @@ export default () => (
 
     <jumper
       name="J2"
+      doNotPlace
       footprint="pinrow5_p2.54_id1.016_od1.880_nosquareplating_pinlabelorthogonal_pinlabeltextalignright"
       pcbX="8.28mm"
       pcbY="0mm"

@@ -30,13 +30,11 @@ export const SP3223EEY_L_TR = (props: ChipProps<typeof pinLabels>) => {
       supplierPartNumbers={{
         jlcpcb: ["C33330"],
       }}
-      manufacturerPartNumber="SP3223EEY_L_TR"
-      footprint="dfn20_pillpads_p0.65mm_w7.4839mm_pw0.364mm_pl1.742mm_pin1location(leftside,bottom)"
+      manufacturerPartNumber="SP3223EEY-L/TR"
+      footprint="tssop20_p0.65mm_w3.9999mm_pw0.364mm_pl1.742mm_rounded0.182mm_pin1location(leftside,bottom)"
       cadModel={{
-        objUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/assets/C33330.obj?uuid=f8ba5b4174b9490d8c445fbe2ed40b80",
-        stepUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/assets/C33330.step?uuid=f8ba5b4174b9490d8c445fbe2ed40b80",
+        objUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C33330.obj?uuid=f8ba5b4174b9490d8c445fbe2ed40b80",
+        stepUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C33330.step?uuid=f8ba5b4174b9490d8c445fbe2ed40b80",
         pcbRotationOffset: 90,
         modelOriginPosition: { x: 0, y: 0.000012700000070253736, z: -0.019205 },
       }}

@@ -13,19 +13,13 @@ export const X6511FRS_03_C85D30 = (props: ChipProps<typeof pinLabels>) => {
       supplierPartNumbers={{
         jlcpcb: ["C5142236"],
       }}
-      manufacturerPartNumber="X6511FRS_03_C85D30"
+      manufacturerPartNumber="X6511FRS-03-C85D30"
       footprint="solderjumper3_pw1mm_ph2mm"
       cadModel={{
-        objUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/assets/C5142236.obj?uuid=c44f47884e984ffd99d4df712dfa4b96",
-        stepUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/assets/C5142236.step?uuid=c44f47884e984ffd99d4df712dfa4b96",
+        objUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C5142236.obj?uuid=c44f47884e984ffd99d4df712dfa4b96",
+        stepUrl: "https://modelcdn.tscircuit.com/easyeda_models/assets/C5142236.step?uuid=c44f47884e984ffd99d4df712dfa4b96",
         pcbRotationOffset: 0,
-        modelOriginPosition: {
-          x: 0.000500000000000167,
-          y: 6.507000399999959,
-          z: -2.4,
-        },
+        modelOriginPosition: { x: 0.00048729999992991324, y: 6.506962299999941, z: -2.4 },
       }}
       {...props}
     />
