@@ -20,7 +20,7 @@ export const PJ_320D_4A = (props: ChipProps<typeof pinLabels>) => {
           pins: ["pin1", "pin2", "pin3", "pin4"],
         },
       }}
-      manufacturerPartNumber="PJ_320D_4A"
+      manufacturerPartNumber="PJ-320D-4A"
       footprint={
         <footprint>
           <hole pcbX="0mm" pcbY="-2.1500211mm" diameter="1.1999976mm" />
@@ -116,23 +116,25 @@ export const PJ_320D_4A = (props: ChipProps<typeof pinLabels>) => {
           />
           <courtyardoutline
             outline={[
-              { x: -4.753673999999933, y: 8.916060899999934 },
-              { x: 4.737926000000016, y: 8.916060899999934 },
-              { x: 4.737926000000016, y: -6.01113910000015 },
-              { x: -4.753673999999933, y: -6.01113910000015 },
-              { x: -4.753673999999933, y: 8.916060899999934 },
+              { x: -4.749991000000023, y: 8.815959499999963 },
+              { x: 4.749991000000023, y: 8.815959499999963 },
+              { x: 4.749991000000023, y: -5.784012299999972 },
+              { x: -4.749991000000023, y: -5.784012299999972 },
+              { x: -4.749991000000023, y: 8.815959499999963 },
             ]}
           />
         </footprint>
       }
       cadModel={{
         objUrl:
-          "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=6ee5211049a342f8a533e98e368db464&pn=C95562",
-        rotationOffset: { x: 0, y: 0, z: 0 },
-        positionOffset: {
-          x: -3.8,
-          y: 0,
-          z: 0,
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C95562.obj?uuid=6ee5211049a342f8a533e98e368db464",
+        stepUrl:
+          "https://modelcdn.tscircuit.com/easyeda_models/assets/C95562.step?uuid=6ee5211049a342f8a533e98e368db464",
+        pcbRotationOffset: 0,
+        modelOriginPosition: {
+          x: -0.000025400000026820635,
+          y: -3.365973600000052,
+          z: 0.00999860000000008,
         },
       }}
       {...props}
