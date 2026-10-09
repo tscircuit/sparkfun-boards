@@ -1,7 +1,7 @@
 import { sel } from "tscircuit"
 
 export default () => (
-  <board width="17.78mm" height="35.56mm" routingDisabled>
+  <board width="17.78mm" height="35.56mm">
     <chip
       name="U1"
       footprint="soic28_pillpads_w11.30mm_pw0.762_pl1.524"
@@ -40,6 +40,7 @@ export default () => (
     />
     <jumper
       name="JP1"
+      doNotPlace={true}
       footprint={"pinrow14_nosquareplating_nopinlabels_id1.016_od1.626_p2.54"}
       pcbRotation={-90}
       cadModel={null}
@@ -70,6 +71,7 @@ export default () => (
     />
     <jumper
       name="JP2"
+      doNotPlace={true}
       footprint={"pinrow14_nopinlabels_id1.016_od1.626_p2.54_nosquareplating"}
       schY={4}
       schX={2}
