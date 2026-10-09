@@ -157,13 +157,13 @@ export default () => (
 
     <silkscreentext
       text="sparkfun.com"
-      fontSize={3}
+      fontSize={0.9}
       pcbY={2.8}
       layer="bottom"
     />
     <silkscreentext
       text="ADXL345   Breakout"
-      fontSize={1.4}
+      fontSize={0.9}
       pcbY={0.6}
       layer="bottom"
     />
