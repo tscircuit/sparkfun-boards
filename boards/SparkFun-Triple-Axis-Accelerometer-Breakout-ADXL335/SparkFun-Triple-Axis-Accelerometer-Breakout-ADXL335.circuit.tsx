@@ -1,7 +1,7 @@
 import { ADXL335BCPZ_RL7 } from "./ADXL335"
 
 export default () => (
-  <board width="17.78mm" height="15.24mm" routingDisabled>
+  <board width="17.78mm" height="15.24mm">
     <ADXL335BCPZ_RL7
       name="U1"
       schY={0}
@@ -13,6 +13,9 @@ export default () => (
         pin5: "net.GND",
         pin6: "net.GND",
         pin7: "net.GND",
+        pin8: "net.ZOUT",
+        pin10: "net.YOUT",
+        pin12: "net.XOUT",
       }}
     />
     <capacitor
