@@ -13,7 +13,7 @@ const outline = new OutlineBuilder(10, 10.16)
 
 export default () => {
   return (
-    <board outline={outline} routingDisabled>
+    <board outline={outline}>
       <group pcbX={0} pcbY={0}>
         <DS3234S_T_R
           name="U1"
