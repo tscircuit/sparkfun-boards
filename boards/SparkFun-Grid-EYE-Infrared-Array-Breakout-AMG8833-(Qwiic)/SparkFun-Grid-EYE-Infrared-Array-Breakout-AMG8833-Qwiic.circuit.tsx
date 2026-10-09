@@ -11,7 +11,7 @@ const JPPinlabel = {
 
 export default () => {
   return (
-    <board width="25.40mm" height="25.40mm" routingDisabled>
+    <board width="25.40mm" height="25.40mm">
       <AMG8833
         name="U1"
         connections={{
@@ -82,7 +82,7 @@ export default () => {
       <resistor
         name="R2"
         resistance="10k"
-        connections={{ pin2: sel.net().VDD }}
+        connections={{ pin2: sel.net().V3_3 }}
         schRotation={90}
         schX={8}
         footprint="0603"
@@ -139,6 +139,7 @@ export default () => {
       />
       <jumper
         name="JP3"
+        doNotPlace={true}
         schWidth={0.7}
         pinLabels={JPPinlabel}
         schPinArrangement={{
@@ -156,6 +157,7 @@ export default () => {
       />
       <jumper
         name="JP4"
+        doNotPlace={true}
         pinLabels={{
           pin1: ["INT"],
         }}
