@@ -19,7 +19,7 @@ const outline = new OutlineBuilder(-3.805, 12.7)
   .lineTo(-3.805, 3.805)
   .toArray()
 export default () => (
-  <board outline={outline} routingDisabled>
+  <board outline={outline}>
     <SM04B_SRSS_TB_LF__SN1
       name="JP1"
       pcbY={-9.6}
@@ -75,11 +75,13 @@ export default () => (
       schRotation={90}
       schY={-1.4}
       pcbX={-2.032}
-      pcbY={3.302}
+      pcbY={3.1}
       connections={{ pin2: sel.JP5.pin1 }}
     />
     <led
       name="D1"
+      pinLabels={{ pin1: ["cathode", "neg"], pin2: ["anode", "pos"] }}
+      supplierPartNumbers={{ jlcpcb: ["C6390388"] }}
       schX={11}
       schRotation={-90}
       schY={-2.9}
@@ -87,7 +89,7 @@ export default () => (
       color="red"
       pcbX={-2.032}
       pcbY={4.699}
-      connections={{ pin1: sel.R1.pin1, pin2: sel.net().GND }}
+      connections={{ anode: sel.R1.pin1, cathode: sel.net().GND }}
     />
     <hole diameter={3.048} pcbX={3.9} pcbY={3.9} />
     <hole diameter={3.048} pcbX={-3.9} pcbY={-3.9} />
