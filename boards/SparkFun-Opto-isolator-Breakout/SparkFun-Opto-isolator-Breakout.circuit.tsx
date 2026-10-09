@@ -26,9 +26,9 @@ export default () => (
       footprint={"0603"}
       schX={-3}
       schY={0.5}
-      pcbX={-4.5}
-      pcbY={0.5}
-      pcbRotation={-90}
+      pcbX={-3.04}
+      pcbY={0.64}
+      pcbRotation={0}
       connections={{ pin1: sel.J2.pin2, pin2: sel.U1.pin1 }}
     />
     <resistor
@@ -37,9 +37,9 @@ export default () => (
       footprint={"0603"}
       schX={-3}
       schY={-0.5}
-      pcbX={-4.5}
-      pcbY={-2.5}
-      pcbRotation={-90}
+      pcbX={-3.04}
+      pcbY={2.14}
+      pcbRotation={0}
       connections={{ pin1: sel.J2.pin3, pin2: sel.U1.pin3 }}
     />
 
@@ -50,9 +50,9 @@ export default () => (
       schX={3}
       schY={4}
       schRotation={90}
-      pcbX={4.5}
-      pcbY={0.5}
-      pcbRotation={-90}
+      pcbX={3.04}
+      pcbY={0.64}
+      pcbRotation={0}
       connections={{ pin2: sel.net().HV }}
     />
     <resistor
@@ -62,9 +62,9 @@ export default () => (
       schX={4}
       schY={4}
       schRotation={90}
-      pcbX={4.5}
-      pcbY={-2.5}
-      pcbRotation={-90}
+      pcbX={3.04}
+      pcbY={2.14}
+      pcbRotation={0}
       connections={{ pin2: sel.net().HV }}
     />
     <resistor
@@ -74,9 +74,9 @@ export default () => (
       schX={5}
       schY={4}
       schRotation={90}
-      pcbX={-1}
-      pcbY={2.81}
-      pcbRotation={90}
+      pcbX={0}
+      pcbY={0.64}
+      pcbRotation={0}
       connections={{ pin2: sel.net().HV }}
     />
     <resistor
@@ -86,9 +86,9 @@ export default () => (
       schX={6}
       schY={4}
       schRotation={90}
-      pcbX={4.5}
-      pcbY={4.5}
-      pcbRotation={90}
+      pcbX={0}
+      pcbY={2.14}
+      pcbRotation={0}
       connections={{ pin2: sel.net().HV }}
     />
     <transistor
@@ -96,9 +96,9 @@ export default () => (
       footprint={"sot23"}
       schX={4}
       schY={-1}
-      pcbX={-4}
-      pcbY={4}
-      pcbRotation={90}
+      pcbX={-2.2}
+      pcbY={4.7}
+      pcbRotation={0}
       type="npn"
       connections={{
         pin1: sel.net().OUT_2,
@@ -113,9 +113,9 @@ export default () => (
       footprint="sot23"
       schX={6}
       schY={1}
-      pcbX={2}
-      pcbY={4}
-      pcbRotation={90}
+      pcbX={2.2}
+      pcbY={4.7}
+      pcbRotation={0}
       type="npn"
       connections={{
         pin1: sel.net().OUT_1,
