@@ -6,15 +6,23 @@ export default () => (
     <USBC_16PIN
       name="USBC"
       pcbY={0}
-      pcbX={-2.6}
+      pcbX={-2.175}
       pcbRotation={-90}
       schX={-12.5}
       schY={0.1}
       connections={{
-        pin1: sel.net().VBUS,
-        pin7: sel.net().D_P,
-        pin10: sel.net().D_N,
-        pin13: sel.net().SHILD,
+        GND1: sel.net.GND,
+        GND2: sel.net.GND,
+        VBUS1: sel.net().VBUS,
+        VBUS2: sel.net().VBUS,
+        DP1: sel.net().D_P,
+        DP2: sel.net().D_P,
+        DN1: sel.net().D_N,
+        DN2: sel.net().D_N,
+        SHELL1: sel.net().SHILD,
+        SHELL2: sel.net().SHILD,
+        SHELL3: sel.net().SHILD,
+        SHELL4: sel.net().SHILD,
       }}
     />
     <pinheader
@@ -72,14 +80,14 @@ export default () => (
       anchorSide="left"
       schX={-8.7}
       schY={0.1}
-      connectsTo={[sel.USBC.pin11, sel.R4.pin2]}
+      connectsTo={[sel.USBC.CC1, sel.R4.pin2]}
     />
     <netlabel
       net="CC2"
       anchorSide="left"
       schX={-9.8}
       schY={-0.1}
-      connectsTo={[sel.USBC.pin5, sel.R1.pin2]}
+      connectsTo={[sel.USBC.CC2, sel.R1.pin2]}
     />
 
     <netlabel
@@ -87,7 +95,7 @@ export default () => (
       anchorSide="top"
       schX={-11.2}
       schY={-1.37}
-      connectsTo={[sel.USBC.pin2]}
+      connectsTo={[sel.USBC.pin5]}
     />
     <netlabel
       net="GND"
