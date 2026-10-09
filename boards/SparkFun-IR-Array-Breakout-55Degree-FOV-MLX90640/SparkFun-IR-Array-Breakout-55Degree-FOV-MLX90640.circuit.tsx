@@ -32,7 +32,7 @@ export default () => (
     <capacitor
       name="C1"
       pcbX={-7.049}
-      pcbY={5.905}
+      pcbY={6}
       pcbRotation={180}
       capacitance="0.1uF"
       footprint="cap0603"
@@ -43,7 +43,7 @@ export default () => (
     <capacitor
       name="C2"
       pcbX={-7.049}
-      pcbY={4.445}
+      pcbY={4.4}
       pcbRotation={180}
       capacitance="1uF"
       footprint="cap0603"
@@ -83,8 +83,8 @@ export default () => (
       schX={-6.2}
       schY={0.5}
       pcbX={-10.16}
-      pcbY={-4.445}
-      connections={{ pin2: sel.net().V3_3, pin1: sel.D1.pin1 }}
+      pcbY={-4.3}
+      connections={{ pin2: sel.net().V3_3, pin1: sel.D1.anode }}
     />
 
     <led
@@ -96,7 +96,9 @@ export default () => (
       schRotation={-90}
       schX={-6.2}
       schY={-1}
-      connections={{ pin2: sel.net().GND }}
+      connections={{ cathode: sel.net().GND }}
+      pcbRotation={180}
+      pinLabels={{ pin1: ["cathode", "neg"], pin2: ["anode", "pos"] }}
     />
     <schematictext
       text="Qwiic/I2C Connections"
@@ -125,7 +127,7 @@ export default () => (
     <schematictext
       text="Cut trace on jumper JP1 to remove 12C pullups"
       schX={3.7}
-      schY={1.7}
+      schY={1.9}
       color="gray"
       anchor="left"
       fontSize={0.15}
