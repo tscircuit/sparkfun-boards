@@ -15,6 +15,7 @@ export default () => (
         pin5: sel.JP1.pin2,
         pin6: sel.JP1.pin1,
       }}
+      pcbRotation={90}
     />
     <jumper
       name="JP1"
