@@ -298,7 +298,7 @@ export default function SparkFunCurrentSensorINA237() {
       <resistor
         name="R4"
         footprint="0603"
-        pcbX={0.0}
+        pcbX={-3.5}
         pcbY={-4.7625}
         pcbRotation={0}
         layer="top"
@@ -387,7 +387,7 @@ export default function SparkFunCurrentSensorINA237() {
         name="R2"
         footprint="2512"
         pcbX={0.0}
-        pcbY={2.2225}
+        pcbY={3.2225}
         pcbRotation={180.0}
         layer="top"
         schSectionName="power_inputs"
@@ -449,7 +449,7 @@ export default function SparkFunCurrentSensorINA237() {
         footprint="0603"
         pcbX={-9.8425}
         pcbY={-4.7625}
-        pcbRotation={0}
+        pcbRotation={180}
         layer="top"
         schSectionName="power_led"
         schX={-8}
