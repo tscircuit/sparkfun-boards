@@ -18,7 +18,7 @@ const JP2PinLabels = {
   pin6: "INT2",
 }
 export default () => (
-  <board width="22.86mm" height="12.7mm" routingDisabled>
+  <board width="22.86mm" height="12.7mm">
     <LIS3DHTR
       name="U1"
       schY={-0.5}
@@ -34,7 +34,9 @@ export default () => (
         pin16: sel.net().ADC1,
         pin15: sel.net().ADC2,
         pin13: sel.net().ADC3,
-        pin7: sel.R3.pin1,
+        pin7: ["R3.pin1", "net.SA0"],
+        pin4: sel.net().SCL,
+        pin6: sel.net().SDA,
         pin10: sel.U1.pin5,
       }}
     />
@@ -47,6 +49,7 @@ export default () => (
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength="8mm"
       capacitance="0.1uF"
       footprint="cap0402"
       pcbY={-0.889}
@@ -57,10 +60,11 @@ export default () => (
     />
     <capacitor
       name="C2"
+      maxDecouplingTraceLength="8mm"
       capacitance="10uF"
       footprint="cap0603"
       pcbX={4.064}
-      pcbY={-2.286}
+      pcbY={-2.5}
       schRotation={-90}
       schX={-3.5}
       schY={-0.5}
@@ -80,7 +84,7 @@ export default () => (
       name="R2"
       resistance="4.7k"
       footprint="0603"
-      pcbY={2.921}
+      pcbY={2.55}
       pcbX={-1.905}
       pcbRotation={180}
       schX={5.5}
@@ -92,7 +96,7 @@ export default () => (
       name="R3"
       resistance="10k"
       footprint="0603"
-      pcbY={2.794}
+      pcbY={2.45}
       pcbX={4.318}
       schX={7.5}
       schY={1}
@@ -130,16 +134,7 @@ export default () => (
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
-          pins: [
-            "pin8",
-            "pin7",
-            "pin6",
-            "pin5",
-            "pin4",
-            "pin3",
-            "pin2",
-            "pin1",
-          ],
+          pins: ["pin6", "pin5", "pin4", "pin3", "pin2", "pin1"],
         },
       }}
       footprint="pinrow6_id1.016mm_od1.88mm_p2.56mm_nosquareplating_pinlabelverticallyinverted_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
@@ -171,16 +166,7 @@ export default () => (
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
-          pins: [
-            "pin8",
-            "pin7",
-            "pin6",
-            "pin5",
-            "pin4",
-            "pin3",
-            "pin2",
-            "pin1",
-          ],
+          pins: ["pin6", "pin5", "pin4", "pin3", "pin2", "pin1"],
         },
       }}
       connections={{
@@ -203,7 +189,8 @@ export default () => (
       schX={7.5}
       schY={-0.5}
       pcbRotation={-90}
-      pcbY={0.058}
+      pcbX={4.5}
+      pcbY={-0.8}
       footprint="solderjumper2_pw0.635_ph1.27_p0.9"
     />
     <solderjumper
