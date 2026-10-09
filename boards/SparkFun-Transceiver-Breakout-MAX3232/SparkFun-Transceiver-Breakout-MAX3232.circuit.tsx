@@ -9,12 +9,7 @@ const selectors = {
 }
 
 export default () => (
-  <board
-    width="25.5mm"
-    height="15mm"
-    autorouter="auto-cloud"
-    manualEdits={manualEdits}
-  >
+  <board width="25.5mm" height="15mm" manualEdits={manualEdits}>
     <capacitor
       capacitance="0.1uF"
       footprint="cap0603"
@@ -50,7 +45,7 @@ export default () => (
         jlcpcb: ["C577419"],
       }}
       connections={{ pin1: sel.net().V_P, pin2: sel.net().GND }}
-      pcbRotation={90}
+      pcbRotation={270}
     />
     <capacitor
       capacitance="0.1uF"
