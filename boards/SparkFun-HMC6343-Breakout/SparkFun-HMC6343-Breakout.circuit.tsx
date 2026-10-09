@@ -16,8 +16,7 @@ const HMC6343Breakout = () => (
         GND2: sel.net.GND,
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
-        CS_CTRL: sel.net.CS,
-        CS: "net.CS_CTRL",
+        CS_CTRL: sel.U1.CS,
       }}
       schPinArrangement={{
         leftSide: {
@@ -124,7 +123,7 @@ const HMC6343Breakout = () => (
       pcbX={-6.985}
       pcbY={1.27}
       schX={-4.5}
-      pcbRotation={270}
+      pcbRotation={90}
       schRotation="-90deg"
       connections={{
         pin1: sel.net.V3_3,
