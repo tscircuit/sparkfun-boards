@@ -13,7 +13,7 @@ const JPPinlabel = {
 
 export default () => {
   return (
-    <board width="25.40mm" height="25.40mm" routingDisabled>
+    <board width="25.40mm" height="25.40mm">
       <MMA8452QR1 name="U1" />
       <capacitor
         name="C5"
@@ -22,6 +22,7 @@ export default () => {
         schX={-4}
         footprint="cap0603"
         pcbX={3.3}
+        pcbY={0.3}
         pcbRotation={-90}
         connections={{ pin2: sel.net().GND, pin1: sel.net().V3_3 }}
       />
@@ -31,9 +32,15 @@ export default () => {
         schRotation={-90}
         schX={-5}
         footprint="cap0603"
-        pcbX={4.5}
+        pcbX={4.9}
         pcbRotation={-90}
         connections={{ pin2: sel.net().GND, pin1: sel.net().V3_3 }}
+      />
+      <trace
+        name="decoupling_supply"
+        from={sel.C5.pin1}
+        to={sel.C4.pin1}
+        pcbPath={[sel.C5.pin1, sel.C4.pin1]}
       />
       <resistor
         name="R2"
@@ -109,6 +116,7 @@ export default () => {
       />
       <jumper
         name="JP3"
+        doNotPlace={true}
         cadModel={null}
         schWidth={0.7}
         pinLabels={JPPinlabel}
@@ -126,6 +134,7 @@ export default () => {
       />
       <jumper
         name="JP4"
+        doNotPlace={true}
         cadModel={null}
         schWidth={0.7}
         pinLabels={{
