@@ -4,7 +4,7 @@ import { sel } from "tscircuit"
 
 export default () => {
   return (
-    <board width="25.40mm" height="12.70mm" routingDisabled>
+    <board width="25.40mm" height="12.70mm">
       <AS7331_AQFM_OLGA16_LF_T_R
         name="U1"
         schX={-0.45}
@@ -23,7 +23,7 @@ export default () => {
           pin7: "A1.pin2",
           pin8: "net.SYNC",
           pin9: "net.READY_INT",
-          pin10: sel.net().VDDA,
+          pin10: sel.net().V3_3,
           pin11: "net.DGND",
           pin12: sel.net.SDA,
           pin13: sel.net.SCL,
@@ -33,12 +33,22 @@ export default () => {
         }}
       />
 
+      <trace
+        name="decoupling_return"
+        from={sel.C1.pin2}
+        to={sel.C2.pin2}
+        pcbPath={[sel.C1.pin2, sel.C2.pin2]}
+      />
+
+      {/* SparkFun ties the analog and digital returns at SUPPLYTIE1. */}
+      <trace name="ground_tie" from={sel.U1.pin1} to={sel.U1.pin11} />
+
       <A1001WV_S_04P
         name="J1"
         schX={-4.95}
         schY={-4.9}
-        pcbX={10.55}
-        pcbY={2.9}
+        pcbX={10.3}
+        pcbY={2.65}
         layer="bottom"
         pcbRotation={90}
         connections={{
@@ -53,8 +63,8 @@ export default () => {
         name="J2"
         schX={-3.0}
         schY={-4.9}
-        pcbX={-10.55}
-        pcbY={2.9}
+        pcbX={-10.3}
+        pcbY={2.65}
         layer="bottom"
         pcbRotation={-90}
         connections={{
@@ -85,17 +95,19 @@ export default () => {
         layer="bottom"
         pcbRotation={180}
         connections={{
-          pin1: "net.DGND",
-          pin2: "net.SYNC",
-          pin3: "net.READY_INT",
-          pin4: sel.net.SDA,
-          pin5: sel.net.SCL,
-          pin6: sel.net.V3_3,
+          pin1: "net.SYNC",
+          pin2: "net.READY_INT",
+          pin3: "net.DGND",
+          pin4: sel.net.V3_3,
+          pin5: sel.net.SDA,
+          pin6: sel.net.SCL,
         }}
       />
 
       <resistor
         name="R1"
+        pcbY={2.25}
+        pcbX={2.6}
         resistance="2.2k"
         footprint="0402"
         schX={1.95}
@@ -107,6 +119,8 @@ export default () => {
       />
       <resistor
         name="R2"
+        pcbY={2.25}
+        pcbX={3.9}
         resistance="2.2k"
         footprint="0402"
         schX={2.95}
@@ -118,18 +132,22 @@ export default () => {
       />
       <solderjumper
         name="I2C"
+        pcbY={4.5}
+        pcbX={4.25}
         bridgedPins={[["1"], ["2"], ["3"]]}
         footprint="solderjumper3_bridged123_pw0.66_pl1.270_p1"
         layer="bottom"
         schX={2.45}
         schY={4.0}
         schRotation={180}
-        pcbRotation={180}
+        pcbRotation={0}
         connections={{ pin2: sel.net.V3_3 }}
       />
 
       <resistor
         name="R3"
+        pcbY={4.65}
+        pcbX={-2}
         resistance="100k"
         footprint="0402"
         schX={4.25}
@@ -141,6 +159,8 @@ export default () => {
       />
       <resistor
         name="R4"
+        pcbY={4.65}
+        pcbX={0.7}
         resistance="100k"
         footprint="0402"
         schX={5.2}
@@ -152,6 +172,8 @@ export default () => {
       />
       <solderjumper
         name="A0"
+        pcbY={0.1}
+        pcbX={-2}
         bridgedPins={[["2"], ["3"]]}
         footprint="solderjumper3_bridged23_pw0.66_pl1.270_p1"
         layer="bottom"
@@ -163,6 +185,8 @@ export default () => {
       />
       <solderjumper
         name="A1"
+        pcbY={0.1}
+        pcbX={0.7}
         bridgedPins={[["2"], ["3"]]}
         footprint="solderjumper3_bridged23_pw0.66_pl1.270_p1"
         layer="bottom"
@@ -187,6 +211,7 @@ export default () => {
       />
       <capacitor
         name="C1"
+        maxDecouplingTraceLength="8mm"
         capacitance="1.0uF"
         footprint="0402"
         layer="top"
@@ -196,10 +221,11 @@ export default () => {
         pcbX={-4.45}
         pcbY={0.55}
         pcbRotation={90}
-        connections={{ pin1: sel.net().VDDA, pin2: "net.DGND" }}
+        connections={{ pin1: sel.net().V3_3, pin2: "net.DGND" }}
       />
       <capacitor
         name="C2"
+        maxDecouplingTraceLength="8mm"
         capacitance="0.1uF"
         footprint="0402"
         layer="top"
@@ -213,6 +239,8 @@ export default () => {
       />
       <resistor
         name="R7"
+        pcbY={0}
+        pcbX={-4.45}
         resistance="33k"
         footprint="0402"
         schX={-2.15}
@@ -225,6 +253,8 @@ export default () => {
 
       <solderjumper
         name="PWR"
+        pcbY={-2.25}
+        pcbX={6.5}
         bridgedPins={[["1", "2"]]}
         footprint="solderjumper2_bridged12_pw0.66_pl1.270_p1"
         layer="bottom"
@@ -236,27 +266,31 @@ export default () => {
       />
       <resistor
         name="R5"
+        pcbY={0.7}
+        pcbX={6.5}
         resistance="2.2k"
         footprint="0402"
         schX={10.5}
         schY={0.95}
         schRotation={90}
         layer="bottom"
-        pcbRotation={90}
-        connections={{ pin1: "D1.pin1", pin2: "PWR.pin1" }}
+        pcbRotation={0}
+        connections={{ pin1: "D1.anode", pin2: "PWR.pin1" }}
       />
       <led
         name="D1"
+        pinLabels={{ pin1: ["cathode", "neg"], pin2: ["anode", "pos"] }}
+        supplierPartNumbers={{ jlcpcb: ["C6390388"] }}
         color="red"
         footprint="0603"
         schX={10.5}
         schY={-0.4}
         schRotation={-90}
-        pcbX={6.2}
+        pcbX={6.5}
         pcbY={3}
         layer="bottom"
         pcbRotation={90}
-        connections={{ pin2: "net.DGND" }}
+        connections={{ cathode: "net.DGND" }}
       />
 
       <schematicrect
