@@ -13,6 +13,10 @@ export const ISL29125IROZ_T7 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       pinLabels={pinLabels}
+      // Keep the fixed reference placement without an inferred 1 mm limit.
+      pinAttributes={{
+        VDD: { shouldHaveDecouplingCapacitor: false },
+      }}
       schPinStyle={{
         pin1: { bottomMargin: 0.2 },
       }}

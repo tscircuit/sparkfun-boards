@@ -73,6 +73,7 @@ export default () => (
       cadModel={null}
       schWidth={0.6}
       pinLabels={jumperPinLabels}
+      doNotPlace
       name="JP1"
       manufacturerPartNumber="M05PTH"
       footprint="pinrow5_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_doublesidedpinlabel"
@@ -126,7 +127,7 @@ export default () => (
       text="SOLDERJUMPER_2WAYS"
       anchor="left"
       fontSize={0.15}
-      schX={1.7}
+      schX={4.1}
       schRotation={-90}
       schY={0.2}
       color="gray"
