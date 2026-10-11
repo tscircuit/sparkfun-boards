@@ -11,6 +11,11 @@ const pinLabels = {
 export const AP2112K = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
+      // Preserve the reference placement without an inferred 1 mm decoupling limit.
+      pinAttributes={{
+        VIN: { shouldHaveDecouplingCapacitor: false },
+        VOUT: { shouldHaveDecouplingCapacitor: false },
+      }}
       pinLabels={pinLabels}
       supplierPartNumbers={{
         jlcpcb: ["C23380830"],

@@ -59,6 +59,7 @@ export default () => (
       }}
     />
     <jumper
+      schWidth={1.385}
       name="J2"
       footprint={<JST04_1MM_RA />}
       pcbX="6.35mm"
@@ -84,6 +85,7 @@ export default () => (
       }}
     />
     <jumper
+      schWidth={1.385}
       name="J1"
       footprint={<JST05_1MM_RA />}
       pcbX="-6.35mm"
@@ -192,7 +194,7 @@ export default () => (
     <schematictext
       text="Interrupt Pin"
       schX={5.8}
-      schY={-4.8}
+      schY={-3.8}
       color="black"
       anchor="center"
       fontSize={0.2}
