@@ -4,7 +4,7 @@ import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 import { sel } from "@tscircuit/core"
 
 const MotionSensor = () => (
-  <board width="25.4mm" height="25.4mm" routingDisabled>
+  <board width="25.4mm" height="25.4mm">
     <capacitor
       name="C1"
       schX={5}
@@ -18,6 +18,8 @@ const MotionSensor = () => (
     />
     <led
       name="D1"
+      pinLabels={{ pin1: ["cathode", "neg"], pin2: ["anode", "pos"] }}
+      supplierPartNumbers={{ jlcpcb: ["C6390388"] }}
       schRotation={-90}
       schX={-5}
       schY={-1.5}
@@ -25,7 +27,7 @@ const MotionSensor = () => (
       pcbX={10.2}
       pcbY={-5}
       footprint="0603"
-      connections={{ pin2: sel.net().GND }}
+      connections={{ cathode: sel.net().GND }}
     />
     <resistor
       name="R1"
@@ -51,11 +53,11 @@ const MotionSensor = () => (
     />
     <resistor
       name="R3"
-      connections={{ pin1: sel.D1.pin1 }}
+      connections={{ pin1: sel.D1.anode }}
       schRotation={90}
       resistance="1k"
       pcbX={7}
-      pcbY={-5}
+      pcbY={-4.5}
       schX={-5}
       schY={-0.25}
       pcbRotation={180}
