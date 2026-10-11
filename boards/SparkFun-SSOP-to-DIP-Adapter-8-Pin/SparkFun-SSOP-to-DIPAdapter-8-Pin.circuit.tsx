@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 export default () => (
   <board width="15.24mm" height="10.16mm">
@@ -27,8 +26,9 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP2"
-      footprint={barePinRow("pinrow4_nopinlabels")}
+      footprint="pinrow4_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schX={-1.9}
       pcbX={-6.08}
@@ -37,8 +37,9 @@ export default () => (
       manufacturerPartNumber="M04PTH"
     />
     <jumper
+      doNotPlace
       name="JP1"
-      footprint={barePinRow("pinrow4_nopinlabels")}
+      footprint="pinrow4_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schX={1.9}
       pcbX={6.08}
