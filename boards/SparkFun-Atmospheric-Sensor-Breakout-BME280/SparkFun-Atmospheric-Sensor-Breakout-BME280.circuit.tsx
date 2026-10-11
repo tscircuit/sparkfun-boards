@@ -15,7 +15,7 @@ export default () => (
       minViaPadDiameter="0.6mm"
       minViaHoleDiameter="0.3mm"
       minTraceToPadEdgeClearance="0.2mm"
-      autorouter={{ local: true, traceClearance: 0.2 }}
+      autorouter={{ local: true }}
     />
     <BME280
       name="U1"
