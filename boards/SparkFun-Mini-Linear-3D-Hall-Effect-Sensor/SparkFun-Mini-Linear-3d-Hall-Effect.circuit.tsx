@@ -291,6 +291,7 @@ export default () => (
       fontSize={0.3}
     />
     <pinheader
+      doNotPlace
       name="J3"
       pinCount={6}
       footprint="pinrow6_p2.54_id1.016_od1.88_nosquareplating"
