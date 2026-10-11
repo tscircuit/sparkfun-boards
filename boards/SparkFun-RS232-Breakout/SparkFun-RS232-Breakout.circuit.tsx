@@ -3,7 +3,12 @@ import { DS1037_09FNAKT74_0CC } from "./imports/DS1037_09FNAKT74_0CC"
 import { SP3223EEY_L_TR } from "./imports/SP3223EEY_L_TR"
 
 export default () => (
-  <board width="27.94mm" height="31.75mm" autorouter="auto-cloud">
+  <board width="27.94mm" height="31.75mm" autorouter="auto-local">
+    <autoroutingphase
+      minViaEdgeToPadEdgeClearance="0.3mm"
+      minTraceToPadEdgeClearance="0.2mm"
+      autorouter="beta-pipeline9"
+    />
     <schematicsection name="rs232" displayName="RS-232 / DE9 Connector" />
     <schematicsection name="transceiver" displayName="RS-232 Transceiver" />
     <schematicsection name="ttl" displayName="TTL Logic Header" />
@@ -14,7 +19,7 @@ export default () => (
       schSectionName="transceiver"
       pcbX={5.075}
       pcbY={0.067}
-      schX={0}
+      schX={-0.23}
       schY={0}
       schWidth={2}
       schPinArrangement={{
@@ -123,7 +128,7 @@ export default () => (
       capacitance="0.1uF"
       footprint="cap0603"
       schSectionName="transceiver"
-      schX={2.8}
+      schX={3.03}
       schY={0.6}
       schRotation={-90}
       supplierPartNumbers={{ jlcpcb: ["C14663"] }}
