@@ -7,7 +7,7 @@ export default () => (
     <autoroutingphase
       minViaEdgeToPadEdgeClearance="0.3mm"
       minTraceToPadEdgeClearance="0.2mm"
-      autorouter={{ local: true, traceClearance: 0.2 }}
+      autorouter={{ local: true }}
     />
     <silkscreentext text="SCD40" pcbX={10} pcbY={7.3} layer="top" />
     <silkscreentext text="SCD41" pcbX={10} pcbY={5.3} layer="top" />
