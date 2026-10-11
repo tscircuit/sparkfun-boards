@@ -7,6 +7,8 @@ export default () => (
     <silkscreentext text="SOIC-20" pcbY={-11.5} fontSize={1.5} />
 
     <jumper
+      doNotPlace
+      schWidth={1.48}
       name="JP1"
       cadModel={null}
       footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
@@ -74,6 +76,8 @@ export default () => (
     />
 
     <jumper
+      doNotPlace
+      schWidth={1.48}
       name="JP2"
       cadModel={null}
       footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
