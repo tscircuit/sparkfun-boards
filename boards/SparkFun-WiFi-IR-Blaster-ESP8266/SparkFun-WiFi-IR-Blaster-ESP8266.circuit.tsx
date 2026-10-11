@@ -429,6 +429,7 @@ export default () => {
       {/* ======================= Headers ======================= */}
       {/* J2: 8-pin GPIO breakout */}
       <pinheader
+        doNotPlace
         name="J2"
         gender="female"
         pinCount={8}
@@ -469,6 +470,7 @@ export default () => {
       />
       {/* J1: 6-pin FTDI serial target */}
       <pinheader
+        doNotPlace
         name="J1"
         gender="female"
         pinCount={6}
