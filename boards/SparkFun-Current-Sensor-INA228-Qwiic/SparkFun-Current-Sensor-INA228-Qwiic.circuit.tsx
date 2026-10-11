@@ -9,7 +9,7 @@ export default () => {
       <autoroutingphase
         minViaEdgeToPadEdgeClearance="0.3mm"
         minTraceToPadEdgeClearance="0.2mm"
-        autorouter={{ local: true, traceClearance: 0.2 }}
+        autorouter={{ local: true }}
       />
       <schematicsection name="power_inputs" displayName="Power Inputs" />
       <schematicsection name="sensor" displayName="INA228 Current Sensor" />
