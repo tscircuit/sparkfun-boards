@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { MCP4725A1T_E_CH } from "./MCP4725A1T_E_CH"
 
@@ -75,14 +74,13 @@ const I2CDACBREAKOUT = () => (
     />
 
     <jumper
+      doNotPlace
       name="JP6"
       pinLabels={{
         pin1: ["GND"],
         pin2: ["VOUT"],
       }}
-      footprint={barePinRow(
-        "pinrow2_p2.54_id1.016_od1.88_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel",
-      )}
+      footprint="pinrow2_p2.54_id1.016_od1.88_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
       cadModel={null}
       pcbX={-6.35}
       pcbY={5.08}
@@ -95,6 +93,7 @@ const I2CDACBREAKOUT = () => (
     />
 
     <jumper
+      doNotPlace
       name="JP5"
       pinLabels={{
         pin1: ["SCL"],
@@ -102,9 +101,7 @@ const I2CDACBREAKOUT = () => (
         pin3: ["VCC"],
         pin4: ["GND"],
       }}
-      footprint={barePinRow(
-        "pinrow4_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel",
-      )}
+      footprint="pinrow4_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
       cadModel={null}
       pcbX={-6.35}
       pcbY={-2.54}
