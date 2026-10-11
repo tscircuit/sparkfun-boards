@@ -6,7 +6,8 @@ export default () => (
       schWidth={1.3}
       cadModel={null}
       schHeight={1}
-      footprint="sot23_6_pw0.55mm_pl1.2mm_w1.4_p1"
+      // Footprinter's default orientation matches SparkFun's left/right pad rows.
+      footprint="sot23_6_pw0.55mm_pl1.2mm_w1.4_p0.95"
       connections={{
         pin1: sel.JP2.pin3,
         pin2: sel.JP2.pin2,
@@ -15,7 +16,6 @@ export default () => (
         pin5: sel.JP1.pin2,
         pin6: sel.JP1.pin1,
       }}
-      pcbRotation={90}
     />
     <jumper
       doNotPlace
