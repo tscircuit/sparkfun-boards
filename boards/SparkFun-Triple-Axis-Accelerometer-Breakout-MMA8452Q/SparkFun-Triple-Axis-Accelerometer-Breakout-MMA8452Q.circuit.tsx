@@ -12,7 +12,7 @@ const JPPinlabel = {
 
 export default () => {
   return (
-    <board width="15.24mm" height="15.24mm" routingDisabled>
+    <board width="15.24mm" height="15.24mm">
       <MMA8452QR1 name="U1" pcbRotation={180} />
       <resistor
         name="R1"
@@ -96,10 +96,11 @@ export default () => {
         schRotation={-90}
         footprint="solderjumper2_p0.9_pw0.6604_ph1.27"
         layer={"bottom"}
-        pcbX={0.45}
-        pcbY={0}
+        pcbX={2.8}
+        pcbY={2.5}
       />
       <jumper
+        doNotPlace
         name="JP3"
         cadModel={null}
         schWidth={0.7}
