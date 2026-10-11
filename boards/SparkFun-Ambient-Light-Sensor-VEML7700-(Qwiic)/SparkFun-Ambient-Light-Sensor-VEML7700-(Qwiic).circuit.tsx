@@ -10,6 +10,14 @@ const jumperPinLabels = {
 }
 export default () => (
   <board width="25.4mm" height="25.4mm">
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.3mm"
+      minViaEdgeToPadEdgeClearance="0.3mm"
+      minViaPadDiameter="0.6mm"
+      minViaHoleDiameter="0.3mm"
+      minBoardEdgeClearance="0.3mm"
+      autorouter={{ local: true, traceClearance: 0.2 }}
+    />
     <VEML7700 name="U1" schY={1.5} />
     <SM04B_SRSS_TB_LF__SN
       name="JP1"
@@ -31,7 +39,7 @@ export default () => (
       pcbRotation={-90}
       schRotation={-90}
       pcbY={-3.08}
-      schX={-3.3}
+      schX={-3.75}
       schY={0.9}
       capacitance="2.2uF"
       footprint="cap0402"
@@ -76,9 +84,9 @@ export default () => (
       name="R3"
       resistance="4.7k"
       footprint="0402"
-      pcbX={-9.843}
+      pcbX={-9.6}
       pcbY={-4.762}
-      connections={{ pin1: sel.D1.pin1, pin2: sel.JP3.pin1 }}
+      connections={{ pin1: sel.D1.pin2, pin2: sel.JP3.pin1 }}
       schRotation={90}
       schY={-7.1}
       schX={-1.8}
@@ -96,6 +104,8 @@ export default () => (
       connections={{ pin1: sel.JP4.pin3 }}
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
+      pcbRotation={180}
       name="D1"
       color="red"
       footprint="0603"
@@ -104,7 +114,7 @@ export default () => (
       schRotation={-90}
       schY={-8.3}
       schX={-1.8}
-      connections={{ pin2: sel.net().GND }}
+      connections={{ pin1: sel.net().GND }}
     />
     <solderjumper
       name="JP3"
@@ -173,12 +183,12 @@ export default () => (
       schX={8}
       schY={-3.9}
     />
-    <schematictext text="Power LED" fontSize={0.5} schX={-1.8} schY={-3.5} />
+    <schematictext text="Power LED" fontSize={0.5} schX={1.2} schY={-2.5} />
     <schematictext
       text="Cut jumper to turn off power LED."
       fontSize={0.2}
-      schX={-1.8}
-      schY={-3.9}
+      schX={1.2}
+      schY={-2.9}
     />
     <schematictext text="Connectors" fontSize={0.5} schX={8} schY={5.5} />
     <schematictext
