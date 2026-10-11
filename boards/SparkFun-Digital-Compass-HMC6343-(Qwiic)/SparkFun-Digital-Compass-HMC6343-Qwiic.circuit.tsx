@@ -1,10 +1,25 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { JST05_1MM_RA } from "./JST05_1MM_RA"
 import { HMC6343 } from "./HMC6343"
 import { JST04_1MM_RA } from "./JST04_1MM_RA"
 import { sel, SilkscreenText } from "@tscircuit/core"
 
 const HMC6343Qwiic = () => (
-  <board width="25.4mm" height="25.4mm">
+  <board
+    minViaPadDiameter="0.6mm"
+    minViaHoleDiameter="0.3mm"
+    width="25.4mm"
+    height="25.4mm"
+    nominalTraceWidth="0.2mm"
+  >
+    <autoroutingphase
+      minBoardEdgeClearance="0.5mm"
+      minViaEdgeToPadEdgeClearance="0.3mm"
+      minViaPadDiameter="0.6mm"
+      minViaHoleDiameter="0.3mm"
+      minTraceToPadEdgeClearance="0.2mm"
+      autorouter={{ local: true, traceClearance: 0.2 }}
+    />
     <HMC6343
       name="U1"
       schWidth="1.4mm"
@@ -57,7 +72,7 @@ const HMC6343Qwiic = () => (
       footprint="0603"
       schX={9.985}
       schY={12.4}
-      pcbX={-5.715}
+      pcbX={-6.015}
       pcbY={0.952}
       pcbRotation={270}
       schRotation={-90}
@@ -107,6 +122,7 @@ const HMC6343Qwiic = () => (
             shape="rect"
           />
           <smtpad
+            portHints={["1"]}
             pcbX="-0.508mm"
             pcbY="0mm"
             width="0.381mm"
@@ -114,6 +130,7 @@ const HMC6343Qwiic = () => (
             shape="rect"
           />
           <smtpad
+            portHints={["3"]}
             pcbX="0.508mm"
             pcbY="0mm"
             width="0.381mm"
@@ -218,9 +235,11 @@ const HMC6343Qwiic = () => (
       pcbX={-9.843}
       pcbY={-6.348}
       schRotation={-90}
-      connections={{ pin1: "LED.pin1", pin2: "D1.pin1" }}
+      connections={{ pin1: "LED.pin1", pin2: "D1.pin2" }}
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
+      pcbRotation={180}
       name="D1"
       color="red"
       footprint="0603"
@@ -229,7 +248,7 @@ const HMC6343Qwiic = () => (
       schRotation={-90}
       pcbX={-9.843}
       pcbY={-4.761}
-      connections={{ pin2: "net.GND" }}
+      connections={{ pin1: "net.GND" }}
     />
 
     <netlabel
@@ -237,7 +256,7 @@ const HMC6343Qwiic = () => (
       schX={27.032}
       schY={10.32}
       anchorSide="top"
-      connectsTo={"D1.pin2"}
+      connectsTo={"D1.pin1"}
     />
 
     <JST04_1MM_RA
@@ -322,8 +341,11 @@ const HMC6343Qwiic = () => (
       connectsTo={"J2.GND"}
     />
     <jumper
+      doNotPlace
       name="J3"
-      footprint={"pinrow4_id1.016_od1.88_nosquareplating_doublesidedpinlabel"}
+      footprint={barePinRow(
+        "pinrow4_id1.016_od1.88_nosquareplating_doublesidedpinlabel",
+      )}
       schWidth={0.65}
       cadModel={null}
       schDirection="left"
@@ -341,7 +363,7 @@ const HMC6343Qwiic = () => (
       }}
       schX={22.2}
       schY={4.7}
-      pcbX={-1.08}
+      pcbX={-1.18}
       pcbY={-11.43}
       connections={{
         GND: "net.GND",
@@ -379,8 +401,10 @@ const HMC6343Qwiic = () => (
     />
 
     <jumper
+      doNotPlace
       name="J4"
-      footprint="pinrow1_id1.016_od1.88_nosquareplating"
+      footprint={barePinRow("pinrow1_id1.016_od1.88_nosquareplating")}
+      pinLabels={{ pin1: "1" }}
       cadModel={null}
       pcbX={5.08}
       pcbY={-11.43}
