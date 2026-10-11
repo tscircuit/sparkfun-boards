@@ -5,6 +5,7 @@ import { RJ45_8PTH, SCREWTERMINAL_3_5MM_3 } from "./footprints"
 export default () => (
   <board width="22.86mm" height="27.94mm">
     <pinheader
+      doNotPlace
       name="JP9"
       pinCount={5}
       footprint="pinrow5_p2.54_id1.016_od1.8769_nosquareplating_nopinlabels"
@@ -105,7 +106,7 @@ export default () => (
       capacitance="0.1uF"
       footprint="0603"
       schX={10}
-      pcbX={-6.477}
+      pcbX={-6.377}
       pcbY={5.461}
       pcbRotation={90}
       schRotation="-90deg"
@@ -130,6 +131,7 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="JP1"
       pinCount={4}
       footprint="pinrow4_p2.54_id1.016_od1.8769_doublesidedpinlabel"
@@ -212,6 +214,7 @@ export default () => (
       schY={1.45}
     />
     <pinheader
+      doNotPlace
       name="JP3"
       pinCount={3}
       footprint="pinrow3_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
