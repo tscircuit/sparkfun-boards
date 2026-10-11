@@ -17,7 +17,7 @@ export default () => (
       minViaPadDiameter="0.45mm"
       minViaHoleDiameter="0.2mm"
       minTraceToPadEdgeClearance="0.3mm"
-      autorouter={{ local: true, traceClearance: 0.3 }}
+      autorouter={{ local: true }}
     />
     <silkscreentext text="SCD40" pcbX={10} pcbY={7.3} layer="top" />
     <silkscreentext text="SCD41" pcbX={10} pcbY={5.3} layer="top" />
