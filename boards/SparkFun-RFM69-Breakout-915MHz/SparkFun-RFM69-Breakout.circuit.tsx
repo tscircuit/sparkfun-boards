@@ -3,13 +3,14 @@ import { sel } from "@tscircuit/core"
 
 const RFM69BREAKOUT = () => {
   return (
-    <board width="27.94" height="20.32" autorouter="auto-cloud">
+    <board width="27.94" height="20.32" autorouter="auto-local">
       <RFM69HCW
         name="U1"
         footprint="stampboard_left8_right8_bottom0_top0_w18mm_p2.0mm_pw1.2mm_pl3.0mm_padshape=rect"
         pcbY="1.27mm"
       />
       <pinheader
+        doNotPlace
         name="JP1"
         pinCount={2}
         schRotation={180}
@@ -41,6 +42,8 @@ const RFM69BREAKOUT = () => {
         anchorSide="bottom"
       />
       <pinheader
+        schWidth={0.675}
+        doNotPlace
         name="JP2"
         pinCount={5}
         schRotation={0}
@@ -62,6 +65,7 @@ const RFM69BREAKOUT = () => {
         pinLabels={["MISO", "MOSI", "SCK", "NSS", "RESET"]}
       />
       <pinheader
+        doNotPlace
         name="JP3"
         pinCount={1}
         schRotation={180}
@@ -80,6 +84,8 @@ const RFM69BREAKOUT = () => {
         schWidth={0.5}
       />
       <pinheader
+        schWidth={0.58}
+        doNotPlace
         name="JP4"
         pinCount={5}
         schRotation={0}
@@ -101,6 +107,7 @@ const RFM69BREAKOUT = () => {
         pinLabels={["DIO0", "DIO1", "DIO2", "DIO3", "DIO4"]}
       />
       <pinheader
+        doNotPlace
         name="JP5"
         pinCount={3}
         schRotation={180}
