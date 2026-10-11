@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { VEML7700 } from "./VEML7700"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
@@ -156,9 +155,7 @@ export default () => (
         },
       }}
       pinLabels={jumperPinLabels}
-      footprint={barePinRow(
-        "pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted",
-      )}
+      footprint="pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
       pcbY={-11.43}
     />
     <hole diameter={3.1} pcbX={10.16} pcbY={-10.16} />
