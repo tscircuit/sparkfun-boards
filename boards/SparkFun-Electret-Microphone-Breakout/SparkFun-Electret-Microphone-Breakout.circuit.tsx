@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { GMI9745P_30db } from "./MIC"
 import { OPA344NA_250 } from "./OPA344"
@@ -136,8 +135,9 @@ export default () => {
       />
 
       <jumper
+        doNotPlace
         name="J1"
-        footprint={barePinRow("pinrow3")}
+        footprint="pinrow3"
         pinLabels={{ pin1: "1", pin2: "2", pin3: "3" }}
         cadModel={null}
         pcbX={8.89}
