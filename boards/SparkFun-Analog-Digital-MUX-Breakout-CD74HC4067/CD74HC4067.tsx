@@ -1,3 +1,5 @@
+import { fp } from "@tscircuit/footprinter"
+import type { FootprintSoupElements } from "@tscircuit/props"
 import type { ChipProps } from "@tscircuit/props"
 
 const pinLabels = {
@@ -63,7 +65,25 @@ export const CD74HC4067 = (props: ChipProps<typeof pinLabels>) => {
         jlcpcb: ["C98457"],
       }}
       manufacturerPartNumber="CD74HC4067SM96"
-      footprint="dfn24_p0.65mm_w8.4482mm_pw0.308mm_pl1.324mm_pin1location(leftside,bottom)"
+      footprint={
+        // Normalize quarter-turn pads without changing their copper geometry.
+        fp
+          .string(
+            "dfn24_p0.65mm_w8.4482mm_pw0.308mm_pl1.324mm_pin1location(leftside,bottom)",
+          )
+          .circuitJson()
+          .map((element) =>
+            element.type === "pcb_smtpad" && element.shape === "rotated_rect"
+              ? {
+                  ...element,
+                  shape: "rect",
+                  width: element.height,
+                  height: element.width,
+                  ccw_rotation: 0,
+                }
+              : element,
+          ) as FootprintSoupElements[]
+      }
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/download?uuid=44cbf0bf34924619a9a3f811509fb70e&pn=C98457",
