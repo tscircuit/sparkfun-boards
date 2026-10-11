@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { JST05_1MM_RA } from "./JST05_1MM_RA"
 import { HMC6343 } from "./HMC6343"
 import { JST04_1MM_RA } from "./JST04_1MM_RA"
@@ -343,9 +342,7 @@ const HMC6343Qwiic = () => (
     <jumper
       doNotPlace
       name="J3"
-      footprint={barePinRow(
-        "pinrow4_id1.016_od1.88_nosquareplating_doublesidedpinlabel",
-      )}
+      footprint="pinrow4_id1.016_od1.88_nosquareplating_doublesidedpinlabel"
       schWidth={0.65}
       cadModel={null}
       schDirection="left"
@@ -403,7 +400,7 @@ const HMC6343Qwiic = () => (
     <jumper
       doNotPlace
       name="J4"
-      footprint={barePinRow("pinrow1_id1.016_od1.88_nosquareplating")}
+      footprint="pinrow1_id1.016_od1.88_nosquareplating"
       pinLabels={{ pin1: "1" }}
       cadModel={null}
       pcbX={5.08}
