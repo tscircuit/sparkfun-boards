@@ -23,9 +23,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP1"
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={2}
       schX={-3.5}
       pcbX="-9.145mm"
@@ -39,9 +41,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP2"
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={2}
       schX={-0.5}
       pcbX="-1.525mm"
@@ -76,9 +80,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP5"
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={-2}
       schX={-3.5}
       pcbX="-9.145mm"
@@ -92,9 +98,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP6"
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={-2}
       schX={-0.5}
       pcbX="-1.525mm"
@@ -129,9 +137,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP3"
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={2}
       schX={1.5}
       pcbX="1.525mm"
@@ -145,9 +155,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP4"
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={2}
       schX={4.5}
       pcbX="9.145mm"
@@ -182,9 +194,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP7"
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={-2}
       schX={1.5}
       pcbX="1.525mm"
@@ -198,9 +212,11 @@ export default () => (
       }}
     />
     <jumper
+      doNotPlace
       name="JP8"
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
+      pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schY={-2}
       schX={4.5}
       pcbX="9.145mm"
