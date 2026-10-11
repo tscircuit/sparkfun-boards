@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { ACS723 } from "./ACS723"
 import { boardProps } from "@tscircuit/props"
@@ -12,6 +11,7 @@ export default () => {
         pcbY={1.27}
         pcbRotation={-90}
         pinLabels={{ pin1: ["VCC"], pin2: ["VOUT"], pin3: ["GND"] }}
+        doNotPlace
         name="JP1"
         schDirection="left"
         footprint="pinrow3_id1.016_od1.88_nosquareplating_doublesidedpinlabel"
@@ -27,28 +27,28 @@ export default () => {
         cadModel={null}
         pcbX={-8.255}
         pcbY={3.81}
+        doNotPlace
         name="JP2"
         schWidth={0.8}
         connections={{ pin1: sel.U1.pin1 }}
         schX={-3.8}
         schY={1.3}
         pinLabels={{ pin1: ["IP_POS"] }}
-        footprint={barePinRow(
-          "pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft",
-        )}
+        footprint="pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft"
       />
       <jumper
         cadModel={null}
         pcbX={-2.5}
         pcbRotation={0}
         schWidth={0.8}
+        doNotPlace
         name="JP3"
         connections={{
           pin2: [sel.U1.pin1, sel.U1.pin2],
           pin1: [sel.U1.pin3, sel.U1.pin4],
         }}
         schX={-3.8}
-        footprint={barePinRow("pinrow2_id1.016_od1.88_nosquareplating")}
+        footprint="pinrow2_id1.016_od1.88_nosquareplating"
         pinLabels={{ pin1: "1", pin2: "2" }}
         pcbY={-5.7}
       />
@@ -56,15 +56,14 @@ export default () => {
         cadModel={null}
         pcbX={-8.255}
         pcbY={-3.81}
+        doNotPlace
         name="JP4"
         schWidth={0.8}
         schX={-3.8}
         schY={-1.3}
         pinLabels={{ pin1: ["IP_NEG"] }}
         connections={{ pin1: sel.U1.pin3 }}
-        footprint={barePinRow(
-          "pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft",
-        )}
+        footprint="pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft"
       />
       <solderjumper
         name="JP5"
