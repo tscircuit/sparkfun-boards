@@ -132,10 +132,11 @@ const MotionSensor = () => (
       pcbX="-5.08"
       pcbRotation="270"
       connections={{
-        pin1: "D1.pin1",
+        pin1: "D1.pin2",
       }}
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
       name="D1"
       footprint="0603"
       schRotation={270}
@@ -145,7 +146,7 @@ const MotionSensor = () => (
       schDisplayValue="Red"
       pcbX="-10.16"
       pcbY="5.715"
-      pcbRotation="180"
+      pcbRotation={0}
     />
     <netlabel
       schX={6.5}
@@ -166,7 +167,7 @@ const MotionSensor = () => (
       pcbY="3.81"
       layer="bottom"
       connections={{
-        pin2: "D1.pin2",
+        pin2: "D1.pin1",
       }}
     />
     <netlabel
@@ -259,6 +260,7 @@ const MotionSensor = () => (
     />
 
     <jumper
+      schWidth={1.385}
       name="J2"
       footprint={JST04_1MM_RA}
       schX={3.5}
@@ -297,6 +299,7 @@ const MotionSensor = () => (
     />
 
     <jumper
+      schWidth={1.385}
       name="J1"
       footprint={JST04_1MM_RA}
       schX={0}
