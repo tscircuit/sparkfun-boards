@@ -91,6 +91,8 @@ function createJumpersGrid(options: JumpersGridOptions) {
           : connections
       jumpers.push(
         <jumper
+          doNotPlace
+          key={name}
           name={name}
           cadModel={cadModel}
           footprint={footprint}
