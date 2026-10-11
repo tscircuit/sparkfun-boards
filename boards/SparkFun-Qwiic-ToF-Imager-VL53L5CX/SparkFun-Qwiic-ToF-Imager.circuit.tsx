@@ -1,4 +1,3 @@
-import { contiguousPinHeader } from "../../util/contiguous-pin-header"
 import { sel } from "@tscircuit/core"
 import { VL53L5CX } from "./VL53L5CX"
 import { VL53L5CX_footprint, JST04_RA_1mm } from "./footprints"
@@ -577,11 +576,10 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J3"
       pinCount={4}
-      footprint={contiguousPinHeader(
-        "pinrow4_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal",
-      )}
+      footprint="pinrow4_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       pinLabels={["GND", "VCC", "SDA", "SCL"]}
@@ -691,11 +689,10 @@ export default () => (
       anchorSide="right"
     />
     <pinheader
+      doNotPlace
       name="J5"
       pinCount={1}
-      footprint={contiguousPinHeader(
-        "pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal",
-      )}
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
@@ -716,11 +713,10 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J1"
       pinCount={1}
-      footprint={contiguousPinHeader(
-        "pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal",
-      )}
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
@@ -742,11 +738,10 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J6"
       pinCount={1}
-      footprint={contiguousPinHeader(
-        "pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal",
-      )}
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
@@ -768,11 +763,10 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J7"
       pinCount={1}
-      footprint={contiguousPinHeader(
-        "pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal",
-      )}
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
@@ -794,11 +788,10 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J8"
       pinCount={1}
-      footprint={contiguousPinHeader(
-        "pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal",
-      )}
+      footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
       schFacingDirection="left"
       schWidth={0.5}
