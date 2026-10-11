@@ -2,12 +2,10 @@ import { sel } from "tscircuit"
 export default () => (
   <board width="15.24mm" height="10.16mm">
     <chip
-      doNotPlace
       name="U1"
       footprint="ssop8_w6.2_p0.635_pw0.35_pl2.2"
       pcbX={0}
       pcbY={0}
-      cadModel={null}
       pcbStyle={{ silkscreenTextVisibility: "hidden" }}
       schPinArrangement={{
         rightSide: {
