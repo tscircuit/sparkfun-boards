@@ -337,6 +337,7 @@ const MotionSensor = () => (
       connection="J1.pin1"
     />
     <pinheader
+      doNotPlace
       name="J3"
       pinCount={6}
       footprint="pinrow6__p2.54_id1.016_od1.88_nosquareplating"
