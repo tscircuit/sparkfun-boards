@@ -287,6 +287,7 @@ export default () => (
       pinLabels={{ pin1: ["GND"], pin2: ["VDD"], pin3: ["SDA"], pin4: ["SCL"] }}
       pcbX={0}
       pcbY={-11.5}
+      doNotPlace
       name="JP3"
       footprint="pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
       connections={{
