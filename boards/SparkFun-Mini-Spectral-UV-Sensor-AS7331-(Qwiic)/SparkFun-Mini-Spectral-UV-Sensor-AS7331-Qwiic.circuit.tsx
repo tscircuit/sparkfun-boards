@@ -77,6 +77,7 @@ export default () => {
       />
 
       <jumper
+        doNotPlace
         name="J3"
         // pinLabels={headerPinLabels}
         schX={-0.35}
