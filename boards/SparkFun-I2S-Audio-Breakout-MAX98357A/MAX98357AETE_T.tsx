@@ -24,6 +24,8 @@ const pinLabels = {
 export const MAX98357AETE_T = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
+      // Preserve the reference placement without an inferred 1 mm decoupling limit.
+      pinAttributes={{ VDD: { shouldHaveDecouplingCapacitor: false } }}
       pinLabels={pinLabels}
       schWidth={2}
       connections={{ pin8: sel.U1.pin7, pin3: [sel.U1.pin11, sel.U1.pin15] }}
