@@ -1,9 +1,10 @@
+import { contiguousPinHeader } from "../../util/contiguous-pin-header"
 import { RFM69HCW } from "./RFM69HCW"
 import { sel } from "@tscircuit/core"
 
 const RFM69BREAKOUT = () => {
   return (
-    <board width="27.94" height="20.32" autorouter="auto-cloud">
+    <board width="27.94" height="20.32" autorouter="auto-local">
       <RFM69HCW
         name="U1"
         footprint="stampboard_left8_right8_bottom0_top0_w18mm_p2.0mm_pw1.2mm_pl3.0mm_padshape=rect"
@@ -13,7 +14,9 @@ const RFM69BREAKOUT = () => {
         name="JP1"
         pinCount={2}
         schRotation={180}
-        footprint="pinrow2_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
+        footprint={contiguousPinHeader(
+          "pinrow2_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating",
+        )}
         schFacingDirection="right"
         schX={-3}
         schY={1.4}
@@ -41,10 +44,13 @@ const RFM69BREAKOUT = () => {
         anchorSide="bottom"
       />
       <pinheader
+        schWidth={0.675}
         name="JP2"
         pinCount={5}
         schRotation={0}
-        footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
+        footprint={contiguousPinHeader(
+          "pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating",
+        )}
         schFacingDirection="right"
         schX={-3}
         schY={-0.1}
@@ -65,7 +71,9 @@ const RFM69BREAKOUT = () => {
         name="JP3"
         pinCount={1}
         schRotation={180}
-        footprint="pinrow1_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
+        footprint={contiguousPinHeader(
+          "pinrow1_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating",
+        )}
         facingDirection="left"
         schX={3}
         schY={1.5}
@@ -80,10 +88,13 @@ const RFM69BREAKOUT = () => {
         schWidth={0.5}
       />
       <pinheader
+        schWidth={0.58}
         name="JP4"
         pinCount={5}
         schRotation={0}
-        footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
+        footprint={contiguousPinHeader(
+          "pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating",
+        )}
         facingDirection="left"
         schX={3}
         schY={0.34}
@@ -104,7 +115,9 @@ const RFM69BREAKOUT = () => {
         name="JP5"
         pinCount={3}
         schRotation={180}
-        footprint="pinrow3_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
+        footprint={contiguousPinHeader(
+          "pinrow3_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating",
+        )}
         facingDirection="left"
         schX={3}
         schY={-1}
