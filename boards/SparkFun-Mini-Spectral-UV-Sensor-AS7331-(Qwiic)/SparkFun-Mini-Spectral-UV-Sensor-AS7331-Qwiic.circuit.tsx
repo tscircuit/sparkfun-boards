@@ -7,6 +7,7 @@ export default () => {
     <board width="25.40mm" height="12.70mm">
       <AS7331_AQFM_OLGA16_LF_T_R
         name="U1"
+        schHeight={1.4}
         schX={-0.45}
         schY={1.0}
         pcbX={0}
@@ -45,7 +46,7 @@ export default () => {
 
       <A1001WV_S_04P
         name="J1"
-        schX={-4.95}
+        schX={-5.5}
         schY={-4.9}
         pcbX={10.3}
         pcbY={2.65}
@@ -61,7 +62,7 @@ export default () => {
 
       <A1001WV_S_04P
         name="J2"
-        schX={-3.0}
+        schX={-3.1}
         schY={-4.9}
         pcbX={-10.3}
         pcbY={2.65}
@@ -78,7 +79,7 @@ export default () => {
       <jumper
         name="J3"
         // pinLabels={headerPinLabels}
-        schX={-1.0}
+        schX={-0.35}
         schY={-4.75}
         schWidth={0.7}
         schDirection="left"
@@ -199,6 +200,7 @@ export default () => {
 
       <resistor
         name="R6"
+        schRotation={-90}
         resistance="10"
         footprint="0402"
         schX={-3.65}
@@ -211,7 +213,6 @@ export default () => {
       />
       <capacitor
         name="C1"
-        maxDecouplingTraceLength="8mm"
         capacitance="1.0uF"
         footprint="0402"
         layer="top"
@@ -225,7 +226,6 @@ export default () => {
       />
       <capacitor
         name="C2"
-        maxDecouplingTraceLength="8mm"
         capacitance="0.1uF"
         footprint="0402"
         layer="top"
@@ -324,40 +324,40 @@ export default () => {
       <schematictext
         text="UV A/B/C Sensor"
         schX={0.2}
-        schY={5.2}
+        schY={5.45}
         fontSize={0.5}
       />
       <schematictext
         text="Voltage Range:"
-        schX={-1.25}
+        schX={-1.05}
         schY={3.2}
         color="gray"
         fontSize={0.2}
       />
       <schematictext
         text="2.7-3.6V"
-        schX={-1.25}
+        schX={-1.05}
         schY={2.95}
         color="gray"
         fontSize={0.2}
       />
       <schematictext
         text="Cut I2C jumper"
-        schX={2.7}
+        schX={3.4}
         schY={4.95}
         color="gray"
         fontSize={0.2}
       />
       <schematictext
         text="to remove pull-ups"
-        schX={2.7}
+        schX={3.4}
         schY={4.7}
         color="gray"
         fontSize={0.2}
       />
       <schematictext
         text="from the I2C lines"
-        schX={2.7}
+        schX={3.4}
         schY={4.45}
         color="gray"
         fontSize={0.2}
@@ -431,14 +431,14 @@ export default () => {
       />
       <schematictext
         text="Qwiic Vert"
-        schX={-4.95}
+        schX={-5.5}
         schY={-5.95}
         color="gray"
         fontSize={0.18}
       />
       <schematictext
         text="Qwiic Vert"
-        schX={-3.0}
+        schX={-3.1}
         schY={-5.95}
         color="gray"
         fontSize={0.18}
