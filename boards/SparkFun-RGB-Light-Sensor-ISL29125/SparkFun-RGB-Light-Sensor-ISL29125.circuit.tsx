@@ -73,6 +73,7 @@ export default () => (
       cadModel={null}
       schWidth={0.6}
       pinLabels={jumperPinLabels}
+      doNotPlace
       name="JP1"
       manufacturerPartNumber="M05PTH"
       footprint="pinrow5_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_doublesidedpinlabel"
