@@ -3,6 +3,8 @@ import { sel } from "tscircuit"
 export default () => (
   <board width="17.78mm" height="15.24mm" pcbGap={0.5}>
     <chip
+      // Preserve the reference placement without an inferred 1 mm decoupling limit.
+      pinAttributes={{ VCORE: { shouldHaveDecouplingCapacitor: false } }}
       name="U1"
       schX={0}
       pcbX={0}
@@ -35,7 +37,6 @@ export default () => (
         pin4: "net.SDA",
         pin5: "net.AL_L",
         pin6: "net.AL_H",
-        pin7: "net.NC",
         pin8: "net.VCC",
       }}
     />
@@ -45,7 +46,7 @@ export default () => (
       schRotation={-90}
       footprint="cap0402"
       pcbX={-1.5}
-      pcbY={3.2}
+      pcbY={3.3}
       capacitance={"0.1uF"}
       connections={{ pin2: "net.GND" }}
     />
@@ -55,13 +56,13 @@ export default () => (
       schRotation={-90}
       footprint="cap0402"
       pcbX={1.5}
-      pcbY={3.2}
+      pcbY={3.3}
       capacitance={"0.22uF"}
       connections={{ pin1: "net.VCC", pin2: "net.GND" }}
     />
     <resistor
       name="R1"
-      schX={2}
+      schX={1.65}
       schY={1.7}
       pcbX={-6}
       schRotation={-90}
