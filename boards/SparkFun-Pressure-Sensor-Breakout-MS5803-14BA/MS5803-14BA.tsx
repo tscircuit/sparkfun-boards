@@ -15,6 +15,10 @@ export const MS580314BA01_00 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       pinLabels={pinLabels}
+      // Keep the fixed reference placement without an inferred 1 mm limit.
+      pinAttributes={{
+        VDD: { shouldHaveDecouplingCapacitor: false },
+      }}
       schPinArrangement={{
         leftSide: {
           direction: "top-to-bottom",
