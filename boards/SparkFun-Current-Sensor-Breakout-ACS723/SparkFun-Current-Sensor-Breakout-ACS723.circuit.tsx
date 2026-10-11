@@ -11,6 +11,7 @@ export default () => {
         pcbY={1.27}
         pcbRotation={-90}
         pinLabels={{ pin1: ["VCC"], pin2: ["VOUT"], pin3: ["GND"] }}
+        doNotPlace
         name="JP1"
         schDirection="left"
         footprint="pinrow3_id1.016_od1.88_nosquareplating_doublesidedpinlabel"
@@ -26,6 +27,7 @@ export default () => {
         cadModel={null}
         pcbX={-8.255}
         pcbY={3.81}
+        doNotPlace
         name="JP2"
         schWidth={0.8}
         connections={{ pin1: sel.U1.pin1 }}
@@ -36,9 +38,10 @@ export default () => {
       />
       <jumper
         cadModel={null}
-        pcbX={-4.9}
-        pcbRotation={90}
+        pcbX={-2.5}
+        pcbRotation={0}
         schWidth={0.8}
+        doNotPlace
         name="JP3"
         connections={{
           pin2: [sel.U1.pin1, sel.U1.pin2],
@@ -46,11 +49,14 @@ export default () => {
         }}
         schX={-3.8}
         footprint="pinrow2_id1.016_od1.88_nosquareplating"
+        pinLabels={{ pin1: "1", pin2: "2" }}
+        pcbY={-5.7}
       />
       <jumper
         cadModel={null}
         pcbX={-8.255}
         pcbY={-3.81}
+        doNotPlace
         name="JP4"
         schWidth={0.8}
         schX={-3.8}
@@ -98,7 +104,7 @@ export default () => {
           pcbY={3.429}
           pcbX={2.794}
           schY={-1.3}
-          schX={3}
+          schX={3.55}
           pcbRotation={180}
           schRotation={-90}
           footprint="cap0603"
@@ -185,15 +191,6 @@ export default () => {
         color="gray"
         schX={5}
         schY={-2.6}
-      />
-      <schematictext
-        text="JUMPER-SMT_2_NO_SILK"
-        schRotation={-90}
-        anchor="left"
-        fontSize={0.21}
-        color="gray"
-        schX={8.5}
-        schY={-0.5}
       />
 
       <schematictext
