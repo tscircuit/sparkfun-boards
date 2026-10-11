@@ -25,6 +25,11 @@ export const AS7331_AQFM_OLGA16_LF_T_R = (
   return (
     <chip
       pinLabels={pinLabels}
+      // Keep the fixed reference placement without an inferred 1 mm limit.
+      pinAttributes={{
+        VDDA: { shouldHaveDecouplingCapacitor: false },
+        VDDD: { shouldHaveDecouplingCapacitor: false },
+      }}
       displayName="AS7331"
       schWidth={1.55}
       schHeight={2.6}
