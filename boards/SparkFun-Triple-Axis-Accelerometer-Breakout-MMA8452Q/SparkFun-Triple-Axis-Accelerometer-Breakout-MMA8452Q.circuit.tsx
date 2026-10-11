@@ -100,6 +100,7 @@ export default () => {
         pcbY={2.5}
       />
       <jumper
+        doNotPlace
         name="JP3"
         cadModel={null}
         schWidth={0.7}
