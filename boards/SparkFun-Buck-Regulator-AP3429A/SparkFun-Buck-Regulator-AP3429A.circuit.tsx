@@ -254,6 +254,7 @@ export default () => (
       schSectionName="Connectors"
     />
     <chip
+      doNotPlace
       name="J3"
       manufacturerPartNumber="Breakout Header"
       footprint="pinrow5_p2.54_id1.2_od2.1_nosquareplating"
