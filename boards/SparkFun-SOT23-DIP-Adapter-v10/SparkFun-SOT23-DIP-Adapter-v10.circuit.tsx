@@ -18,6 +18,7 @@ export default () => (
       pcbRotation={90}
     />
     <jumper
+      doNotPlace
       name="JP1"
       cadModel={null}
       schX={2}
@@ -27,6 +28,7 @@ export default () => (
       pcbRotation={-90}
     />
     <jumper
+      doNotPlace
       name="JP2"
       schX={-2}
       cadModel={null}
