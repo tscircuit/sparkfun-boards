@@ -54,7 +54,6 @@ export default () => {
       />
       <capacitor
         name="C1"
-        maxDecouplingTraceLength="8mm"
         connections={{ pin1: "U1.pin1", pin2: "net.GND" }}
         capacitance="0.1uF"
         schRotation={-90}
@@ -67,7 +66,6 @@ export default () => {
       />
       <capacitor
         name="C3"
-        maxDecouplingTraceLength="8mm"
         connections={{ pin1: "U1.pin1", pin2: "net.GND" }}
         capacitance="0.1uF"
         schRotation={-90}
@@ -80,7 +78,6 @@ export default () => {
       />
       <capacitor
         name="C2"
-        maxDecouplingTraceLength="8mm"
         connections={{ pin1: "U1.pin2", pin2: "net.GND" }}
         capacitance="0.1uF"
         schRotation={-90}
