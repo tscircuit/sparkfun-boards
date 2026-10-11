@@ -120,10 +120,12 @@ export default () => (
       schRotation={90}
       connections={{
         pin2: sel.JP7.pin1,
-        pin1: sel.D1.pin1,
+        pin1: sel.D1.pin2,
       }}
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
+      pcbRotation={180}
       name="D1"
       footprint="0603"
       color="RED"
@@ -143,7 +145,7 @@ export default () => (
       net="GND"
       schX={2.5}
       schY={-4.3}
-      connection="D1.pin2"
+      connection="D1.pin1"
       anchorSide="top"
     />
     <capacitor
@@ -531,7 +533,7 @@ export default () => (
           pins: ["pin1", "pin2", "pin3", "pin4"],
         },
       }}
-      schWidth={0.8}
+      schWidth={0.485}
       pitch="1mm"
       pcbX={-7.62}
       pcbY={0}
@@ -574,6 +576,7 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J3"
       pinCount={4}
       footprint="pinrow4_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
@@ -588,7 +591,7 @@ export default () => (
       }}
       pcbX={-2.568}
       pcbY={-11.43}
-      schWidth={0.8}
+      schWidth={0.485}
       pitch="2.54mm"
       schX={4.3}
       schY={-13}
@@ -644,7 +647,7 @@ export default () => (
           pins: ["pin1", "pin2", "pin3", "pin4"],
         },
       }}
-      schWidth={0.8}
+      schWidth={0.485}
       pitch="1mm"
       schX={0.6}
       schY={-18}
@@ -686,6 +689,7 @@ export default () => (
       anchorSide="right"
     />
     <pinheader
+      doNotPlace
       name="J5"
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
@@ -709,6 +713,7 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J1"
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
@@ -733,6 +738,7 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J6"
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
@@ -757,6 +763,7 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J7"
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
@@ -781,6 +788,7 @@ export default () => (
     />
 
     <pinheader
+      doNotPlace
       name="J8"
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
