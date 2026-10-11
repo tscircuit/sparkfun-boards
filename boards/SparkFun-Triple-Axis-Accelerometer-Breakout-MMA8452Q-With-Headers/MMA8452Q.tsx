@@ -23,6 +23,11 @@ export const MMA8452QR1 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       pinLabels={pinLabels}
+      // Keep the fixed reference placement without an inferred 1 mm limit.
+      pinAttributes={{
+        VDDIO: { shouldHaveDecouplingCapacitor: false },
+        VDD: { shouldHaveDecouplingCapacitor: false },
+      }}
       connections={{
         pin5: "U1.pin10",
         pin10: "U1.pin12",
