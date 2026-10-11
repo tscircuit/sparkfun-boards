@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "@tscircuit/core"
 import { TXB0104D } from "./TXB0104D"
 
@@ -77,9 +76,7 @@ export default () => (
       doNotPlace
       pinCount={7}
       cadModel={null}
-      footprint={barePinRow(
-        "pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignleft",
-      )}
+      footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignleft"
       pitch="2.54mm"
       gender="female"
       schX={-4}
@@ -188,9 +185,7 @@ export default () => (
       pinCount={7}
       schFacingDirection="left"
       cadModel={null}
-      footprint={barePinRow(
-        "pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignright",
-      )}
+      footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignright"
       pitch="2.54mm"
       gender="female"
       schX={4}
