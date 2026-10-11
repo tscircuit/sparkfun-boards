@@ -225,7 +225,7 @@ export default () => (
         ["1", "2"],
         ["2", "3"],
       ]}
-      pcbX={1.905}
+      pcbX={2.9464}
       pcbY={-2.54}
       schX={10}
       pinCount={3}
@@ -235,6 +235,7 @@ export default () => (
         pin2: sel.net().V3_3_SW,
         pin3: sel.R2.pin2,
       }}
+      layer="bottom"
     />
 
     <resistor
@@ -290,6 +291,7 @@ export default () => (
       fontSize={0.3}
     />
     <pinheader
+      doNotPlace
       name="J3"
       pinCount={6}
       footprint="pinrow6_p2.54_id1.016_od1.88_nosquareplating"
@@ -497,7 +499,7 @@ export default () => (
       footprint="0603"
       name="R3"
       pcbRotation={270}
-      pcbX={6.096}
+      pcbX={6.196}
       pcbY={2.54}
       schX={12}
       schY={-6}
@@ -514,10 +516,11 @@ export default () => (
       anchorSide="bottom"
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
       name="D1"
       footprint="0603"
       color="red"
-      pcbRotation={270}
+      pcbRotation={90}
       pcbX={4.699}
       pcbY={2.54}
       schX={11.996}
@@ -531,7 +534,7 @@ export default () => (
       name="LED"
       footprint="solderjumper2_bridged12_p1.0414_pw0.6604_ph1.27"
       bridgedPins={[["1", "2"]]}
-      pcbX={2.921}
+      pcbX={3.4417}
       pcbY={-0.127}
       schX={12}
       schY={-9.5}
@@ -579,6 +582,7 @@ export default () => (
         pin1: sel.net().V3_3_SW,
         pin2: sel.R4.pin2,
       }}
+      layer="bottom"
     />
     <netlabel
       net="V3_3_SW"
