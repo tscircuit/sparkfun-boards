@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { FS3000_1015 } from "./imports/FS3000_1015"
 import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
 import { sel } from "tscircuit"
@@ -486,9 +485,7 @@ export default () => {
           pin2: ["ADCR"],
         }}
         cadModel={null}
-        footprint={barePinRow(
-          "pinrow2_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54",
-        )}
+        footprint="pinrow2_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54"
         pcbX={5.08}
         pcbY={-11.43}
       />
@@ -512,9 +509,7 @@ export default () => {
           },
         }}
         cadModel={null}
-        footprint={barePinRow(
-          "pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54",
-        )}
+        footprint="pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54"
         pcbX={-2.54}
         pcbY={-11.43}
       />
