@@ -74,12 +74,14 @@ const I2CDACBREAKOUT = () => (
     />
 
     <jumper
+      doNotPlace
       name="JP6"
       pinLabels={{
         pin1: ["GND"],
         pin2: ["VOUT"],
       }}
       footprint="pinrow2_p2.54_id1.016_od1.88_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
+      cadModel={null}
       pcbX={-6.35}
       pcbY={5.08}
       pcbRotation={90}
@@ -91,6 +93,7 @@ const I2CDACBREAKOUT = () => (
     />
 
     <jumper
+      doNotPlace
       name="JP5"
       pinLabels={{
         pin1: ["SCL"],
@@ -99,6 +102,7 @@ const I2CDACBREAKOUT = () => (
         pin4: ["GND"],
       }}
       footprint="pinrow4_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
+      cadModel={null}
       pcbX={-6.35}
       pcbY={-2.54}
       pcbRotation={270}
