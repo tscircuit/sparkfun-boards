@@ -107,6 +107,7 @@ export default () => (
         pin1: ["P"],
         pin2: ["N"],
       }}
+      doNotPlace
       name="JP3"
       footprint="pinrow2_id1.016mm_od1.88mm_p2.62mm_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
       schDirection="left"
@@ -139,6 +140,7 @@ export default () => (
       strokeWidth={0.15}
     />
     <jumper
+      doNotPlace
       name="JP4"
       cadModel={null}
       manufacturerPartNumber="CONN_07NO_SILK"
