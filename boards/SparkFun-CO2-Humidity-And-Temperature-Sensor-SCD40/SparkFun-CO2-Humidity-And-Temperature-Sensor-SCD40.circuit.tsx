@@ -1,4 +1,3 @@
-import { barePinRow } from "../../util/bare-pin-row"
 import { SCD40_D_R1 } from "./ SCD40_D_R1"
 import { sel } from "tscircuit"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
@@ -298,9 +297,7 @@ export default () => (
       pcbX={0}
       pcbY={-11.5}
       name="JP3"
-      footprint={barePinRow(
-        "pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted",
-      )}
+      footprint="pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
       connections={{
         pin3: sel.net.SDA,
         pin4: sel.net.SCL,
