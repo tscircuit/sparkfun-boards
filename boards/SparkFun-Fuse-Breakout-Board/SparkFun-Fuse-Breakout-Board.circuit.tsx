@@ -151,7 +151,7 @@ const outline = [
 ]
 
 export default () => (
-  <board outline={outline} routingDisabled>
+  <board outline={outline} minTraceWidth="0.508mm">
     {/* Input Section Components */}
     <PowerJackPthLock
       name="J2"
@@ -162,8 +162,11 @@ export default () => (
       schY={-1.5}
       connections={{ PWR: "net.VIN", GND: "net.GND", GNDBREAK: "net.GND" }}
     />
+    {/* Alternative input terminal; unpopulated when the barrel jack is fitted. */}
     <ScrewTerminal5mm2
       name="J1"
+      doNotPlace={true}
+      cadModel={null}
       pcbX={-28.6385}
       pcbY={2.54}
       pcbRotation={270}
@@ -201,35 +204,17 @@ export default () => (
         pin4: "net.VOUT",
       }}
     />
+    {/* Alternative resettable-fuse footprint; unpopulated when F1 is fitted. */}
     <PptcFusePth
       name="F2"
+      cadModel={null}
+      doNotPlace={true}
       displayName="72V/0.25A"
       pcbX={5.6515}
       pcbY={0}
       schX={0}
       schY={0}
       connections={{ pin1: "net.VIN", pin2: "net.VOUT" }}
-    />
-
-    {/* PCB Layout details */}
-    <pcbtrace
-      layer="top"
-      thickness="0.508mm"
-      route={[
-        { x: -2.2225, y: -2.54 },
-        { x: 1.5875, y: 0 },
-        { x: 5.6515, y: 0 },
-      ]}
-    />
-    <pcbtrace
-      layer="top"
-      thickness="0.508mm"
-      route={[
-        { x: 18.8595, y: 0 },
-        { x: 14.6685, y: 0 },
-        { x: 16.8275, y: -2.54 },
-        { x: 16.8275, y: 2.54 },
-      ]}
     />
 
     {/* PCB Silkscreen texts */}
