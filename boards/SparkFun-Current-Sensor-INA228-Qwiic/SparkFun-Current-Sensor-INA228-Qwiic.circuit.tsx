@@ -363,6 +363,7 @@ export default () => {
         connections={{ pin1: sel.net.GND, pin2: sel.net().LED_D1 }}
       />
       <jumper
+        doNotPlace
         name="J3"
         layer="top"
         schSectionName="connectors"
