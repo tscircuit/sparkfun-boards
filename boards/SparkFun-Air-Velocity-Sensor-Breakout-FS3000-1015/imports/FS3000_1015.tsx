@@ -18,6 +18,11 @@ const pinLabels = {
 export const FS3000_1015 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
+      // Preserve the reference placement without an inferred 1 mm decoupling limit.
+      pinAttributes={{
+        VREG: { shouldHaveDecouplingCapacitor: false },
+        VCM: { shouldHaveDecouplingCapacitor: false },
+      }}
       pinLabels={pinLabels}
       supplierPartNumbers={{
         jlcpcb: ["C3662658"],
