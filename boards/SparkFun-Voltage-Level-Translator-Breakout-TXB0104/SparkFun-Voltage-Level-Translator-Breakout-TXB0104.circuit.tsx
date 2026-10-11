@@ -3,6 +3,7 @@ import { TXB0104D } from "./TXB0104D"
 
 export default () => (
   <board width="12.7mm" height="17.78mm">
+    <trace from="U1.pin8" to="net.OE" />
     <silkscreentext
       text="TXB0104"
       fontSize={1.5}
@@ -32,8 +33,8 @@ export default () => (
           pins: ["pin10", "pin11", "pin12", "pin13"],
         },
       }}
-      schWidth={1.8}
-      schHeight={2}
+      schWidth={1.5}
+      schHeight={2.4}
       schPinStyle={{
         pin8: {
           bottomMargin: 0.2,
@@ -74,6 +75,7 @@ export default () => (
       name="JP1"
       doNotPlace
       pinCount={7}
+      cadModel={null}
       footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignleft"
       pitch="2.54mm"
       gender="female"
@@ -154,14 +156,14 @@ export default () => (
       fontSize={0.2}
       color="gray"
       schX={-4.1}
-      schY={1.6}
+      schY={2.6}
     />
     <schematictext
       text="A side Vcc from 1.2 to 3.6V"
       fontSize={0.2}
       color="gray"
       schX={-2}
-      schY={2}
+      schY={3}
     />
     <schematictext
       text="B side Vcc from 1.65 to 5V"
@@ -182,6 +184,7 @@ export default () => (
       doNotPlace
       pinCount={7}
       schFacingDirection="left"
+      cadModel={null}
       footprint="pinrow7_p2.54_id1.016_od1.8769_nosquareplating_bottomsidepinlabel_pinlabelorthogonal_pinlabeltextalignright"
       pitch="2.54mm"
       gender="female"
@@ -198,7 +201,7 @@ export default () => (
         pin4: sel.U1.pin11,
         pin5: sel.U1.pin12,
         pin6: sel.U1.pin13,
-        pin7: sel.net().DE,
+        pin7: sel.net().OE,
       }}
       schY={-0.3}
       pcbX={5.08}
@@ -214,7 +217,7 @@ export default () => (
       }}
     />
     <netlabel
-      net="DE"
+      net="OE"
       anchorSide="left"
       connection="JP2.pin7"
       schX={3.4}
@@ -245,15 +248,15 @@ export default () => (
       text="B3"
       fontSize={0.15}
       color="gray"
-      schX={3.3}
-      schY={-0.24}
+      schX={6.3}
+      schY={0.76}
     />
     <schematictext
       text="B4"
       fontSize={0.15}
       color="gray"
-      schX={3.3}
-      schY={-0.44}
+      schX={6.3}
+      schY={0.56}
     />
     <capacitor
       name="C1"
