@@ -16,7 +16,7 @@ export default () => (
       minViaPadDiameter="0.6mm"
       minViaHoleDiameter="0.3mm"
       minBoardEdgeClearance="0.3mm"
-      autorouter={{ local: true, traceClearance: 0.2 }}
+      autorouter={{ local: true }}
     />
     <VEML7700 name="U1" schY={1.5} />
     <SM04B_SRSS_TB_LF__SN
