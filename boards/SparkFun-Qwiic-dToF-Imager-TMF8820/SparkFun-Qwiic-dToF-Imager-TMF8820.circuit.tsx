@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { TMF8820_1AM } from "./TMF8820_1AM"
 import { SM04B_SRSS_TB_LF__SN } from "../SparkFun-Qwiic-Adapter/SM04B_SRSS_TB_LF__SN"
@@ -62,7 +63,7 @@ export default () => (
     />
     <resistor
       name="R6"
-      connections={{ pin1: sel.D2.pin1 }}
+      connections={{ pin1: sel.D2.pin2 }}
       schX={5}
       schY={1.5}
       schRotation={90}
@@ -107,12 +108,13 @@ export default () => (
       footprint="0402"
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
       name="D2"
-      connections={{ pin2: sel.net.GND }}
+      connections={{ pin1: sel.net.GND }}
       schX={5}
       schY={0}
       schRotation={-90}
-      pcbRotation={-90}
+      pcbRotation={90}
       color="RED"
       pcbX={-11.278}
       pcbY={5.436}
@@ -172,7 +174,9 @@ export default () => (
         pin1: ["EN"],
       }}
       cadModel={null}
-      footprint="pinrow4_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating_id1.016_od1.88_p2.54"
+      footprint={barePinRow(
+        "pinrow4_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating_id1.016_od1.88_p2.54",
+      )}
       pcbX={7.62}
       pcbY={-11.08}
     />
@@ -301,7 +305,9 @@ export default () => (
         pin4: ["SCL"],
       }}
       cadModel={null}
-      footprint="pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54"
+      footprint={barePinRow(
+        "pinrow4_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_id1.016_od1.88_p2.54",
+      )}
       pcbX={-2.54}
       pcbY={-11.08}
     />
@@ -413,7 +419,7 @@ export default () => (
       color="gray"
       fontSize={0.15}
       schX={9}
-      schY={2.3}
+      schY={3.3}
     />
 
     <schematictext
