@@ -10,6 +10,8 @@ const pinLabels = {
 export const VEML7700 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
+      // Preserve the reference placement without an inferred 1 mm decoupling limit.
+      pinAttributes={{ VDD: { shouldHaveDecouplingCapacitor: false } }}
       pinLabels={pinLabels}
       supplierPartNumbers={{
         jlcpcb: ["C504893"],
