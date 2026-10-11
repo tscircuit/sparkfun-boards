@@ -3,12 +3,14 @@ import { DS1037_09FNAKT74_0CC } from "./imports/DS1037_09FNAKT74_0CC"
 import { SP3223EEY_L_TR } from "./imports/SP3223EEY_L_TR"
 
 export default () => (
-  <board width="27.94mm" height="31.75mm" autorouter="auto-local">
-    <autoroutingphase
-      minViaEdgeToPadEdgeClearance="0.3mm"
-      minTraceToPadEdgeClearance="0.2mm"
-      autorouter="beta-pipeline9"
-    />
+  <board
+    minTraceToPadEdgeClearance="0.1524mm"
+    minViaEdgeToPadEdgeClearance="0.1524mm"
+    minBoardEdgeClearance="0.254mm"
+    width="27.94mm"
+    height="31.75mm"
+    autorouter="auto-local"
+  >
     <schematicsection name="rs232" displayName="RS-232 / DE9 Connector" />
     <schematicsection name="transceiver" displayName="RS-232 Transceiver" />
     <schematicsection name="ttl" displayName="TTL Logic Header" />
