@@ -17,6 +17,7 @@ export default () => (
       schX={-8}
     />
     <capacitor
+      schOrientation={"vertical"}
       capacitance="10nF"
       footprint="0603"
       name="C2"
@@ -32,6 +33,7 @@ export default () => (
       }}
     />
     <jumper
+      schWidth={1.48}
       name="JP1"
       footprint={
         "pinrow6_rows1_p2.54mm_id1mm_od1.5mm_male_nosquareplating_doublesidedpinlabel"
@@ -90,7 +92,7 @@ export default () => (
       padShape="circle"
       padDiameter="1mm"
       pcbY={7}
-      pcbX={2.5}
+      pcbX={-1}
       schX={-2}
       schY={-3}
     />
@@ -100,7 +102,7 @@ export default () => (
       padShape="circle"
       padDiameter="1mm"
       pcbY={-7}
-      pcbX={2.5}
+      pcbX={-1}
       schX={-6}
       schY={-3}
       schRotation={180}
