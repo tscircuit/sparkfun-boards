@@ -188,6 +188,7 @@ export default () => (
 
     {/* 0.1" breakout header (TTL/CMOS side) */}
     <pinheader
+      doNotPlace
       name="J1"
       pinCount={9}
       gender="male"
