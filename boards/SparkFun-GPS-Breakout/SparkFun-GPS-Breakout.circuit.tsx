@@ -2,7 +2,7 @@ import { sel } from "tscircuit"
 import { BM06B_SRSS_TB_LF__SN } from "./BM06B_SRSS_TB_LF__SN"
 
 export default () => (
-  <board width="20.32mm" height="10.16mm" routingDisabled>
+  <board width="20.32mm" height="10.16mm">
     <BM06B_SRSS_TB_LF__SN
       name="U1"
       pcbY={-2.54}
