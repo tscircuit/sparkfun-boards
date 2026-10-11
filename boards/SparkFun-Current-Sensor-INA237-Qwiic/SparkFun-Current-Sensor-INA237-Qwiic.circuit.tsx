@@ -458,6 +458,7 @@ export default function SparkFunCurrentSensorINA237() {
         connections={{ pin1: sel.net.GND, pin2: sel.net().LED_D1 }}
       />
       <jumper
+        doNotPlace
         name="J3"
         footprint="pinrow5_p2.54_id1.016_od1.8796_nosquareplating_nopinlabels"
         pcbX={0}
