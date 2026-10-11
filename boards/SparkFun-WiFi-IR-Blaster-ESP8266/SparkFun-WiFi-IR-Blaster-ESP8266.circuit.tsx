@@ -114,9 +114,31 @@ export default () => {
         connections={{ pin1: sel.net().V3_3, pin2: sel.D1.anode }}
       />
       <led
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
+        pcbRotation={0}
         name="D1"
-        color="red"
-        footprint="1206"
+        color="infrared"
+        manufacturerPartNumber="LTE-302"
+        footprint={
+          <footprint name="LTE-302">
+            <platedhole
+              portHints={["pin1", "cathode"]}
+              pcbX={-1.27}
+              pcbY={0}
+              holeDiameter={0.8}
+              outerDiameter={1.7144}
+              shape="circle"
+            />
+            <platedhole
+              portHints={["pin2", "anode"]}
+              pcbX={1.27}
+              pcbY={0}
+              holeDiameter={0.8}
+              outerDiameter={1.7144}
+              shape="circle"
+            />
+          </footprint>
+        }
         schSectionName="ir_tx"
         schX={-9}
         schY={6.5}
@@ -157,6 +179,7 @@ export default () => {
       {/* ======================= Boot Mode / Buttons ======================= */}
       {/* Green status LED on IO5 */}
       <led
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
         name="D2"
         color="green"
         footprint="0603"
@@ -166,7 +189,7 @@ export default () => {
         schRotation={-90}
         pcbX={0}
         pcbY={6.35}
-        pcbRotation={270}
+        pcbRotation={90}
         connections={{ anode: sel.net().IO5, cathode: sel.R3.pin2 }}
       />
       <resistor
@@ -309,6 +332,7 @@ export default () => {
 
       {/* ======================= ESP-12S (on bottom layer) ======================= */}
       <ESP_12S
+        schHeight={1}
         name="U1"
         schSectionName="mcu"
         schX={-22}
