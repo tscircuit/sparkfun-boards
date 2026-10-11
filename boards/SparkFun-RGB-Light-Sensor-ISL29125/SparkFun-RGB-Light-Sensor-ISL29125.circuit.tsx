@@ -25,7 +25,6 @@ export default () => (
     />
     <capacitor
       name="C1"
-      maxDecouplingTraceLength="10mm"
       pcbX={-5.08}
       capacitance="0.1uF"
       footprint="cap0603"
@@ -33,7 +32,6 @@ export default () => (
     />
     <capacitor
       name="C2"
-      maxDecouplingTraceLength="10mm"
       pcbX={-5.08}
       pcbY={1.935}
       capacitance="1uF"
@@ -128,7 +126,7 @@ export default () => (
       text="SOLDERJUMPER_2WAYS"
       anchor="left"
       fontSize={0.15}
-      schX={1.7}
+      schX={4.1}
       schRotation={-90}
       schY={0.2}
       color="gray"
