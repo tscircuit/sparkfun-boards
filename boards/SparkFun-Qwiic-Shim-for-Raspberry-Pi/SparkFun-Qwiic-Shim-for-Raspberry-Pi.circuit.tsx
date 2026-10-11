@@ -41,6 +41,7 @@ export default () => (
     <schematicsection name="i2c" displayName="I2C Connections" />
 
     <PiShimHeader
+      doNotPlace
       name="J9"
       pcbX={-1.27}
       pcbY={4.445}
