@@ -5,8 +5,8 @@ export default () => (
   <board width="17.78mm" height="40.64mm">
     <autoroutingphase
       minViaEdgeToPadEdgeClearance="0.3mm"
-      minTraceToPadEdgeClearance="0.2mm"
-      autorouter={{ local: true, traceClearance: 0.2 }}
+      minTraceToPadEdgeClearance="0.21mm"
+      autorouter={{ local: true }}
     />
     <CD74HC4067
       schHeight={1.8}
