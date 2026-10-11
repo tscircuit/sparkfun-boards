@@ -49,7 +49,6 @@ export default () => (
     />
     <capacitor
       name="C1"
-      maxDecouplingTraceLength="8mm"
       capacitance="0.1uF"
       footprint="cap0402"
       pcbY={-0.889}
@@ -60,7 +59,6 @@ export default () => (
     />
     <capacitor
       name="C2"
-      maxDecouplingTraceLength="8mm"
       capacitance="10uF"
       footprint="cap0603"
       pcbX={4.064}
@@ -118,7 +116,7 @@ export default () => (
       }}
     />
     <pinheader
-      schWidth={0.7}
+      schWidth={0.58}
       pinCount={6}
       name="JP1"
       schHeight={1.5}
@@ -150,7 +148,7 @@ export default () => (
       }}
     />
     <pinheader
-      schWidth={0.7}
+      schWidth={0.58}
       pinCount={6}
       supplierPartNumbers={{
         jlcpcb: ["C37208"],
@@ -276,15 +274,15 @@ export default () => (
     <schematictext
       text="SJ2 pulls up the SCK and SDA lines"
       fontSize={0.15}
-      schX={4.8}
-      schY={3.8}
+      schX={4.9}
+      schY={3.9}
       anchor="left"
       color="gray"
     />
     <schematictext
       text="for I2C operation."
       fontSize={0.15}
-      schX={4.8}
+      schX={5}
       schY={3.6}
       anchor="left"
       color="gray"
