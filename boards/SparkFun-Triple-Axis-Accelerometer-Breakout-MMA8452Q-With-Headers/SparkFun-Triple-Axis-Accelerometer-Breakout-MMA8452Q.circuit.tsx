@@ -69,7 +69,7 @@ export default () => {
         name="C3"
         maxDecouplingTraceLength="8mm"
         connections={{ pin1: "U1.pin1", pin2: "net.GND" }}
-        capacitance="0.1uF"
+        capacitance="4.7uF"
         schRotation={-90}
         schX={-4}
         schY={-0.5}
@@ -104,7 +104,7 @@ export default () => {
       />
       <pinheader
         name="JP3"
-        schWidth={0.7}
+        schWidth={0.58}
         pinLabels={JPPinlabel}
         pinCount={6}
         pcbRotation={-90}
