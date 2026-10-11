@@ -14,6 +14,8 @@ const pinLabels = {
 export const ACS723 = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
+      // Preserve the reference placement without an inferred 1 mm decoupling limit.
+      pinAttributes={{ VIOUT: { shouldHaveDecouplingCapacitor: false } }}
       pinLabels={pinLabels}
       supplierPartNumbers={{
         jlcpcb: ["C459325"],

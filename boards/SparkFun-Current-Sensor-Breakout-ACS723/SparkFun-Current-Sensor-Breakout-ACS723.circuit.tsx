@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "tscircuit"
 import { ACS723 } from "./ACS723"
 import { boardProps } from "@tscircuit/props"
@@ -32,12 +33,14 @@ export default () => {
         schX={-3.8}
         schY={1.3}
         pinLabels={{ pin1: ["IP_POS"] }}
-        footprint="pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft"
+        footprint={barePinRow(
+          "pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft",
+        )}
       />
       <jumper
         cadModel={null}
-        pcbX={-4.9}
-        pcbRotation={90}
+        pcbX={-2.5}
+        pcbRotation={0}
         schWidth={0.8}
         name="JP3"
         connections={{
@@ -45,7 +48,9 @@ export default () => {
           pin1: [sel.U1.pin3, sel.U1.pin4],
         }}
         schX={-3.8}
-        footprint="pinrow2_id1.016_od1.88_nosquareplating"
+        footprint={barePinRow("pinrow2_id1.016_od1.88_nosquareplating")}
+        pinLabels={{ pin1: "1", pin2: "2" }}
+        pcbY={-5.7}
       />
       <jumper
         cadModel={null}
@@ -57,7 +62,9 @@ export default () => {
         schY={-1.3}
         pinLabels={{ pin1: ["IP_NEG"] }}
         connections={{ pin1: sel.U1.pin3 }}
-        footprint="pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft"
+        footprint={barePinRow(
+          "pinrow1_id3.81_od6.198_nosquareplating_pinlabeltextalignleft",
+        )}
       />
       <solderjumper
         name="JP5"
@@ -98,7 +105,7 @@ export default () => {
           pcbY={3.429}
           pcbX={2.794}
           schY={-1.3}
-          schX={3}
+          schX={3.55}
           pcbRotation={180}
           schRotation={-90}
           footprint="cap0603"
@@ -185,15 +192,6 @@ export default () => {
         color="gray"
         schX={5}
         schY={-2.6}
-      />
-      <schematictext
-        text="JUMPER-SMT_2_NO_SILK"
-        schRotation={-90}
-        anchor="left"
-        fontSize={0.21}
-        color="gray"
-        schX={8.5}
-        schY={-0.5}
       />
 
       <schematictext
