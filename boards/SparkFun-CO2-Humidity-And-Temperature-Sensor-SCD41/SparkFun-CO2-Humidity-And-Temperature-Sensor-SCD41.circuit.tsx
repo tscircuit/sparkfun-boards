@@ -4,6 +4,11 @@ import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 
 export default () => (
   <board width="25.4mm" height="25.4mm">
+    <autoroutingphase
+      minViaEdgeToPadEdgeClearance="0.3mm"
+      minTraceToPadEdgeClearance="0.2mm"
+      autorouter={{ local: true }}
+    />
     <silkscreentext text="SCD40" pcbX={10} pcbY={7.3} layer="top" />
     <silkscreentext text="SCD41" pcbX={10} pcbY={5.3} layer="top" />
     <silkscreentext text="qwiic" pcbX={-10} pcbY={-5.3} layer="top" />
@@ -43,14 +48,14 @@ export default () => (
 
     <schematictext
       schX={-8}
-      schY={2.5}
+      schY={3.5}
       text="Cut Jumper to"
       color="gray"
       fontSize={0.15}
     />
     <schematictext
       schX={-8}
-      schY={2.3}
+      schY={3.3}
       text="disable LED"
       color="gray"
       fontSize={0.15}
@@ -208,6 +213,8 @@ export default () => (
         layer="bottom"
       />
       <led
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
+        pcbRotation={180}
         pcbX={-9.906}
         pcbY={4.572}
         schX={-8}
@@ -216,7 +223,7 @@ export default () => (
         color="RED"
         footprint="0603"
         schRotation={-90}
-        connections={{ pin2: sel.net.GND }}
+        connections={{ pin1: sel.net.GND }}
       />
       <solderjumper
         pcbX={9.906}
@@ -249,7 +256,7 @@ export default () => (
         resistance="4.7k"
         footprint="0603"
         schRotation={90}
-        connections={{ pin1: sel.D1.pin1, pin2: sel.JP2.pin1 }}
+        connections={{ pin1: sel.D1.pin2, pin2: sel.JP2.pin1 }}
       />
       <solderjumper
         name="JP2"
@@ -280,6 +287,7 @@ export default () => (
       pinLabels={{ pin1: ["GND"], pin2: ["VDD"], pin3: ["SDA"], pin4: ["SCL"] }}
       pcbX={0}
       pcbY={-11.5}
+      doNotPlace
       name="JP3"
       footprint="pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
       connections={{
