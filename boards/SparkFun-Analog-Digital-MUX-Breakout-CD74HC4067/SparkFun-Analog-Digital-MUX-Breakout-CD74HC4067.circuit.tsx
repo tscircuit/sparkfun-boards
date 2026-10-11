@@ -1,3 +1,4 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { sel } from "@tscircuit/core"
 import { CD74HC4067 } from "./CD74HC4067"
 
@@ -97,10 +98,11 @@ export default () => (
     />
 
     <jumper
+      doNotPlace
       schWidth={0.65}
       schX={-3}
       name="JP1"
-      footprint={"pinrow16_id1.016_od1.88_p2.54_nosquareplating"}
+      footprint={barePinRow("pinrow16_id1.016_od1.88_p2.54_nosquareplating")}
       cadModel={null}
       pcbX={-7.62}
       pcbRotation={90}
@@ -166,12 +168,13 @@ export default () => (
     />
 
     <jumper
+      doNotPlace
       schWidth={0.65}
       schX={2.6}
       schY={0}
       schDirection="left"
       name="JP3"
-      footprint={"pinrow8_id1.016_od1.88_p2.54"}
+      footprint={barePinRow("pinrow8_id1.016_od1.88_p2.54")}
       cadModel={null}
       pcbX={7.62}
       pcbRotation={90}
