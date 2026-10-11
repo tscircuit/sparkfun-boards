@@ -6,7 +6,7 @@ export default () => (
   <board width="25.4mm" height="12.7mm">
     <TMF8820_1AM name="U1" schX={0} schY={0} layer="bottom" />
     <netlabel
-      net="EN"
+      net="N_INT"
       schX={1.5}
       schY={0.4}
       connection="R1.pin1"
@@ -59,13 +59,13 @@ export default () => (
     />
     <resistor
       name="R6"
-      connections={{ pin1: sel.D2.pin1 }}
+      connections={{ pin1: sel.D2.pin2 }}
       schX={5}
       schY={1.5}
       schRotation={90}
       resistance="1k"
       pcbX={-5.131}
-      pcbY={4.064}
+      pcbY={4.164}
       pcbRotation={180}
       footprint="0402"
     />
@@ -103,9 +103,10 @@ export default () => (
       footprint="0402"
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
       name="D2"
-      connections={{ pin2: sel.net.GND }}
-      pcbRotation={180}
+      connections={{ pin1: sel.net.GND }}
+      pcbRotation={0}
       schX={5}
       schY={0}
       schRotation={-90}
@@ -149,11 +150,12 @@ export default () => (
       schRotation={180}
     />
     <jumper
+      doNotPlace
       name="JP2"
       schWidth={0.7}
       schDirection="right"
       pcbRotation={180}
-      schX={-0.5}
+      schX={-1.55}
       schY={-7}
       connections={{ pin2: sel.net.N_INT, pin1: sel.net().GPIO0 }}
       pinLabels={{
@@ -166,6 +168,7 @@ export default () => (
       pcbY={-5.08}
     />
     <jumper
+      doNotPlace
       name="JP3"
       schWidth={0.7}
       schDirection="right"
@@ -293,6 +296,7 @@ export default () => (
       anchorSide="left"
     />
     <jumper
+      doNotPlace
       name="JP6"
       schWidth={0.7}
       schDirection="right"
@@ -406,7 +410,7 @@ export default () => (
       color="gray"
       fontSize={0.15}
       schX={9}
-      schY={2.3}
+      schY={3.3}
     />
 
     <schematictext
