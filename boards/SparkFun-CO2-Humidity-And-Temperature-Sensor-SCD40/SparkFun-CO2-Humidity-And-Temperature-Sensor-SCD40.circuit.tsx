@@ -1,10 +1,25 @@
+import { barePinRow } from "../../util/bare-pin-row"
 import { SCD40_D_R1 } from "./ SCD40_D_R1"
 import { sel } from "tscircuit"
 import { SM04B_SRSS_TB_LF__SN } from "./SM04B_SRSS_TB_LF__SN"
 import { SM04B_SRSS_TB_LF__SN2 } from "./SM04B_SRSS_TB_LF__SN2"
 
 export default () => (
-  <board width="25.4mm" height="25.4mm">
+  <board
+    minViaPadDiameter="0.45mm"
+    minViaHoleDiameter="0.2mm"
+    width="25.4mm"
+    height="25.4mm"
+    nominalTraceWidth="0.2mm"
+  >
+    <autoroutingphase
+      minBoardEdgeClearance="0.4mm"
+      minViaEdgeToPadEdgeClearance="0.3mm"
+      minViaPadDiameter="0.45mm"
+      minViaHoleDiameter="0.2mm"
+      minTraceToPadEdgeClearance="0.3mm"
+      autorouter={{ local: true, traceClearance: 0.3 }}
+    />
     <silkscreentext text="SCD40" pcbX={10} pcbY={7.3} layer="top" />
     <silkscreentext text="SCD41" pcbX={10} pcbY={5.3} layer="top" />
     <silkscreentext text="qwiic" pcbX={-10} pcbY={-5.3} layer="top" />
@@ -29,14 +44,14 @@ export default () => (
     />
     <schematictext
       schX={-8}
-      schY={2.5}
+      schY={3.5}
       text="Cut Jumper to"
       color="gray"
       fontSize={0.15}
     />
     <schematictext
       schX={-8}
-      schY={2.3}
+      schY={3.3}
       text="disable LED"
       color="gray"
       fontSize={0.15}
@@ -159,7 +174,7 @@ export default () => (
         capacitance="0.1uF"
         footprint="0603"
         pcbX={-2.032}
-        pcbY={6.35}
+        pcbY={7}
         schX={-2.5}
         schY={0}
         schRotation={-90}
@@ -172,7 +187,7 @@ export default () => (
         schX={-4}
         schY={0}
         pcbX={2.032}
-        pcbY={6.35}
+        pcbY={7}
         connections={{ pin2: sel.net.GND, pin1: sel.net.V3_3 }}
         schRotation={-90}
         pcbRotation={180}
@@ -207,6 +222,8 @@ export default () => (
         layer="bottom"
       />
       <led
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
+        pcbRotation={180}
         pcbX={-9.906}
         pcbY={4.572}
         schX={-8}
@@ -215,7 +232,7 @@ export default () => (
         color="RED"
         footprint="0603"
         schRotation={-90}
-        connections={{ pin2: sel.net.GND }}
+        connections={{ pin1: sel.net.GND }}
       />
       <solderjumper
         pcbX={9.906}
@@ -242,13 +259,13 @@ export default () => (
       <resistor
         name="R3"
         pcbX={-9.906}
-        pcbY={6.35}
+        pcbY={7}
         schX={-8}
         schY={0.8}
         resistance="4.7k"
         footprint="0603"
         schRotation={90}
-        connections={{ pin1: sel.D1.pin1, pin2: sel.JP2.pin1 }}
+        connections={{ pin1: sel.D1.pin2, pin2: sel.JP2.pin1 }}
       />
       <solderjumper
         name="JP2"
@@ -265,6 +282,7 @@ export default () => (
       />
     </group>
     <jumper
+      doNotPlace
       schWidth={0.7}
       cadModel={null}
       schX={8}
@@ -280,7 +298,9 @@ export default () => (
       pcbX={0}
       pcbY={-11.5}
       name="JP3"
-      footprint="pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
+      footprint={barePinRow(
+        "pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted",
+      )}
       connections={{
         pin3: sel.net.SDA,
         pin4: sel.net.SCL,
