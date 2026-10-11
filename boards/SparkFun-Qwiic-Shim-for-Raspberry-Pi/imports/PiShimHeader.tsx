@@ -24,7 +24,7 @@ export const PiShimHeader = (props: ChipProps<typeof pinLabels>) => (
       },
     }}
     footprint={
-      <footprint>
+      <footprint insertionDirection="from_above">
         <platedhole
           portHints={["pin1"]}
           pcbX="-2.54mm"

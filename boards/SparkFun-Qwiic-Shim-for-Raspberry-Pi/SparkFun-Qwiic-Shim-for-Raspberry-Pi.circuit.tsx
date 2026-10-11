@@ -4,19 +4,19 @@ import { SM04B_SRSS_TB_LF__SN_ } from "./imports/SM04B_SRSS_TB_LF__SN_"
 import { PiShimHeader } from "./imports/PiShimHeader"
 
 const outline = new OutlineBuilder(3.81, -6.985)
-  .lineTo(-3.81, -6.985)
-  .arcTo(-5.08, -5.715, { radius: 1.27, sweep: false })
-  .lineTo(-5.08, 5.715)
-  .arcTo(-3.81, 6.985, {
+  .lineTo(-3.93, -6.985)
+  .arcTo(-5.2, -5.715, { radius: 1.27, sweep: false })
+  .lineTo(-5.2, 5.715)
+  .arcTo(-3.93, 6.985, {
     radius: 1.27,
     sweep: false,
   })
-  .lineTo(1.27, 6.985)
-  .arcTo(2.54, 5.715, {
+  .lineTo(1.39, 6.985)
+  .arcTo(2.66, 5.715, {
     radius: 1.27,
     sweep: false,
   })
-  .lineTo(2.54, 2.2098)
+  .lineTo(2.66, 2.2098)
   .lineTo(4.445, 2.2098)
   .arcTo(5.08, 1.6002, {
     radius: 0.635,
@@ -53,7 +53,6 @@ export default () => (
         SDA: sel.net.SDA,
         SCL: sel.net.SCL,
         GND: sel.net.GND,
-        NC: sel.net().NC,
       }}
     />
     <SM04B_SRSS_TB_LF__SN_
