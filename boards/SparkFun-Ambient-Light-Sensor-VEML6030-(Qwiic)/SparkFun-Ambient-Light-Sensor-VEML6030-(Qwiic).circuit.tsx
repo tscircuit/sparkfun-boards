@@ -11,6 +11,11 @@ const jumperPinLabels = {
 }
 export default () => (
   <board width="25.4mm" height="25.4mm">
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.15mm"
+      minViaEdgeToPadEdgeClearance="0.15mm"
+      minBoardEdgeClearance="0.3mm"
+    />
     <VEML6030 name="U1" schY={1.5} pcbRotation={-90} />
     <SM04B_SRSS_TB_LF__SN
       name="J1"
@@ -78,14 +83,16 @@ export default () => (
       name="R4"
       resistance="1k"
       footprint="0603"
-      pcbX={-10.109}
-      pcbY={4.318}
+      pcbX={-9.109}
+      pcbY={4.118}
       schY={-7.1}
       schX={-1.8}
       schRotation={90}
-      connections={{ pin1: sel.D1.pin1, pin2: sel.JP1.pin1 }}
+      connections={{ pin1: sel.D1.pin2, pin2: sel.JP1.pin1 }}
     />
     <led
+      pinLabels={{ pin1: "cathode", pin2: "anode" }}
+      pcbRotation={180}
       name="D1"
       color="red"
       footprint="0603"
@@ -134,6 +141,7 @@ export default () => (
       connections={{ pin2: sel.net().V3_3 }}
     />
     <jumper
+      doNotPlace
       name="J3"
       schWidth={0.7}
       schX={8}
@@ -395,7 +403,7 @@ export default () => (
     />
     <netlabel
       net="GND"
-      connection="D1.pin2"
+      connection="D1.pin1"
       anchorSide="top"
       schX={-1.8}
       schY={-10}
