@@ -17,7 +17,7 @@ const HMC6343Qwiic = () => (
       minViaPadDiameter="0.6mm"
       minViaHoleDiameter="0.3mm"
       minTraceToPadEdgeClearance="0.2mm"
-      autorouter={{ local: true, traceClearance: 0.2 }}
+      autorouter={{ local: true }}
     />
     <HMC6343
       name="U1"
