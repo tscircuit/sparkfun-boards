@@ -10,6 +10,7 @@ export default () => (
     <ThingPlus
       schHeight={2.6}
       schWidth={2.34}
+      doNotPlace
       name="J5"
       schX={-5}
       schY={0}
