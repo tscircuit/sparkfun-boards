@@ -23,8 +23,13 @@ export const LIS3DHTR = (props: ChipProps<typeof pinLabels>) => {
   return (
     <chip
       pinLabels={pinLabels}
+      // Keep the fixed reference placement without an inferred 1 mm limit.
+      pinAttributes={{
+        VDD_IO: { shouldHaveDecouplingCapacitor: false },
+        VDD: { shouldHaveDecouplingCapacitor: false },
+      }}
       schHeight={2.5}
-      schWidth={3}
+      schWidth={2.15}
       schPinStyle={{
         pin1: { marginBottom: 0.5 },
         pin10: { marginTop: 0.5, marginBottom: 0.2 },
