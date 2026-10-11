@@ -2,7 +2,21 @@ import { sel } from "@tscircuit/core"
 import { BME280 } from "./BME280"
 
 export default () => (
-  <board width="12.7mm" height="20.32mm">
+  <board
+    minViaPadDiameter="0.6mm"
+    minViaHoleDiameter="0.3mm"
+    width="12.7mm"
+    height="20.32mm"
+    nominalTraceWidth="0.2mm"
+  >
+    <autoroutingphase
+      minBoardEdgeClearance="0.5mm"
+      minViaEdgeToPadEdgeClearance="0.3mm"
+      minViaPadDiameter="0.6mm"
+      minViaHoleDiameter="0.3mm"
+      minTraceToPadEdgeClearance="0.2mm"
+      autorouter={{ local: true, traceClearance: 0.2 }}
+    />
     <BME280
       name="U1"
       schWidth={1.8}
@@ -125,7 +139,7 @@ export default () => (
         pin1: sel.U1.pin5,
       }}
       pcbX={-3.81}
-      pcbY={-4.445}
+      pcbY={-4.75}
       pcbRotation={180}
     />
 
@@ -238,7 +252,7 @@ export default () => (
       schY={1.2}
     />
     <netlabel
-      net="SDD_ADR"
+      net="SDO_ADR"
       anchorSide="right"
       connectsTo={["U1.pin4", "SJ3.pin2"]}
       schX={-5.4}
@@ -329,8 +343,8 @@ export default () => (
     />
     <schematictext
       schRotation={-90}
-      schX={3.4}
-      schY={1.5}
+      schX={6.4}
+      schY={2.5}
       text="EN I2C PULL"
       color="gray"
       fontSize={0.2}
@@ -397,8 +411,8 @@ export default () => (
       text="Jumpers SJ1-SJ3 can be opend to"
       color="gray"
       fontSize={0.2}
-      schX={-6.85}
-      schY={5}
+      schX={-3.8499999999999996}
+      schY={6}
       anchor="right"
     />
     <schematictext
@@ -413,8 +427,8 @@ export default () => (
       text="Leave the copper-connected jumpers"
       color="gray"
       fontSize={0.2}
-      schX={-6.58}
-      schY={5.9}
+      schX={-3.58}
+      schY={6.9}
       anchor="right"
     />
     <schematictext
@@ -523,7 +537,7 @@ export default () => (
       pinLabels={["GND", "VCC", "SDA", "SCL"]}
       schX={-9}
       schY={-6}
-      schWidth={0.6}
+      schWidth={0.485}
       schPinArrangement={{
         rightSide: {
           direction: "bottom-to-top",
