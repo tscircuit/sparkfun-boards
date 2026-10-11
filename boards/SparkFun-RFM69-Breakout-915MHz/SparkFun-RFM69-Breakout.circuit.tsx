@@ -1,4 +1,3 @@
-import { contiguousPinHeader } from "../../util/contiguous-pin-header"
 import { RFM69HCW } from "./RFM69HCW"
 import { sel } from "@tscircuit/core"
 
@@ -11,12 +10,11 @@ const RFM69BREAKOUT = () => {
         pcbY="1.27mm"
       />
       <pinheader
+        doNotPlace
         name="JP1"
         pinCount={2}
         schRotation={180}
-        footprint={contiguousPinHeader(
-          "pinrow2_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating",
-        )}
+        footprint="pinrow2_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
         schFacingDirection="right"
         schX={-3}
         schY={1.4}
@@ -45,12 +43,11 @@ const RFM69BREAKOUT = () => {
       />
       <pinheader
         schWidth={0.675}
+        doNotPlace
         name="JP2"
         pinCount={5}
         schRotation={0}
-        footprint={contiguousPinHeader(
-          "pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating",
-        )}
+        footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
         schFacingDirection="right"
         schX={-3}
         schY={-0.1}
@@ -68,12 +65,11 @@ const RFM69BREAKOUT = () => {
         pinLabels={["MISO", "MOSI", "SCK", "NSS", "RESET"]}
       />
       <pinheader
+        doNotPlace
         name="JP3"
         pinCount={1}
         schRotation={180}
-        footprint={contiguousPinHeader(
-          "pinrow1_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating",
-        )}
+        footprint="pinrow1_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
         facingDirection="left"
         schX={3}
         schY={1.5}
@@ -89,12 +85,11 @@ const RFM69BREAKOUT = () => {
       />
       <pinheader
         schWidth={0.58}
+        doNotPlace
         name="JP4"
         pinCount={5}
         schRotation={0}
-        footprint={contiguousPinHeader(
-          "pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating",
-        )}
+        footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
         facingDirection="left"
         schX={3}
         schY={0.34}
@@ -112,12 +107,11 @@ const RFM69BREAKOUT = () => {
         pinLabels={["DIO0", "DIO1", "DIO2", "DIO3", "DIO4"]}
       />
       <pinheader
+        doNotPlace
         name="JP5"
         pinCount={3}
         schRotation={180}
-        footprint={contiguousPinHeader(
-          "pinrow3_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating",
-        )}
+        footprint="pinrow3_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
         facingDirection="left"
         schX={3}
         schY={-1}
