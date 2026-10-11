@@ -7,7 +7,16 @@ import { SM04B_SRSS_TB_LF__SN_J4 } from "./SM04B_SRSS_TB_LF__SN_J4"
 
 export default () => (
   <board width="22.76mm" height="50.66mm">
-    <ThingPlus name="J5" schX={-5} schY={0} pcbX={0.05} pcbY={3.5} />
+    <ThingPlus
+      schHeight={2.6}
+      schWidth={2.34}
+      doNotPlace
+      name="J5"
+      schX={-5}
+      schY={0}
+      pcbX={0.05}
+      pcbY={3.5}
+    />
 
     <resistor
       name="R1"
@@ -77,7 +86,7 @@ export default () => (
       schX={6}
       schY={3}
       pcbX={0.05}
-      pcbY={22.39}
+      pcbY={22.29}
       pcbRotation={180}
       schPinArrangement={{
         rightSide: {
