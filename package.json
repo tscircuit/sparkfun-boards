@@ -15,10 +15,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tscircuit/footprinter": "0.0.451",
     "@types/bun": "latest",
-    "circuit-json": "0.0.562",
-    "circuit-json-to-footprinter": "^0.0.60",
+    "circuit-json-to-footprinter": "^0.0.62",
     "tscircuit": "^0.0.3300"
   },
   "peerDependencies": {
