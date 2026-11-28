@@ -101,6 +101,7 @@ export default () => {
       />
       <jumper
         name="JP3"
+        allowOffBoard
         cadModel={null}
         schWidth={0.7}
         pinLabels={JPPinlabel}

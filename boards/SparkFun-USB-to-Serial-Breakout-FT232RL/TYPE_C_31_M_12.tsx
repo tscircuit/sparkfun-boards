@@ -1,26 +1,27 @@
 import type { ChipProps } from "@tscircuit/props"
 
+// USB-C signal names follow the physical A/B contact numbers.
 const pinLabels = {
-  pin1: ["pin1"],
-  pin2: ["pin2"],
-  pin3: ["pin3"],
-  pin4: ["B8"],
-  pin5: ["A5"],
-  pin6: ["B7"],
-  pin7: ["A6"],
+  pin1: ["SH1"],
+  pin2: ["SH2"],
+  pin3: ["SH3"],
+  pin4: ["B8", "SBU2"],
+  pin5: ["A5", "CC1"],
+  pin6: ["B7", "D_MINUS"],
+  pin7: ["A6", "D_PLUS"],
   pin8: ["A7"],
   pin9: ["B6"],
-  pin10: ["A8"],
-  pin11: ["B5"],
-  pin12: ["A1"],
+  pin10: ["A8", "SBU1"],
+  pin11: ["B5", "CC2"],
+  pin12: ["A1", "GND"],
   pin13: ["B12"],
-  pin14: ["GND"],
-  pin15: ["DI"],
-  pin16: ["D_PLUS"],
-  pin17: ["D_MINUS"],
-  pin18: ["VCC"],
+  pin14: ["A4", "VCC"],
+  pin15: ["B9"],
+  pin16: ["B4"],
+  pin17: ["A9"],
+  pin18: ["B1"],
   pin19: ["A12"],
-  pin20: ["SH"],
+  pin20: ["SH4"],
 } as const
 
 export const TYPE_C_31_M_12 = (props: ChipProps<typeof pinLabels>) => {

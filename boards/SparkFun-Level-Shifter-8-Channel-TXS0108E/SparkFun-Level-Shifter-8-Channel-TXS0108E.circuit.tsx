@@ -176,6 +176,7 @@ export default () => (
     />
     <jumper
       name="J1"
+      allowOffBoard
       pcbX="-0.005mm"
       pcbY="-5.08mm"
       footprint="pinrow11_id1.016_od1.880_p2.54_nosquareplating_pinlabelorthogonal_pinlabeltextalignright_doublesidedpinlabel"
@@ -223,6 +224,7 @@ export default () => (
     />
     <jumper
       name="J2"
+      allowOffBoard
       pcbX="-1.275mm"
       pcbY="5.08mm"
       footprint="pinrow10_id1.016_od1.880_p2.54_nosquareplating_pinlabelorthogonal_pinlabeltextalignleft_doublesidedpinlabel"

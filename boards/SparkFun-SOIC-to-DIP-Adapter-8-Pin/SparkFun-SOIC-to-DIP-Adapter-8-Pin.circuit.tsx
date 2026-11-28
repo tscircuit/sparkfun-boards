@@ -25,6 +25,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP1"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
@@ -43,6 +44,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP2"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
@@ -82,6 +84,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP5"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
@@ -100,6 +103,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP6"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
@@ -139,6 +143,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP3"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
@@ -157,6 +162,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP4"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
@@ -196,6 +202,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP7"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
@@ -214,6 +221,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP8"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.88_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}

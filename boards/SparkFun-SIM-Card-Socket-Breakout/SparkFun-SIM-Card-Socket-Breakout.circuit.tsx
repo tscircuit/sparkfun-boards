@@ -21,6 +21,7 @@ export default () => (
     />
     <jumper
       name="JP1"
+      allowOffBoard
       pinLabels={{
         pin1: ["VCC"],
         pin2: ["RST"],

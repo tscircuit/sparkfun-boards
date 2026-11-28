@@ -106,6 +106,7 @@ const MotionSensor = () => (
 
     <jumper
       name="JP3"
+      allowOffBoard
       footprint={"pinrow4_id1.016_od1.88_nosquareplating_doublesidedpinlabel"}
       schWidth={0.65}
       cadModel={null}
@@ -162,10 +163,7 @@ const MotionSensor = () => (
     <solderjumper
       name="JP5"
       pinCount={3}
-      bridgedPins={[
-        ["1", "2"],
-        ["2", "3"],
-      ]}
+      bridgedPins={[["1", "2", "3"]]}
       footprint="solderjumper3_bridged123_p1.041_pw0.660_ph1.270"
       layer="bottom"
       schX={-7}

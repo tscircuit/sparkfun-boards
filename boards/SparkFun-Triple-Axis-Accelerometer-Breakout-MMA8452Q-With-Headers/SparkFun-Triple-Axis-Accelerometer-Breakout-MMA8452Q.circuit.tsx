@@ -101,6 +101,7 @@ export default () => {
       />
       <pinheader
         name="JP3"
+        allowOffBoard
         schWidth={0.7}
         pinLabels={JPPinlabel}
         pinCount={6}

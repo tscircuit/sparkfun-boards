@@ -94,6 +94,7 @@ export default () => {
       })}
       <jumper
         name="JP1"
+        allowOffBoard
         footprint={
           "pinrow6_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal_id1.016_od1.88_p2.54"
         }
@@ -123,6 +124,7 @@ export default () => {
 
       <jumper
         name="JP2"
+        allowOffBoard
         footprint={
           "pinrow6_nosquareplating_doublesidedpinlabel_id1.016_od1.88_p2.54"
         }

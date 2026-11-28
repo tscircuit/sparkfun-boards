@@ -4,6 +4,7 @@ export default () => (
   <board width="25.4mm" height="25.4mm">
     <jumper
       name="J1"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow4_nosquareplating_id1.016_od1.880_p2.54_doublesidedpinlabel_pinlabelorthogonal_pinlabeltextalignleft"
       pcbX={-11.375}

@@ -233,6 +233,7 @@ export default () => (
       schX={-6}
       schY={-10}
       schSectionName="Connectors"
+      allowOffBoard
     />
     <chip
       name="J2"

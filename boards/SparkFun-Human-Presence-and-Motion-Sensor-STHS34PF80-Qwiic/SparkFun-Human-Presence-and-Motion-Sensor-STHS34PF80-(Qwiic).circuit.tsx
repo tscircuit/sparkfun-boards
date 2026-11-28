@@ -63,10 +63,7 @@ const MotionSensor = () => (
     <solderjumper
       name="JP1"
       pinCount={3}
-      bridgedPins={[
-        ["1", "2"],
-        ["2", "3"],
-      ]}
+      bridgedPins={[["1", "2", "3"]]}
       footprint="solderjumper3_bridged123_p1.041_pw0.660_ph1.270"
       layer="bottom"
       schY={2}
@@ -339,6 +336,7 @@ const MotionSensor = () => (
     <pinheader
       doNotPlace
       name="J3"
+      allowOffBoard
       pinCount={6}
       footprint="pinrow6__p2.54_id1.016_od1.88_nosquareplating"
       gender="female"

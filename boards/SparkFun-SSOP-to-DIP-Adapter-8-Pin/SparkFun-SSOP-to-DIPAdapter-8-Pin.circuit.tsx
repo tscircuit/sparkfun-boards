@@ -31,6 +31,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP2"
+      allowOffBoard
       footprint="pinrow4_p2.54_id1.016_od1.8796_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schX={-1.9}
@@ -44,6 +45,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP1"
+      allowOffBoard
       footprint="pinrow4_p2.54_id1.016_od1.8796_nopinlabels"
       pinLabels={{ pin1: "1", pin2: "2", pin3: "3", pin4: "4" }}
       schX={1.9}

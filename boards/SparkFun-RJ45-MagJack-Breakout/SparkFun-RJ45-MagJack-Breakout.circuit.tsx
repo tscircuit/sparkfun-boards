@@ -27,6 +27,7 @@ export default () => (
     />
     <jumper
       name="JP1"
+      allowOffBoard
       pcbX={0}
       pcbY={-8.8}
       pcbRotation={0}

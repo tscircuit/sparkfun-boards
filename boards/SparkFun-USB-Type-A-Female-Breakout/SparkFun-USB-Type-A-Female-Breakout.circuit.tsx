@@ -11,6 +11,7 @@ export default () => (
   <board width="20.32mm" height="25.40mm">
     <USB_SMT_04F_S1_B1_R11
       name="U1"
+      allowOffBoard
       pcbX={1.672}
       pcbRotation={-90}
       connections={{
@@ -41,6 +42,7 @@ export default () => (
       schX={5}
       pinLabels={JP1PinLabels}
       name="JP1"
+      allowOffBoard
       footprint="pinrow4_id1.016mm_od1.88mm_p2.62mm_pinlabeltextalignleft_pinlabelverticallyinverted_pinlabelorthogonal_nosquareplating_doublesidedpinlabel"
       schDirection="left"
       pcbRotation={-90}

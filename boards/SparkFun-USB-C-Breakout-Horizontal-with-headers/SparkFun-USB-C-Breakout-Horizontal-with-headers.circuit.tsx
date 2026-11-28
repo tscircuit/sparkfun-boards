@@ -5,6 +5,7 @@ export default () => (
   <board width="12.7mm" height="21.59mm">
     <USBC_16PIN
       name="USBC"
+      allowOffBoard
       pcbY={0}
       pcbX={-2.175}
       pcbRotation={-90}
@@ -42,6 +43,7 @@ export default () => (
         pin1: sel.net().CC2,
       }}
       name="JP3"
+      allowOffBoard
       footprint={"pinrow6_od1.88_id1.016_nosquareplating"}
       pcbRotation={90}
       pcbX={5.1}

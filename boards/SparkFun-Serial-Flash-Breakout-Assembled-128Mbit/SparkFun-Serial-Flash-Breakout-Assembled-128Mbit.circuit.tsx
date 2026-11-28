@@ -46,6 +46,7 @@ export default () => (
       schDirection={"left"}
       schWidth={0.6}
       name="JP1"
+      allowOffBoard
       footprint="pinrow8_od1.88_id1.016_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_bottomsidepinlabel"
       pcbRotation={180}
       cadModel={null}

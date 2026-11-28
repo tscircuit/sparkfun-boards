@@ -50,6 +50,7 @@ export default () => (
         pin7: sel.net().VBUS,
       }}
       name="J1"
+      allowOffBoard
       footprint={
         "pinrow7_od1.88_id1.016_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_pinlabelverticallyinverted"
       }
@@ -92,7 +93,7 @@ export default () => (
       connections={{
         pin1: sel.net().GND,
       }}
-      bridgedPins={[["1"], ["2"]]}
+      bridgedPins={[["1", "2"]]}
       schX={-10}
       schY={-2}
       pcbX={0.127}

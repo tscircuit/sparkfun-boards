@@ -35,17 +35,17 @@ export default () => (
         pin4: "net.SDA",
         pin5: "net.AL_L",
         pin6: "net.AL_H",
-        pin7: "net.NC",
         pin8: "net.VCC",
       }}
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength={6}
       schX={-3}
       schRotation={-90}
       footprint="cap0402"
       pcbX={-1.5}
-      pcbY={3.2}
+      pcbY={3.3}
       capacitance={"0.1uF"}
       connections={{ pin2: "net.GND" }}
     />
@@ -55,13 +55,13 @@ export default () => (
       schRotation={-90}
       footprint="cap0402"
       pcbX={1.5}
-      pcbY={3.2}
+      pcbY={3.3}
       capacitance={"0.22uF"}
       connections={{ pin1: "net.VCC", pin2: "net.GND" }}
     />
     <resistor
       name="R1"
-      schX={2}
+      schX={1.65}
       schY={1.7}
       pcbX={-6}
       schRotation={-90}
@@ -84,6 +84,7 @@ export default () => (
     <jumper
       cadModel={null}
       name="JP1"
+      allowOffBoard
       schX={5}
       schY={1.1}
       pcbY={-6.4}

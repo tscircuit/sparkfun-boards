@@ -72,7 +72,7 @@ export default () => (
       schX={-5.5}
       schY={2.9}
       pcbX={-1.245}
-      pcbY={2.232}
+      pcbY={2.432}
       schRotation={-90}
     />
     <capacitor
@@ -82,8 +82,9 @@ export default () => (
       schX={-7.2}
       schY={2.9}
       pcbX={1.295}
-      pcbY={2.232}
+      pcbY={2.432}
       schRotation={-90}
+      pcbRotation={180}
     />
     <netlabel
       net="V3_3"
@@ -175,7 +176,7 @@ export default () => (
       schX={0.7}
       schY={3.6}
       pcbX={1.295}
-      pcbY={-2.213}
+      pcbY={-2.413}
       schRotation={90}
       connections={{ pin1: "net.INT" }}
     />
@@ -219,7 +220,7 @@ export default () => (
       schX={12.3}
       schY={3.7}
       pcbX={-1.245}
-      pcbY={-2.213}
+      pcbY={-2.413}
       schRotation={-90}
       connections={{ pin2: "D1.pin1" }}
     />
@@ -281,6 +282,7 @@ export default () => (
 
     <jumper
       name="J1"
+      allowOffBoard
       schWidth={0.45}
       schX={2.2}
       schY={-6}
@@ -293,6 +295,7 @@ export default () => (
         leftSide: { direction: "top-to-bottom", pins: ["pin1"] },
       }}
       connections={{ pin1: "net.INT" }}
+      doNotPlace
     />
     <schematictext
       text="J1"

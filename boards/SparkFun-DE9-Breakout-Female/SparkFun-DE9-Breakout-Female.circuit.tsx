@@ -35,6 +35,7 @@ export default () => {
       />
       <jumper
         name="J2"
+        allowOffBoard
         footprint={"pinrow9_id1.016_od1.88_nosquareplating"}
         schWidth={0.65}
         cadModel={null}
@@ -63,6 +64,7 @@ export default () => {
       />
       <jumper
         name="J3"
+        allowOffBoard
         footprint={"pinrow1_id1.016_od1.88_nosquareplating"}
         schWidth={0.65}
         cadModel={null}
@@ -79,6 +81,7 @@ export default () => {
       />
       <jumper
         name="J4"
+        allowOffBoard
         footprint={"pinrow1_id1.016_od1.88_nosquareplating"}
         schWidth={0.65}
         cadModel={null}

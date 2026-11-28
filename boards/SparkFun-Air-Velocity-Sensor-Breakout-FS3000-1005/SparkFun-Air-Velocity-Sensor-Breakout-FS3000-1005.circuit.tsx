@@ -12,6 +12,7 @@ export default () => {
           pin1: [sel.JP3.pin2, sel.C2.pin1],
           pin7: sel.net.SCL,
           pin6: sel.net.SDA,
+          pin10: sel.net().VCM,
         }}
       />
       <capacitor
@@ -35,6 +36,7 @@ export default () => {
       />
       <capacitor
         name="C2"
+        maxDecouplingTraceLength={6}
         capacitance="0.1uF"
         footprint="cap0402"
         pcbRotation={90}
@@ -67,6 +69,7 @@ export default () => {
       />
       <capacitor
         name="C4"
+        maxDecouplingTraceLength={22}
         schX={3}
         connections={{ pin1: sel.U1.pin10, pin2: sel.net().GND }}
         schRotation={-90}
@@ -129,7 +132,7 @@ export default () => {
           pin1: sel.R3.pin2,
           pin2: sel.net().V3_3,
         }}
-        bridgedPins={[["1"], ["2"], ["3"]]}
+        bridgedPins={[["1", "2", "3"]]}
         schX={8}
         schY={2}
         pcbX={11.201}
@@ -142,7 +145,7 @@ export default () => {
       <solderjumper
         connections={{ pin1: sel.R5.pin1, pin2: sel.net().V3_3 }}
         pcbX={-11.57}
-        bridgedPins={[["1"], ["2"]]}
+        bridgedPins={[["1", "2"]]}
         schRotation={90}
         pcbY={-4.699}
         schX={5.5}
@@ -153,7 +156,7 @@ export default () => {
         layer="bottom"
       />
       <solderjumper
-        bridgedPins={[["1"], ["2"]]}
+        bridgedPins={[["1", "2"]]}
         connections={{ pin1: [sel.U1.pin2] }}
         schX={-3.1}
         schY={1.5}
@@ -470,6 +473,7 @@ export default () => {
 
       <jumper
         name="JP4"
+        allowOffBoard
         doNotPlace
         schWidth={0.7}
         connections={{ pin1: sel.net().VCM, pin2: sel.net().ADC_REF }}
@@ -487,6 +491,7 @@ export default () => {
       />
       <jumper
         name="JP5"
+        allowOffBoard
         doNotPlace
         schWidth={0.7}
         schX={-4}

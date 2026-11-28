@@ -25,6 +25,7 @@ export default () => (
     />
     <jumper
       name="JP4"
+      allowOffBoard
       footprint="pinrow3"
       pcbX={-3.51}
       pcbRotation={90}

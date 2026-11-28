@@ -33,6 +33,7 @@ export default () => (
         },
       }}
       name="JP1"
+      allowOffBoard
       manufacturerPartNumber="M04PTH"
       footprint="pinrow4_id1mm_od1.88,,_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_doublesidedpinlabel"
       schDirection="left"

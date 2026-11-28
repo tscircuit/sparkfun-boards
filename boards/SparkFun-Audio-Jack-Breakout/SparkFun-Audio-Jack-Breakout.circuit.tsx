@@ -5,6 +5,7 @@ export default () => (
   <board width="21.59mm" height="15.24mm">
     <PJ_307C
       name="U1"
+      allowOffBoard
       pcbX={-6}
       pcbY={0}
       pcbRotation={90}

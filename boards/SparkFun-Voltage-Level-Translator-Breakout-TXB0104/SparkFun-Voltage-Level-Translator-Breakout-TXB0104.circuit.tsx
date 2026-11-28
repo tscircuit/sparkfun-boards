@@ -73,6 +73,7 @@ export default () => (
     />
     <pinheader
       name="JP1"
+      allowOffBoard
       doNotPlace
       pinCount={7}
       cadModel={null}
@@ -181,6 +182,7 @@ export default () => (
     />
     <pinheader
       name="JP2"
+      allowOffBoard
       doNotPlace
       pinCount={7}
       schFacingDirection="left"

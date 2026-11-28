@@ -22,6 +22,7 @@ export default () => (
       schWidth={0.6}
       pinLabels={jumperPinLabels}
       name="JP5"
+      allowOffBoard
       footprint="pinrow10_od1.88_id1.016_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal"
       cadModel={null}
       pcbRotation={90}

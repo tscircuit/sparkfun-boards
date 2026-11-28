@@ -42,40 +42,40 @@ export const TYPE_C_14PLC_H10_0 = (props: ChipProps<typeof pinLabels>) => {
             portHints={["pin1"]}
             pcbX="-2.0001230000000305mm"
             pcbY="-1.9298919999999953mm"
-            holeWidth="0.700024mm"
-            holeHeight="1.700022mm"
-            outerWidth="0.9999979999999999mm"
-            outerHeight="1.9999959999999999mm"
+            holeWidth="1.700022mm"
+            holeHeight="0.700024mm"
+            outerWidth="1.9999959999999999mm"
+            outerHeight="0.9999979999999999mm"
             shape="pill"
           />
           <platedhole
             portHints={["pin2"]}
             pcbX="1.9998690000001034mm"
             pcbY="-1.9298919999999953mm"
-            holeWidth="0.700024mm"
-            holeHeight="1.700022mm"
-            outerWidth="0.9999979999999999mm"
-            outerHeight="1.9999959999999999mm"
+            holeWidth="1.700022mm"
+            holeHeight="0.700024mm"
+            outerWidth="1.9999959999999999mm"
+            outerHeight="0.9999979999999999mm"
             shape="pill"
           />
           <platedhole
             portHints={["pin3"]}
             pcbX="-2.0001230000000305mm"
             pcbY="1.9298919999998816mm"
-            holeWidth="0.700024mm"
-            holeHeight="1.700022mm"
-            outerWidth="0.9999979999999999mm"
-            outerHeight="1.9999959999999999mm"
+            holeWidth="1.700022mm"
+            holeHeight="0.700024mm"
+            outerWidth="1.9999959999999999mm"
+            outerHeight="0.9999979999999999mm"
             shape="pill"
           />
           <platedhole
             portHints={["pin4"]}
             pcbX="1.9998690000001034mm"
             pcbY="1.9298919999998816mm"
-            holeWidth="0.700024mm"
-            holeHeight="1.700022mm"
-            outerWidth="0.9999979999999999mm"
-            outerHeight="1.9999959999999999mm"
+            holeWidth="1.700022mm"
+            holeHeight="0.700024mm"
+            outerWidth="1.9999959999999999mm"
+            outerHeight="0.9999979999999999mm"
             shape="pill"
           />
           <platedhole

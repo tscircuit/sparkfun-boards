@@ -182,6 +182,7 @@ export default function SparkFunCurrentSensorINA237() {
         schRotation={0}
         pinCount={2}
         connections={{ pin1: sel.net().VBUS, pin2: sel.net().IN_POS }}
+        allowOffBoard
       />
 
       <INA237AIDGSR
@@ -209,6 +210,7 @@ export default function SparkFunCurrentSensorINA237() {
 
       <SM04B_SRSS_TB_LF__SN_
         name="J1"
+        allowOffBoard
         schWidth={1.3}
         schPinArrangement={{
           leftSide: {
@@ -238,6 +240,7 @@ export default function SparkFunCurrentSensorINA237() {
       />
       <SM04B_SRSS_TB_LF__SN_
         name="J2"
+        allowOffBoard
         schWidth={1.3}
         schPinArrangement={{
           leftSide: {
@@ -298,7 +301,7 @@ export default function SparkFunCurrentSensorINA237() {
       <resistor
         name="R4"
         footprint="0603"
-        pcbX={0.0}
+        pcbX={-3.5}
         pcbY={-4.7625}
         pcbRotation={0}
         layer="top"
@@ -387,7 +390,7 @@ export default function SparkFunCurrentSensorINA237() {
         name="R2"
         footprint="2512"
         pcbX={0.0}
-        pcbY={2.2225}
+        pcbY={3.2225}
         pcbRotation={180.0}
         layer="top"
         schSectionName="power_inputs"
@@ -449,7 +452,7 @@ export default function SparkFunCurrentSensorINA237() {
         footprint="0603"
         pcbX={-9.8425}
         pcbY={-4.7625}
-        pcbRotation={0}
+        pcbRotation={180}
         layer="top"
         schSectionName="power_led"
         schX={-8}
@@ -458,7 +461,9 @@ export default function SparkFunCurrentSensorINA237() {
         connections={{ pin1: sel.net.GND, pin2: sel.net().LED_D1 }}
       />
       <jumper
+        doNotPlace
         name="J3"
+        allowOffBoard
         footprint="pinrow5_p2.54_id1.016_od1.8796_nosquareplating_nopinlabels"
         pcbX={0}
         pcbY={-11.43}

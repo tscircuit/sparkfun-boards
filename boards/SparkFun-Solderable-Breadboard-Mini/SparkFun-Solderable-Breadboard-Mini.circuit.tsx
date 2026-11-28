@@ -113,7 +113,7 @@ function createJumpersGrid(options: JumpersGridOptions) {
 }
 
 export default () => (
-  <board width="45.72mm" height="33.02mm">
+  <board width="45.72mm" height="33.02mm" routeRemaining>
     <silkscreentext text="1" pcbX={-6} pcbY={11.7} fontSize={1.5} />
     <silkscreentext text="20" pcbX={5.5} pcbY={11.7} fontSize={1.5} />
     <silkscreentext text="SOIC-20" pcbY={-11.5} fontSize={1.5} />

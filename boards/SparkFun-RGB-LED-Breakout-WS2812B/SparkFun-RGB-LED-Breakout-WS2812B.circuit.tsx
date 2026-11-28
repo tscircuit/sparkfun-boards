@@ -43,6 +43,7 @@ export default () => {
       <jumper
         connections={{ pin2: sel.net().DI }}
         name="JP1"
+        allowOffBoard
         pinLabels={JP1PinLabels}
         footprint="pinrow3_id1mm_od1.88_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
         schWidth={0.6}
@@ -55,6 +56,7 @@ export default () => {
       <jumper
         connections={{ pin2: sel.net().DO }}
         name="JP2"
+        allowOffBoard
         pinLabels={JP2PinLabels}
         footprint="pinrow3_id1mm_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
         schPinArrangement={{

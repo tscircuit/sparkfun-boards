@@ -20,6 +20,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP1"
+      allowOffBoard
       cadModel={null}
       schX={2}
       schDirection="left"
@@ -30,6 +31,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP2"
+      allowOffBoard
       schX={-2}
       cadModel={null}
       footprint="pinrow3_id1.016mm_od1.626mm_nosquareplating_nopinlabels"

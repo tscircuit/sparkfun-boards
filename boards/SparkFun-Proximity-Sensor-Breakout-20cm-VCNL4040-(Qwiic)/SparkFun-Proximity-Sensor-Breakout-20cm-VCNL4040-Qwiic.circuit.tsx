@@ -55,7 +55,7 @@ export default () => {
       <resistor
         name="R3"
         resistance="1k"
-        connections={{ pin2: sel.net().VDD, pin1: sel.D1.pin1 }}
+        connections={{ pin2: sel.net().VDD, pin1: sel.D1.pin2 }}
         schRotation={90}
         schX={-7}
         footprint="0603"
@@ -113,8 +113,10 @@ export default () => {
         bridgedPins={[["1", "2"]]}
       />
       <led
-        connections={{ pin2: sel.net().GND }}
+        connections={{ pin1: sel.net().GND }}
         name="D1"
+        pcbRotation={180}
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
         footprint="0603"
         pcbX={-9.525}
         pcbY={-6.604}
@@ -123,6 +125,7 @@ export default () => {
       />
       <jumper
         name="JP3"
+        allowOffBoard
         schWidth={0.7}
         pinLabels={JPPinlabel}
         schPinArrangement={{
@@ -136,9 +139,11 @@ export default () => {
         footprint="pinrow4_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
         pcbY={-11.43}
         pcbX={-1.25}
+        doNotPlace
       />
       <jumper
         name="JP4"
+        allowOffBoard
         pinLabels={{
           pin1: ["N_INT"],
         }}
@@ -146,12 +151,13 @@ export default () => {
         schPinArrangement={{
           leftSide: { direction: "top-to-bottom", pins: ["pin1"] },
         }}
-        connections={{ pin1: sel.net().N_INT }}
+        connections={{ pin1: sel.net().INT }}
         schY={-5.7}
         schX={2}
         footprint="pinrow1_id1.016mm_od1.88mm_nosquareplating_pinlabeltextalignright_pinlabelverticallyinverted_pinlabelorthogonal"
         pcbY={-11.43}
         pcbX={5.08}
+        doNotPlace
       />
       <SM04B_SRSS_TB_LF__SN
         name="JP2"

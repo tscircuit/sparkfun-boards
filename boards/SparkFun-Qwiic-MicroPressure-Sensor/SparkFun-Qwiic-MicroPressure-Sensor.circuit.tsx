@@ -55,11 +55,10 @@ export default () => {
         pcbRotation={180}
         schX={-7}
         schY={8}
+        // SS and MISO are unused on SparkFun's I2C sensor variant.
         connections={{
-          pin1: sel.net().SS,
           pin2: sel.net().SDA,
           pin3: sel.net().SCL,
-          pin7: sel.net().MISO,
           pin8: sel.net().EOC,
           pin9: sel.net().RESET,
           pin10: sel.net().GND,
@@ -235,10 +234,12 @@ export default () => {
         schY={-2.35}
         schSectionName="power_led"
         schRotation={90}
-        connections={{ pin1: sel.D1.pin1 }}
+        connections={{ pin1: sel.D1.pin2 }}
       />
       <led
         name="D1"
+        pcbRotation={180}
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
         color="red"
         footprint="0603"
         schSectionName="power_led"
@@ -250,16 +251,17 @@ export default () => {
         net="GND"
         schX={-9}
         schY={-4.55}
-        connectsTo={sel.D1.pin2}
+        connectsTo={sel.D1.pin1}
         anchorSide="top"
       />
 
       <SM04B_SRSS_TB_LF__SN2
         name="J1"
+        allowOffBoard
         schSectionName="connectors"
         schX={-1.5}
         schY={-1.15}
-        pcbX={-9.8}
+        pcbX={-9.7}
         pcbRotation={-90}
         connections={{
           pin4: sel.net().SCL,
@@ -270,10 +272,11 @@ export default () => {
       />
       <SM04B_SRSS_TB_LF__SN
         name="J2"
+        allowOffBoard
         schSectionName="connectors"
         schX={2}
         schY={-1.15}
-        pcbX={9.8}
+        pcbX={9.7}
         pcbRotation={90}
         connections={{
           pin4: sel.net().SCL,
@@ -284,6 +287,7 @@ export default () => {
       />
       <jumper
         name="J3"
+        allowOffBoard
         schWidth={0.7}
         schSectionName="connectors"
         schX={-1.5}
@@ -305,9 +309,11 @@ export default () => {
         footprint="pinrow4_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
         pcbX={-2}
         pcbY={-11.43}
+        doNotPlace
       />
       <jumper
         name="J4"
+        allowOffBoard
         pinCount={2}
         schWidth={0.7}
         schSectionName="connectors"
@@ -328,6 +334,7 @@ export default () => {
         footprint="pinrow2_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
         pcbX={5.5}
         pcbY={-11.43}
+        doNotPlace
       />
 
       <silkscreentext text="SparkFun" fontSize={2} pcbX={0} pcbY={9} />

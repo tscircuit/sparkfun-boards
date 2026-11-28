@@ -13,6 +13,7 @@ const jumperPinLabels = {
 export default () => {
   return (
     <board width={25.4} height={25.4}>
+      <autoroutingphase minBoardEdgeClearance="0.3mm" />
       {/* Color Sensor */}
       <schematictext
         text="Color Sensor - OPT4048DTSR"
@@ -191,20 +192,21 @@ export default () => {
         pcbX={10.109}
         pcbY={5.232}
         pcbRotation={90}
-        connections={{ pin1: sel.D1.pin1, pin2: sel.net().V3_3 }}
+        connections={{ pin1: sel.D1.pin2, pin2: sel.net().V3_3 }}
       />
 
       <led
         name="D1"
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
         color="red"
         footprint="0603"
         pcbX={11.709}
         pcbY={5.232}
-        pcbRotation={90}
+        pcbRotation={270}
         schX={10}
         schY={6.3}
         schRotation={-90}
-        connections={{ pin2: sel.LED1.pin2 }}
+        connections={{ pin1: sel.LED1.pin2 }}
       />
       <solderjumper
         name="LED1"
@@ -236,7 +238,7 @@ export default () => {
           pin1: sel.R1.pin2,
           pin2: sel.net().V3_3,
         }}
-        bridgedPins={[["1"], ["2"], ["3"]]}
+        bridgedPins={[["1", "2", "3"]]}
         schX={4}
         schY={6}
         pcbX={3.81}
@@ -336,14 +338,15 @@ export default () => {
           pin1: sel.net().ADDR,
           pin2: sel.R5.pin1,
         }}
-        footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
-        bridgedPins={[["1", "2"]]}
+        footprint="solderjumper2_p1.041_pw0.660_ph1.270"
+        bridgedPins={[]}
         schX={4}
         schY={-2}
         pcbX={-3.81}
         pcbY={-1.27}
         pcbRotation={0}
         layer="bottom"
+        doNotPlace
       />
       <solderjumper
         name="OX46"
@@ -352,14 +355,15 @@ export default () => {
           pin1: sel.net().ADDR,
           pin2: sel.net().SDA,
         }}
-        footprint="solderjumper2_bridged12_p1.041_pw0.660_ph1.270"
-        bridgedPins={[["1", "2"]]}
+        footprint="solderjumper2_p1.041_pw0.660_ph1.270"
+        bridgedPins={[]}
         schX={4}
         schY={-3}
         pcbX={-3.81}
         pcbY={0.965}
         pcbRotation={0}
         layer="bottom"
+        doNotPlace
       />
       <solderjumper
         name="OX44"
@@ -376,6 +380,7 @@ export default () => {
         pcbY={-3.556}
         pcbRotation={0}
         layer="bottom"
+        doNotPlace
       />
 
       {/* Connectors */}
@@ -389,6 +394,7 @@ export default () => {
       />
       <jumper
         name="JP3"
+        allowOffBoard
         schWidth={0.7}
         schX={-5}
         schY={-6}
@@ -409,13 +415,15 @@ export default () => {
         pinLabels={jumperPinLabels}
         footprint="pinrow5_id1.016_od1.88_nosquareplating_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel_pinlabelverticallyinverted"
         pcbY={-11.43}
+        doNotPlace
       />
 
       <SM04B_SRSS_TB_LF__SN_
         name="JP2"
+        allowOffBoard
         schX={-1}
         schY={-5}
-        pcbX={-9.8}
+        pcbX={-9.7}
         pcbRotation={-90}
         connections={{
           pin4: sel.net().SCL,
@@ -429,7 +437,8 @@ export default () => {
         schX={-1}
         schY={-7}
         name="JP1"
-        pcbX={9.8}
+        allowOffBoard
+        pcbX={9.7}
         pcbRotation={90}
         connections={{
           pin4: sel.net().SCL,

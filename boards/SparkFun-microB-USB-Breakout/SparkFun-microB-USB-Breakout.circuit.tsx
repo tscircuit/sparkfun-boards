@@ -26,6 +26,7 @@ export default () => (
     <jumper
       pinLabels={pinlabels}
       name="J1"
+      allowOffBoard
       connections={{
         pin1: sel.net().GND,
         pin2: sel.net().ID,

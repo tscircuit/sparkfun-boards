@@ -135,6 +135,7 @@ export default () => (
     />
     <pinheader
       name="JP4"
+      allowOffBoard
       gender="female"
       footprint="pinrow6_p2.54_id1.016_od1.8796_nosquareplating_pinlabelorthogonal_pinlabeltextalignleft_doublesidedpinlabel"
       pcbPinLabels={{
@@ -167,6 +168,7 @@ export default () => (
     />
     <pinheader
       name="JP5"
+      allowOffBoard
       gender="female"
       footprint="pinrow5_p2.54_id1.016_od1.8796_nosquareplating_pinlabelorthogonal_pinlabeltextalignleft_pinlabelverticallyinverted_doublesidedpinlabel"
       pinCount={5}

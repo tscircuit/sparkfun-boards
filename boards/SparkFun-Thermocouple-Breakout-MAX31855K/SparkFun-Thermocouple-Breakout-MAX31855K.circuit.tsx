@@ -35,6 +35,7 @@ export default () => (
     <jumper
       schWidth={1.48}
       name="JP1"
+      allowOffBoard
       footprint={
         "pinrow6_rows1_p2.54mm_id1mm_od1.5mm_male_nosquareplating_doublesidedpinlabel"
       }

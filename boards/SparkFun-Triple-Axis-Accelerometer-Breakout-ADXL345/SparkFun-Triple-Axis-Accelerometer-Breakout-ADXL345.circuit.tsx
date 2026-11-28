@@ -71,6 +71,7 @@ export default () => (
       }}
       cadModel={null}
       name="JP1"
+      allowOffBoard
       schX={6.5}
       schY={1}
       schDirection="left"

@@ -40,6 +40,7 @@ export default () => {
             pin1: "net.SS",
           }}
           name="JP1"
+          allowOffBoard
           schX={-7}
           footprint={"pinrow7_id1.016mm_od1.88mm_p2.54mm_nosquareplating"}
           pcbRotation={180}

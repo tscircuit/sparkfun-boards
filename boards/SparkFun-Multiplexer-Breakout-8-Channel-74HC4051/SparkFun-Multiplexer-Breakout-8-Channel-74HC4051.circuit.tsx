@@ -134,6 +134,7 @@ export default () => (
     <hole name="MH2" pcbY={-11.43} diameter={3.302} />
     <jumper
       name="J1"
+      allowOffBoard
       footprint={
         "pinrow11_nosquareplating_doublesidedpinlabel_id1.016_od1.88_p2.54"
       }
@@ -201,6 +202,7 @@ export default () => (
     />
     <jumper
       name="J2"
+      allowOffBoard
       footprint={
         "pinrow8_nosquareplating_doublesidedpinlabel_id1.016_od1.88_p2.54_pinlabeltextalignleft_pinlabelorthogonal"
       }

@@ -185,6 +185,7 @@ export default () => (
     />
     <jumper
       name="JP3"
+      allowOffBoard
       schWidth={0.7}
       schDirection="left"
       schPinArrangement={{
@@ -210,7 +211,7 @@ export default () => (
     <solderjumper
       name="JP1"
       footprint="solderjumper3_bridged123_pl1.27_pw0.635_p1"
-      bridgedPins={[["1"], ["2"], ["3"]]}
+      bridgedPins={[["1", "2", "3"]]}
       schX={3.5}
       schY={1.5}
       pcbX={7.366}

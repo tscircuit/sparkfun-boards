@@ -109,6 +109,7 @@ export default () => (
     <jumper
       schWidth={0.7}
       name="JP1"
+      allowOffBoard
       pinLabels={jumperPinLabels}
       footprint="pinrow6_od1.88_id1.016_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
       pcbRotation={180}
