@@ -96,7 +96,7 @@ export default () => (
     <solderjumper
       name="JP5"
       footprint="solderjumper2_bridged12_pl1.27_pw0.635_p1"
-      bridgedPins={[["1"], ["2"]]}
+      bridgedPins={[["1", "2"]]}
       schX={11}
       schY={0}
       pcbX={-1.511}

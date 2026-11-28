@@ -1,3 +1,5 @@
+import { fp } from "@tscircuit/footprinter"
+import type { FootprintSoupElements } from "@tscircuit/props"
 import type { ChipProps } from "@tscircuit/props"
 
 const pinLabels = {
@@ -31,7 +33,24 @@ export const SP3223EEY_L_TR = (props: ChipProps<typeof pinLabels>) => {
         jlcpcb: ["C33330"],
       }}
       manufacturerPartNumber="SP3223EEY-L/TR"
-      footprint="tssop20_p0.65mm_w3.9999mm_pw0.364mm_pl1.742mm_rounded0.182mm_pin1location(leftside,bottom)"
+      footprint={
+        fp
+          .string(
+            "tssop20_p0.65mm_w3.9999mm_pw0.364mm_pl1.742mm_rounded0.182mm_pin1location(leftside,bottom)",
+          )
+          .circuitJson()
+          .map((element) =>
+            element.type === "pcb_smtpad" && element.shape === "rotated_rect"
+              ? {
+                  ...element,
+                  shape: "rect",
+                  width: element.height,
+                  height: element.width,
+                  ccw_rotation: 0,
+                }
+              : element,
+          ) as FootprintSoupElements[]
+      }
       cadModel={{
         objUrl:
           "https://modelcdn.tscircuit.com/easyeda_models/assets/C33330.obj?uuid=f8ba5b4174b9490d8c445fbe2ed40b80",

@@ -6,6 +6,11 @@ import { A_1751251 } from "./imports/A_1751251"
 export default () => {
   return (
     <board width={25.4} height={25.4}>
+      <autoroutingphase
+        minViaEdgeToPadEdgeClearance="0.3mm"
+        minTraceToPadEdgeClearance="0.2mm"
+        autorouter={{ local: true }}
+      />
       <schematicsection name="power_inputs" displayName="Power Inputs" />
       <schematicsection name="sensor" displayName="INA228 Current Sensor" />
       <schematicsection name="power_led" displayName="Power LED" />
@@ -99,6 +104,7 @@ export default () => {
         schRotation={180}
         pinCount={3}
         footprint="solderjumper3_bridged123_pw0.66_pl1.27_p1"
+        bridgedPins={[["1", "2", "3"]]}
         pcbX="3.5mm"
         pcbY="2mm"
         connections={{
@@ -146,11 +152,12 @@ export default () => {
 
       <SM04B_SRSS_TB_LF__SN_
         name="J1"
+        allowOffBoard
         layer="top"
         schSectionName="connectors"
         schX={-7}
         schY={-6}
-        pcbX="-10mm"
+        pcbX="-9.7mm"
         pcbRotation={-90}
         connections={{
           GND: sel.net.GND,
@@ -161,11 +168,12 @@ export default () => {
       />
       <SM04B_SRSS_TB_LF__SN_
         name="J2"
+        allowOffBoard
         layer="top"
         schSectionName="connectors"
         schX={-3}
         schY={-6}
-        pcbX="10mm"
+        pcbX="9.7mm"
         pcbRotation={90}
         connections={{
           GND: sel.net.GND,
@@ -305,7 +313,7 @@ export default () => {
         name="R8"
         layer="top"
         schSectionName="power_inputs"
-        schX={-6}
+        schX={-6.28}
         schY={5}
         schRotation={90}
         resistance="10k"
@@ -319,7 +327,7 @@ export default () => {
         name="JP3"
         layer="bottom"
         schSectionName="power_inputs"
-        schX={-4.74}
+        schX={-4.46}
         schY={5}
         schRotation={0}
         pinCount={2}
@@ -358,6 +366,7 @@ export default () => {
         connections={{ pin1: sel.net.GND, pin2: sel.net().LED_D1 }}
       />
       <jumper
+        doNotPlace
         name="J3"
         layer="top"
         schSectionName="connectors"

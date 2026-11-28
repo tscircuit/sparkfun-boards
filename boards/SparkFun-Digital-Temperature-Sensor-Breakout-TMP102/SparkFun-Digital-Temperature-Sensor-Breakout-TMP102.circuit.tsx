@@ -166,6 +166,7 @@ export default () => (
     />
     <jumper
       name="JP1"
+      allowOffBoard
       connections={{
         pin1: sel.net().GND,
         pin2: sel.net().VCC,

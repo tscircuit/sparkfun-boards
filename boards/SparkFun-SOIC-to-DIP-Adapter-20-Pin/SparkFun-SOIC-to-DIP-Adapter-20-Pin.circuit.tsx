@@ -10,6 +10,7 @@ export default () => (
       doNotPlace
       schWidth={1.48}
       name="JP1"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
       schX={-2}
@@ -79,6 +80,7 @@ export default () => (
       doNotPlace
       schWidth={1.48}
       name="JP2"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow10_p2.54_id1.016_od1.626_nosquareplating_nopinlabels"
       schX={2}

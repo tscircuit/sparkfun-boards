@@ -7,6 +7,7 @@ export default () => (
       footprint={"pinrow3_smd_rightangle"}
       pinCount={3}
       name="JP1"
+      allowOffBoard
       schPinArrangement={{
         rightSide: {
           direction: "bottom-to-top",

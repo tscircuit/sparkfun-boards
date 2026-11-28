@@ -133,6 +133,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="JP1"
+      allowOffBoard
       pinCount={4}
       footprint="pinrow4_p2.54_id1.016_od1.8769_doublesidedpinlabel"
       gender="female"
@@ -216,6 +217,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="JP3"
+      allowOffBoard
       pinCount={3}
       footprint="pinrow3_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"

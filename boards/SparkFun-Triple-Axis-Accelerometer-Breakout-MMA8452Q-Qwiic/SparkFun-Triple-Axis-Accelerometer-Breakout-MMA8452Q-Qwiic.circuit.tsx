@@ -116,6 +116,7 @@ export default () => {
       />
       <jumper
         name="JP3"
+        allowOffBoard
         doNotPlace={true}
         cadModel={null}
         schWidth={0.7}
@@ -134,6 +135,7 @@ export default () => {
       />
       <jumper
         name="JP4"
+        allowOffBoard
         doNotPlace={true}
         cadModel={null}
         schWidth={0.7}

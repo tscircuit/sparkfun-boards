@@ -152,6 +152,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP2"
+      allowOffBoard
       schWidth={0.7}
       schDirection="right"
       pcbRotation={180}
@@ -170,6 +171,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP3"
+      allowOffBoard
       schWidth={0.7}
       schDirection="right"
       schX={-0.5}
@@ -298,6 +300,7 @@ export default () => (
     <jumper
       doNotPlace
       name="JP6"
+      allowOffBoard
       schWidth={0.7}
       schDirection="right"
       schX={3}

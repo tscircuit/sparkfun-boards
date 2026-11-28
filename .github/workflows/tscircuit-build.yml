@@ -16,3 +16,4 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install
       - run: bunx tsci build --concurrency 4
+      - run: bun run check:board-edge-copper

@@ -16,10 +16,7 @@ export default () => (
     <solderjumper
       name="JP8"
       footprint="solderjumper3_bridged123_p1.0414_pw0.6604_ph1.27"
-      bridgedPins={[
-        ["1", "2"],
-        ["2", "3"],
-      ]}
+      bridgedPins={[["1", "2", "3"]]}
       layer="bottom"
       pcbX={-1.04}
       pcbY={-3.81}
@@ -425,10 +422,7 @@ export default () => (
     <solderjumper
       name="I2C"
       footprint="solderjumper3_bridged123_p1.0414_pw0.6604_ph1.27"
-      bridgedPins={[
-        ["1", "2"],
-        ["2", "3"],
-      ]}
+      bridgedPins={[["1", "2", "3"]]}
       layer="bottom"
       pcbX={9.84}
       pcbY={5.08}
@@ -578,6 +572,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="J3"
+      allowOffBoard
       pinCount={4}
       footprint="pinrow4_p2.54_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
@@ -691,6 +686,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="J5"
+      allowOffBoard
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
@@ -715,6 +711,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="J1"
+      allowOffBoard
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
@@ -740,6 +737,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="J6"
+      allowOffBoard
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignright_pinlabelorthogonal"
       gender="female"
@@ -765,6 +763,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="J7"
+      allowOffBoard
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"
@@ -790,6 +789,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="J8"
+      allowOffBoard
       pinCount={1}
       footprint="pinrow1_id1.016_od1.8769_nosquareplating_doublesidedpinlabel_pinlabeltextalignleft_pinlabelorthogonal"
       gender="female"

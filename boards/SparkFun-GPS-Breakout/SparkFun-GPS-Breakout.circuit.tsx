@@ -17,6 +17,7 @@ export default () => (
     />
     <jumper
       name="JP1"
+      allowOffBoard
       footprint={"pinrow6_nosquareplating_id1.016_od1.880_p2.54"}
       cadModel={null}
       schY={0}

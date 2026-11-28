@@ -30,6 +30,7 @@ export default () => (
       schWidth={0.6}
       cadModel={null}
       name="JP1"
+      allowOffBoard
       schX={-3}
       pinLabels={JP1PinLabels}
       footprint="pinrow4_pinlabeltextalignleft_pinlabelorthogonal_bottomsidepinlabel"
@@ -46,6 +47,7 @@ export default () => (
       schWidth={0.6}
       cadModel={null}
       name="JP2"
+      allowOffBoard
       schX={4}
       schDirection="left"
       pinLabels={JP2PinLabels}

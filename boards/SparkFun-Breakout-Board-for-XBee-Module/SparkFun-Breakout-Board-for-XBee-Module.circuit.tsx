@@ -116,6 +116,7 @@ export default () => (
       schWidth={0.65}
       schX={-3}
       name="JP1"
+      allowOffBoard
       doNotPlace
       schPinArrangement={{
         rightSide: {
@@ -147,6 +148,7 @@ export default () => (
       schX={3}
       schDirection="left"
       name="JP2"
+      allowOffBoard
       doNotPlace
       pinLabels={JP2PinLabels}
       pcbX={6.431}

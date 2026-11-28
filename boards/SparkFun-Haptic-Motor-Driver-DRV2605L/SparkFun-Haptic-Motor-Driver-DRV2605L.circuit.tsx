@@ -99,6 +99,7 @@ export default () => (
       pcbY={-2.67}
       pcbRotation={90}
       name="JP1"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow6_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating_doublesidedpinlabel"
       manufacturerPartNumber="M06SILK_FEMALE_PTH"
@@ -111,6 +112,7 @@ export default () => (
       pcbY={-1.27}
       pcbRotation={-90}
       name="JP2"
+      allowOffBoard
       cadModel={null}
       footprint="pinrow2_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_doublesidedpinlabel"
       manufacturerPartNumber="M02PTH"

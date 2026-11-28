@@ -7,6 +7,7 @@ const selectors = {
 export default () => (
   <board width="19mm" height="12.7mm">
     <chip
+      schHeight={0.6}
       footprint="vssop8_p0.5_ph0.8_pw0.3"
       manufacturerPartNumber="PCA9306DC"
       pinLabels={{
@@ -47,9 +48,10 @@ export default () => (
     <capacitor
       capacitance="100pF"
       pcbX="3.124mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       name="C1"
+      maxDecouplingTraceLength={16}
       footprint="0603"
       schX="1.5"
       schY="-1.5"
@@ -111,7 +113,7 @@ export default () => (
       schRotation={270}
       footprint="0603"
       pcbX="1.651mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       connections={{
         pin2: sel<"VREF2">("U1").VREF2,
@@ -126,7 +128,7 @@ export default () => (
       schRotation={270}
       footprint="0603"
       pcbX="0.152mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       connections={{
         pin1: sel.JP1.pin1,
@@ -141,7 +143,7 @@ export default () => (
       schRotation={270}
       footprint="0603"
       pcbX="-1.626mm"
-      pcbY="3.048mm"
+      pcbY={3.348}
       pcbRotation={90}
       connections={{
         pin2: sel<"SDA2">("U1").SDA2,
@@ -186,7 +188,9 @@ export default () => (
       connectsTo={sel.JP1.pin3}
     />
     <jumper
+      schWidth={1.575}
       name="J1"
+      allowOffBoard
       doNotPlace
       footprint="pinrow4_p2.54_id1.016_od1.880_nosquareplating_pinlabeltextalignleft_pinlabelorthogonal"
       pcbX="-8.23mm"
@@ -222,7 +226,9 @@ export default () => (
     />
 
     <jumper
+      schWidth={1.575}
       name="J2"
+      allowOffBoard
       doNotPlace
       footprint="pinrow5_p2.54_id1.016_od1.880_nosquareplating_pinlabelorthogonal_pinlabeltextalignright"
       pcbX="8.28mm"
@@ -383,7 +389,7 @@ export default () => (
     <schematictext
       text="and fill in lower jumper."
       schX={3.5}
-      schY={2.5}
+      schY={3.5}
       color="gray"
       anchor="left"
       fontSize={0.1}
@@ -420,5 +426,6 @@ export default () => (
         <schematiccell>5V</schematiccell>
       </schematicrow>
     </schematictable>
+    <trace from="U1.SCL1" to="net.SCL1" />
   </board>
 )

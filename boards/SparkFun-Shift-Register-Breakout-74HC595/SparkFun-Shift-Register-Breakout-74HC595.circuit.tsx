@@ -54,6 +54,7 @@ export default () => {
 
       <jumper
         name="JP1"
+        allowOffBoard
         pcbX={-10}
         pcbY={0}
         pcbRotation={-90}
@@ -100,6 +101,7 @@ export default () => {
 
       <jumper
         name="JP2"
+        allowOffBoard
         pcbX={2.5}
         pcbY={14}
         footprint="pinrow7_nosquareplating_nopinlabels_id1.016_od1.626_p2.54"
@@ -128,6 +130,7 @@ export default () => {
 
       <jumper
         name="JP3"
+        allowOffBoard
         pcbX={2.5}
         pcbY={-14}
         footprint="pinrow7_nosquareplating_nopinlabels_id1.016_od1.626_p2.54"

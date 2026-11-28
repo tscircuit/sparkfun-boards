@@ -98,6 +98,7 @@ export default () => (
     />
     <JP
       name="JP2"
+      allowOffBoard
       pcbRotation={180}
       connections={{
         T1IN: sel.net().T1IN,

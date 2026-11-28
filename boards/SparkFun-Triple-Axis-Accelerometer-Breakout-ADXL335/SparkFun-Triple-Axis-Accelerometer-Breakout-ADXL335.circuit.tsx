@@ -87,6 +87,7 @@ export default () => (
       schWidth={0.6}
       schDirection="left"
       name="JP1"
+      allowOffBoard
       pinLabels={{
         pin1: ["ST"],
         pin2: ["Z"],

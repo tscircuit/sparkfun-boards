@@ -12,6 +12,7 @@ export default () => {
     <board width={"12.70mm"} height={"17.78mm"}>
       <PJ_320D_4A
         name="U1"
+        allowOffBoard
         pcbY={4}
         pcbRotation={90}
         pcbX={0.65}
@@ -67,6 +68,7 @@ export default () => {
       />
       <jumper
         name="J1"
+        allowOffBoard
         schDirection="left"
         footprint="pinrow4_pinlabeltextalignright_pinlabelorthogonal_doublesidedpinlabel"
         connections={{

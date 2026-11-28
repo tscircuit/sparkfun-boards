@@ -29,6 +29,7 @@ export default () => (
     />
     <jumper
       name="JP1"
+      allowOffBoard
       footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54"}
       schY={4}
       schX={-1.5}
@@ -48,9 +49,11 @@ export default () => (
           ],
         },
       }}
+      doNotPlace
     />
     <jumper
       name="JP2"
+      allowOffBoard
       footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating"}
       schY={4}
       schX={1.5}
@@ -70,6 +73,7 @@ export default () => (
           ],
         },
       }}
+      doNotPlace
     />
 
     <chip
@@ -99,6 +103,7 @@ export default () => (
     />
     <jumper
       name="JP3"
+      allowOffBoard
       footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54"}
       schY={0}
       schX={-1.5}
@@ -118,9 +123,11 @@ export default () => (
           ],
         },
       }}
+      doNotPlace
     />
     <jumper
       name="JP4"
+      allowOffBoard
       footprint={"pinrow8_nopinlabels_id1.016_od1.88_p2.54_nosquareplating"}
       schY={0}
       schX={1.5}
@@ -140,6 +147,7 @@ export default () => (
           ],
         },
       }}
+      doNotPlace
     />
     <silkscreentext
       text="SSOP16"

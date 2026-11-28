@@ -49,6 +49,7 @@ export default () => (
     />
     <jumper
       name="JP2"
+      allowOffBoard
       schWidth={0.7}
       schY={0}
       schX={6}

@@ -41,6 +41,7 @@ export default () => (
     />
     <jumper
       name="JP1"
+      allowOffBoard
       footprint={"pinrow14_nosquareplating_nopinlabels_id1.016_od1.88_p2.54"}
       schY={4}
       schX={-2}
@@ -69,6 +70,7 @@ export default () => (
     />
     <jumper
       name="JP2"
+      allowOffBoard
       footprint={"pinrow14_nopinlabels_id1.016_od1.88_p2.54_nosquareplating"}
       schY={4}
       schX={2}

@@ -60,7 +60,7 @@ export default () => (
     />
     <capacitor
       name="C2"
-      maxDecouplingTraceLength="8mm"
+      maxDecouplingTraceLength={14}
       capacitance="10uF"
       footprint="cap0603"
       pcbX={4.064}
@@ -121,6 +121,7 @@ export default () => (
       schWidth={0.7}
       cadModel={null}
       name="JP1"
+      allowOffBoard
       schHeight={1.5}
       pcbRotation={180}
       schPinStyle={{
@@ -151,6 +152,7 @@ export default () => (
       schWidth={0.7}
       cadModel={null}
       name="JP2"
+      allowOffBoard
       schHeight={1.5}
       pcbRotation={180}
       schPinStyle={{
@@ -203,7 +205,7 @@ export default () => (
       pcbRotation={180}
       pcbX={-4.623}
       pcbY={-1.651}
-      bridgedPins={[["1"], ["2"], ["3"]]}
+      bridgedPins={[["1", "2", "3"]]}
       footprint="solderjumper3_bridged123_pw0.635_ph1.27_p0.9"
     />
 

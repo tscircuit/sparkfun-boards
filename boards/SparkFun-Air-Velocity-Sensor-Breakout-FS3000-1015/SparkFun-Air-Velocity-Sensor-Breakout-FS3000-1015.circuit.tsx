@@ -6,12 +6,15 @@ export default () => {
   return (
     <board width={25.4} height={25.4}>
       <FS3000_1015
+        schX={-0.19}
+        schY={0}
         name="U1"
         pcbY={8.128}
         connections={{
           pin1: [sel.JP3.pin2, sel.C2.pin1],
           pin7: sel.net.SCL,
           pin6: sel.net.SDA,
+          pin10: sel.net().VCM,
         }}
       />
       <capacitor
@@ -22,7 +25,7 @@ export default () => {
         capacitance="0.1uF"
         footprint="cap0402"
         pcbRotation={-90}
-        pcbX={-5.232}
+        pcbX={-5.332}
         pcbY={8.89}
         connections={{ pin1: sel.JP3.pin1, pin2: sel.net().GND }}
       />
@@ -35,13 +38,14 @@ export default () => {
       />
       <capacitor
         name="C2"
+        maxDecouplingTraceLength={6}
         capacitance="0.1uF"
         footprint="cap0402"
         pcbRotation={90}
         schRotation={-90}
         schX={-3}
         schY={-0.5}
-        pcbX={-5.232}
+        pcbX={-5.332}
         pcbY={11.176}
         connections={{ pin2: sel.net().GND }}
       />
@@ -55,25 +59,26 @@ export default () => {
       />
       <capacitor
         name="C3"
-        schX={2.3}
+        schX={1.94}
         connections={{ pin1: sel.U1.pin9, pin2: sel.U1.pin8 }}
         schY={-0.5}
         schRotation={-90}
         capacitance="0.1uF"
         footprint="cap0402"
         pcbRotation={-90}
-        pcbX={5.232}
+        pcbX={5.332}
         pcbY={8.89}
       />
       <capacitor
         name="C4"
+        maxDecouplingTraceLength={22}
         schX={3}
         connections={{ pin1: sel.U1.pin10, pin2: sel.net().GND }}
         schRotation={-90}
         capacitance="1uF"
         footprint="cap0402"
         pcbRotation={90}
-        pcbX={5.232}
+        pcbX={5.332}
         pcbY={11.176}
       />
       <resistor
@@ -100,7 +105,7 @@ export default () => {
       />
       <resistor
         name="R5"
-        connections={{ pin2: sel.D2.pin1 }}
+        connections={{ pin2: sel.D2.pin2 }}
         schX={5.5}
         schY={-9.5}
         schRotation={-90}
@@ -111,14 +116,15 @@ export default () => {
         pcbRotation={90}
       />
       <led
+        pinLabels={{ pin1: "cathode", pin2: "anode" }}
         name="D2"
-        connections={{ pin2: sel.net().GND }}
+        connections={{ pin1: sel.net().GND }}
         schX={5.5}
         schY={-11}
         schRotation={-90}
         color="RED"
         footprint="0603"
-        pcbRotation={180}
+        pcbRotation={0}
         pcbX={-10.16}
         pcbY={-6.045}
       />
@@ -129,7 +135,7 @@ export default () => {
           pin1: sel.R3.pin2,
           pin2: sel.net().V3_3,
         }}
-        bridgedPins={[["1"], ["2"], ["3"]]}
+        bridgedPins={[["1", "2", "3"]]}
         schX={8}
         schY={2}
         pcbX={11.201}
@@ -142,7 +148,7 @@ export default () => {
       <solderjumper
         connections={{ pin1: sel.R5.pin1, pin2: sel.net().V3_3 }}
         pcbX={-11.57}
-        bridgedPins={[["1"], ["2"]]}
+        bridgedPins={[["1", "2"]]}
         schRotation={90}
         pcbY={-4.699}
         schX={5.5}
@@ -153,7 +159,7 @@ export default () => {
         layer="bottom"
       />
       <solderjumper
-        bridgedPins={[["1"], ["2"]]}
+        bridgedPins={[["1", "2"]]}
         connections={{ pin1: [sel.U1.pin2] }}
         schX={-3.1}
         schY={1.5}
@@ -212,8 +218,8 @@ export default () => {
         text="Power LED"
         color="red"
         anchor="left"
-        schX={4}
-        schY={-5}
+        schX={7}
+        schY={-4}
         fontSize={0.3}
       />
 
@@ -221,16 +227,16 @@ export default () => {
         text="Cut the trace"
         color="gray"
         anchor="left"
-        schX={5}
-        schY={-7.5}
+        schX={8}
+        schY={-6.5}
         fontSize={0.15}
       />
       <schematictext
         text="to disable LED"
         color="gray"
         anchor="left"
-        schX={5}
-        schY={-7.7}
+        schX={8}
+        schY={-6.7}
         fontSize={0.15}
       />
 
@@ -289,7 +295,7 @@ export default () => {
         color="gray"
         anchor="left"
         schX={-3.1}
-        schY={1}
+        schY={2}
         fontSize={0.15}
       />
 
@@ -470,6 +476,7 @@ export default () => {
 
       <jumper
         name="JP4"
+        allowOffBoard
         doNotPlace
         schWidth={0.7}
         connections={{ pin1: sel.net().VCM, pin2: sel.net().ADC_REF }}
@@ -487,6 +494,7 @@ export default () => {
       />
       <jumper
         name="JP5"
+        allowOffBoard
         doNotPlace
         schWidth={0.7}
         schX={-4}

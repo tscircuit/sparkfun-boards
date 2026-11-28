@@ -148,6 +148,7 @@ const HMC6343Breakout = () => (
 
     <jumper
       name="JP1"
+      allowOffBoard
       footprint="pinrow4__p2.54_id1.016_od1.8796"
       pcbX={0}
       pcbY={-8.89}

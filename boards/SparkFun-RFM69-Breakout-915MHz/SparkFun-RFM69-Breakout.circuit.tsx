@@ -12,6 +12,7 @@ const RFM69BREAKOUT = () => {
       <pinheader
         doNotPlace
         name="JP1"
+        allowOffBoard
         pinCount={2}
         schRotation={180}
         footprint="pinrow2_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
@@ -45,6 +46,7 @@ const RFM69BREAKOUT = () => {
         schWidth={0.675}
         doNotPlace
         name="JP2"
+        allowOffBoard
         pinCount={5}
         schRotation={0}
         footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
@@ -67,6 +69,7 @@ const RFM69BREAKOUT = () => {
       <pinheader
         doNotPlace
         name="JP3"
+        allowOffBoard
         pinCount={1}
         schRotation={180}
         footprint="pinrow1_p2.54_id1.016_od1.88_pinlabeltextalignleft_pinlabelorthogonal_nosquareplating"
@@ -87,6 +90,7 @@ const RFM69BREAKOUT = () => {
         schWidth={0.58}
         doNotPlace
         name="JP4"
+        allowOffBoard
         pinCount={5}
         schRotation={0}
         footprint="pinrow5_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"
@@ -109,6 +113,7 @@ const RFM69BREAKOUT = () => {
       <pinheader
         doNotPlace
         name="JP5"
+        allowOffBoard
         pinCount={3}
         schRotation={180}
         footprint="pinrow3_p2.54_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_nosquareplating"

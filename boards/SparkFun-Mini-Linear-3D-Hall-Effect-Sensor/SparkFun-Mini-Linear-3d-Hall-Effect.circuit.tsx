@@ -221,10 +221,7 @@ export default () => (
     <solderjumper
       name="I2C"
       footprint="solderjumper3_bridged123_p1.0414_pw0.6604_ph1.27"
-      bridgedPins={[
-        ["1", "2"],
-        ["2", "3"],
-      ]}
+      bridgedPins={[["1", "2", "3"]]}
       pcbX={2.9464}
       pcbY={-2.54}
       schX={10}
@@ -293,6 +290,7 @@ export default () => (
     <pinheader
       doNotPlace
       name="J3"
+      allowOffBoard
       pinCount={6}
       footprint="pinrow6_p2.54_id1.016_od1.88_nosquareplating"
       gender="female"

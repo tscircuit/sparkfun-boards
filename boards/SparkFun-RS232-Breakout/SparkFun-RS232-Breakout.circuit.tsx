@@ -3,7 +3,14 @@ import { DS1037_09FNAKT74_0CC } from "./imports/DS1037_09FNAKT74_0CC"
 import { SP3223EEY_L_TR } from "./imports/SP3223EEY_L_TR"
 
 export default () => (
-  <board width="27.94mm" height="31.75mm" autorouter="auto-cloud">
+  <board
+    minTraceToPadEdgeClearance="0.1524mm"
+    minViaEdgeToPadEdgeClearance="0.1524mm"
+    minBoardEdgeClearance="0.254mm"
+    width="27.94mm"
+    height="31.75mm"
+    autorouter="auto-local"
+  >
     <schematicsection name="rs232" displayName="RS-232 / DE9 Connector" />
     <schematicsection name="transceiver" displayName="RS-232 Transceiver" />
     <schematicsection name="ttl" displayName="TTL Logic Header" />
@@ -14,7 +21,7 @@ export default () => (
       schSectionName="transceiver"
       pcbX={5.075}
       pcbY={0.067}
-      schX={0}
+      schX={-0.23}
       schY={0}
       schWidth={2}
       schPinArrangement={{
@@ -82,6 +89,7 @@ export default () => (
     {/* DE9 female connector */}
     <DS1037_09FNAKT74_0CC
       name="J3"
+      allowOffBoard
       schSectionName="rs232"
       pcbX={-4}
       pcbY={-0.113}
@@ -123,13 +131,14 @@ export default () => (
       capacitance="0.1uF"
       footprint="cap0603"
       schSectionName="transceiver"
-      schX={2.8}
+      schX={3.03}
       schY={0.6}
       schRotation={-90}
       supplierPartNumbers={{ jlcpcb: ["C14663"] }}
     />
     <capacitor
       name="C4"
+      maxDecouplingTraceLength={24}
       capacitance="0.1uF"
       footprint="cap0603"
       schSectionName="transceiver"
@@ -141,6 +150,7 @@ export default () => (
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength={22}
       capacitance="0.1uF"
       footprint="cap0603"
       schSectionName="transceiver"
@@ -168,6 +178,7 @@ export default () => (
     <solderjumper
       name="JP1"
       footprint="solderjumper2_bridged12"
+      bridgedPins={[["1", "2"]]}
       bridged={false}
       layer="bottom"
       schSectionName="transceiver"
@@ -183,7 +194,9 @@ export default () => (
 
     {/* 0.1" breakout header (TTL/CMOS side) */}
     <pinheader
+      doNotPlace
       name="J1"
+      allowOffBoard
       pinCount={9}
       gender="male"
       pitch="2.54mm"

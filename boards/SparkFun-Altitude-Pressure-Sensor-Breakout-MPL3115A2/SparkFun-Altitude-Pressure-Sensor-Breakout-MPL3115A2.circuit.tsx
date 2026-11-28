@@ -147,6 +147,7 @@ export default () => (
     />
     <jumper
       name="JP4"
+      allowOffBoard
       schWidth={0.6}
       pcbX={0}
       pcbY={-7.62}

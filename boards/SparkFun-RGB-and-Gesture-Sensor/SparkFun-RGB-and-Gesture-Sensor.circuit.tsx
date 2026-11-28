@@ -16,6 +16,7 @@ export default function SparkFunApds9960RgbGestureSensor() {
     <board width="15.24mm" height="20.32mm" layers={2} thickness="1.6mm">
       <pinheader
         name="JP1"
+        allowOffBoard
         pinCount={6}
         pinLabels={["VL", "GND", "VCC", "SDA", "SCL", "INT"]}
         footprint="pinrow6_p2.54_id1.016_od1.8796_nosquareplating_doublesidedpinlabel"

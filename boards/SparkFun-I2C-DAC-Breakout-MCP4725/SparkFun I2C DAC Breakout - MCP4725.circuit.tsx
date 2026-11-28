@@ -76,6 +76,7 @@ const I2CDACBREAKOUT = () => (
     <jumper
       doNotPlace
       name="JP6"
+      allowOffBoard
       pinLabels={{
         pin1: ["GND"],
         pin2: ["VOUT"],
@@ -95,6 +96,7 @@ const I2CDACBREAKOUT = () => (
     <jumper
       doNotPlace
       name="JP5"
+      allowOffBoard
       pinLabels={{
         pin1: ["SCL"],
         pin2: ["SDA"],
@@ -180,10 +182,7 @@ const I2CDACBREAKOUT = () => (
       cadModel={null}
       name="SJ1"
       pinCount={3}
-      bridgedPins={[
-        ["pin1", "pin2"],
-        ["pin2", "pin3"],
-      ]}
+      bridgedPins={[["1", "2", "3"]]}
       footprint="solderjumper3_bridged123_p0.8_pw0.635_ph1.270"
       pcbX="0.8"
       pcbY="5.715"

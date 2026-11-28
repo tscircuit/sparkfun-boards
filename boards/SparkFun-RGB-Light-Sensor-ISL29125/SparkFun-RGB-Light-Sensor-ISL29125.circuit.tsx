@@ -25,6 +25,7 @@ export default () => (
     />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength={10}
       pcbX={-5.08}
       capacitance="0.1uF"
       footprint="cap0603"
@@ -32,6 +33,7 @@ export default () => (
     />
     <capacitor
       name="C2"
+      maxDecouplingTraceLength={10}
       pcbX={-5.08}
       pcbY={1.935}
       capacitance="1uF"
@@ -73,7 +75,9 @@ export default () => (
       cadModel={null}
       schWidth={0.6}
       pinLabels={jumperPinLabels}
+      doNotPlace
       name="JP1"
+      allowOffBoard
       manufacturerPartNumber="M05PTH"
       footprint="pinrow5_id1.016_od1.88_pinlabeltextalignright_pinlabelorthogonal_pinlabelverticallyinverted_nosquareplating_doublesidedpinlabel"
       pcbY={-6.955}
@@ -89,6 +93,7 @@ export default () => (
       schRotation={180}
       connections={{ pin1: sel.R3.pin2, pin3: sel.R2.pin2 }}
       cadModel={null}
+      allowOffBoard
     />
     <schematictext
       text="I2C Address:"
@@ -126,7 +131,7 @@ export default () => (
       text="SOLDERJUMPER_2WAYS"
       anchor="left"
       fontSize={0.15}
-      schX={1.7}
+      schX={4.1}
       schRotation={-90}
       schY={0.2}
       color="gray"

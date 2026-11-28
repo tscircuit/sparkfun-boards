@@ -52,19 +52,26 @@ const JP4PinLabels = {
 
 export default () => (
   <board outline={outline} manualEdits={manualEdits}>
-    <MAX98357AETE_T name="U1" pcbX={-1.016} pcbRotation={-90} />
+    <autoroutingphase
+      minTraceToPadEdgeClearance="0.15mm"
+      minViaEdgeToPadEdgeClearance="0.15mm"
+      minBoardEdgeClearance="0.3mm"
+    />
+    <MAX98357AETE_T schHeight={1.2} name="U1" pcbX={-1.016} pcbRotation={-90} />
     <capacitor
       name="C1"
+      maxDecouplingTraceLength={10}
       capacitance="10uF"
       footprint="0805"
       pcbRotation={-90}
-      pcbX={1.041}
+      pcbX={1.241}
       pcbY={-5.105}
       schRotation={-90}
       connections={{ pin1: sel.U1.pin7 }}
     />
     <capacitor
       name="C2"
+      maxDecouplingTraceLength={6}
       capacitance="0.1uF"
       footprint="0603"
       pcbRotation={-90}
@@ -91,6 +98,7 @@ export default () => (
       cadModel={null}
       schRotation={90}
       footprint="solderjumper2_bridged12_pw0.635mm_ph1.27mm_p0.8mm"
+      bridgedPins={[["1", "2"]]}
       pinCount={2}
       pcbY={-7.557}
       pcbX={0.123}
@@ -102,6 +110,7 @@ export default () => (
         pin1: ["P"],
         pin2: ["N"],
       }}
+      doNotPlace
       name="JP3"
       footprint="pinrow2_id1.016mm_od1.88mm_p2.62mm_pinlabeltextalignleft_pinlabelorthogonal_doublesidedpinlabel"
       schDirection="left"
@@ -134,7 +143,9 @@ export default () => (
       strokeWidth={0.15}
     />
     <jumper
+      doNotPlace
       name="JP4"
+      allowOffBoard
       cadModel={null}
       manufacturerPartNumber="CONN_07NO_SILK"
       schWidth={0.7}
@@ -307,7 +318,7 @@ export default () => (
       text="(Left/2 + Right/2)"
       color="gray"
       fontSize={0.25}
-      schY={-5.3}
+      schY={-6.3}
       schX={-2.3}
     />
     <schematictext
@@ -322,21 +333,21 @@ export default () => (
       color="gray"
       fontSize={0.25}
       schY={-5.3}
-      schX={-6.8}
+      schX={-3.8}
     />
     <schematictext
       text="Right Only"
       color="gray"
       fontSize={0.25}
-      schY={-6.5}
+      schY={-5.5}
       schX={-7.8}
     />
     <schematictext
       text="Left Only"
       color="gray"
       fontSize={0.25}
-      schY={-7.9}
-      schX={-7.8}
+      schY={-6.9}
+      schX={-4.8}
     />
 
     <schematictable schY={-8} schX={9} borderWidth={0.02}>

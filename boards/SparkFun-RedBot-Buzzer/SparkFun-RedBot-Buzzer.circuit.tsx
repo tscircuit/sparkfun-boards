@@ -43,6 +43,7 @@ export default () => (
         pin1: sel.JP1.pin1,
         pin2: sel.JP1.pin3,
       }}
+      allowOffBoard
     />
     <X6511FRS_03_C85D30
       name="JP1"

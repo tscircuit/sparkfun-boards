@@ -139,6 +139,7 @@ export default () => {
       />
       <jumper
         name="JP3"
+        allowOffBoard
         doNotPlace={true}
         schWidth={0.7}
         pinLabels={JPPinlabel}
@@ -157,6 +158,7 @@ export default () => {
       />
       <jumper
         name="JP4"
+        allowOffBoard
         doNotPlace={true}
         pinLabels={{
           pin1: ["INT"],
